@@ -1,7 +1,7 @@
 ﻿program Main_blending;
 
 uses
-  UBlending;
+  UBlending; // Имя модуля,содержащего описание расчетов
 
 const
   flow_count = 6;
@@ -59,6 +59,6 @@ begin
   readln(treb_RON);
   get_data(comp_RON, flow_composition);
   blending(comp_count, flow_count, comp_RON, flow_composition, treb_RON, 
-  5e-2, 5e-6, mix_composition, RONc);
+    5e-2, 5e-6, mix_composition, RONc);
   get_result(mix_composition, RONc);
 end.
