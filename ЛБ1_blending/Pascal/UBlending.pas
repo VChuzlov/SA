@@ -145,10 +145,6 @@ begin
     end;
   
   min := get_min(flow_count, flows_RON, treb_RON);
-  mix_composition[min] := 1;
-  for i := 0 to flow_count-1 do
-    if i <> min then
-      mix_composition[i] := 0;
   
   mix_composition := get_mix_composition(eps, h, flow_count, min, flows_RON, treb_RON);
   RONc := get_mix_RON(flow_count, flows_RON, mix_composition);
