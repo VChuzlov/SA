@@ -43,9 +43,9 @@ begin
   assign(f, 'result.txt');
   rewrite(f);
   for i := 0 to flow_count-1 do
-    writeln(f, 'Доля потока ', i+1, ' = ', mix_composition[i] * 100:8:2);
-  writeln(f);
-  writeln(f, 'Октановое число смешения = ', RONc:8:2);
+    writeln({f,} 'Доля потока ', i+1, ' = ', mix_composition[i] * 100:8:2);
+  writeln({f});
+  writeln({f,} 'Октановое число смешения = ', RONc:8:2);
   close(f);
 end;
 
@@ -58,7 +58,8 @@ begin
   write('Введите требуемое ОЧ: ');
   readln(treb_RON);
   get_data(comp_RON, flow_composition);
-  blending(comp_count, flow_count, comp_RON, flow_composition, treb_RON, 
+  blending(comp_count, flow_count, comp_RON, 
+    flow_composition,  treb_RON, 
     5e-2, 5e-6, mix_composition, RONc);
   get_result(mix_composition, RONc);
 end.
