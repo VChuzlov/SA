@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2020.02.16 15:31:47.831,=D:\Users\TEMP.TPU.149\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020.02.16 15:33:25.077,S:\_ОБЩАЯ\Чузлов\Proj\2\Unit1.dfm=D:\Users\TEMP.TPU.149\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020.02.16 15:33:25.077,S:\_ОБЩАЯ\Чузлов\Proj\2\Unit1.pas=D:\Users\TEMP.TPU.149\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020.02.16 15:37:24.117,S:\_ОБЩАЯ\Чузлов\Proj\2\Project1.dproj=D:\Users\TEMP.TPU.149\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020.02.16 17:56:32.285,=S:\_ОБЩАЯ\Чузлов\Proj\2\UBlending.pas</Transaction>
+  </Transactions>
+</BorlandProject>
