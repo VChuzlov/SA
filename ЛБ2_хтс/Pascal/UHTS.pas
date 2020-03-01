@@ -34,7 +34,7 @@ begin
     SetLength(Result[i], comp_count);
   for i := 0 to comp_count-1 do
     for j := 0 to flows_count-1 do
-      Result[j, i] := A[i] + B[i] * (flows_param[j, 1] + 273.15)
+      Result[j, i] := A[i] + B[i] * flows_param[j, 1]
 end;
 
 function get_flow_Cp(comp_count: integer; flows_count: integer; 

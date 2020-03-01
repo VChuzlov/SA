@@ -10,8 +10,6 @@ const
 var 
   flows_composition: TArrOfArrOfDouble; // Состав потоков,подаваемых на смешение
   flows_param: TArrOfArrOfDouble; // Параметры потоков
-  //Cp_comp: m2; // Массив теплоемкостей компонентов
-  //Flow_Cp: m; // Массив теплоемкостей потоков
   heater_flow_rate: double; // Расход горячего потока теплообменника
   heater_flow_Temp: double; // Начальная температура горячего потока теплообменника
   flow_rate: double; // Расход потока
@@ -20,8 +18,6 @@ var
   flow_composition: TArrOfDouble; // Состав потока после смешения
   flow_rate1: double; // Расходы потока после делителя 
   flow_rate2: double; // Расходы потока после делителя
-  {mix_Flow_Rate, mix_Cp, mix_Temp: real;
-  mix_Comp_Frac: m;}
   f1, f2: text;
   i, j: integer;
 
