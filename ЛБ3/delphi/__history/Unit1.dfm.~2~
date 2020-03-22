@@ -1,0 +1,118 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = #1048#1076#1077#1085#1090#1080#1092#1080#1082#1072#1094#1080#1103' '#1082#1080#1085#1077#1090#1080#1095#1077#1089#1082#1080#1093' '#1087#1072#1088#1072#1084#1077#1090#1088#1086#1074
+  ClientHeight = 593
+  ClientWidth = 1107
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 1101
+    Height = 94
+    Align = alTop
+    TabOrder = 0
+    ExplicitWidth = 1120
+    object Label1: TLabel
+      AlignWithMargins = True
+      Left = 4
+      Top = 4
+      Width = 1093
+      Height = 19
+      Align = alTop
+      Caption = #1057#1093#1077#1084#1072' '#1093#1080#1084#1080#1095#1077#1089#1082#1080#1093' '#1088#1077#1072#1082#1094#1080#1081
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitWidth = 234
+    end
+    object Label2: TLabel
+      AlignWithMargins = True
+      Left = 4
+      Top = 29
+      Width = 1093
+      Height = 23
+      Align = alTop
+      Alignment = taCenter
+      Caption = 'C9H20 = C9H18 + H2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clHighlight
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitWidth = 211
+    end
+    object Label3: TLabel
+      AlignWithMargins = True
+      Left = 4
+      Top = 58
+      Width = 1093
+      Height = 23
+      Align = alTop
+      Alignment = taCenter
+      Caption = 'C9H18 = C9H16 + H2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clHighlight
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitWidth = 211
+    end
+  end
+  object Panel2: TPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 103
+    Width = 1101
+    Height = 178
+    Align = alTop
+    TabOrder = 1
+    object Label4: TLabel
+      AlignWithMargins = True
+      Left = 4
+      Top = 4
+      Width = 1093
+      Height = 19
+      Align = alTop
+      Caption = #1048#1089#1093#1086#1076#1085#1099#1077' '#1076#1072#1085#1085#1099#1077
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitWidth = 153
+    end
+    object StringGrid1: TStringGrid
+      AlignWithMargins = True
+      Left = 4
+      Top = 29
+      Width = 1093
+      Height = 145
+      Align = alClient
+      RowCount = 3
+      TabOrder = 0
+      ExplicitLeft = 248
+      ExplicitTop = 56
+      ExplicitWidth = 320
+      ExplicitHeight = 120
+    end
+  end
+end
