@@ -1,4 +1,4 @@
-﻿program kinetic_calculation;
+program kinetic_calculation;
 
 uses UR_K_method;
 
@@ -15,7 +15,7 @@ var
   comp_conc_profile: TArrOfArrOfDouble;
   
   function kinetic_model(c, kin_par: TArrOfDouble; 
-                           react_count: integer): TArrOfDouble;
+                           comp_count: integer): TArrOfDouble;
   begin
     SetLength(result, comp_count);
     result[0] := - kin_par[0] * c[0];

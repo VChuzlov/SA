@@ -1,4 +1,4 @@
-﻿unit UR_K_method;
+unit UR_K_method;
 
 interface
 
@@ -6,7 +6,7 @@ type
   TArrOfDouble = array of double;
   TArrOfArrOfDouble = array of array of double;
   Tfunc = function (c: TArrOfDouble; kin_par: TArrOfDouble; 
-                    react_count: integer):TArrOfDouble;
+                    comp_count: integer):TArrOfDouble;
   
 function RK(f: Tfunc; comp_count, react_count: integer; h, tk: double;
             init_conc, kin_par: TArrOfDouble): TArrOfArrOfDouble;
