@@ -1,0 +1,135 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Grids, UR_K_method;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Panel1: TPanel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Panel2: TPanel;
+    Label4: TLabel;
+    StringGrid1: TStringGrid;
+    Panel3: TPanel;
+    Label5: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Panel4: TPanel;
+    Label10: TLabel;
+    StringGrid2: TStringGrid;
+    Button1: TButton;
+    procedure get_data(var kin_par, comp_conc:TArrOfDouble; var tk, h: double);
+    procedure show_result(comp_conc_profile: TArrOfArrOfDouble; tk, h: double);
+    function kinetic_model(c, kin_par: TArrOfDouble;
+                           react_count: integer): TArrOfDouble;
+    procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+const
+  react_count = 2;
+  comp_count = 4;
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.get_data(var kin_par, comp_conc:TArrOfDouble; var tk, h: double);
+var
+  i: Integer;
+
+begin
+  SetLength(kin_par, react_count);
+  SetLength(comp_conc, comp_count);
+  kin_par[0]:= StrToFloat(Edit1.Text);
+  kin_par[1]:= StrToFloat(Edit2.Text);
+  for i := 0 to comp_count - 1 do
+    comp_conc[i]:= StrToFloat(StringGrid1.Cells[i+1, 1]);
+  tk:= StrToFloat(Edit3.Text);
+  h:= StrToFloat(Edit4.Text);
+end;
+
+procedure TForm1.show_result(comp_conc_profile: TArrOfArrOfDouble; tk, h: double);
+var
+  i, j: integer;
+begin
+  with StringGrid2 do
+    for i := 0 to Trunc(tk / h)-1 do
+      begin
+        RowCount := RowCount + 1;
+        cells[0, i+1] := FloatToStrF((i * h + h), fffixed, 4, 1);
+        for j := 0 to comp_count-1 do
+          cells [j+1, i+1] := FloatToStrF(comp_conc_profile[i, j], fffixed, 8, 4);
+      end;
+end;
+
+function TForm1.kinetic_model(c, kin_par: TArrOfDouble;
+                           react_count: integer): TArrOfDouble;
+  begin
+    SetLength(result, comp_count);
+    result[0] := - kin_par[0] * c[0];
+    result[1] := kin_par[0] * c[0] - kin_par[1] * c[1];
+    result[2] := kin_par[1] * c[1];
+    result[3] := kin_par[0] * c[0] + kin_par[1] * c[1];
+  end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  kin_par, comp_conc:TArrOfDouble;
+  tk, h: double;
+  comp_conc_profile: TArrOfArrOfDouble;
+begin
+  StringGrid2.RowCount := 1;
+  get_data(kin_par, comp_conc, tk, h);
+  comp_conc_profile := RK(kinetic_model, comp_count, react_count, h, tk,
+                          comp_conc, kin_par);
+  show_result(comp_conc_profile, tk, h)
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  with StringGrid1 do
+    begin
+      StringGrid1.ColWidths[0]:= 260;
+      Cells[0, 1]:= '»сходные концентрации, моль / л';
+      Cells[0, 2]:= 'Ёкспериментальные концентрации, моль / л';
+      Cells[1, 0]:= 'C9H20';
+      Cells[2, 0]:= 'C9H18';
+      Cells[3, 0]:= 'C9H16';
+      Cells[4, 0]:= 'H2';
+      Cells[1, 1]:= '1,0';
+      Cells[2, 1]:= '0,0';
+      Cells[3, 1]:= '0,0';
+      Cells[4, 1]:= '0,0';
+      Cells[1, 2]:= '0,1653';
+      Cells[2, 2]:= '0,4481';
+      Cells[3, 2]:= '0,3866';
+      Cells[4, 2]:= '1,2213';
+    end;
+  with StringGrid2 do
+    begin
+      Cells[0, 0]:= '¬рем€, ч';
+      Cells[1, 0]:= 'C9H20';
+      Cells[2, 0]:= 'C9H18';
+      Cells[3, 0]:= 'C9H16';
+      Cells[4, 0]:= 'H2';
+    end;
+end;
+
+end.
