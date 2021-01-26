@@ -42,7 +42,7 @@ end;
 
 begin
   var fractions := read_from_txt('data.txt');
-  var mix_composition := mix_flows(|0.1, 0.1, 0.0, 0.0, 0.0, 0.8|, fractions);
+  var mix_composition := mix_flows(|0.1, 0.1, 0.1, 0.1, 0.2, 0.4|, fractions);
   var mixture_ron := calculate_octane_num(mix_composition);
   print($'{mixture_ron:f}')
 end.
