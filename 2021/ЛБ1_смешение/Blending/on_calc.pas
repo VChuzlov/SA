@@ -1,13 +1,12 @@
-﻿uses UConst;
+﻿uses UConst, UGeneticAlgorythm;
+
 
 function calculate_octane_num(fractions:array of real; 
                               Bi: array of real := UConst.Bi; 
                               RON: array of real := UConst.RON): real;
 begin
   result := 0;
-  (* 
-    Создадим массив отклонений от аддитивности для каждого компонента.
-   *)
+  
   var delta := ArrFill(Bi.Length, 0.0);
   foreach var i in Bi.Indices do
     for var j := i+1 to Bi.High do
