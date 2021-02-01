@@ -1,4 +1,4 @@
-﻿uses UConst, UGeneticAlgorythm;
+﻿uses UConst, UGeneticAlgorithm;
 
 
 function read_txt(filename: string): array of array of real;
