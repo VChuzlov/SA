@@ -16,8 +16,8 @@ function get_flow_molar_mass(mass_fractions:array of real;
 function get_heat_capacity(mass_fractions: array of real; temperature: real;
          coef: array of array of real := UConst.HEATCAPACITYCOEFFS): real;
 
-
 implementation
+
 
 function normalize(x: array of real): array of real;
 begin
