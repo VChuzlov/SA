@@ -14,9 +14,7 @@ type
     heat_capacity: real;
     
     constructor Create(mass_flow_rate: real; mass_fractions: array of real; 
-                       temperature: real); 
-    
-    procedure show();
+                       temperature: real);
   
   end;
 
@@ -40,11 +38,6 @@ begin
       self.volume_flow_rate := self.mass_flow_rate / self.density / 1000;
       self.mole_flow_rate := self.mass_flow_rate / self.molar_mass;
     end;
-
-procedure Flow.show();
-begin
-  print($'Flow object: mass flow rate: {self.mass_flow_rate}')
-end;
 
 
 end.
