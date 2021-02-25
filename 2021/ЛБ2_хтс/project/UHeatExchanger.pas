@@ -6,8 +6,8 @@ uses UFlow;
 
 type
   HeatExchanger = class
-    d_in := 0.2;
-    d_out := 0.5;
+    d_in := 0.15;
+    d_out := 0.4;
     length := 3.0;
     k := 4900;
     
@@ -32,7 +32,7 @@ begin
   begin
     t_cold += k * 3.14 * d_in / (v_cold * cold.density * 1e3 * cold.heat_capacity) 
              * (t_hot - t_cold) * h;
-    t_hot -= k * 3.14 * d_out / (v_hot * hot.density * 1e3 * hot.heat_capacity) 
+    t_hot -= k * 3.14 * d_in / (v_hot * hot.density * 1e3 * hot.heat_capacity) 
              * (t_hot - t_cold) * h;
     len += h;
   end;

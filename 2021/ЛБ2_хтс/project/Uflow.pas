@@ -2,7 +2,7 @@
 
 interface 
 
-uses URegularFunctions;
+uses URegularFunctions, UConst;
 
 type 
   Flow = class
@@ -27,13 +27,15 @@ begin
       self.mass_fractions := normalize(mass_fractions);
       self.temperature := temperature;
       
-      self.mole_fractions := convert_mass_to_mole_fractions(self.mass_fractions);
-      self.volume_fractions := convert_mass_to_volume_fractions(self.mass_fractions);
+      self.mole_fractions := convert_mass_to_mole_fractions(self.mass_fractions, 
+                                                            UConst.MR);
+      self.volume_fractions := convert_mass_to_volume_fractions(self.mass_fractions, 
+                                                                UConst.DENSITIES);
       
-      self.density := get_flow_density(self.mass_fractions);
-      self.molar_mass := get_flow_molar_mass(self.mass_fractions);
+      self.density := get_flow_density(self.mass_fractions, UConst.DENSITIES);
+      self.molar_mass := get_flow_molar_mass(self.mass_fractions, UConst.MR);
       self.heat_capacity := get_heat_capacity(self.mass_fractions, 
-                                              self.temperature);
+                                              self.temperature, UConst.HEATCAPACITYCOEFFS);
                                               
       self.volume_flow_rate := self.mass_flow_rate / self.density / 1000;
       self.mole_flow_rate := self.mass_flow_rate / self.molar_mass;
