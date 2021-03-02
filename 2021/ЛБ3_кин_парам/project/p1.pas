@@ -33,7 +33,7 @@ begin
   for var i := 0 to iter-1 do
     SetLength(result[i], c.Length+1);
   
-  for var i := 0 to iter-1 do
+  for var i := 0 to result.High do
   begin
     result[i][0] := time;
     for var j := 0 to c_.High do
