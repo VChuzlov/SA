@@ -3,8 +3,12 @@
 
 interface
 
+uses URegularFunctions, UConst;
+
 function reactions(c, k: array of real): array of real;
-function kin_scheme(t: real; c, k: array of real): array of real;
+function get_k(temperature: real; k0: array of real := UConst.K0; 
+         ea: array of real := UConst.Ea): array of real;
+function kin_scheme(t: real; c, k0: array of real): array of real;
 
 
 implementation
@@ -89,11 +93,21 @@ begin
 end;
 
 
-function kin_scheme(t: real; c, k: array of real): array of real;
+function get_k(temperature: real; k0: array of real; 
+               ea: array of real): array of real;
+begin
+  result := ArrFill(k0.Length, 0.0);
+  for var i := 0 to result.High do
+    result[i] := k0[i] * exp(-ea[i] * 1000 / (8.314 * temperature))
+end;
+
+
+function kin_scheme(t: real; c, k0: array of real): array of real;
 begin
   SetLength(result, c.Length);
-  
-  var r := reactions(c, k);
+ 
+  var k := get_k(c[^1]);
+  var r := reactions(c[:^1], k);
   
   result[0] := k[33] * c[11] + k[57] * c[18] - (k[0] + k[1] + k[2] + k[3] 
                + k[4] + k[5]) * c[0];
@@ -161,8 +175,15 @@ begin
                 + (4 * k[60] + k[61] + k[62] + k[63]) * c[19] + (4 * k[64] 
                 + k[65] + k[66]) * c[20] + (4 * k[67] + k[68]) * c[21] 
                 + 4 * k[69] * c[22] + 3 * k[70] * c[23] - k[55] * c[17];
-                
   
+  var mass_fractions := convert_molar_to_mass_fractions(c[:^1], UConst.MR);
+  var flow_density := get_flow_density(mass_fractions, UConst.DENSITIES);
+  var heat_capacity := get_heat_capacity(mass_fractions, c[^1], 
+                                         UConst.HEATCAPACITYCOEFFS);
+  result[25] := 0.0;
+  for var i := 0 to r.High do
+    result[25] += -UConst.REACTION_ENTHALPIES[i] * r[i] / (flow_density 
+                                                          * heat_capacity*1e-3);
 end;  
 
 
