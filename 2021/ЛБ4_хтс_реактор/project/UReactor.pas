@@ -31,10 +31,10 @@ function Reactor.calculate(feedstock: Flow): Flow;
 begin
   var gas_volume_flow_rate := feedstock.mole_flow_rate * 8.314 
                               * feedstock.temperature / feedstock.pressure * 1e-3;
-  var stop_time := self.volume / gas_volume_flow_rate;
+  var stop_time := self.volume / gas_volume_flow_rate * 3600;
   var results := runge_kutt(kin_scheme, 
-                  feedstock.mole_fractions+|feedstock.temperature|,
-                  ArrRandomReal(71, 1e-3, 10), 0.0, stop_time)[^1][1:];
+                  feedstock.molar_fractions+|feedstock.temperature|,
+                  UConst.K0, 0.0, stop_time)[^1][1:];
   var mass_fractions := convert_molar_to_mass_fractions(results[:^1], UConst.MR);
   
   result := new Flow(feedstock.mass_flow_rate, mass_fractions, results[^1],

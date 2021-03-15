@@ -1,7 +1,7 @@
 ﻿uses UFlow, UReactor, UMixer;
 
 begin
-  var r1 := new Reactor(4.9, 2.9);
+  var r1 := new Reactor(4.902, 2.438);
   
   var f_mass_frac := Arr(
     0.77,	6.82,	8.57,	12.02,	12.41,	14.41,	9.26,	0.0,	0.0,	0.0,	0.0,	
@@ -12,8 +12,8 @@ begin
     0.0,	0.0,	0.0,	0.0,	0.0,	0.0,	0.0,	0.0,	0.0,	0.0,	10.0,	0.0,	0.0,	
     0.0,	0.0,	0.0,	0.0,	0.0,	0.0, 0.0,	0.0,	0.0,	0.0,	0.0,	90.0);
   
-  var feedstock := new Flow(100, f_mass_frac, 750, 0.105);
-  var hbg := new Flow(50, hbg_mass_frac, 750, 0.105);
+  var feedstock := new Flow(26600, f_mass_frac, 763.15, 0.105);
+  var hbg := new Flow(3700, hbg_mass_frac, 763.15, 0.105);
   
   var m1 := new Mixer;
   var feedstock_mix := m1.calculate(|feedstock, hbg|);
