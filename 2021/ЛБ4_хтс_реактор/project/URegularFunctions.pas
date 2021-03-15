@@ -121,7 +121,7 @@ begin
     flow_density += molar_fractions[i] * molar_masses[i];
   
   for var i := 0 to result.High do
-    result[i] := molar_fractions[i] * molar_masses[i] / flow_density / 1000;
+    result[i] := molar_fractions[i] * molar_masses[i] / flow_density;
   
 end;  
 
