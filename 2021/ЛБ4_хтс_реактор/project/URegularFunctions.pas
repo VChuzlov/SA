@@ -23,7 +23,8 @@ function convert_molar_to_mass_fractions(molar_fractions: array of real;
 function runge_kutt(func: function(time: real; c, k: array of real): array of real;
                     c, k:array of real; start, stop: real; 
                     h: real := 0.01): array of array of real;
-                    
+function get_gas_densities(temperature, pressure: real;
+                           molar_masses: array of real := UConst.MR): array of real;                   
 
 implementation
 
@@ -166,5 +167,13 @@ begin
   end;
 end;
 
+
+function get_gas_densities(temperature, pressure: real;
+                           molar_masses: array of real): array of real;
+begin
+  result := ArrFill(molar_masses.Length, 0.0);
+  for var i := 0 to result.High do
+    result[i] := pressure * molar_masses[i] / (8.314 * temperature)
+end;
 
 end.

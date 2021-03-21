@@ -18,8 +18,12 @@ type
     
     constructor Create(mass_flow_rate: real; mass_fractions: array of real; 
                        temperature, pressure: real);
-  
-  end;
+    function gas_separation: sequence of Flow;
+    function getRON(Bi: array of real := UConst.Bi; 
+                    RON: array of real := UConst.RON): real;
+                              
+end;
+
 
 implementation
 
@@ -36,7 +40,8 @@ begin
       self.volume_fractions := convert_mass_to_volume_fractions(self.mass_fractions, 
                                                                 UConst.DENSITIES);
       self.molar_fractions := convert_mass_to_molar_fractions(self.mass_fractions, 
-                              UConst.DENSITIES, UConst.MR);
+                              get_gas_densities(self.temperature, self.pressure, 
+                              UConst.MR), UConst.MR);
       
       self.density := get_flow_density(self.mass_fractions, UConst.DENSITIES);
       self.molar_mass := get_flow_molar_mass(self.mass_fractions, UConst.MR);
@@ -47,5 +52,49 @@ begin
       self.mole_flow_rate := self.mass_flow_rate / self.molar_mass;
     end;
 
+
+function Flow.gas_separation: sequence of Flow;
+begin
+  var gas_mass_fractions := ArrFill(self.mass_fractions.Length, 0.0);
+  var gas_mass_flow_rate := 0.0;
+  
+  for var i := 7 to 10 do
+  begin
+    gas_mass_fractions[i] := self.mass_fractions[i];
+    gas_mass_flow_rate += self.mass_flow_rate * self.mass_fractions[i]
+  end;
+  
+  gas_mass_fractions := normalize(gas_mass_fractions);
+  
+  var h2_mass_fractions := ArrFill(self.mass_fractions.Length-1, 0.0) + 
+                            |1.0|;
+  var h2_mass_flow_rate := self.mass_flow_rate * self.mass_fractions[^1];
+  
+  self.mass_fractions[7:11] := ArrFill(4, 0.0);
+  self.mass_fractions[^1] := 0.0;
+  self.mass_fractions := normalize(self.mass_fractions);
+  self.mass_flow_rate -= gas_mass_flow_rate + h2_mass_flow_rate;
+  
+  var gas := new Flow(gas_mass_flow_rate, gas_mass_fractions, self.temperature, 
+                      self.pressure);
+  var h2 := new Flow(h2_mass_flow_rate, h2_mass_fractions, self.temperature, 
+                     self.pressure);
+  result := seq(gas, h2)
+end;
+
+function Flow.getRON(Bi: array of real; RON: array of real): real;
+begin
+  result := 0;
+  
+  var delta := ArrFill(Bi.Length, 0.0);
+  foreach var i in Bi.Indices do
+    for var j := i+1 to Bi.High do
+      delta[i] += Bi[i] * Bi[j] * self.volume_fractions[i] * self.volume_fractions[j];
+  
+  foreach var i in Bi.Indices do
+    result += self.volume_fractions[i] * RON[i];
+  result += delta.Sum();
+end;
+  
 
 end.

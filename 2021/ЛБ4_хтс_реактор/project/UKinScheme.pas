@@ -177,7 +177,8 @@ begin
                 + 4 * k[69] * c[22] + 3 * k[70] * c[23] - k[55] * c[17];
   
   var mass_fractions := convert_molar_to_mass_fractions(c[:^1], UConst.MR);
-  var flow_density := get_flow_density(mass_fractions, UConst.DENSITIES);
+  var flow_density := get_flow_density(mass_fractions, 
+      get_gas_densities(c[^1], 0.105, UConst.MR));
   var heat_capacity := get_heat_capacity(mass_fractions, c[^1], 
                                          UConst.HEATCAPACITYCOEFFS);
   result[25] := 0.0;
