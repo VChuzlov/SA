@@ -1,4 +1,4 @@
-﻿uses UFlow, UReactor, UMixer, UHeatExchanger;
+﻿uses UFlow, UReactor, UMixer, UHeatExchanger, USplitter;
 
 begin
   var r1 := new Reactor(4.902, 2.438);
@@ -26,19 +26,26 @@ begin
     0.0,	0.87, 3.56,	4.04,	5.95,	4.23,	0.64,	0.96,	1.34,	4.24,	5.77,	3.02,	
     1.12,	0.0
   );
-  var heating_flow1 := new Flow(100000, hf_mass_fractions, 800, 0.105);
+  
+  var heating_flow := new Flow(39000, hf_mass_fractions, 800, 0.105);
+  var splitter := new Splitter(|0.333, 0.333, 0.333|);
+  var hf := splitter.calculate(heating_flow);
+  
   var he1 := new HeatExchanger;
-  var (f1, products1_h) := he1.calculate(heating_flow1, products1);
+  he1.d_in := 0.75;
+  he1.d_out := 0.9;
+  var (f1, products1_h) := he1.calculate(hf[0], products1);
   products1_h.temperature.Println;
-  var heating_flow2 := new Flow(125000, hf_mass_fractions, 800, 0.105);
-  var heating_flow3 := new Flow(125000, hf_mass_fractions, 800, 0.105);
+  
   
   var r2 := new Reactor(5.410, 2.819);
   var products2 := r2.calculate(products1_h);
   products2.temperature.Println;
   
   var he2 := new HeatExchanger;
-  var (f2, products2_h) := he2.calculate(heating_flow2, products2);
+  he2.d_in := 0.8;
+  he2.d_out := 0.95;
+  var (f2, products2_h) := he2.calculate(hf[1], products2);
   products2_h.temperature.Println;
   
   var r3 := new Reactor(6.452, 2.971);
@@ -46,7 +53,9 @@ begin
   products3.temperature.Println;
   
   var he3 := new HeatExchanger;
-  var (f3, products3_h) := he3.calculate(heating_flow3, products3);
+  he3.d_in := 0.82;
+  he3.d_out := 0.97;
+  var (f3, products3_h) := he3.calculate(hf[2], products3);
   products3_h.temperature.Println;
   
   var r4 := new Reactor(8.208, 3.505);
