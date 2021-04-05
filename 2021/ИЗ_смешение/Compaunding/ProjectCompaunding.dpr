@@ -1,0 +1,131 @@
+program ProjectCompaunding;
+
+
+
+uses
+  Forms,
+  UMainCompaunding in 'UMainCompaunding.pas' {MainForm},
+  UFlowOfVO in 'UFlowOfVO.pas' {FormFlowofOV},
+  UMath in 'UMath.pas',
+  USecondForm in 'USecondForm.pas' {SecondForm},
+  UOVofFlow in 'UOVofFlow.pas' {FormOVofFlow},
+  UPravilo in 'UPravilo.pas' {FPravilo},
+  UParam in 'UParam.pas' {FormParam},
+  UDM in 'UDM.pas' {DM: TDataModule},
+  UMyDB1 in 'UMyDB1.pas' {FMyDB1},
+  UMyDB2 in 'UMyDB2.pas' {FMyDB2},
+  UMyDB3 in 'UMyDB3.pas' {FMyDB3},
+  UMyDB4 in 'UMyDB4.pas' {FMyDB4},
+  Unit1 in 'bin\sk\UNIT1.PAS' {Form1},
+  Unit4 in 'bin\sk\Unit4.pas' {Form4},
+  Unit3 in 'bin\sk\Unit3.pas' {Form3},
+  Unit5 in 'bin\sk\Unit5.pas' {Form5},
+  makeres in 'bin\sk\makeres.pas',
+  URasDisAkt in 'bin\sk\URasDisAkt.pas' {RasDisAkt},
+  ActObj in 'bin\sk\ActObj.pas',
+  Unit2 in 'bin\sk\Unit2.pas' {Form2},
+  Unit6 in 'bin\sk\UNIT6.PAS' {Form6},
+  Unit8 in 'bin\sk\Unit8.pas' {Form8},
+  basa in 'bin\sk\basa.pas' {basadan},
+  basa_tv in 'bin\sk\Basa\basa_tv.pas',
+  basres2 in 'bin\sk\Basa\Basres2.pas',
+  Unitb2 in 'bin\sk\Basa\Unitb2.pas' {Formb2},
+  Unitb3 in 'bin\sk\Basa\Unitb3.pas' {Formb3},
+  Unitb4 in 'bin\sk\Basa\Unitb4.pas' {Formb4},
+  ChekSub in 'bin\sk\Basa\ChekSub.pas' {AddSub},
+  Unit30 in 'bin\sk\Unit30.pas' {Form30},
+  Unit7 in 'bin\sk\UNIT7.PAS' {Form7},
+  Unit9 in 'bin\sk\Unit9.pas' {Form9},
+  Unit10 in 'bin\sk\Unit10.pas' {Form10},
+  Unit11 in 'bin\sk\Unit11.pas' {Form11},
+  Unit12 in 'bin\sk\Unit12.pas' {Form12},
+  Unit13 in 'bin\sk\UNIT13.PAS' {Form13},
+  Unit15 in 'bin\sk\UNIT15.PAS' {Form15},
+  frak in 'bin\sk\frak.pas' {frak1},
+  FmxUtils in 'bin\sk\Fmxutils.pas',
+  adv in 'bin\sk\adv.pas' {Advice},
+  SvodTab in 'bin\sk\SvodTab.pas' {svod},
+  Unit16 in 'bin\sk\Unit16.pas' {Form16},
+  Unit17 in 'bin\sk\Unit17.pas' {Form17},
+  Unit18 in 'bin\sk\Unit18.pas' {Form18},
+  Unit19 in 'bin\sk\Unit19.pas' {Form19},
+  Treefind in 'bin\sk\Treefind.pas' {TreeF},
+  res in 'bin\sk\res.pas' {ResF},
+  Sdel in 'bin\sk\Sdel.pas',
+  Me_As in 'bin\sk\Me_As.pas' {M_A},
+  reportform in 'bin\sk\reportform.pas',
+  NewReport in 'bin\sk\NewReport.pas' {NewReportForm},
+  Unit2Ab in 'bin\sk\Unit2Ab.pas' {AboutBox},
+  Unit14 in 'bin\sk\UNIT14.PAS' {Form14},
+  ToGraph in 'bin\sk\ToGraph.pas' {ToGr},
+  UCondition in 'UCondition.pas' {Form20},
+  UGrupp in 'UGrupp.pas' {FGrupp},
+  MashaStyle1 in 'MashaStyle1.pas',
+  URezervuar in 'URezervuar.pas' {FRezervuar},
+  UiniExcel in 'UiniExcel.pas' {INIExcel},
+  UPIMS in 'UPIMS.pas' {FPIMS},
+  UOVofFlowLite in 'UOVofFlowLite.pas' {FormOVofFlowLite},
+  UFlowOfVOLite in 'UFlowOfVOLite.pas' {FormFlowofOVLite},
+  USOAP in 'bin\WebServer\USOAP.pas',
+  PILABService in 'bin\WebServer\PILABService.pas',
+  UPlan in 'UPlan.pas' {FPlan},
+  UConditionPlan in 'UConditionPlan.pas' {FormPlan},
+  USetUser in 'USetUser.pas' {FSetUser};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TSecondForm, SecondForm);
+  Application.CreateForm(TFormParam, FormParam);
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TFMyDB1, FMyDB1);
+  Application.CreateForm(TFMyDB2, FMyDB2);
+  Application.CreateForm(TFMyDB3, FMyDB3);
+  Application.CreateForm(TFMyDB4, FMyDB4);
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm5, Form5);
+  Application.CreateForm(TRasDisAkt, RasDisAkt);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm6, Form6);
+  Application.CreateForm(TForm8, Form8);
+  Application.CreateForm(Tbasadan, basadan);
+  Application.CreateForm(TFormb2, Formb2);
+  Application.CreateForm(TFormb3, Formb3);
+  Application.CreateForm(TFormb4, Formb4);
+  Application.CreateForm(TAddSub, AddSub);
+  Application.CreateForm(TForm30, Form30);
+  Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TForm9, Form9);
+  Application.CreateForm(TForm10, Form10);
+  Application.CreateForm(TForm11, Form11);
+  Application.CreateForm(TForm12, Form12);
+  Application.CreateForm(TForm13, Form13);
+  Application.CreateForm(TForm15, Form15);
+  Application.CreateForm(Tfrak1, frak1);
+  Application.CreateForm(TAdvice, Advice);
+  Application.CreateForm(Tsvod, svod);
+  Application.CreateForm(TForm16, Form16);
+  Application.CreateForm(TForm17, Form17);
+  Application.CreateForm(TForm18, Form18);
+  Application.CreateForm(TForm19, Form19);
+  Application.CreateForm(TTreeF, TreeF);
+  Application.CreateForm(TResF, ResF);
+  Application.CreateForm(TM_A, M_A);
+  Application.CreateForm(TNewReportForm, NewReportForm);
+  Application.CreateForm(TAboutBox, AboutBox);
+  Application.CreateForm(TForm14, Form14);
+  Application.CreateForm(TToGr, ToGr);
+  Application.CreateForm(TForm20, Form20);
+  Application.CreateForm(TFGrupp, FGrupp);
+  Application.CreateForm(TFRezervuar, FRezervuar);
+  Application.CreateForm(TINIExcel, INIExcel);
+  Application.CreateForm(TFPIMS, FPIMS);
+  Application.CreateForm(TFPlan, FPlan);
+  Application.CreateForm(TFormPlan, FormPlan);
+  Application.CreateForm(TFSetUser, FSetUser);
+  Application.Run;
+end.
