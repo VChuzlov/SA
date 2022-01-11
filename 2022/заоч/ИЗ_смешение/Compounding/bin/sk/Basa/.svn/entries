@@ -1,0 +1,1300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="1"
+   name=""
+   committed-date="2005-11-16T07:24:57.187500Z"
+   url="https://bacchus/repos/reform/trunk/ActivKinef/Basa"
+   last-author="sergey"
+   kind="dir"
+   uuid="7499bc31-dd9c-0049-84ed-bb7211ef27e6"
+   revision="11"/>
+<entry
+   committed-rev="1"
+   name="shablon.10"
+   text-time="2006-01-20T04:59:42.781250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.031250Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.11"
+   text-time="2006-01-20T04:59:42.781250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="31ecfc91e1c182df633e8a36dfe38415"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.062500Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.12"
+   text-time="2006-01-20T04:59:42.812500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="31ecfc91e1c182df633e8a36dfe38415"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.062500Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.13"
+   text-time="2006-01-20T04:59:42.828125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="31ecfc91e1c182df633e8a36dfe38415"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.078125Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.14"
+   text-time="2006-01-20T04:59:42.828125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="31ecfc91e1c182df633e8a36dfe38415"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.093750Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.15"
+   text-time="2006-01-20T04:59:42.828125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.093750Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.16"
+   text-time="2006-01-20T04:59:42.843750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.109375Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.17"
+   text-time="2006-01-20T04:59:42.843750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.140625Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.1"
+   text-time="2006-01-20T04:59:42.859375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.140625Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.2"
+   text-time="2006-01-20T04:59:42.859375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.156250Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.3"
+   text-time="2006-01-20T04:59:42.875000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.156250Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.4"
+   text-time="2006-01-20T04:59:42.875000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.171875Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.5"
+   text-time="2006-01-20T04:59:42.875000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="a6742903ce497d36e5936c6c26b4a851"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.187500Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.6"
+   text-time="2006-01-20T04:59:42.890625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.187500Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.7"
+   text-time="2006-01-20T04:59:42.906250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.218750Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.3"
+   text-time="2006-01-20T04:59:42.890625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.203125Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.8"
+   text-time="2006-01-20T04:59:42.921875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.234375Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.4"
+   text-time="2006-01-20T04:59:42.921875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.218750Z"/>
+<entry
+   committed-rev="1"
+   name="shablon.9"
+   text-time="2006-01-20T04:59:42.937500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ee49450a23caa282361b71e1dd204a15"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.250000Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.5"
+   text-time="2006-01-20T04:59:42.937500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.234375Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.6"
+   text-time="2006-01-20T04:59:42.953125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="c1dd0e3aeab7f1edae9040e1ca1f0079"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.250000Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.7"
+   text-time="2006-01-20T04:59:42.953125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="7637728e2da2c6c41a0e070bea5ae200"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.265625Z"/>
+<entry
+   committed-rev="1"
+   name="AROMs.10"
+   text-time="2006-01-20T04:59:42.968750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="b7e5c7cb14821f8f1c73666786d37356"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.296875Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.8"
+   text-time="2006-01-20T04:59:42.968750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="f1a5548e263d9bf74c172e29134f1c18"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.296875Z"/>
+<entry
+   committed-rev="1"
+   name="AROMs.11"
+   text-time="2006-01-20T04:59:43.000000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="b89e614ac26f66eeb3af03434df6345a"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.312500Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.9"
+   text-time="2006-01-20T04:59:42.984375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="87383332118082761d41d066560636f4"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.312500Z"/>
+<entry
+   committed-rev="1"
+   name="AROMs.12"
+   text-time="2006-01-20T04:59:43.000000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="599ade7702712e55ad46b78a0dc0d7c2"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.328125Z"/>
+<entry
+   committed-rev="1"
+   name="AROMs.13"
+   text-time="2006-01-20T04:59:43.015625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="749d22382f0a11390dbad0a429f897ba"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.328125Z"/>
+<entry
+   committed-rev="1"
+   name="ChekSub.pas"
+   text-time="2006-01-20T04:59:43.015625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="2361ffa158a66c6e1c5f643df961e6d8"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.343750Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.10"
+   text-time="2006-01-20T04:59:43.015625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="c254310bae2c6f22c81647ed6353b878"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.343750Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.11"
+   text-time="2006-01-20T04:59:43.031250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="4ed32a9573994a8a2886ca99973bc74e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.359375Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.12"
+   text-time="2006-01-20T04:59:43.031250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="a5737c3d646975110f4151953be431ac"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.359375Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.13"
+   text-time="2006-01-20T04:59:43.062500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="81051bcc2cf1bedf378224b0a93e2877"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.390625Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5S.5"
+   text-time="2006-01-20T04:59:43.062500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="1cfa14a5a027bfb6d322a678581bf082"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.406250Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5S.6"
+   text-time="2006-01-20T04:59:43.078125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="740a2ac5af8259e95f2dcec8d957daf4"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.406250Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5S.7"
+   text-time="2006-01-20T04:59:43.078125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="3bd3764f964bf9a3a3e0ccc1c0c5ac8e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.421875Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5S.8"
+   text-time="2006-01-20T04:59:43.093750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="e2fa0f35666a3663ad7c1256913c89d2"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.437500Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5S.9"
+   text-time="2006-01-20T04:59:43.093750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="837356ea8f64db760faed1b7ab051dc4"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.437500Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.10"
+   text-time="2006-01-20T04:59:43.109375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="5164a4b2db1975eea9b1b057ebb2e765"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.453125Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.11"
+   text-time="2006-01-20T04:59:43.109375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="13e99192f6e80334bc44b1afdbb0ffd7"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.453125Z"/>
+<entry
+   committed-rev="1"
+   name="Unitb3.pas"
+   text-time="2006-01-20T04:59:43.109375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="f0f4cb589371107c3e6e7122edd3095a"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.468750Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.12"
+   text-time="2006-01-20T04:59:43.125000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="554c212c793397d0761590711ac19482"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.500000Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.13"
+   text-time="2006-01-20T04:59:43.140625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="cafb7670561bd9d2ce3da7f104ff258c"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.578125Z"/>
+<entry
+   committed-rev="1"
+   name="Unitb5.pas"
+   text-time="2006-01-20T04:59:43.156250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="f60cb3de7bb43d3e41d5bea5efd84d98"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.593750Z"/>
+<entry
+   committed-rev="1"
+   name="Omsklab.dt"
+   text-time="2006-01-20T04:59:43.156250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="cf832f6a9fe7613c5c1917cd557e4ac6"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.593750Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.10"
+   text-time="2006-01-20T04:59:43.171875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="fec983ff2ec7bc00c287e7a0a7bf203f"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.609375Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.11"
+   text-time="2006-01-20T04:59:43.171875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="10538d76cbf70ee55ee336de16dc23d0"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.609375Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.12"
+   text-time="2006-01-20T04:59:43.187500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="e2e218a782ce08efd735b19fa8da27cd"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.609375Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.13"
+   text-time="2006-01-20T04:59:43.203125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="c9d9f854c8d13c2ab66dfad189258701"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.625000Z"/>
+<entry
+   committed-rev="1"
+   name="Unitb2.dfm"
+   text-time="2006-01-20T04:59:43.218750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d36458ebbb40573852e5a34ad8a14f80"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.625000Z"/>
+<entry
+   committed-rev="1"
+   name="Unitb4.dfm"
+   text-time="2006-01-20T04:59:43.218750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="9e328100eaf9b3627b01ea75fbfc2d4f"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.640625Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.10"
+   text-time="2006-01-20T04:59:43.234375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="0bfb858ffb619c5ce57b1bad2c2f19a2"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.640625Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.11"
+   text-time="2006-01-20T04:59:43.234375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="2d8d02d60c82ca045bb10fa3618292e8"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.671875Z"/>
+<entry
+   committed-rev="1"
+   name="Unitb6.dfm"
+   text-time="2006-01-20T04:59:43.250000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d14078fd0256861e824e6c088f5a4c6e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.671875Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.12"
+   text-time="2006-01-20T04:59:43.250000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="000b3f0ac29eee1e7034b64bbefdaac7"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.687500Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.13"
+   text-time="2006-01-20T04:59:43.265625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.687500Z"/>
+<entry
+   committed-rev="1"
+   name="Basres2.pas"
+   text-time="2006-01-20T04:59:43.281250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="39436e487199f62188ea2179da0983fc"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.703125Z"/>
+<entry
+   committed-rev="1"
+   name="Basres4.pas"
+   text-time="2006-01-20T04:59:43.281250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="56aa429280082c6faeb6461ec08a4984"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.703125Z"/>
+<entry
+   committed-rev="1"
+   name="PROT2"
+   text-time="2006-01-20T04:59:43.281250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="f619966115c28ef999137db94fef8a1b"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.718750Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.3"
+   text-time="2006-01-20T04:59:43.296875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="cb5a53a45e0fda6865dce8fd5d42df43"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.718750Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.4"
+   text-time="2006-01-20T04:59:43.296875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="042c6d073cdd7e6da1640b9de6fb1a1a"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.734375Z"/>
+<entry
+   committed-rev="1"
+   name="TRAFARET"
+   text-time="2006-01-20T04:59:43.312500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="e795a92b7773c6199db42c9b22e713fb"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.765625Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.5"
+   text-time="2006-01-20T04:59:43.312500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="a20361cbebb1a6e4fb0c83434d6f8f3d"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.765625Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.6"
+   text-time="2006-01-20T04:59:43.328125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="82d88cc7448cb4334116060ceb8ed704"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.781250Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.7"
+   text-time="2006-01-20T04:59:43.343750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="084ed11164f99b43d29c6fffd50822ef"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.781250Z"/>
+<entry
+   committed-rev="1"
+   name="GR_DAN1"
+   text-time="2006-01-20T04:59:43.359375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="f0e30665b8a70f6411cbd70648356865"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.796875Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.8"
+   text-time="2006-01-20T04:59:43.343750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="fd18901a154f9da41690a1e199ba76b7"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.796875Z"/>
+<entry
+   committed-rev="1"
+   name="PARs.9"
+   text-time="2006-01-20T04:59:43.359375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ec97957d0bd957d0c17cd953c995a89e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.812500Z"/>
+<entry
+   committed-rev="1"
+   name="IPARs.4"
+   text-time="2006-01-20T04:59:43.359375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="f37f704610ebe51587d3e90f661b2859"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.812500Z"/>
+<entry
+   committed-rev="1"
+   name="IPARs.5"
+   text-time="2006-01-20T04:59:43.375000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="388485519ee3bc3f89e3ab7207100ded"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.843750Z"/>
+<entry
+   committed-rev="1"
+   name="IPARs.6"
+   text-time="2006-01-20T04:59:43.390625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="1b4d925647bd5258ac94d2ceb9c9b4ae"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.859375Z"/>
+<entry
+   committed-rev="1"
+   name="IPARs.7"
+   text-time="2006-01-20T04:59:43.390625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="8e05209673d442f7642087d2db897128"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.875000Z"/>
+<entry
+   committed-rev="1"
+   name="IPARs.8"
+   text-time="2006-01-20T04:59:43.406250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="923e4957d2cd76de46e66ed38a527c82"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.906250Z"/>
+<entry
+   committed-rev="1"
+   name="IPARs.9"
+   text-time="2006-01-20T04:59:43.421875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="e978470fddfde7e0561da6cfb00cb4b7"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.921875Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6s.10"
+   text-time="2006-01-20T04:59:43.421875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="1528ca73a4da581800f72f2e9e3be113"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.921875Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6s.11"
+   text-time="2006-01-20T04:59:43.437500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="35fec8c5e53555869aa9f13befab876a"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.953125Z"/>
+<entry
+   committed-rev="1"
+   name="iPARs.10"
+   text-time="2006-01-20T04:59:43.421875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="5164a4b2db1975eea9b1b057ebb2e765"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.953125Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6s.12"
+   text-time="2006-01-20T04:59:43.453125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="7e74c8a15c1ef50ba155a1c068f35a48"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.968750Z"/>
+<entry
+   committed-rev="1"
+   name="iPARs.11"
+   text-time="2006-01-20T04:59:43.437500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="13e99192f6e80334bc44b1afdbb0ffd7"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.968750Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6s.13"
+   text-time="2006-01-20T04:59:43.468750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="1dc8c548f078c182f7b5bfc63f6956d8"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.984375Z"/>
+<entry
+   committed-rev="1"
+   name="iPARs.12"
+   text-time="2006-01-20T04:59:43.453125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="554c212c793397d0761590711ac19482"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.984375Z"/>
+<entry
+   committed-rev="1"
+   name="iPARs.13"
+   text-time="2006-01-20T04:59:43.468750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="cafb7670561bd9d2ce3da7f104ff258c"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:41.984375Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.10"
+   text-time="2006-01-20T04:59:43.484375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="08a70f977e2436a05ac3bfe406235bf8"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.000000Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.11"
+   text-time="2006-01-20T04:59:43.484375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="a6526cd4e3becfae62c0caca880539dd"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.031250Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.12"
+   text-time="2006-01-20T04:59:43.500000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.031250Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6.13"
+   text-time="2006-01-20T04:59:43.500000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.031250Z"/>
+<entry
+   committed-rev="1"
+   name="GD_DAN1"
+   text-time="2006-01-20T04:59:43.531250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="9effeecb21e33fc37e21a76fb1a52c76"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.046875Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.10"
+   text-time="2006-01-20T04:59:43.531250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="af28abce8dc63ca82ad832593194fd76"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.062500Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.11"
+   text-time="2006-01-20T04:59:43.562500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="9d665b796e15b1e73a84dbf17f0e6785"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.093750Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.12"
+   text-time="2006-01-20T04:59:43.578125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="c02cbab373c0bfb19ccaf59694fde4d4"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.093750Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.13"
+   text-time="2006-01-20T04:59:43.593750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="0d881a6eada4c9ab9323f8c6369535a2"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.109375Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6s.6"
+   text-time="2006-01-20T04:59:43.593750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="a8857257a546bf2d18805d3d46406add"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.125000Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6s.7"
+   text-time="2006-01-20T04:59:43.625000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="fd98fb99b5af974a43de95eaa4380941"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.140625Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6s.8"
+   text-time="2006-01-20T04:59:43.640625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="5955d0e37ec3e2d1285409c37a523066"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.140625Z"/>
+<entry
+   committed-rev="1"
+   name="NAF6s.9"
+   text-time="2006-01-20T04:59:43.640625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="837356ea8f64db760faed1b7ab051dc4"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.140625Z"/>
+<entry
+   committed-rev="1"
+   name="Unitb2.pas"
+   text-time="2006-01-20T04:59:43.640625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="86fea4b0b7f9e2882ea1c6df181b3085"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.156250Z"/>
+<entry
+   committed-rev="1"
+   name="TABLE"
+   text-time="2006-01-20T04:59:43.671875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="e138b6e9046ba89d397390b37dd89be1"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.187500Z"/>
+<entry
+   committed-rev="1"
+   name="Unitb4.pas"
+   text-time="2006-01-20T04:59:43.656250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="68867d2bb42ebf5d1adb6b8e2a994741"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.187500Z"/>
+<entry
+   committed-rev="1"
+   name="ChekSub.dfm"
+   text-time="2006-01-20T04:59:43.687500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="49d6456fcbbaf017b9753fc4d31340e0"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.203125Z"/>
+<entry
+   committed-rev="1"
+   name="Unitb6.pas"
+   text-time="2006-01-20T04:59:43.671875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="7e1fc71edfd88286adc752cada8bd8ca"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.203125Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.3"
+   text-time="2006-01-20T04:59:43.687500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.218750Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.4"
+   text-time="2006-01-20T04:59:43.703125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="6f6f3db27a4013ed7f57bf0a06117865"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.218750Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.5"
+   text-time="2006-01-20T04:59:43.703125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="cdae49f62ef89373824cf4fde81e9132"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.234375Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.6"
+   text-time="2006-01-20T04:59:43.734375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="691fe103d96d3cfc405f1f6b8438f03b"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.265625Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.3"
+   text-time="2006-01-20T04:59:43.703125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.250000Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.7"
+   text-time="2006-01-20T04:59:43.750000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="2e9d8f0863a5ddad30627be45761f266"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.265625Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.4"
+   text-time="2006-01-20T04:59:43.734375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.265625Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.8"
+   text-time="2006-01-20T04:59:43.765625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="69b098083e0fc43aafee2b6fb91c60c0"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.296875Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.5"
+   text-time="2006-01-20T04:59:43.750000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.296875Z"/>
+<entry
+   committed-rev="1"
+   name="IPAR.9"
+   text-time="2006-01-20T04:59:43.781250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="5c2ccb2e4f8cee54d2e63edd110bbe09"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.312500Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.6"
+   text-time="2006-01-20T04:59:43.765625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d1aff4cc61d38a130239b07dc23745b6"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.312500Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.7"
+   text-time="2006-01-20T04:59:43.781250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="5bc7f390770f5397f7f5f7a6c2aa4eea"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.328125Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.8"
+   text-time="2006-01-20T04:59:43.796875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="21a8d52b0ded3913e1249bfd1c8b3966"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.359375Z"/>
+<entry
+   committed-rev="1"
+   name="AROM.9"
+   text-time="2006-01-20T04:59:43.796875Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="4358b38ab6f6fbff3904e0d4de4a72c9"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.359375Z"/>
+<entry
+   committed-rev="1"
+   name="Unitb3.dfm"
+   text-time="2006-01-20T04:59:43.828125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="601e46e6827f18baabdb85ec8ec88275"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.375000Z"/>
+<entry
+   committed-rev="1"
+   name="Unitb5.dfm"
+   text-time="2006-01-20T04:59:43.875000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="227d3d1f489e6fad0fdb16b9d989a7da"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.390625Z"/>
+<entry
+   committed-rev="1"
+   name="Basres1.pas"
+   text-time="2006-01-20T04:59:43.875000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="bcaa530d6ed032fbc52e7684802c8383"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.390625Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.3"
+   text-time="2006-01-20T04:59:43.875000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="5b388ed178f7a626319173051cf3c4a4"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.406250Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.4"
+   text-time="2006-01-20T04:59:43.890625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="60f29d4dff3b67abf6f7c5c25772f056"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.406250Z"/>
+<entry
+   committed-rev="1"
+   name="AROMs.6"
+   text-time="2006-01-20T04:59:43.906250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="a207e00dcdd3276d8c590ae06cc72319"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.437500Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.5"
+   text-time="2006-01-20T04:59:43.890625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="1bd95aa090f3a31b17c867ff8d146611"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.421875Z"/>
+<entry
+   committed-rev="1"
+   name="AROMs.7"
+   text-time="2006-01-20T04:59:43.937500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="8c7ec7a48ffe30e3d44d7de7c1d684c9"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.453125Z"/>
+<entry
+   committed-rev="1"
+   name="BASRES5.PAS"
+   text-time="2006-01-20T04:59:43.937500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="94dbe50d0a934c0cec35b1d4a0b59f74"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.453125Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.6"
+   text-time="2006-01-20T04:59:43.906250Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="c09fda8067365d2c310ec6993883d54c"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.437500Z"/>
+<entry
+   committed-rev="1"
+   name="AROMs.8"
+   text-time="2006-01-20T04:59:43.953125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="0203fad3aa903249bde461f14a38d93d"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.500000Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.7"
+   text-time="2006-01-20T04:59:43.953125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="14281b90ec202b7c43e51ef6bd96abdd"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.484375Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.8"
+   text-time="2006-01-20T04:59:43.968750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="dc0d2480d1ced970734c36fa8b60553b"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.562500Z"/>
+<entry
+   committed-rev="1"
+   name="NLO"
+   text-time="2006-01-20T04:59:43.968750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="857bdc3278ff9fb3f14ba00a283cdea3"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.640625Z"/>
+<entry
+   committed-rev="1"
+   name="AROMs.9"
+   text-time="2006-01-20T04:59:43.984375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="077c2b26d952f7a2a7db68277c5d1971"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.640625Z"/>
+<entry
+   committed-rev="1"
+   name="PAR.9"
+   text-time="2006-01-20T04:59:43.984375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="318ac4d5221508d4cf07c8c736d9f3a4"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.656250Z"/>
+<entry
+   committed-rev="1"
+   name="GR_DAN"
+   text-time="2006-01-20T04:59:43.984375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="61c630fc9e84c2038a7d9b80b7c4f201"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.671875Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.3"
+   text-time="2006-01-20T04:59:44.000000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.671875Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.4"
+   text-time="2006-01-20T04:59:44.000000Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.671875Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5S.10"
+   text-time="2006-01-20T04:59:44.015625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="1528ca73a4da581800f72f2e9e3be113"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.687500Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.5"
+   text-time="2006-01-20T04:59:44.015625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="ca2fd4dd3fc4defa7e994d31acf7eb03"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.687500Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5S.11"
+   text-time="2006-01-20T04:59:44.015625Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="35fec8c5e53555869aa9f13befab876a"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.703125Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.6"
+   text-time="2006-01-20T04:59:44.062500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="f07f0d10281408e1735c81536935749e"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.718750Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5S.12"
+   text-time="2006-01-20T04:59:44.062500Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="7e74c8a15c1ef50ba155a1c068f35a48"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.734375Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.7"
+   text-time="2006-01-20T04:59:44.078125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="07f031e4d7ac14162c7dbb7f3a18f249"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.734375Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5S.13"
+   text-time="2006-01-20T04:59:44.078125Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="1dc8c548f078c182f7b5bfc63f6956d8"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.750000Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.8"
+   text-time="2006-01-20T04:59:44.093750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="02ee72b5ceed1811d9fde437917425a6"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.750000Z"/>
+<entry
+   committed-rev="1"
+   name="NAF5.9"
+   text-time="2006-01-20T04:59:44.093750Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="50dc5a9ceeb8be39dea4f2296446c87a"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.765625Z"/>
+<entry
+   committed-rev="1"
+   name="basa_tv.pas"
+   text-time="2006-01-20T04:59:44.234375Z"
+   committed-date="2005-11-16T07:24:57.187500Z"
+   checksum="89f96682341954c396e9b40a45358ea8"
+   last-author="sergey"
+   kind="file"
+   prop-time="2006-01-20T04:59:42.765625Z"/>
+</wc-entries>
