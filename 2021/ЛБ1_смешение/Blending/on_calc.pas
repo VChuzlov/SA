@@ -1,4 +1,4 @@
-﻿uses UConst, UGeneticAlgorythm;
+﻿uses UConst;
 
 
 function calculate_octane_num(fractions:array of real; 
