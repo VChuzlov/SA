@@ -22,33 +22,33 @@ begin
 end;
 
 
-function get_octane_number(fractions: array of real;
+function get_octane_number(c: array of real;
     octane_numbers: array of real;
     bi: array of real): real;
 begin
   result := 0.0;
   
-  foreach var i in fractions.Indices do
-    result += fractions[i] * octane_numbers[i];
+  foreach var i in c.Indices do
+    result += octane_numbers[i] * c[i];
   
-  foreach var i in fractions.Indices do
-    foreach var j in fractions.Indices do
-      if i <> j then
-        result += bi[i] * bi[j] * fractions[i] * fractions[j]
+  foreach var i in c.Indices do
+    for var j := i + 1 to c.High do
+      result += bi[i] * bi[j] * c[i] * c[j]
 end;
 
 
 begin
   var data := read_txt('data.txt');
-  var ratio := arr(0.1, 0.1, 0.1, 0.1, 0.1, 0.5);
+  var ratio := Arr(0.1, 0.1, 0.1, 0.1, 0.2, 0.4);
   var fractions := mix_flows(ratio, data);
   var ron := get_octane_number(fractions, UConst.RON, UConst.Bi);
   
-  var flow := ArrFill(data.Length, 0.0);
+  var flow := ArrFill(fractions.Length, 0.0);
   foreach var j in ratio.Indices do
   begin
     foreach var i in data.Indices do
       flow[i] := data[i][j];
-    get_octane_number(flow, UConst.RON, UConst.Bi).Println
+    
+    println($'Октанове число потока {j + 1} = {get_octane_number(flow, UConst.RON, UConst.Bi):f3}')
   end;
 end.
