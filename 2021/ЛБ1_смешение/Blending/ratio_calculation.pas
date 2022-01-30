@@ -1,4 +1,4 @@
-﻿uses UConst, UGeneticAlgorithm;
+﻿uses UConst, UGeneticAlgorythm;
 
 
 function read_txt(filename: string): array of array of real;
@@ -57,7 +57,7 @@ begin
   var ron := calculate_octane_number(fractions);
  
   result := (actual_values[0] - ron) ** 2 
-            + (actual_values[1] - fractions[57]) ** 2;
+            + (actual_values[1] - fractions[56]) ** 2;
 end;
 
 
@@ -66,7 +66,7 @@ begin
   
   var bounds := ||0.1, 0.9|, |0.1, 0.9|, |0.1, 0.9|,
                  |0.1, 0.9|, |0.1, 0.9|, |0.1, 0.9||;
-  var res := genetic_algorithm(bounds, objective_function, |92.0, 0.01|);
+  var res := genetic_algorithm(bounds, objective_function, |92, 0.01|);
   
   var norm_ratio: array of array of real;
   SetLength(norm_ratio, res.Length);
