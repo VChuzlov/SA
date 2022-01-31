@@ -1,5 +1,6 @@
 ﻿uses UConst, UGeneticAlgorithm;
 
+
 function read_txt(filename: string): array of array of real;
 begin
   foreach var (i, line) in ReadLines(filename).Numerate(0) do
@@ -36,7 +37,7 @@ begin
 end;
 
 
-function normalize(x:array of real): array of real;
+function normalize(x: array of real): array of real;
 begin
   result := ArrFill(x.Length, 0.0);
   var s := x.Sum;
@@ -53,21 +54,21 @@ begin
   var flow := mix_flows(normalize(ratio), data);
   var ron := get_octane_number(flow, UConst.RON, UConst.Bi);
   
-  result := (ron - act_values[0]) ** 2 
-              + (flow[56] - act_values[1]) ** 2
+  result := (ron - act_values[0]) ** 2 + (flow[56] - act_values[1]) ** 2
 end;
 
 
 begin
   var bounds := ||0.0001, 0.9|, |0.0001, 0.9|, |0.0001, 0.9|,
                  |0.0001, 0.9|, |0.0001, 0.9|, |0.0001, 0.9||;
-  var res := genetic_algorythm(bounds, obj_func, |92.2, 0.01|);
+  var results := genetic_algorithm(bounds, obj_func, |92.2, 0.01|);
   
   var data := read_txt('data.txt');
   var flow := ArrFill(data.Length, 0.0);
-  foreach var r in res do
+  foreach var r in results do
   begin
     flow := mix_flows(normalize(r[:^1]), data);
-    println(get_octane_number(flow, RON, Bi), flow[56] * 100);
+    println($'ОЧИ = {get_octane_number(flow, UConst.RON, Uconst.Bi):f}, содержание бензола = {flow[56] * 100:f}, % об.')
   end;
+    
 end.

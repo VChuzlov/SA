@@ -26,7 +26,7 @@ function mutate(selected_pop: array of array of real; limits: array of real;
 function crossover(mutated: array of array of real; 
                    popsize: integer): array of array of real;                
 
-function genetic_algorythm(
+function genetic_algorithm(
   bounds: array of array of real; 
   fun: function(genes, act_values: array of real): real; 
   actual_values: array of real;
@@ -158,7 +158,7 @@ begin
 end;
 
 
-function genetic_algorythm(
+function genetic_algorithm(
   bounds: array of array of real; 
   fun: function(genes, act_values: array of real): real; 
   actual_values: array of real; popsize: integer; selection_size: integer; 
