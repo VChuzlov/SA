@@ -51,4 +51,6 @@ begin
     
     println($'Октанове число потока {j + 1} = {get_octane_number(flow, UConst.RON, UConst.Bi):f3}')
   end;
+  println;
+  println($'Октановое число смеси = {ron:f3}')
 end.
