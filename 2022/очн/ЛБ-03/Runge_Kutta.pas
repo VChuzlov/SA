@@ -3,10 +3,11 @@
 
 interface
 
+
 function rk_sum(arr1, arr2: array of real; coef: real): array of real;
 
-function rk(func: function(time: real; c, k: array of real): array of real;
-  c, k: array of real; start, stop: real; 
+function rk(func: function(time: real; c, k: array of real): array of real; 
+  c, k: array of real; start, stop: real;
   h: real := 0.01): array of array of real;
 
 
@@ -21,11 +22,11 @@ begin
 end;
 
 
-function rk(func: function(time: real; c, k: array of real): array of real;
-  c, k: array of real; start, stop: real; 
+function rk(func: function(time: real; c, k: array of real): array of real; 
+  c, k: array of real; start, stop: real;
   h: real): array of array of real;
-
-begin
+  
+ begin 
   var time := start;
   var c_ := copy(c);
   var k1, k2, k3, k4: array of real;
@@ -50,7 +51,8 @@ begin
     
     time += h
   end;
-end;
+  
+ end;
 
 
 end.

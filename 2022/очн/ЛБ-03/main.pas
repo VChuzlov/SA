@@ -18,7 +18,7 @@ begin
   foreach var i in range(20, res.High, 10) do
     res1d := res1d + res[i][1:];
   
-  foreach var i in res1d.Indices do
+  foreach var i in act_val.Indices do
     result += (res1d[i] - act_val[i]) ** 2
 end;
 
@@ -28,7 +28,7 @@ begin
   foreach var (i, val) in ReadLines('act_val.txt').Numerate do
   begin
     SetLength(act_val, i);
-    act_val[i-1] := val.ToReal
+    act_val[i-1] := val.ToReal;
   end;
   
   var k := genetic_algorithm(||1e-3, 5.0|, |1e-3, 5.0||, obj_func, act_val)[0];
