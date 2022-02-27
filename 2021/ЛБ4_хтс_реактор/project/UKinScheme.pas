@@ -178,9 +178,9 @@ begin
   
   var mass_fractions := convert_molar_to_mass_fractions(c[:^1], UConst.MR);
   var flow_density := get_flow_density(mass_fractions, 
-      get_gas_densities(c[^1], 0.105, UConst.MR));
+    get_gas_densities(c[^1], 0.105, UConst.MR));
   var heat_capacity := get_heat_capacity(mass_fractions, c[^1], 
-                                         UConst.HEATCAPACITYCOEFFS);
+    UConst.HEATCAPACITYCOEFFS);
   result[25] := 0.0;
   for var i := 0 to r.High do
     result[25] += -UConst.REACTION_ENTHALPIES[i] * r[i] / (flow_density 
