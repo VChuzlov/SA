@@ -1,0 +1,208 @@
+unit basres2;
+
+interface
+uses basa, unit5;
+ var
+      re:text;
+      KirSir,KirKat,KirKatK,KirBp,KirPent:array[1..69] of real;
+      S1,S2,S3,S4,S5,SS1,SS2,SS3,SS4,SS5:real;
+      i:integer;
+      t:integer;
+      clavisha:char;
+{          Puti,Nazvanie:string;}
+
+
+   procedure rezultkir1(Nazvanie:string);
+//   procedure rezultkir2(Nazvanie:string);
+//   procedure orezultkir;
+
+   IMPLEMENTATION
+
+procedure rezultkir1(Nazvanie:string);
+        begin
+              assignfile(re,Putb+'\'+DataOt+'.sk');
+              try
+              rewrite(re);
+
+{ S1:=0;S2:=0;//S3:=0;S4:=0;S5:=0;
+ for i:=1 to 68 do
+    begin
+         S1:=S1+KirSir[i];
+         S2:=S2+KirKat[i];
+         S3:=S3+KirBp[i];
+         S4:=S4+KirKatK[i];
+         S5:=S5+KirPent[i];
+    end;       }
+
+
+{ for i:=1 to 68 do
+    begin
+         KirSir[i]:=(KirSir[i]*100)/S1;
+         KirKat[i]:=(KirKat[i]*100)/S2;
+         KirBp[i]:=(KirBp[i]*100)/S3;
+         KirKatK[i]:=(KirKatK[i]*100)/S4;
+         KirPent[i]:=(KirPent[i]*100)/S5;
+    end;                   }
+
+
+{ SS1:=0;SS2:=0;//SS3:=0;SS4:=0;SS5:=0;
+ for i:=1 to 69 do
+    begin
+         SS1:=SS1+KirSir[i];
+         SS2:=SS2+KirKat[i];
+         SS3:=SS3+KirBp[i];
+         SS4:=SS4+KirKatK[i];
+         SS5:=SS5+KirPent[i];
+    end;                       }
+
+              writeln(re,' 1   ‎עאם        ',KirSir[1]:6:3);
+              writeln(re,' 2   ןpמןאם      ',KirSir[2]:6:3);
+              writeln(re,' 3   ט-בףעאם     ',KirSir[3]:6:3);
+              writeln(re,' 4   ם-בףעאם     ',KirSir[4]:6:3);
+              writeln(re,' 5   ט-ןוםעאם    ',KirSir[5]:6:3);
+              writeln(re,' 6   ם-ןוםעאם    ',KirSir[6]:6:3);
+              writeln(re,' 7   2,2-הלב     ',KirSir[7]:6:3);
+              writeln(re,' 8   צ-ןוםעאם    ',KirSir[8]:6:3);
+              writeln(re,' 9   2,3-הלב     ',KirSir[9]:6:3);
+              writeln(re,'10   2-לן        ',KirSir[10]:6:3);
+              writeln(re,'11   3-לן        ',KirSir[11]:6:3);
+              writeln(re,'12   ם-דוךסאם    ',KirSir[12]:6:3);
+              writeln(re,'13   לצן         ',KirSir[13]:6:3);
+              writeln(re,'14   2,2-הלן     ',KirSir[14]:6:3);
+              writeln(re,'15   2,4-הלן     ',KirSir[15]:6:3);
+              writeln(re,'16   בוםחמכ      ',KirSir[16]:6:3);
+              writeln(re,'17   2,2,3-עלב   ',KirSir[17]:6:3);
+              writeln(re,'18   3,3-הלן     ',KirSir[18]:6:3);
+              writeln(re,'19   צדוךסאם     ',KirSir[19]:6:3);
+              writeln(re,'20   2-לד        ',KirSir[20]:6:3);
+              writeln(re,'21   2,3-הלן     ',KirSir[21]:6:3);
+              writeln(re,'22   3-לד        ',KirSir[22]:6:3);
+              writeln(re,'23   1,3-הלצן(צ) ',KirSir[23]:6:3);
+              writeln(re,'24   1,3-הלצן(ע) ',KirSir[24]:6:3);
+              writeln(re,'25   1,2-הלצן(ע) ',KirSir[25]:6:3);
+              writeln(re,'26   ם-דוןעאם    ',KirSir[26]:6:3);
+              writeln(re,'27   1,2-הלצן    ',KirSir[27]:6:3);
+              writeln(re,'28   2,2-הלד     ',KirSir[28]:6:3);
+              writeln(re,'29   1,1,3-עלצן  ',KirSir[29]:6:3);
+              writeln(re,'30   לצד         ',KirSir[30]:6:3);
+              writeln(re,'31   2,5-הלד     ',KirSir[31]:6:3);
+              writeln(re,'32   2,4-הלד     ',KirSir[32]:6:3);
+              writeln(re,'33   ‎צן         ',KirSir[33]:6:3);
+              writeln(re,'34   2,2,3-עלן   ',KirSir[34]:6:3);
+              writeln(re,'35   1,2,4-עלצן  ',KirSir[35]:6:3);
+              writeln(re,'36   3,3-הלד     ',KirSir[36]:6:3);
+              writeln(re,'37   עמכףמכ      ',KirSir[37]:6:3);
+              writeln(re,'38   1,2,3-עלצן  ',KirSir[38]:6:3);
+              writeln(re,'39   2,3,4-עלן   ',KirSir[39]:6:3);
+              writeln(re,'40   2,3-הלד     ',KirSir[40]:6:3);
+              writeln(re,'41   2-ל,3-‎ן    ',KirSir[41]:6:3);
+              writeln(re,'42   1,1,2-עלצן  ',KirSir[42]:6:3);
+              writeln(re,'43   2-לדן       ',KirSir[43]:6:3);
+              writeln(re,'44   4-לדן       ',KirSir[44]:6:3);
+              writeln(re,'45   3,4-הלד     ',KirSir[45]:6:3);
+              writeln(re,'46   3-לדן       ',KirSir[46]:6:3);
+              writeln(re,'47   םאפע.המ ס8  ',KirSir[47]:6:3);
+              writeln(re,'48   ם-מךעאם     ',KirSir[48]:6:3);
+              writeln(re,'49   1,2-הלצד(ע) ',KirSir[49]:6:3);
+              writeln(re,'50   1,3-הלצד(ע) ',KirSir[50]:6:3);
+              writeln(re,'51   2,3,5-עלד   ',KirSir[51]:6:3);
+              writeln(re,'52   2,2-הלדן    ',KirSir[52]:6:3);
+              writeln(re,'53   2,4-הלדן    ',KirSir[53]:6:3);
+              writeln(re,'54   2,2,3-עלד   ',KirSir[54]:6:3);
+              writeln(re,'55   2-ּ,4-‎ד    ',KirSir[55]:6:3);
+              writeln(re,'56   2,6-הלדן    ',KirSir[56]:6:3);
+              writeln(re,'57   2,5-הלדן    ',KirSir[57]:6:3);
+              writeln(re,'58   3,3-הלדן    ',KirSir[58]:6:3);
+              writeln(re,'59   ‎צד+‎בוםח   ',KirSir[59]:6:3);
+              writeln(re,'60   עלצן        ',KirSir[60]:6:3);
+              writeln(re,'61   2,3,4-עלד   ',KirSir[61]:6:3);
+              writeln(re,'62   ן-ךסטכמכ    ',KirSir[62]:6:3);
+              writeln(re,'63   ל-ךסטכמכ    ',KirSir[63]:6:3);
+              writeln(re,'64   ט-ס9        ',KirSir[64]:6:3);
+              writeln(re,'65   מ-ךסטכמכ    ',KirSir[65]:6:3);
+              writeln(re,'66   םאפע. המ ס9 ',KirSir[66]:6:3);
+              writeln(re,'67   ם-םמםאם     ',KirSir[67]:6:3);
+              writeln(re,'68   ס9+         ',KirSir[68]:6:3);
+              writeln(re,'69   ג ע.ק. ְp   ',KirSir[69]:6:3);
+              writeln(re,' 1   ‎עאם        ',KirKatK[1]:6:3);
+              writeln(re,' 2   ןpמןאם      ',KirKatK[2]:6:3);
+              writeln(re,' 3   ט-בףעאם     ',KirKatK[3]:6:3);
+              writeln(re,' 4   ם-בףעאם     ',KirKatK[4]:6:3);
+              writeln(re,' 5   ט-ןוםעאם    ',KirKatK[5]:6:3);
+              writeln(re,' 6   ם-ןוםעאם    ',KirKatK[6]:6:3);
+              writeln(re,' 7   2,2-הלב     ',KirKatK[7]:6:3);
+              writeln(re,' 8   צ-ןוםעאם    ',KirKatK[8]:6:3);
+              writeln(re,' 9   2,3-הלב     ',KirKatK[9]:6:3);
+              writeln(re,'10   2-לן        ',KirKatK[10]:6:3);
+              writeln(re,'11   3-לן        ',KirKatK[11]:6:3);
+              writeln(re,'12   ם-דוךסאם    ',KirKatK[12]:6:3);
+              writeln(re,'13   לצן         ',KirKatK[13]:6:3);
+              writeln(re,'14   2,2-הלן     ',KirKatK[14]:6:3);
+              writeln(re,'15   2,4-הלן     ',KirKatK[15]:6:3);
+              writeln(re,'16   בוםחמכ      ',KirKatK[16]:6:3);
+              writeln(re,'17   2,2,3-עלב   ',KirKatK[17]:6:3);
+              writeln(re,'18   3,3-הלן     ',KirKatK[18]:6:3);
+              writeln(re,'19   צדוךסאם     ',KirKatK[19]:6:3);
+              writeln(re,'20   2-לד        ',KirKatK[20]:6:3);
+              writeln(re,'21   2,3-הלן     ',KirKatK[21]:6:3);
+              writeln(re,'22   3-לד        ',KirKatK[22]:6:3);
+              writeln(re,'23   1,3-הלצן(צ) ',KirKatK[23]:6:3);
+              writeln(re,'24   1,3-הלצן(ע) ',KirKatK[24]:6:3);
+              writeln(re,'25   1,2-הלצן(ע) ',KirKatK[25]:6:3);
+              writeln(re,'26   ם-דוןעאם    ',KirKatK[26]:6:3);
+              writeln(re,'27   1,2-הלצן    ',KirKatK[27]:6:3);
+              writeln(re,'28   2,2-הלד     ',KirKatK[28]:6:3);
+              writeln(re,'29   1,1,3-עלצן  ',KirKatK[29]:6:3);
+              writeln(re,'30   לצד         ',KirKatK[30]:6:3);
+              writeln(re,'31   2,5-הלד     ',KirKatK[31]:6:3);
+              writeln(re,'32   2,4-הלד     ',KirKatK[32]:6:3);
+              writeln(re,'33   ‎צן         ',KirKatK[33]:6:3);
+              writeln(re,'34   2,2,3-עלן   ',KirKatK[34]:6:3);
+              writeln(re,'35   1,2,4-עלצן  ',KirKatK[35]:6:3);
+              writeln(re,'36   3,3-הלד     ',KirKatK[36]:6:3);
+              writeln(re,'37   עמכףמכ      ',KirKatK[37]:6:3);
+              writeln(re,'38   1,2,3-עלצן  ',KirKatK[38]:6:3);
+              writeln(re,'39   2,3,4-עלן   ',KirKatK[39]:6:3);
+              writeln(re,'40   2,3-הלד     ',KirKatK[40]:6:3);
+              writeln(re,'41   2-ל,3-‎ן    ',KirKatK[41]:6:3);
+              writeln(re,'42   1,1,2-עלצן  ',KirKatK[42]:6:3);
+              writeln(re,'43   2-לדן       ',KirKatK[43]:6:3);
+              writeln(re,'44   4-לדן       ',KirKatK[44]:6:3);
+              writeln(re,'45   3,4-הלד     ',KirKatK[45]:6:3);
+              writeln(re,'46   3-לדן       ',KirKatK[46]:6:3);
+              writeln(re,'47   םאפע.המ ס8  ',KirKatK[47]:6:3);
+              writeln(re,'48   ם-מךעאם     ',KirKatK[48]:6:3);
+              writeln(re,'49   1,2-הלצד(ע) ',KirKatK[49]:6:3);
+              writeln(re,'50   1,3-הלצד(ע) ',KirKatK[50]:6:3);
+              writeln(re,'51   2,3,5-עלד   ',KirKatK[51]:6:3);
+              writeln(re,'52   2,2-הלדן    ',KirKatK[52]:6:3);
+              writeln(re,'53   2,4-הלדן    ',KirKatK[53]:6:3);
+              writeln(re,'54   2,2,3-עלד   ',KirKatK[54]:6:3);
+              writeln(re,'55   2-ּ,4-‎ד    ',KirKatK[55]:6:3);
+              writeln(re,'56   2,6-הלדן    ',KirKatK[56]:6:3);
+              writeln(re,'57   2,5-הלדן    ',KirKatK[57]:6:3);
+              writeln(re,'58   3,3-הלדן    ',KirKatK[58]:6:3);
+              writeln(re,'59   ‎צד+‎בוםח   ',KirKatK[59]:6:3);
+              writeln(re,'60   עלצן        ',KirKatK[60]:6:3);
+              writeln(re,'61   2,3,4-עלד   ',KirKatK[61]:6:3);
+              writeln(re,'62   ן-ךסטכמכ    ',KirKatK[62]:6:3);
+              writeln(re,'63   ל-ךסטכמכ    ',KirKatK[63]:6:3);
+              writeln(re,'64   ט-ס9        ',KirKatK[64]:6:3);
+              writeln(re,'65   מ-ךסטכמכ    ',KirKatK[65]:6:3);
+              writeln(re,'66   םאפע. המ ס9 ',KirKatK[66]:6:3);
+              writeln(re,'67   ם-םמםאם     ',KirKatK[67]:6:3);
+              writeln(re,'68   ס9+         ',KirKatK[68]:6:3);
+              writeln(re,'69   ג ע.ק. ְp   ',KirKatK[69]:6:3);
+              writeln(re,'                 ',StrToFl(BasaDan.F1.Text):3:0);
+              writeln(re,'                 ',StrToFl(BasaDan.F2.Text):3:0);
+              writeln(re,'                 ',StrToFl(BasaDan.F3.Text):3:0);
+              writeln(re,'                 ',StrToFl(BasaDan.F4.Text):3:0);
+              writeln(re,'                 ',StrToFl(BasaDan.F5.Text):3:0);
+              writeln(re,'                 ',Ps:4:3);
+              finally
+              closefile(re);
+              end;
+  end;
+
+end.
+ 
