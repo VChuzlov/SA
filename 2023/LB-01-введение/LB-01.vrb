@@ -1,0 +1,11 @@
+\frametitle{Задание}
+\footnotesize^^I
+\begin{enumerate}
+^^I\setcounter{enumi}{5}
+^^I
+^^I\item $y = \dfrac{\dfrac{x}{\sin \left(x\right) + 1}}{\dfrac{e^{x^2} + \ln \left(x\right)}{\sqrt{x^2 + 3.7 \cdot 10 ^{-5} \cdot x}}}$
+^^I
+^^I\item $y = \dfrac{4.9 \cdot 10^{-2} + \ln \left(\dfrac{x^2}{2}\right)}{\arctan \left(x^2 + 2 \cdot x\right)}$
+\end{enumerate}
+
+\vfill

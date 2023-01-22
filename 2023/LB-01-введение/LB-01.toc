@@ -1,0 +1,12 @@
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Язык программирования Python}{3}{0}{1}
+\beamer@sectionintoc {2}{Простейшая программа на Python}{6}{0}{2}
+\beamer@sectionintoc {3}{Имена идентификаторов}{7}{0}{3}
+\beamer@sectionintoc {4}{Динамическая типизация}{10}{0}{4}
+\beamer@sectionintoc {5}{Запись комментариев}{14}{0}{5}
+\beamer@sectionintoc {6}{Типы данных}{16}{0}{6}
+\beamer@sectionintoc {7}{Числовые типы}{18}{0}{7}
+\beamer@sectionintoc {8}{Арифметические операции с числами}{21}{0}{8}
+\beamer@sectionintoc {9}{Некоторые математические функции}{24}{0}{9}
+\beamer@sectionintoc {10}{Пример}{27}{0}{10}
+\beamer@sectionintoc {11}{Задание}{30}{0}{11}
