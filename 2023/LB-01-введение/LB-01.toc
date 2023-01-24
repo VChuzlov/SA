@@ -1,4 +1,4 @@
-\babel@toc {russian}{}
+\babel@toc {russian}{}\relax 
 \beamer@sectionintoc {1}{Язык программирования Python}{3}{0}{1}
 \beamer@sectionintoc {2}{Простейшая программа на Python}{6}{0}{2}
 \beamer@sectionintoc {3}{Имена идентификаторов}{7}{0}{3}
