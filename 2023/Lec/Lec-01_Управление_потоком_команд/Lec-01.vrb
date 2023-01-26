@@ -1,0 +1,16 @@
+\frametitle{Пример~2~-- Вычисление факториала числа n}
+\scriptsize
+С использованием цикла \mintinline{python}|for|:
+^^I
+\begin{minted}[linenos=true]{python}
+
+n = int(input('Введите положительное целое число: '))
+
+f = 1
+
+for i in range(1, n + 1):
+    f *= i
+
+print('n! =', f)
+\end{minted}
+\vfill
