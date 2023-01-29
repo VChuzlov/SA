@@ -1,0 +1,18 @@
+\frametitle{Задание~3}
+\large
+Вычислите давление насыщенных паров углеводородов $C_{6_{+}}$ (P) в сепараторе по формуле Аш-Ворта:
+\begin{equation*}
+^^I\mathrm{P = \exp \left(2.3 \cdot \left(2.68 \cdot \left(1 - \dfrac{f_2}{f_1}\right)-1\right)\right)}
+\end{equation*}
+\begin{equation*}
+\mathrm{
+^^If_1 = \left\{
+^^I\begin{aligned}
+^^I^^I& \sqrt{\left(68.74 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6, T \leqslant 11.4 \\
+^^I^^I& \sqrt{\left(124.7 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6, 11.4 < T \leqslant 37.8 \\
+^^I^^I& \sqrt{\left(134.7 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6,  37.8 < T
+^^I\end{aligned}
+^^I\right.}
+\end{equation*}
+T изменяется в интервале 10-40°С с шагом 2.5°С.
+\vfill

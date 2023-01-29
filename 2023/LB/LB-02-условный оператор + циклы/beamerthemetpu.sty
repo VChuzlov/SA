@@ -1,0 +1,33 @@
+\mode<presentation>
+
+% This is the main .sty file
+
+\RequirePackage{graphicx}
+\RequirePackage{tikz}	% most of the layout is done using tikz
+\RequirePackage[skins]{tcolorbox}
+
+% here are options to change between light/dark theme and russian/english logo
+
+\DeclareOptionBeamer{dark}{
+	\def \TPUtheme {dk}
+}
+\DeclareOptionBeamer{light}{
+	\def \TPUtheme {lt}
+}
+\DeclareOptionBeamer{rulogo}{
+	\def \TPUlogo {ru}
+}
+\DeclareOptionBeamer{enlogo}{
+	\def \TPUlogo {en}
+}
+
+\ExecuteOptionsBeamer{light, enlogo}
+\ProcessOptionsBeamer
+
+\useinnertheme[\TPUtheme,\TPUlogo]{tpu}
+\useoutertheme{tpu}
+\usecolortheme[\TPUtheme]{tpu}
+\usefonttheme{tpu}
+
+\mode
+<all>
