@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  30 JAN 2023 09:27
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  30 JAN 2023 10:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2590,10 +2590,18 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 \openout4 = `LB-02.vrb'.
 
  (./LB-02.vrb
-Overfull \hbox (7.7114pt too wide) detected at line 14
-[]
- []
-
+Missing character: There is no п ("43F) in font cmmi12!
+Missing character: There is no р ("440) in font cmmi12!
+Missing character: There is no и ("438) in font cmmi12!
+Missing character: There is no п ("43F) in font cmmi12!
+Missing character: There is no р ("440) in font cmmi12!
+Missing character: There is no и ("438) in font cmmi12!
+Missing character: There is no п ("43F) in font cmmi12!
+Missing character: There is no р ("440) in font cmmi12!
+Missing character: There is no и ("438) in font cmmi12!
+Missing character: There is no п ("43F) in font cmmi12!
+Missing character: There is no р ("440) in font cmmi12!
+Missing character: There is no и ("438) in font cmmi12!
 )
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
@@ -2669,10 +2677,10 @@ runsystem(del LB-02.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 37072 strings out of 475848
- 810854 string characters out of 5805114
+ 37068 strings out of 475848
+ 810699 string characters out of 5805114
  1200149 words of memory out of 5000000
- 57178 multiletter control sequences out of 15000+600000
+ 57174 multiletter control sequences out of 15000+600000
  480280 words of font info for 120 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,16n,122p,495b,984s stack positions out of 10000i,1000n,20000p,200000b,200000s
