@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  30 JAN 2023 10:34
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  30 JAN 2023 12:00
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -165,6 +165,10 @@ etics.code.tex)))
 (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count281
 )))
+
+Class beamer Warning: ``mathserif'' is obsolete. Use font theme ``serif'' with 
+option ``onlymath'' on input line 357.
+
 (c:/texlive/2022/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
@@ -507,20 +511,7 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(c:/texlive/2022/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
-Package: sansmathaccent 2020/01/31
-
-(c:/texlive/2022/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2022/07/04 v3.37 KOMA-Script package (file load hooks)
-
-(c:/texlive/2022/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
-Package: scrlfile-hook 2022/07/04 v3.37 KOMA-Script package (using LaTeX hooks)
-
-
-(c:/texlive/2022/texmf-dist/tex/latex/koma-script/scrlogo.sty
-Package: scrlogo 2022/07/04 v3.37 KOMA-Script package (logo)
-)))))
+)))
 (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
 (c:/texlive/2022/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
@@ -1336,22 +1327,18 @@ Package hyperref Info: Link coloring OFF on input line 122.
 \@outlinefile=\write7
 \openout7 = `LB-02.out'.
 
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 122.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 122.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Brygada1918(0)/m/n on input line 12
-2.
+(Font)                  OT1/cmr/m/n --> TU/Brygada1918(0)/m/n on input line 122
+.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/ALSSirius(0)/b/n on input line 122.
-
+(Font)                  OT1/cmr/bx/n --> TU/Brygada1918(0)/b/n on input line 12
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ALSSirius(0)/b/n on input line 122.
-
+(Font)                  OT1/cmr/bx/n --> TU/Brygada1918(0)/b/n on input line 12
+2.
 LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/ALSSirius(0)/m/n on input line 122.
@@ -1361,34 +1348,34 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 .
 LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/ALSSirius(0)/m/it on input line 122
-.
+(Font)                  OT1/cmr/m/it --> TU/Brygada1918(0)/m/it on input line 1
+22.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/ALSSirius(0)/m/it on input line 12
-2.
+(Font)                  OT1/cmr/bx/it --> TU/Brygada1918(0)/m/it on input line 
+122.
 LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/Consolas(0)/m/n on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/Consolas(0)/m/n on input line 122.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/ALSSirius(0)/m/n --> TU/ALSSirius(0)/b/n on input li
-ne 122.
+(Font)                  TU/Brygada1918(0)/m/n --> TU/Brygada1918(0)/b/n on inpu
+t line 122.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/ALSSirius(0)/m/it --> TU/ALSSirius(0)/b/it on input 
-line 122.
+(Font)                  TU/Brygada1918(0)/m/it --> TU/Brygada1918(0)/b/it on in
+put line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> TU/Brygada1918(0)/b/n on input line 12
+(Font)                  OT1/cmr/bx/n --> TU/Brygada1918(0)/b/n on input line 12
 2.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/ALSSirius(0)/b/n --> TU/ALSSirius(0)/b/n on input li
-ne 122.
+(Font)                  TU/Brygada1918(0)/b/n --> TU/Brygada1918(0)/b/n on inpu
+t line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  TU/ALSSirius(0)/m/n --> TU/ALSSirius(0)/b/n on input li
 ne 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/ALSSirius(0)/m/it --> TU/ALSSirius(0)/b/it on input 
-line 122.
+(Font)                  TU/Brygada1918(0)/m/it --> TU/Brygada1918(0)/b/it on in
+put line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  TU/Consolas(0)/m/n --> TU/Consolas(0)/b/n on input line
  122.
@@ -1452,23 +1439,23 @@ LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 122.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Brygada1918(0)/m/n on input line 12
-2.
+(Font)                  OT1/cmr/m/n --> TU/Brygada1918(0)/m/n on input line 122
+.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `bold' on input line 122.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> TU/Brygada1918(0)/m/n on input line 12
+(Font)                  OT1/cmr/bx/n --> TU/Brygada1918(0)/m/n on input line 12
 2.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/Brygada1918(0)/m/n --> TU/Brygada1918(0)/m/n on inpu
 t line 122.
 LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  TU/ALSSirius(0)/m/it --> TU/Brygada1918(0)/m/it on inpu
-t line 122.
+(Font)                  TU/Brygada1918(0)/m/it --> TU/Brygada1918(0)/m/it on in
+put line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/ALSSirius(0)/b/n --> TU/Brygada1918(0)/b/n on input 
-line 122.
+(Font)                  TU/Brygada1918(0)/b/n --> TU/Brygada1918(0)/b/n on inpu
+t line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  TU/ALSSirius(0)/m/n --> TU/ALSSirius(0)/m/n on input li
 ne 122.
@@ -1479,8 +1466,8 @@ LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/Brygada1918(0)/m/n --> TU/Brygada1918(0)/b/n on inpu
 t line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/ALSSirius(0)/b/it --> TU/Brygada1918(0)/b/it on inpu
-t line 122.
+(Font)                  TU/Brygada1918(0)/b/it --> TU/Brygada1918(0)/b/it on in
+put line 122.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  TU/ALSSirius(0)/b/n --> TU/ALSSirius(0)/b/n on input li
 ne 122.
@@ -1502,11 +1489,6 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 127
 (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-LaTeX Font Warning: Font shape `TU/ALSSirius(0)/m/it' undefined
-(Font)              using `TU/ALSSirius(0)/m/n' instead on input line 127.
-
-
 Overfull \hbox (68.29076pt too wide) in paragraph at lines 127--127
 [][][]  
  []
@@ -2589,20 +2571,7 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 ]
 \openout4 = `LB-02.vrb'.
 
- (./LB-02.vrb
-Missing character: There is no п ("43F) in font cmmi12!
-Missing character: There is no р ("440) in font cmmi12!
-Missing character: There is no и ("438) in font cmmi12!
-Missing character: There is no п ("43F) in font cmmi12!
-Missing character: There is no р ("440) in font cmmi12!
-Missing character: There is no и ("438) in font cmmi12!
-Missing character: There is no п ("43F) in font cmmi12!
-Missing character: There is no р ("440) in font cmmi12!
-Missing character: There is no и ("438) in font cmmi12!
-Missing character: There is no п ("43F) in font cmmi12!
-Missing character: There is no р ("440) in font cmmi12!
-Missing character: There is no и ("438) in font cmmi12!
-)
+ (./LB-02.vrb)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -2630,7 +2599,7 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  [40
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 981--981
+Underfull \hbox (badness 10000) in paragraph at lines 977--977
 
  []
 
@@ -2641,12 +2610,12 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 981--981
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 977--977
 [][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 981
+Overfull \vbox (5.0pt too high) detected at line 977
  []
 
 File: bgs/contacts.jpg Graphic file (type bmp)
@@ -2677,12 +2646,12 @@ runsystem(del LB-02.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 37068 strings out of 475848
- 810699 string characters out of 5805114
- 1200149 words of memory out of 5000000
- 57174 multiletter control sequences out of 15000+600000
- 480280 words of font info for 120 fonts, out of 8000000 for 9000
+ 36875 strings out of 475848
+ 805848 string characters out of 5805114
+ 1196853 words of memory out of 5000000
+ 56988 multiletter control sequences out of 15000+600000
+ 480328 words of font info for 126 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,16n,122p,495b,984s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,15n,104p,495b,984s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on LB-02.pdf (41 pages).

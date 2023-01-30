@@ -1,6 +1,6 @@
 % !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
 %!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
-\documentclass[aspectratio=169]{beamer}	% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+\documentclass[aspectratio=169, mathserif]{beamer}	% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
 
 % Style options:
 % light --- light theme (default)
@@ -910,39 +910,38 @@ y = 4.700000000000002, p = 14.538941383471727
 \large
 Необходимо вычислить f:
 \begin{equation*}
-\mathrm{
 f = \left\{ 
 \begin{aligned}
-	& x + \dfrac{x}{x - \dfrac{y}{25 - k}} \cdot \dfrac{\tan \left(k\right)}{\left(k + x\right)^2} + \dfrac{y^2}{\sqrt{k}} &\quad при -5 \leqslant x < 0; \quad 0 < x \leqslant 3 \\
-	& \dfrac{x^3}{y} + a \cdot x ^ {2 - y \cdot x} - \cos^2\left(x\right) + \dfrac{\sqrt[3]{x \cdot y}}{34 - a} &\quad при x = 0 \\
-	& \dfrac{1}{x} \cdot \ln \left(1 + 2 \cdot y\right) + \dfrac{c}{4 - \sqrt[6]{3 \cdot y + 5 \cdot x}} &\quad при 3 < x \leqslant 5 \\
-	& 0 &\quad при x > 5
+	& x + \dfrac{x}{x - \dfrac{y}{25 - k}} \cdot \dfrac{\tan \left(k\right)}{\left(k + x\right)^2} + \dfrac{y^2}{\sqrt{k}}, &\quad -5 \leqslant x < 0; \quad 0 < x \leqslant 3 \\
+	& \dfrac{x^3}{y} + a \cdot x ^ {2 - y \cdot x} - \cos^2\left(x\right) + \dfrac{\sqrt[3]{x \cdot y}}{34 - a}, &\quad x = 0 \\
+	& \dfrac{1}{x} \cdot \ln \left(1 + 2 \cdot y\right) + \dfrac{c}{4 - \sqrt[6]{3 \cdot y + 5 \cdot x}}, &\quad  3 < x \leqslant 5 \\
+	& 0, &\quad x > 5
 \end{aligned}	
-\right.}
+\right.
 \end{equation*}
 
-где \quad $\mathrm{a = 26; \quad c = 28.96; \quad y = 1.3; \quad k = 9.86; \quad x \in \left[-5; 6\right]; \quad h = 1}$.
+где \quad $a = 26; \quad c = 28.96; \quad y = 1.3; \quad k = 9.86; \quad x \in \left[-5; 6\right]; \quad h = 1$.
 \vfill
 \end{frame}
 
 
 \begin{frame}[fragile]{Задание~2}
 \large
-Вычислите константу скорости химической реакции k в интервале температур $\mathrm{T \in \left[700; 750\right]}$ (шаг изменения $\mathrm{h = 5 K}$):
+Вычислите константу скорости химической реакции k в интервале температур $T \in \left[700; 750\right]$ (шаг изменения $h = 5 K$):
 \begin{equation*}
-	\mathrm{k = k_0 \cdot e^{-E_a / RT}}
+	k = k_0 \cdot e^{-E_a / RT}
 \end{equation*}
 \begin{equation*}
-\mathrm{
 	E_a = \left\{
 	\begin{aligned}
-		& \mathrm{60, T \leqslant 720} \\
-		& \mathrm{59, 720 < T \leqslant 730} \\
-		& \mathrm{57, 730 < T \leqslant 750}
+		& 60, T \leqslant 720 \\
+		& 59, 720 < T \leqslant 730 \\
+		& 57, 730 < T \leqslant 750
 	\end{aligned}
-	\right.}
+	\right.
 \end{equation*}
-$\mathrm{k_0 = 100; \qquad R = 8.314}$.
+
+$k_0 = 100; \qquad R = 8.314$.
 \vfill
 \end{frame}
 
@@ -951,22 +950,19 @@ $\mathrm{k_0 = 100; \qquad R = 8.314}$.
 \large
 Вычислите давление насыщенных паров углеводородов $C_{6_{+}}$ (P) в сепараторе по формуле Аш-Ворта:
 \begin{equation*}
-	\mathrm{P = \exp \left(2.3 \cdot \left(2.68 \cdot \left(1 - \dfrac{f_2}{f_1}\right)-1\right)\right)}
+	P = \exp \left(2.3 \cdot \left(2.68 \cdot \left(1 - \dfrac{f_2}{f_1}\right)-1\right)\right)
 \end{equation*}
 \begin{equation*}
-\mathrm{
 	f_1 = \left\{
 	\begin{aligned}
-		& \mathrm{\sqrt{\left(68.74 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6, T \leqslant 11.4} \\
-		& \mathrm{\sqrt{\left(124.7 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6, 11.4 < T \leqslant 37.8} \\
-		& \mathrm{\sqrt{\left(134.7 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6,  37.8 < T}
+		& \sqrt{\left(68.74 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6, T \leqslant 11.4 \\
+		& \sqrt{\left(124.7 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6, 11.4 < T \leqslant 37.8 \\
+		& \sqrt{\left(134.7 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6,  37.8 < T
 	\end{aligned}
-	\right.}
+	\right.
 \end{equation*}
 \begin{equation*}
-\mathrm{
 	f_2 = \dfrac{1250}{\sqrt{\left(T+273.15\right)^2 + 1.08 \cdot 10^3} - 307.6} - 1
-}
 \end{equation*}
 T изменяется в интервале 10-40°С с шагом 2.5°С.
 \vfill
