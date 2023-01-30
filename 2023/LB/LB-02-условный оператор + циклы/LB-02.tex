@@ -363,7 +363,7 @@ true
 
 Напоминаем, что $1$~-- это \mintinline{python}|True|, таким образом, проверка в операторе всегда проходит. Для обработки ложного результата понадобится добавить часть \mintinline{python}|else|:
 
-\begin{minted}{python}
+\begin{minted}{pycon}
 >>> if not 1:
 ...     print('true')
 ... else:
@@ -843,7 +843,7 @@ else:
 \begin{frame}[fragile]{Пример~1}
 \scriptsize
 \textbf{Решение с помощью цикла} \mintinline{python}|while|
-\begin{minted}[linenos=true, fontsize=\fontsize{7pt}{8pt}]{pycon}
+\begin{minted}[fontsize=\fontsize{7pt}{8pt}]{pycon}
 >>> import math
 >>> start, stop, h = 2.5, 4.7, 0.2
 >>> x = 12.4
@@ -873,7 +873,7 @@ y = 4.500000000000002, p = 11.956205751844458
 \begin{frame}[fragile]{Пример~1}
 \scriptsize
 \textbf{Решение с помощью цикла} \mintinline{python}|for|
-\begin{minted}[linenos=true, fontsize=\fontsize{8pt}{8pt}]{pycon}
+\begin{minted}[fontsize=\fontsize{7pt}{8pt}]{pycon}
 >>> import math
 >>> start, stop, h = 2.5, 4.7, 0.2
 >>> x = 12.4
@@ -957,11 +957,16 @@ $\mathrm{k_0 = 100; \qquad R = 8.314}$.
 \mathrm{
 	f_1 = \left\{
 	\begin{aligned}
-		& \sqrt{\left(68.74 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6, T \leqslant 11.4 \\
-		& \sqrt{\left(124.7 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6, 11.4 < T \leqslant 37.8 \\
-		& \sqrt{\left(134.7 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6,  37.8 < T
+		& \mathrm{\sqrt{\left(68.74 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6, T \leqslant 11.4} \\
+		& \mathrm{\sqrt{\left(124.7 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6, 11.4 < T \leqslant 37.8} \\
+		& \mathrm{\sqrt{\left(134.7 + 273.15\right)^2 + 1.08 \cdot 10^3} - 308.6,  37.8 < T}
 	\end{aligned}
 	\right.}
+\end{equation*}
+\begin{equation*}
+\mathrm{
+	f_2 = \dfrac{1250}{\sqrt{\left(T+273.15\right)^2 + 1.08 \cdot 10^3} - 307.6} - 1
+}
 \end{equation*}
 T изменяется в интервале 10-40°С с шагом 2.5°С.
 \vfill
