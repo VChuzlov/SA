@@ -1,0 +1,24 @@
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Строки в Python}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Синтаксис строк}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Операции над строками}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Операции индексации и среза}{9}{0}{1}
+\beamer@sectionintoc {2}{Списки}{15}{0}{2}
+\beamer@subsectionintoc {2}{1}{Базовые операции со списками}{17}{0}{2}
+\beamer@subsectionintoc {2}{2}{Итерация по спискам и генераторы списков}{18}{0}{2}
+\beamer@subsectionintoc {2}{3}{Индексация, срезы и вложенность}{20}{0}{2}
+\beamer@subsectionintoc {2}{4}{Изменение списков}{22}{0}{2}
+\beamer@subsectionintoc {2}{5}{Вызовы методов списков}{23}{0}{2}
+\beamer@sectionintoc {3}{Кортежи}{25}{0}{3}
+\beamer@subsectionintoc {3}{1}{Операции над кортежами}{27}{0}{3}
+\beamer@sectionintoc {4}{Словари}{29}{0}{4}
+\beamer@subsectionintoc {4}{1}{Базовые операции со словарями}{31}{0}{4}
+\beamer@subsectionintoc {4}{2}{Изменение словарей}{33}{0}{4}
+\beamer@subsectionintoc {4}{3}{Вложенные словари}{34}{0}{4}
+\beamer@subsectionintoc {4}{4}{Инициализация словарей}{35}{0}{4}
+\beamer@subsectionintoc {4}{5}{Генераторы словарей}{36}{0}{4}
+\beamer@subsectionintoc {4}{6}{Словарные представления}{37}{0}{4}
+\beamer@sectionintoc {5}{Множества}{38}{0}{5}
+\beamer@subsectionintoc {5}{1}{Создание объектов множеств}{40}{0}{5}
+\beamer@subsectionintoc {5}{2}{Операции над множествами}{41}{0}{5}
+\beamer@subsectionintoc {5}{3}{Примеры использования множеств}{43}{0}{5}
