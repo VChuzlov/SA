@@ -363,20 +363,19 @@ Y
 \item Мини-язык для спецификатора формата такой же, как и в методе \mintinline{python}|format()|.
 \end{itemize}
 
-\begin{minted}{python}
-|In [1]:| f'{1.2354:.2f}'
-|Out[1]:| '1.24'
+\begin{minted}{pycon}
+>>> f'{1.2354:.2f}'
+'1.24'
 
-|In [2]:| f'{1.2354:e}'
-|Out[2]:| '1.235400e+00'
+>>> f'{1.2354:e}'
+'1.235400e+00'
 
-|In [3]:| f'{1.2354:.3e}'
-|Out[3]:| '1.235e+00'
+>>> f'{1.2354:.3e}'
+'1.235e+00'
 
-|In [4]:| f'{1.2354:g}'
-|Out[4]:| '1.2354'
+>>> f'{1.2354:g}'
+'1.2354'
 \end{minted}
-
 \vfill
 \end{frame}
 
@@ -402,33 +401,33 @@ Y
 \hline
 \textbf{Операция} & \textbf{Описание} \\
 \hline
-\pythoninline{a = []} & Пустой список \\
+\mintinline{ipython}|a = []| & Пустой список \\
 %\hline
-\pythoninline{a = [123, 'abc', 1.354, []]} & Четыре элемента: индексы 0...3 \\
+\mintinline{ipython}|a = [123, 'abc', 1.354, []]| & Четыре элемента: индексы 0...3 \\
 %\hline
-\pythoninline{a = ['Joe', 30.0, ['dev', 'prof']]} & Вложенные списки \\
+\mintinline{ipython}|a = ['Joe', 30.0, ['dev', 'prof']]| & Вложенные списки \\
 %\hline
-\pythoninline{a = list('hello')} & Список элементов итерируемого объекта \\
+\mintinline{ipython}|a = list('hello')| & Список элементов итерируемого объекта \\
 %\hline
-\pythoninline{a = list(range(-5, 6))} & Список последовательных целых чисел \\
+\mintinline{ipython}|a = list(range(-5, 6))| & Список последовательных целых чисел \\
 %\hline
-\pythoninline{a[i]} & Индекс \\
+\mintinline{ipython}|a[i]| & Индекс \\
 %\hline
-\pythoninline{a[i][j]} & Индекс индекса \\
+\mintinline{ipython}|a[i][j]| & Индекс индекса \\
 %\hline
-\pythoninline{a[i:j]} & Срез \\
+\mintinline{ipython}|a[i:j]| & Срез \\
 %\hline
-\pythoninline{len(a)} & Длина \\
+\mintinline{ipython}|len(a)| & Длина \\
 %\hline
-\pythoninline{a1 + a2} & Конкатенация \\
+\mintinline{ipython}|a1 + a2| & Конкатенация \\
 %\hline
-\pythoninline{a * 3} & Повторение \\
+\mintinline{ipython}|a * 3| & Повторение \\
 %\hline
-\pythoninline{x in a} & Вхождение \\
+\mintinline{ipython}|x in a| & Вхождение \\
 %\hline
-\pythoninline{a.append(5)} & Добавление элемента в конец списка \\
+\mintinline{ipython}|a.append(5)| & Добавление элемента в конец списка \\
 %\hline
-\pythoninline{a.extend([10, 20, 30])} & Добавление списка в конец исходного списка \\
+\mintinline{ipython}|a.extend([10, 20, 30])| & Добавление списка в конец исходного списка \\
 \hline
 \end{tabular}
 
@@ -521,7 +520,7 @@ banana orange apple
 \item Индексация  и срезы для списков работают аналогично тому, как это было описано для объектов строк. 
 
 \item Результатом индексации списка может быть объект любого типа, находящийся по указанному индексу, тогда как  срезы всегда возвращают новый объект списка.
-\end{itemize}
+
 
 \begin{minted}{pycon}
 >>> fruits = ['banana', 'orange', 'apple']
@@ -538,6 +537,7 @@ banana orange apple
 >>> fruits[-1]           # Результат среза всегда новый список
 ['apple']
 \end{minted}
+\end{itemize}
 \vfill
 \end{frame}
 
@@ -724,7 +724,7 @@ banana orange apple
 \item Кортежи поддерживают обычные операции, специфичные для последовательностей:
 \begin{minted}[fontsize=\fontsize{7pt}{8pt}]{pycon}
 >>> (10, 20) + (30, 40)             # Конкатенация
-(10, 20, 30, 40)|
+(10, 20, 30, 40)
 
 >>> (1, 2) * 5                      # Повторение
 (1, 2, 1, 2, 1, 2, 1, 2, 1, 2)  
@@ -968,7 +968,7 @@ True
 {'h': 'hhhhh', 'e': 'eeeee', 'l': 'lllll', 'o': 'ooooo'}
 
 >>> fruits = {fruit.upper(): fruit + '!' 
-	...           for fruit in ['banana', 'orange', 'apple']}
+...           for fruit in ['banana', 'orange', 'apple']}
 
 >>> fruits
 {'BANANA': 'banana!', 'ORANGE': 'orange!', 'APPLE': 'apple!'}
