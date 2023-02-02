@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  2 FEB 2023 09:11
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  2 FEB 2023 11:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2321,100 +2321,6 @@ runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P
 stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
 
  (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
-
-(./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
-
-(./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
-
-(./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
-
-(./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
-\openout6 = `Lec-02.pyg'.
-
-runsystem(pygmentize -l ipython -f latex -P commandprefix=PYG -F tokenmerge -P 
-stripnl=False -o Lec-02.out.pyg Lec-02.pyg)...executed.
-
- (./Lec-02.out.pyg)
 Overfull \hbox (4.65114pt too wide) in paragraph at lines 12--49
  [] 
  []
@@ -2958,12 +2864,12 @@ runsystem(del Lec-02.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 36738 strings out of 475848
- 801490 string characters out of 5805114
- 1206498 words of memory out of 5000000
+ 36708 strings out of 475848
+ 801040 string characters out of 5805114
+ 1203498 words of memory out of 5000000
  56755 multiletter control sequences out of 15000+600000
  475336 words of font info for 103 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,15n,104p,747b,944s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,104p,747b,944s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on Lec-02.pdf (46 pages).

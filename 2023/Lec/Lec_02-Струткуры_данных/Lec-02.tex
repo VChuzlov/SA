@@ -677,35 +677,35 @@ banana orange apple
 \hline
 \textbf{Операция} & \textbf{Описание} \\ 
 \hline 
-\pythoninline{t = ()} & Пустой кортеж \\
+\mintinline{ipython}|{t = ()| & Пустой кортеж \\
 %\hline
-\pythoninline{t = (0, )} & Одноэлементный кортеж (не выражение) \\
+\mintinline{ipython}|t = (0, )| & Одноэлементный кортеж (не выражение) \\
 %\hline
-\pythoninline{t = (0, 'Hi', 1.2, 3)} & Кортеж из четырех элементов \\
+\mintinline{ipython}|t = (0, 'Hi', 1.2, 3)| & Кортеж из четырех элементов \\
 %\hline
-\pythoninline{t = 0, 'Hi', 1.2, 3} & Такой же кортеж, как в предыдущей строке \\
+\mintinline{ipython}|t = 0, 'Hi', 1.2, 3| & Такой же кортеж, как в предыдущей строке \\
 %\hline
-\pythoninline{t = ('John', ('prof', 'dev'))} & Вложенные кортежи \\
+\mintinline{ipython}|t = ('John', ('prof', 'dev'))| & Вложенные кортежи \\
 %\hline
-\pythoninline{t = tuple('hello')} & Кортеж из элементов итерируемого объекта \\
+\mintinline{ipython}|t = tuple('hello')| & Кортеж из элементов итерируемого объекта \\
 %\hline
-\pythoninline{t[i]} & Индекс \\
+\mintinline{ipython}|t[i]| & Индекс \\
 %\hline
-\pythoninline{t[i][j]} & Индекс индекса \\
+\mintinline{ipython}|t[i][j]| & Индекс индекса \\
 %\hline
-\pythoninline{t[i:j]} & Срез \\
+\mintinline{ipython}|t[i:j]| & Срез \\
 %\hline
-\pythoninline{len(t)} & Длина кортежа \\
+\mintinline{ipython}|len(t)| & Длина кортежа \\
 %\hline
-\pythoninline{t1 + t2} & Конкатенация \\
+\mintinline{ipython}|t1 + t2| & Конкатенация \\
 %\hline
-\pythoninline{t * 3} & Повторение \\
+\mintinline{ipython}|t * 3| & Повторение \\
 %\hline
-\pythoninline{'spam' in t} & Проверка вхождения\\
+\mintinline{ipython}|'spam' in t| & Проверка вхождения\\
 %\hline
-\pythoninline{t.index('Hi')} & Поиск индекса элемента \\
+\mintinline{ipython}|t.index('Hi')| & Поиск индекса элемента \\
 %\hline
-\pythoninline{t.count('hello')} & Подсчет повторений элемента \\
+\mintinline{ipython}|t.count('hello')| & Подсчет повторений элемента \\
 %\hline
 \hline
 
@@ -902,9 +902,9 @@ True
 
 \begin{minted}{pycon}
 >>> data = {'name': 'John',
-	...         'jobs': ['developer', 'professor'],
-	...         'web': 'www.john.org/john',
-	...         'home': {'state': 'Overworked', 'zip': 13546}}
+...         'jobs': ['developer', 'professor'],
+...         'web': 'www.john.org/john',
+...         'home': {'state': 'Overworked', 'zip': 13546}}
 \end{minted}
 \item Для доступа к вложенным объектам нужна цепочка операций индексирования:
 
