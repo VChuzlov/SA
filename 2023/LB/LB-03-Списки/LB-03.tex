@@ -1,0 +1,494 @@
+
+% !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[aspectratio=169, mathserif]{beamer}% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+
+% Style options:
+% light --- light theme (default)
+% dark --- dark theme
+% enlogo --- english TPU logo {default}
+% rulogo --- russian TPU logo
+
+\usetheme[light, rulogo]{tpu}% dark theme used as an example of optional argument
+
+\usepackage[russian]{babel}%uncomment this to work in russian
+\usepackage[utf8]{inputenc}
+
+\usepackage{fontspec}
+
+\setromanfont{Brygada1918}[
+Path=./fonts/BrygadaFontFiles/,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\setsansfont{ALSSirius}[
+Path=./fonts/ALSSiriusFiles/,
+Extension = .otf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+%ItalicFont=*-Italic,
+%BoldItalicFont=*-BoldItalic
+]
+
+\setmonofont{Consolas}[
+Path=./fonts/ConsolasFontFiles/,
+%Scale=0.85,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\usepackage[cache=false]{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{onedarkBckGr}{RGB}{40, 44, 52}
+
+\usemintedstyle[python]{default}
+\setminted[python]{
+fontsize=\scriptsize,
+escapeinside=||,
+mathescape=true,
+numbersep=5pt,
+gobble=2,
+linenos=false,
+frame=single,
+framesep=1mm,
+python3=true,
+bgcolor=backcolour,
+}
+
+\usemintedstyle[pycon]{default}
+\setminted[pycon]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=false,
+	frame=single,
+	framesep=1mm,
+	python3=true,
+	bgcolor=backcolour,
+	linenos=true,
+}
+
+\newmint{python}{}
+
+\usepackage{booktabs}% good looking tables
+\usepackage{multicol}% text in multiple columns, useful for side-by-side text and pictures
+\usepackage{hyperref}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\captionsetup[table]{justification=raggedleft, 
+labelformat=empty,
+labelsep=endash,  
+textformat=center, 
+position=top, 
+skip=5pt
+}
+
+\hyphenpenalty=10000% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
+
+\title{\LARGE{Системный анализ процессов химической технологии}}
+\subtitle{Лабораторная работа №2 \\ Структуры данных: списки}
+\author[]{Вячеслав Алексеевич Чузлов, \\
+к.т.н., доцент ОХИ ИШПР}
+\date{\today}
+
+\begin{document}
+
+\newcommand{\pythoninline}[1]{%
+	\colorbox{white}{%
+		\parbox[b][.6em]{\widthof{\mintinline[fontsize=\tiny]{ipython}{#1}}}{\mintinline[fontsize=\tiny]{ipython}{#1}}%
+	}%
+}
+
+% notice usage of \titleframe and several other unconventional functions
+% the reason being is custom backgrounds on these slides
+
+\titleframe% title
+
+%\tocframe{}% this custom frame accepts options for ToC
+
+
+
+\section{Списки}
+\sectionframe
+
+
+\begin{frame}[fragile]{Списки}
+\scriptsize
+\begin{itemize}
+\item Списки в Python~-- наиболее гибкая разновидность объектов упорядоченных коллекций. 
+
+\item Списки могут содержать объекты любого типа: строки, числа или другие списки.  
+
+\item Списки \textcolor{extraorange}{\textbf{можно изменять}} на месте присваиванием по индексам, с использованием срезов, вызвав специальные методы или выполнив оператор удаления. 
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\tiny
+\begin{tabular}{|p{0.52\linewidth}|p{0.44\linewidth}|}
+\hline
+\textbf{Операция} & \textbf{Описание} \\
+\hline
+\mintinline{ipython}|a = []| & Пустой список \\
+%\hline
+\mintinline{ipython}|a = [123, 'abc', 1.354, []]| & Четыре элемента: индексы 0...3 \\
+%\hline
+\mintinline{ipython}|a = ['Joe', 30.0, ['dev', 'prof']]| & Вложенные списки \\
+%\hline
+\mintinline{ipython}|a = list('hello')| & Список элементов итерируемого объекта \\
+%\hline
+\mintinline{ipython}|a = list(range(-5, 6))| & Список последовательных целых чисел \\
+%\hline
+\mintinline{ipython}|a[i]| & Индекс \\
+%\hline
+\mintinline{ipython}|a[i][j]| & Индекс индекса \\
+%\hline
+\mintinline{ipython}|a[i:j]| & Срез \\
+%\hline
+\mintinline{ipython}|len(a)| & Длина \\
+%\hline
+\mintinline{ipython}|a1 + a2| & Конкатенация \\
+%\hline
+\mintinline{ipython}|a * 3| & Повторение \\
+%\hline
+\mintinline{ipython}|x in a| & Вхождение \\
+%\hline
+\mintinline{ipython}|a.append(5)| & Добавление элемента в конец списка \\
+%\hline
+\mintinline{ipython}|a.extend([10, 20, 30])| & Добавление списка в конец исходного списка \\
+\hline
+\end{tabular}
+
+\end{table}
+\vfill
+\end{frame}
+
+
+\subsection{Базовые операции со списками}
+
+\begin{frame}[fragile]{Базовые операции со списками}
+\scriptsize
+\begin{itemize}
+\item Списки являются \textcolor{extraorange}{\textbf{последовательностями}}, поэтому поддерживают многие операции, характерные для строк. 
+
+\item Например, для списков определены операторы \pythoninline{+} и \pythoninline{*}. Данные операторы, также как и в случае со строками, означают конкатенацию и повторение, только возвращают в качестве результата новый список, а не строку.
+\end{itemize}
+
+\begin{minted}{pycon}
+>>> len([1, 2, 3, 4, 5])                # Длина
+5
+
+>>> [1, 2, 3, 4, 5] + [6, 7, 8, 9, 10]  # Конкатенация
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+>>> ['Hi!'] * 5                         # Повторение
+['Hi!', 'Hi!', 'Hi!', 'Hi!', 'Hi!']
+\end{minted}
+\vfill
+\end{frame}
+
+
+\subsection{Итерация по спискам и генераторы списков}
+
+\begin{frame}[fragile]{Итерация по спискам}
+\scriptsize
+В общем смысле для списков определены все операции над последовательностями, в том числе и инструменты итерации:
+
+\begin{minted}{pycon}
+>>> 'banana' in ['banana', 'orange', 'apple']   # Проверка вхождения
+True
+
+>>> for fruit in ['banana', 'orange', 'apple']: # Итерация
+...     print(fruit, end=' ')
+...
+banana orange apple
+\end{minted}
+
+Оператор цикла \mintinline{python}|for| проходит (итерируется) по всем элементам в любой последовательности (итерируемом объекте) слева направо, выполняя операторы для каждого из них.
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Генераторы списков (list comprehension)}
+\scriptsize
+\textcolor{extraorange}{\textbf{Генераторы списков}}~-- это способ создания нового списка с применением выражения к каждому элементу последовательности (по факту в любом итерируемом объекте).
+
+\begin{minted}{pycon}
+>>> res = [c * 4 for c in 'HELLO']
+
+>>> res
+['HHHH', 'EEEE', 'LLLL', 'LLLL', 'OOOO']
+\end{minted}
+
+\begin{itemize}
+\item Генераторы списков записываются более кратко и выполняются чуть быстрее.
+
+\item В сложных случаях лучше использовать цикл \mintinline{python}|for| из-за его более высокой читаемости.
+\end{itemize}
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> res = []
+
+>>> for c in 'HELLO':
+...     res.append(c * 4)
+...
+
+>>> res
+['HHHH', 'EEEE', 'LLLL', 'LLLL', 'OOOO']
+\end{minted}
+\vfill
+\end{frame}
+
+
+\subsection{Индексация, срезы и вложенность}
+
+\begin{frame}[fragile]{Индексация и срезы}
+\scriptsize
+\begin{itemize}
+\item Индексация  и срезы для списков работают аналогично тому, как это было описано для объектов строк. 
+
+\item Результатом индексации списка может быть объект любого типа, находящийся по указанному индексу, тогда как  срезы всегда возвращают новый объект списка.
+
+
+\begin{minted}{pycon}
+>>> fruits = ['banana', 'orange', 'apple']
+
+>>> fruits[2]            # Индексы начинаются с нуля
+'apple'
+
+>>> fruits[-2]           # Отрицательные индексы отсчитываются справа
+'orange'
+
+>>> fruits[1:3]          # Срезы получают сегменты
+['orange', 'apple']
+
+>>> fruits[-1]           # Результат среза всегда новый список
+['apple']
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Вложенность списков}
+\scriptsize
+\begin{itemize}
+\item Внутри списков могут содержаться вложенные списки или объекты других типов.
+\item Матрицы в Python можно представить в виде вложенных списков.
+Пример матрицы $3 \times 3$:
+
+\begin{minted}{pycon}
+>>> matrix = [[10, 20, 30], [40, 50, 60], [70, 80, 90]]
+\end{minted}
+\item Если указать один индекс, то будет получена целая строка, а при указании двух индексов будет возвращен элемент строки:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> matrix[1]
+[40, 50, 60]
+
+>>> matrix[2][0]
+70
+
+>>> matrix = [[10, 20, 30],
+...           [40, 50, 60],
+...           [70, 80, 90]]
+
+>>> matrix[1][1]
+50
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\subsection{Изменение списков}
+
+\begin{frame}[fragile]{Изменение списков}
+\scriptsize
+\begin{itemize}
+\item Так как списки~-- \textcolor{extraorange}{\textbf{изменяемый}} тип объектов, для них определены операции, которые могут модифицировать объект списка \textcolor{extraorange}{\textbf{на месте}}.
+
+\item Операции модифицирования списков изменяют объект списка напрямую, перезаписывая его старое значение, без необходимости создания новой копии, как в случае работы со строками.
+\end{itemize}
+
+\alert{\textbf{Присваивание по индексам и срезам}}
+\\
+Содержимое списка может быть изменено присваиванием значения либо отдельному элементу (по его индексу), либо целому сегменту (по срезу):
+
+\begin{minted}{pycon}
+>>> food = ['burger', 'pizza', 'buritto']
+
+>>> food[1] = 'toast'  # Присваивание по индексу
+
+>>> food
+['burger', 'toast', 'buritto']
+
+>>> food[:2] = ['need', 'more']  # Присваивание срезу
+
+>>> food
+['need', 'more', 'buritto']
+\end{minted}
+\vfill
+\end{frame}
+
+
+\subsection{Вызовы методов списков}
+
+\begin{frame}[fragile]{Вызовы методов списков}
+\scriptsize
+\begin{itemize}
+\item Подобно строкам, списки имеют набор специфичных методов, многие из которых ведут к изменению исходного списка на месте:
+\begin{minted}{pycon}
+>>> a = ['eat', 'more', 'SPAM']
+
+>>> a.append('please')
+
+>>> a
+['eat', 'more', 'SPAM', 'please']
+
+>>> a.sort()  # Сортировка элементов списка ('S' < 'e')
+   
+>>> a
+['SPAM', 'eat', 'more', 'please']
+\end{minted}
+\item Наиболее распространенный метод~-- \mintinline{python}|append()| добавляет объект в конец списка. 
+\item Эффект выполнения выражения \mintinline{python}|a.append(x)| аналогичен \mintinline{python}|a + [x]| с одним принципиальным отличием: первый вариант изменяет \texttt{a} на месте, а второй вариант создает новый объект списка. 
+\item Метод \mintinline{python}|sort()| упорядочивает элементы в списке.
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Дополнительные сведения о методе \texttt{sort()}}
+\scriptsize
+\begin{itemize}
+	\item В методе \mintinline{python}|sort()| аргумент \mintinline{python}|reverse| позволяет производить сортировку в порядке убывания вместо возрастания, а параметр \mintinline{python}|key| задает функцию с одним аргументом, которая возвращает значение для использования при сортировке.
+\begin{minted}[fontsize=\fontsize{8pt}{8pt}]{pycon}
+>>> a = ["abc", "ABD", "aBe"]   
+
+>>> a.sort()                             # Сортировка со смешанным регистром
+
+>>> a
+['ABD', 'aBe', 'abc']
+
+>>> a = ["abc", "ABD", "aBe"]
+
+>>> a.sort(key=str.lower)                # Приведение к нижнему регистру
+
+>>> a
+['abc', 'ABD', 'aBe']
+
+>>> a.sort(key=str.lower, reverse=True)  # Изменение порядка сортировки
+
+>>> a
+['aBe', 'ABD', 'abc']
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\section{Пример}
+\sectionframe
+
+\begin{frame}[fragile]{\space}
+\scriptsize
+\begin{alertblock}{\textbf{Пример}}
+По имеющимся исходным данным определите состав потока в объемных и мольных долях, используя следующие формулы:
+\end{alertblock}
+\vfill
+\begin{large}
+\begin{equation*}
+	\begin{aligned}
+		\varphi _i = \dfrac{\dfrac{\omega _i}{\rho _i}}{\sum \limits _{i=1}^{n} \dfrac{\omega _i}{\rho _i}} &\qquad \chi _i = \dfrac{\dfrac{\omega _i}{M_i}}{\sum \limits_{i=1}^{n}\dfrac{\omega _i}{M_i}}
+	\end{aligned}
+\end{equation*}
+\end{large}
+\vfill
+где $\varphi _i$~-- объемная доля $i$-го компонента; $\chi _i$~-- мольная доля $i$-го компонента; $\omega _i$~-- массовая доля $i$-го компонента; $\rho _i$~-- плотность $i$-го компонента; $M_i$~-- молярная масса $i$-го компонента; $n$~-- число компонентов в системе; $i$~-- индекс компонента в системе.
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{\space}
+\scriptsize
+\begin{alertblock}{\textbf{Пример}}
+Исходные данные:
+\end{alertblock}
+\begin{table}[h!]
+	\begin{tabular}{|p{.2\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|}
+		\hline
+		$\mathrm{Параметр}$ & $C_1$ & $C_2$ & $C_3$ & $iC_4$ & $nC_4$ & $iC_5$ & $nC_5$ & $C_6$ \\
+		\hline
+		$\omega _i$ & $0.1$ & $0.1$ & $0.1$ & $0.4$ & $0.2$ & $0.05$ & $0.03$ & $0.02$ \\
+		\hline
+		$\rho_i, \mathrm{г/см}^3$ & $0.416$ & $0.546$ & $0.585$ & $0.5510$ & $0.6$ & $0.616$ & $0.6262$ & $0.6594$\\
+		\hline
+		$M_i, \mathrm{г/моль}$ & $16$ & $30$ & $44$ & $58$ & $58$ & $72$ & $72$ & $86$ \\
+		\hline
+	\end{tabular}
+\end{table}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{\space}
+\scriptsize
+\begin{alertblock}{\textbf{Пример}}
+\begin{minted}[linenos=true, fontsize=\fontsize{8pt}{9pt}]{python}
+mass_fractions = [.1, .1, .1, .4, .2, .05, .03, .02]
+densities = [0.416, 0.546, 0.585, 0.5510, 0.6, 0.616, 0.6262, 0.6594]
+mol_mass_list = [16, 30, 44, 58, 58, 72, 72, 86]
+
+volume_fractions = [mf / d for mf, d in zip(mass_fractions, densities)]
+s = sum(volume_fractions)
+volume_fractions = [vof / s for vof in volume_fractions]
+
+volume_fractions = []  # Alternative
+for mf, d in zip(mass_fractions, densities):
+    volume_fractions.append(mf / d)
+
+s = sum(volume_fractions)
+for i in range(len(volume_fractions)):
+    volume_fractions[i] /= s
+    
+for vof in volume_fractions:  # вывод результата
+    print(f'{vof:.4f}', end=' ')
+\end{minted}
+\mintinline{ipython}|0.1326 0.1010 0.0943 0.4004 0.1838 0.0448 0.0264 0.0167|
+\end{alertblock}
+\vfill
+\end{frame}
+
+
+\contactsframe[\Large \textbf{Благодарю за внимание!}]{
+
+\includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\
+\includegraphics[width=.05\textwidth]{pics/mail} \quad chuva@tpu.ru \\
+\includegraphics[width=.03\textwidth]{pics/tel} \quad +7-962-782-66-15
+}
+
+\end{document}
+
