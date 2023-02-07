@@ -6,3 +6,4 @@
 \beamer@subsectionintoc {1}{4}{Изменение списков}{9}{0}{1}
 \beamer@subsectionintoc {1}{5}{Вызовы методов списков}{10}{0}{1}
 \beamer@sectionintoc {2}{Пример}{12}{0}{2}
+\beamer@sectionintoc {3}{Задания}{16}{0}{3}

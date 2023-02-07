@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  6 FEB 2023 23:21
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  7 FEB 2023 09:30
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1950,7 +1950,42 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  [15
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 491--491
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 485--485
+[][][]  
+ []
+
+
+Overfull \vbox (5.0pt too high) detected at line 485
+ []
+
+File: bgs/light/section.jpg Graphic file (type bmp)
+<bgs/light/section.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[16
+
+]
+\openout4 = `LB-03.vrb'.
+
+ (./LB-03.vrb)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [17
+
+]
+\openout4 = `LB-03.vrb'.
+
+ (./LB-03.vrb)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [18
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 550--550
 
  []
 
@@ -1961,19 +1996,19 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 491--491
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 550--550
 [][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 491
+Overfull \vbox (5.0pt too high) detected at line 550
  []
 
 File: bgs/contacts.jpg Graphic file (type bmp)
 <bgs/contacts.jpg>
 File: logos/ru/light/logoclr.png Graphic file (type bmp)
 <logos/ru/light/logoclr.png>
-[16
+[19
 
 ]
 \tf@nav=\write8
@@ -1987,19 +2022,19 @@ File: logos/ru/light/logoclr.png Graphic file (type bmp)
 
  (./LB-03.aux)
 Package rerunfilecheck Info: File `LB-03.out' has not changed.
-(rerunfilecheck)             Checksum: B90090C0BAF3E8C0945B28BE8B691174;1569.
+(rerunfilecheck)             Checksum: D5AC49DE0DE181536FFDBF15F8909362;1668.
 runsystem(del LB-03.pyg)...executed.
 
 runsystem(del LB-03.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 36278 strings out of 475848
- 793815 string characters out of 5805114
- 1197670 words of memory out of 5000000
- 56541 multiletter control sequences out of 15000+600000
+ 36303 strings out of 475848
+ 794266 string characters out of 5805114
+ 1197958 words of memory out of 5000000
+ 56562 multiletter control sequences out of 15000+600000
  476849 words of font info for 105 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,12n,104p,469b,864s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on LB-03.pdf (16 pages).
+Output written on LB-03.pdf (19 pages).

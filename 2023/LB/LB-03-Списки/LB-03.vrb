@@ -1,26 +1,30 @@
 \frametitle{\space }
 \scriptsize
-\begin{alertblock}{\textbf{Пример}}
-\begin{minted}[linenos=true, fontsize=\fontsize{8pt}{9pt}]{python}
-mass_fractions = [.1, .1, .1, .4, .2, .05, .03, .02]
-densities = [0.416, 0.546, 0.585, 0.5510, 0.6, 0.616, 0.6262, 0.6594]
-mol_mass_list = [16, 30, 44, 58, 58, 72, 72, 86]
-
-volume_fractions = [mf / d for mf, d in zip(mass_fractions, densities)]
-s = sum(volume_fractions)
-volume_fractions = [vof / s for vof in volume_fractions]
-
-volume_fractions = []  # Alternative
-for mf, d in zip(mass_fractions, densities):
-    volume_fractions.append(mf / d)
-
-s = sum(volume_fractions)
-for i in range(len(volume_fractions)):
-    volume_fractions[i] /= s
-
-for vof in volume_fractions:  # вывод результата
-    print(f'{vof:.4f}', end=' ')
-\end{minted}
-\mintinline{ipython}|0.1326 0.1010 0.0943 0.4004 0.1838 0.0448 0.0264 0.0167|
+\begin{alertblock}{\textbf{Задание 2}}
+Пусть на смешение поступают материальные потоки следющего состава (массовые доли):
 \end{alertblock}
+\vfill
+\begin{table}[h!]
+^^I\begin{tabular}{|p{.2\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|}
+^^I^^I\hline
+^^I^^I$\mathrm{Поток}$ & $C_1$ & $C_2$ & $C_3$ & $iC_4$ & $nC_4$ & $iC_5$ & $nC_5$ & $C_6$ \\
+^^I^^I\hline
+^^I^^I$1$ & $0.1$ & $0.1$ & $0.1$ & $0.4$ & $0.2$ & $0.05$ & $0.03$ & $0.02$ \\
+^^I^^I\hline
+^^I^^I$2$ & $0.1$ & $0.2$ & $0.1$ & $0.3$ & $0.1$ & $0.15$ & $0.03$ & $0.02$ \\
+^^I^^I\hline
+^^I^^I$3$ & $0.1$ & $0.1$ & $0.15$ & $0.35$ & $0.1$ & $0.05$ & $0.08$ & $0.07$ \\
+^^I^^I\hline
+^^I\end{tabular}
+\end{table}
+\vfill
+Расходы потоков $100$, $150$ и $120$ моль/ч, соответственно.
+Необходимо рассчитать состав итогового потока в массовых и мольных долях.
+
+Состав смесевого потока (в массовых долях) можно найти следующим образом:
+$$
+^^I\dfrac{\sum\limits_{j=1}^{n}G_j \cdot \omega_{i, j}}{\sum\limits_{j=1}^{n}G_j}
+$$
+\vfill
+где $\omega_i$~-- массовая доля $i$-го компонента в смесевом потоке; $\omega_{i, j}$~-- массовая доля $i$-го компонента в $j$-ом потоке; $G_j$~-- массовый расход $j$-го потока; $j$~-- индекс потока; $i$~-- индекс компонента в системе; $n$~-- число потоков, подаваемых на смешение.
 \vfill
