@@ -1,0 +1,19 @@
+\frametitle{Сравнение операторов цикла с рекурсией}
+\scriptsize
+\begin{itemize}
+\item В дополнение циклы \mintinline{python}|for| обеспечивают автоматическую итерацию, делая рекурсию во многих случаях излишней и с высокой долей вероятности менее эффективной в плане расхода памяти и времени выполнения:
+
+\begin{minted}{pycon}
+>>> arr = [1, 2, 3, 4, 5]
+
+>>> def sum_for(arr):
+...     s = 0
+...     for x in arr:
+...         s += x
+...     return s
+...
+>>> sum_for(arr)
+150
+\end{minted}
+\end{itemize}
+\vfill

@@ -1,0 +1,15 @@
+\babel@toc {russian}{}\relax 
+\beamer@sectionintoc {1}{Описание функций}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Оператор \texttt {def}}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Оператор \texttt {return}}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Параметры функций}{8}{0}{1}
+\beamer@subsectionintoc {1}{4}{Локальные переменные}{12}{0}{1}
+\beamer@subsectionintoc {1}{5}{Оператор \texttt {global}}{13}{0}{1}
+\beamer@subsectionintoc {1}{6}{Области видимости и вложенные функции}{15}{0}{1}
+\beamer@subsectionintoc {1}{7}{Замыкания}{17}{0}{1}
+\beamer@subsectionintoc {1}{8}{Оператор \texttt {nonlocal}}{19}{0}{1}
+\beamer@subsectionintoc {1}{9}{Строки документации (docstring)}{22}{0}{1}
+\beamer@sectionintoc {2}{Синтаксис передачи аргументов}{23}{0}{2}
+\beamer@subsectionintoc {2}{1}{Именованные аргументы и значения по умолчанию}{25}{0}{2}
+\beamer@subsectionintoc {2}{2}{Передача произвольного количества аргументов}{28}{0}{2}
+\beamer@sectionintoc {3}{Рекурсивные функции}{32}{0}{3}

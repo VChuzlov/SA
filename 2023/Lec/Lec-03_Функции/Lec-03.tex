@@ -1,0 +1,1083 @@
+% !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[aspectratio=169]{beamer}% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+
+% Style options:
+% light --- light theme (default)
+% dark --- dark theme
+% enlogo --- english TPU logo {default}
+% rulogo --- russian TPU logo
+
+\usetheme[light, rulogo]{tpu}% dark theme used as an example of optional argument
+
+\usepackage[russian]{babel}%uncomment this to work in russian
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+
+\usepackage{fontspec}
+
+\setromanfont{Brygada1918}[
+Path=./fonts/BrygadaFontFiles/,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\setsansfont{ALSSirius}[
+Path=./fonts/ALSSiriusFiles/,
+Extension = .otf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+%ItalicFont=*-Italic,
+%BoldItalicFont=*-BoldItalic
+]
+
+\setmonofont{Consolas}[
+Path=./fonts/ConsolasFontFiles/,
+%Scale=0.85,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\usepackage[cache=false]{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{onedarkBckGr}{RGB}{40, 44, 52}
+
+\usemintedstyle[python]{default}
+\setminted[python]{
+fontsize=\scriptsize,
+escapeinside=||,
+mathescape=true,
+numbersep=5pt,
+gobble=2,
+linenos=false,
+frame=single,
+framesep=1mm,
+python3=true,
+bgcolor=backcolour,
+}
+
+\usemintedstyle[pycon]{default}
+\setminted[pycon]{
+fontsize=\scriptsize,
+escapeinside=||,
+mathescape=true,
+numbersep=5pt,
+gobble=2,
+linenos=false,
+frame=single,
+framesep=1mm,
+python3=true,
+bgcolor=backcolour,
+linenos=true,
+}
+
+\newmint{python}{}
+\newmintinline{python}{}
+
+\usepackage{booktabs}% good looking tables
+\usepackage{multicol}% text in multiple columns, useful for side-by-side text and pictures
+\usepackage{hyperref}
+%\usepackage{minted}
+\usepackage{xcolor}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{amsxtra}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\captionsetup[table]{justification=raggedleft, 
+labelformat=empty,
+labelsep=endash,  
+textformat=center, 
+position=top, 
+skip=5pt
+}
+
+\hyphenpenalty=10000% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
+
+\title{\LARGE{Системный анализ процессов химической технологии}}
+\subtitle{Лекция 3 \\ \textbf{Функции}}
+\author[]{Вячеслав Алексеевич Чузлов, \\
+к.т.н., доцент ОХИ ИШПР}
+\date{\today}
+
+\begin{document}
+
+% notice usage of \titleframe and several other unconventional functions
+% the reason being is custom backgrounds on these slides
+
+\titleframe% title
+
+\tocframe{}% this custom frame accepts options for ToC
+
+
+
+\section{Описание функций}
+\sectionframe
+
+
+\begin{frame}[fragile]{Написание кода функций}
+\scriptsize
+\begin{itemize}
+\item \textcolor{extraorange}{\textbf{Функции}}~-- это многократно используемые фрагменты программы. Они позволяют дать имя определенному блоку команд с тем, чтобы в последствии запускать блок по указанному имени в любом месте программы и сколь угодно много раз. Это называется \textbf{вызовом функции}.
+\item Функции определяются при помощи зарезервированного слова \mintinline{python}|def|. После этого слова указывается имя функции, за которым следует пара скобок, в которых можно указать имена некоторых переменных, и заключительное двоеточие в конце строки. Далее следует блок команд (инструкций), составляющих тело функции.
+
+\item \textcolor{extraorange}{\textbf{Сигнатура функции}}~-- часть общего объявления функции, позволяющая средствами трансляции идентифицировать функцию среди других. Составляющие сигнатуры:
+\begin{enumerate}
+\scriptsize
+\item имя функции;
+\item аргументы функции;
+\item возвращаемые значения.
+\end{enumerate} 
+
+\begin{minted}{pycon}
+>>> def say_hi():
+...     print("Hi!")       
+
+>>> say_hi()
+Hi!
+\end{minted}
+
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\subsection{Оператор \texttt{def}}
+
+\begin{frame}[fragile]{Оператор \texttt{def}}
+
+\scriptsize
+\begin{itemize}
+\item Оператор \mintinline{python}|def| создает объект функции и присваивает его имени. 
+\item Общий формат оператора \mintinline{python}|def| выглядит следующим образом:
+
+\begin{minted}{ipython}
+def имя_функции(аргумент1, аргумент2, ..., аргументN):
+    оператор1  # операторы могут отсутствовать
+    оператор2
+    ...
+    операторN
+    return  # может быть пропущен
+\end{minted}
+\item В строке заголовка \mintinline{python}|def| указывается имя функции, которому присваивается объект функции, а также список из нуля и более аргументов (иногда называемых параметрами) в круглых скобках. 
+\item Именам аргументов в заголовке присваиваются объекты, передаваемые в круглых скобках при вызове функции.
+
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Оператор \texttt{return}}
+\scriptsize
+\begin{itemize}
+\item Тело функции почти всегда содержит оператор \mintinline{python}|return|:
+\begin{minted}{ipython}
+def имя_функции(аргумент1, аргумент2, ..., аргумент3):
+    операторы
+    ...
+    return ...
+\end{minted}
+\item Оператор \mintinline{python}|return| в Python может появляться где угодно в теле функции; по достижении он заканчивает выполнение функции и возвращает результат обратно вызывающему коду. 
+\item Оператор \mintinline{python}|return| состоит из необязательного выражения с объектным значением, которое дает результат функции. 
+\item Если значение опущено, тогда \mintinline{python}|return| возвращает \mintinline{python}|None|. 
+\item Оператор \mintinline{python}|return| сам по себе также необязателен; если он отсутствует, то выход из функции происходит, когда  интерпретатор достигает конца тела функции. Формально функция без оператора \mintinline{python}|return| автоматически возвращает объект \mintinline{python}|None|. 
+\item Хорошим тоном является явное использование пустого оператора \mintinline{python}|return| для дополнительного пояснения того, что функция ничего не возвращает в качестве результата.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Оператор \texttt{return}}
+
+\begin{frame}[fragile]{Оператор \texttt{return}}
+\scriptsize
+\begin{itemize}
+\item Оператор \mintinline{python}|return| используется для возврата из функции, т.е. для прекращения её работы и выхода из неё. При этом можно также вернуть некоторое значение из функции.
+\item Оператор \mintinline{python}|return| в Python может появляться где угодно в теле функции; по достижении он \textbf{заканчивает} \textbf{выполнение функции} и возвращает результат обратно вызывающему коду.
+\end{itemize}
+
+\begin{minipage}{.47\textwidth}
+\begin{minted}{pycon}
+>>> def maximum(x, y): 
+...     if x > y:
+...         return x
+...
+...     elif x == y:
+...         return 'Equals.' 
+...     
+...     else:
+...         return y
+
+>>> print(maximum(2, 3))
+3
+\end{minted}
+\end{minipage}
+\begin{minipage}{.05\textwidth}
+\hspace{.1ex}
+\end{minipage}
+\begin{minipage}{.47\textwidth}
+\begin{minted}{pycon}
+>>> def maximum(x, y): 
+...     if x > y:
+...         return x
+...
+...     if x == y:
+...         return 'Equals.' 
+...
+...     return y
+
+>>> print(maximum(2, 3))
+3
+\end{minted}
+\vspace{.08ex}
+\end{minipage}
+\vfill
+\end{frame}
+
+
+\subsection{Параметры функций}
+
+\begin{frame}[fragile]{Параметры функций}
+\scriptsize
+\begin{itemize}
+\item Функции могут принимать параметры, т.е. некоторые значения, передаваемые функции для того, чтобы она что-либо сделала с ними. 
+\item Эти параметры похожи на переменные, за исключением того, что значение этих переменных указывается при вызове функции, и во время работы функции им уже присвоены их значения.
+
+\item Параметры указываются в скобках при объявлении функции и разделяются запятыми. Аналогично мы передаём значения, когда вызываем функцию. 
+\item Обратите внимание на терминологию: имена, указанные в объявлении функции, называются \textcolor{extraorange}{\textbf{параметрами}}, тогда как значения, которые Вы передаёте в функцию при её вызове~-- \textcolor{extraorange}{\textbf{аргументами}}.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+%\subsection{Примеры определения и вызова функций}
+\begin{frame}[fragile]{Примеры определения и вызова функций}
+\scriptsize
+Ниже показано \textcolor{extraorange}{\textbf{определение}} функции по имени \mintinline{ipython}|times|, которое возвращает произведение двух аргументов:
+\begin{itemize}
+\begin{minted}{pycon}
+>>> def times(x, y):
+...    return x * y
+\end{minted}
+
+\item Когда интерпретатор встречает и выполняет этот оператор \mintinline{python}|def|, он создает новый объект функции, умещающий в себе код функции, и присваивает его имени \mintinline{ipython}|times|. 
+\item Обычно такой оператор находится в файле модуля и выполняется при его импортировании.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Примеры определения и вызова функций}
+\scriptsize
+\begin{itemize}
+\item Оператор \mintinline{python}|def| создает функцию, но не вызывает ее. 
+\item После выполнения \mintinline{python}|def| функцию можно \textcolor{extraorange}{\textbf{вызывать}} (выполнить) в своей программе, добавляя к имени функции круглые скобки. 
+\item Круглые скобки могут дополнительно содержать один и более объектов-аргументов, подлежащих передаче (присваиванию) именам в заголовке функции.
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> times(3, 5)
+15
+\end{minted}
+\item Выражение вызова передает в \mintinline{ipython}|times| два аргумента. 
+\item Аргументы передаются по порядку следования: имени \texttt{x} в заголовке функции присваивается значение \mintinline{ipython}|3|, переменной \mintinline{ipython}|y| присваивается значение \mintinline{ipython}|5|. 
+\item Возвращаемый объект можно присвоить переменной:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x = times(3.14, 3)
+
+>>> x
+9.42
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Примеры определения и вызова функций}
+\scriptsize
+\begin{minted}{pycon}
+>>> def print_max(a, b):
+...     if a > b:
+...         print(a, "is max") 
+...     elif a == b:
+...         print(a, "equals to", b)
+...     else:
+...         print(b, "is max")
+...
+
+>>> print_max(6, 7)
+7 is max
+
+>>> print_max(3, 3)
+3 equals to 3
+
+>>> x, y = 5, 2
+
+>>> print_max(x, y)
+5 is max
+\end{minted}
+\vfill
+\end{frame}
+
+
+\subsection{Локальные переменные}
+
+\begin{frame}[fragile]{Локальные переменные}
+\scriptsize
+\begin{itemize}
+\item При объявлении переменных внутри определения функции, они никоим образом не связаны с другими переменными с таким же именем за пределами функции~-- т.е. имена переменных являются локальными в функции. 
+\item Это называется \textcolor{extraorange}{\textbf{областью видимости переменной}}. Область видимости всех переменных ограничена блоком, в котором они объявлены, начиная с точки объявления имени.
+
+\begin{minted}{pycon}
+>>> x = 50
+
+>>> def func(x):
+...     print('x =', x)
+...     x = 2
+...     print('Replace x to', x)
+...
+
+>>> func(x)
+x = 50
+Replace x to 2
+
+>>> print('x =', x)
+x = 50
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\subsection{Оператор \texttt{global}}
+
+\begin{frame}[fragile]{Оператор \texttt{global}}
+\scriptsize
+\begin{itemize}
+\item Чтобы присвоить значение переменной, определённой на высшем уровне программы, необходимо явно указать Python, что её имя не локально, а глобально.
+\item Без применения зарезервированного слова \mintinline{python}|global| невозможно присвоить значение переменной, определённой за пределами функции.
+
+\begin{minted}{pycon}
+>>> x = 50
+
+>>> def func():
+...     global x
+...     print('x =', x)
+...     x = 2
+...     print('Replace x to', x)
+...
+
+>>> func()
+x = 50
+Replace x to 2
+
+>>> print('x =', x)
+x = 2
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+%\begin{frame}[fragile]{Оператор \texttt{global}}
+%\scriptsize
+%\begin{multicols}{2}
+%
+%\begin{lstlisting}[language=iPython, numbers=left,
+%commentstyle=\fontsize{8pt}{8}\color{ipython_cyan}\ttfamily,
+%stringstyle=\fontsize{8pt}{8}\color{ipython_red}\ttfamily,
+%basicstyle=\fontsize{8pt}{8}\ttfamily,
+%keywordstyle=\fontsize{8pt}{8}\color{ipython_green}\ttfamily,]
+%x = 24  # Глобальная переменная x
+%
+%def func():
+%    global x
+%    x = 100 
+%
+%func()
+%print(x)  # Выводит 100
+%¢\space¢
+%\end{lstlisting}
+%
+%\columnbreak
+%\begin{lstlisting}[language=iPython, numbers=left,
+%commentstyle=\fontsize{8pt}{8}\color{ipython_cyan}\ttfamily,
+%stringstyle=\fontsize{8pt}{8}\color{ipython_red}\ttfamily,
+%basicstyle=\fontsize{8pt}{8}\ttfamily,
+%keywordstyle=\fontsize{8pt}{8}\color{ipython_green}\ttfamily,]
+%y, z = 1, 2  # Глобальные переменные 
+%             #в модуле
+%
+%def all_global():
+%    global x  # Объявление присваеваемой 
+%              #глобальной переменной
+%    x = y + z  # Объявлять y и z не нужно  
+%¢\space¢
+%\end{lstlisting}
+%
+%\end{multicols}
+%
+%\begin{itemize}
+%\item Добавленное объявление \alert{\texttt{global}} привело к тому, что имя \texttt{x} внутри \alert{\texttt{def}} теперь ссылается на имя \texttt{x} снаружи \alert{\texttt{def}}.
+%\item На этот раз они представляют собой одну и ту же переменную, а потому изменение \texttt{x} внутри функции приводит к изменению \alert{\texttt{x}} за ее пределами. 
+%\item Переменные \texttt{y} и \texttt{z} Python ищет в модуле автоматически. 
+%\item Кроме того, до выполнения функции \texttt{all\_global} переменная \texttt{x} вообще не существует во включающем модуле; в данном случае первое присваивание внутри функции создает переменную \texttt{x} в модуле. 
+%
+%\end{itemize}
+%\bigskip
+%\end{frame}
+
+
+\begin{frame}[fragile]{Глобальные переменные только для \\ крайних случаев}
+\scriptsize
+\begin{itemize}
+\item Присваиваемые внутри \mintinline{python}|def| переменные по умолчанию будут локальными, поскольку так предусмотрено наилучшей стратегией. 
+\item Изменение глобальных переменных может привести к проблемам: из-за того, что значения переменных зависят от порядка вызовов произвольно отдаленных функций, программы могут стать трудными для отладки и для восприятия:
+
+\begin{minted}[linenos=true]{python}
+x = 24
+
+def func1():
+    global x
+    x = 77
+
+def func2():
+    global x
+    x = 99
+\end{minted}
+\end{itemize}
+
+Для понимания кода понадобится отследить поток управления через целую программу. Вы не сможете использовать одну из функций без привлечения другой. Если нужно повторно применить или модифицировать код~-- придется держать в уме всю программу целиком.
+\vfill
+\end{frame}
+
+
+\subsection{Области видимости и вложенные функции}
+
+\begin{frame}[fragile]{Области видимости и вложенные функции}
+\scriptsize
+Рассмотрим пример вложенной области видимости:
+
+\begin{minted}{pycon}
+>>> x = 24  # Имя в глобальной области видимости
+
+>>> def func1():
+...    x = 55  # Локальное имя объемлющего def
+...
+...    def func2():
+...        print(x)  # Ссылка во вложенном def
+...
+...    func2()
+
+>>> func1()  # Выводит 55: локальное имя объемлющего def
+55
+\end{minted}
+\begin{itemize}
+\item Здесь вложенный оператор \mintinline{python}|def| запускается, пока выполняется функция \texttt{func1}; он создает объект функции и присваивает его имени \texttt{func2}, т.е. локальной переменной внутри локальной области видимости \texttt{func1}. 
+\item В определенном смысле \texttt{func2} представляет собой временную функцию, которая существует только в период выполнения (и видима только в коде) объемлющей функции \texttt{func1}.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Области видимости и вложенные функции}
+\scriptsize
+\begin{itemize}
+\item Поиск в объемлющей области видимости работает, даже если уже произошел возврат из объемлющей функции. 
+\item В следующем коде определена функция, которая создает и \textcolor{extraorange}{\textbf{возвращает}} объект другой функции, представляя более распространенный шаблон использования:
+
+\begin{minted}[fontsize=\fontsize{8pt}{8pt}]{pycon}
+>>> def func1():
+...    x = 44
+...
+...    def func2():
+...        print(x)  # Помнит значение x из области видимости объемлющего def 
+... 
+...    return func2  # Возвращает объект функции func2, но не вызывает ее
+
+>>> action = func1()  # Создает и возвращает объект функции
+
+>>> action()  # Вызов функции: выводит 44
+44
+\end{minted}
+\item Вызов \texttt{action}  функцию \texttt{func2}, которая была создана во время выполнения \texttt{func1}. 
+\item Функции в Python могут передаваться как возвращаемые значения. 
+\item Функция \texttt{func2} помнит значение \texttt{x} из объемлющей области видимости функции \texttt{func1}, хотя \texttt{func1} больше неактивна.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\subsection{Замыкания}
+\begin{frame}[fragile]{Замыкания}
+\scriptsize
+\begin{itemize}
+\item \textcolor{extraorange}{\textbf{Замыкание}}~-- это методика \textbf{функционального программирования}, идея которой заключается в запоминании значений из объемлющих областей видимости, невзирая на то, присутствуют ли еще эти области видимости в памяти.
+\item Замыкания иногда применяются в программах, которым необходимо генерировать обработчики событий на лету в ответ на условия, сложившиеся во время выполнения.
+
+\begin{minted}{pycon}
+>>> def maker(n):
+...     def action(x):     # Создание и возврат функции action
+...         return x ** n  # action сохраняет значение n
+...     return action
+\end{minted}
+\item В коде определяется внешняя функция, которая генерирует и возвращает вложенную функцию, не вызывая ее~-- \texttt{maker} создает \texttt{action}, и возвращает \texttt{action} без выполнения. 
+\item Если вызвать внешнюю функцию~-- будет получена ссылка на вложенную функцию:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> f = maker(3)
+
+>>> f
+<function maker.<locals>.action at 0x000001987C301160>
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Замыкания}
+\scriptsize
+\begin{itemize}
+\item Вызов результата, возвращенного внешней функцией  приводит к запуску вложенной функции, названной \texttt{action} внутри \texttt{maker}:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> f(5)  # Перелача 5 аргументу x, в n запоминается 3: 5 ** 3
+125
+
+>>> f(2)  # 2 ** 3
+8
+\end{minted}
+
+\item Если снова вызвать внешнюю функцию, то получим новую вложенную функцию с другой информацией о состоянии. Каждый вызов замыкания получает собственный набор информации о состоянии.  Функция \texttt{g} запоминает \texttt{2}, a \texttt{f} запоминает \texttt{3}:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> g = maker(2)
+
+>>> g(5)
+25
+
+>>> f(5)
+125
+\end{minted}
+
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\subsection{Оператор \texttt{nonlocal}}
+\begin{frame}[fragile]{Оператор \texttt{nonlocal}}
+\scriptsize
+\begin{itemize}
+\item Оператор \mintinline{python}|nonlocal| разрешает присваивание значений именам из областей видимости объемлющих функций и ограничивает поиск таких имен этими областями. 
+
+\begin{minted}{pycon}
+>>> def tester(start):
+...     state = start
+...     def nested(label):
+...         print(label, state)
+...     return nested
+...
+
+>>> f = tester(1)
+
+>>> f('hello')
+hello 1
+
+>>> f('hi')
+hi 1
+\end{minted}
+\item Функция \texttt{tester} создает и возвращает функцию \texttt{nested}, подлежащую вызову в более позднее время, а ссылка на \texttt{state} в \texttt{nested} отображается на имя в локальной области видимости \texttt{tester} с применением обычных правил поиска в областях видимости.
+
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Оператор \texttt{nonlocal}}
+\scriptsize
+\begin{itemize}
+\item Однако, изменение имени из области видимости объемлющего \mintinline{python}|def| по умолчанию не разрешено:
+
+\begin{minted}{pycon}
+>>> def tester(start):
+...     state = start
+...     def nested(label):
+...         print(label, state)
+...         state += 1
+...     return nested
+
+>>> f = tester(2)
+
+>>> f('hello')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 4, in nested
+UnboundLocalError: local variable 'state' referenced before assignment
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Оператор \texttt{nonlocal}}
+\scriptsize
+\begin{itemize}
+\item Если теперь объявить переменную \texttt{state} из области видимости \texttt{tester} как \mintinline{python}|nonlocal| внутри \texttt{nested}, то мы сможем ее также изменять во вложенной функции. 
+
+\begin{minted}[fontsize=\fontsize{8pt}{8pt}]{pycon}
+>>> def tester(start):
+...     state = start
+...     def nested(label):
+...         nonlocal state
+...         print(label, state)
+...         state += 1
+...     return nested
+
+>>> f = tester(3)
+
+>>> f('hello')
+hello 3
+
+>>> f('hi')
+hi 4
+
+>>> f('good day')
+good day 5
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\subsection{Строки документации (docstring)}
+\begin{frame}[fragile]{Строки документации (docstring)}
+
+\scriptsize
+\begin{itemize}
+\item Строки документации (в тройных кавычках) должны обобщить поведение функции, описать аргументы, возвращаемые значения, побочные эффекты и ограничения на вызов функции.
+
+\begin{minted}[fontsize=\fontsize{8pt}{8pt}]{pycon}
+>>> def print_max(a, b):
+...     """ 
+...     Prints max value of a and b.
+...     NOTE: prints equals if a = b.
+...     """
+...     if a > b:
+...         print(a, 'is max') 
+...     elif a == b:
+...         print(a, 'equals to', b)
+...     else:
+...         print(b, 'is max')
+
+>>> print_max(3, 5)
+5 is max
+
+>>> help(print_max)
+Help on function print_max in module __main__:
+print_max(a, b)
+    Prints max value of a and b.
+    NOTE: prints equals if a = b.
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\section{Синтаксис передачи аргументов}
+\sectionframe
+
+
+\begin{frame}[fragile]{Формы передачи аргументов функции}
+\scriptsize
+Формы передачи аргументов подразделяются на вызовы и определения функций.
+\begin{table}[h!]
+\centering
+\tiny
+\begin{tabular}{|p{.35\linewidth}|p{.13\linewidth}|p{.45\linewidth}|}
+\hline
+\textbf{Синтаксис} & \textbf{Местоположение} & \textbf{Интерпретация} \\
+\hline
+
+\mintinline{ipython}|func(значение)| & Вызывающий код & Позиционный аргумент: передается по позиции \\
+
+\mintinline{ipython}|func(имя=значение)| & Вызывающий код & Ключевой (именованный) аргумент: передается по имени \\
+
+\mintinline{ipython}|func(*итерируемый_объект)| & Вызывающий код & Передает все объекты в \texttt{итерируемом\_объекте} как отдельные позиционные аргументы \\
+
+\mintinline{ipython}|func(**словарь)| & Вызывающий код & Передает все пары ключ/значение в словаре как отдельные именованные аргументы \\
+
+\mintinline{ipython}|def func(имя)| & Функция & Позиционный аргумент: сопоставляется с любым переданным значением по позиции или по имени \\
+
+\mintinline{ipython}|def func(имя=значение)| & Функция & Стандартное значение аргумента, если значение в вызове не передавалось \\
+
+\mintinline{ipython}|def func(*имя)| & Функция & Передает и собирает оставшиеся позиционные аргументы в кортеж \\
+
+\mintinline{ipython}|def func(**имя)| & Функция & Передает и собирает оставшиеся ключевые аргументы в словарь \\
+
+\mintinline{ipython}|def func(*остальные, имя1, имя2, ... имяN)|& Функция & Неограниченная передача позиционных аргументов; обязательная передача всех именованных аргументов по ключевому слову \\
+
+\mintinline{ipython}|def func(*, имя1, имя2, ... имяN)|& Функция & Запрет позиционных аргументов; обязательная передача всех именованных аргументов по ключевому слову \\
+\hline
+\end{tabular}
+\end{table}
+\vfill
+\end{frame}
+
+
+\subsection{Именованные аргументы и значения по умолчанию}
+\begin{frame}[fragile]{Позиционные аргументы}
+\scriptsize
+\begin{itemize}
+\item Если не использовать какой-то специальный синтаксис сопоставления, то Python будет сопоставлять имена по позиции слева направо подобно большинству других языков. Например, если Вы определили функцию, которая требует трех аргументов, тогда должны вызывать ее с тремя аргументами:
+
+\begin{minted}{pycon}
+>>> def f(x, y, z):
+...     return x, y, z
+...
+
+>>> f(0, 1, 2)
+(0, 1, 2)
+\end{minted}
+\item Здесь аргументы передаются по позиции~-- \texttt{x} соответствует \texttt{0}, \texttt{y}~-- \texttt{1} и \texttt{z}~-- \texttt{2}.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Именованные параметры}
+\scriptsize
+\begin{itemize}
+\item \textcolor{extraorange}{\textbf{Именованные}} аргументы делают возможным сопоставление по имени, а не по позиции.
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> f(z=2, x=0, y=1)
+(0, 1, 2)
+\end{minted}
+
+\item Здесь \texttt{z=2} означает передачу значения \texttt{2} аргументу по имени \texttt{z}. Когда применяются ключевые слова, порядок следования аргументов несущественен, т.к. они сопоставляются по имени. 
+\item Разрешено комбинировать позиционные и ключевые аргументы. Сначала сопоставляются позиционные аргументы слева направо в заголовке, а затем ключевые аргументы по имени:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> f(0, z=2, y=1)
+(0, 1, 2)
+\end{minted}
+
+\item Ключевые аргументы делают вызовы функций самодокументированными. Вызов функции:
+
+\begin{minted}{python}
+func(name='James', age=20, job='student')
+\end{minted}
+
+\noindent выглядит более значащим по сравнению с вызовом, содержащим три разделенных запятыми значения, особенно в крупных программах.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Значения по умолчанию}
+\scriptsize
+\begin{itemize}
+\item Стандартные значения позволяют делать некоторые аргументы функции необязательными. 
+\item Если значение для аргумента не было передано, то используется стандартное значение.
+
+\begin{minted}[fontsize=\fontsize{7.pt}{7pt}]{pycon}
+>>> def f(x, y=1, z=2):  # Аргумент x обязательный
+...     return x, y, z   # y и z необязательные
+\end{minted}
+
+\item При вызове такой функции обязательно нужно передать значение для \texttt{x} по позиции, либо по имени;  передача значений для \texttt{y} и \texttt{z} необязательна:
+
+\begin{minted}[firstnumber=last, fontsize=\fontsize{7.pt}{7pt}]{pycon}
+>>> f(0)
+(0, 1, 2)
+>>> f(x=0)
+(0, 1, 2)
+\end{minted}
+
+\item В случае передачи двух значений стандартное значение получит только аргумент \texttt{z}, а при передаче трех значений стандартные значения не применяются:
+\begin{minted}[firstnumber=last, fontsize=\fontsize{7.pt}{7pt}]{pycon}
+>>> f(10, 20)
+(10, 20, 2)
+>>> f(10, 20, 30)
+(10, 20, 30)
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\subsection{Передача произвольного количества аргументов}
+
+\begin{frame}[fragile]{Заголовки функций: сбор аргументов}
+
+\scriptsize
+\begin{itemize}
+\item Расширения при передаче аргументов \mintinline{python}|*| и \mintinline{python}|**| предназначены для поддержки функций, принимающих \textcolor{extraorange}{\textbf{любое количество}} аргументов. 
+\item Когда расширение \mintinline{python}|*| применяется в определении функции, оно обеспечивает сбор неограниченного количества позиционных аргументов в кортеж:
+
+\begin{minted}[fontsize=\fontsize{8pt}{8pt}]{pycon}
+>>> def f(*args):
+...     return args
+...
+\end{minted}
+
+\item Python собирает все позиционные аргументы в кортеж и присваивает его переменной \texttt{args}. Поскольку это кортеж, допускается индексация, проход в цикле \mintinline{python}|for| и т.д.:
+
+\begin{minted}[firstnumber=last, fontsize=\fontsize{8pt}{8pt}]{pycon}
+>>> f()
+()
+
+>>> f(10)
+(10,)
+
+>>> f(10, 20, 30)
+(10, 20, 30)
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Заголовки функций: сбор аргументов}
+\scriptsize
+\begin{itemize}
+\item Расширение \mintinline{python}|**| работает с ключевыми аргументами~-- оно собирает их в словарь, который затем можно обрабатывать с помощью инструментов для словарей:
+
+\begin{minted}[fontsize=\fontsize{7pt}{7pt}]{pycon}
+>>> def f(**kwargs):
+...     return kwargs
+...
+>>> f()
+{}
+
+>>> f(x=2, y=3)
+{'x': 2, 'y': 3}
+\end{minted}
+\item В заголовках функций можно комбинировать позиционные аргументы с расширениями \mintinline{python}|**| и \mintinline{python}|*|, чтобы реализовывать гибкие сигнатуры вызовов.
+
+\begin{minted}[fontsize=\fontsize{7pt}{7pt}]{pycon}
+>>> def f(x, *args, **kwargs):
+...     return x, args, kwargs
+...
+>>> f(1, 2, 3, a=10, b=20)
+(1, (2, 3), {'a': 10, 'b': 20})
+\end{minted}
+\item Подобный код может встречаться в функциях, которым необходимо поддерживать множество шаблонов вызова.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Вызовы функций: распаковка аргументов}
+
+\scriptsize
+\begin{itemize}
+\item Синтаксис \mintinline{python}|*| в контексте вызова функции имеет смысл, противоположный его смыслу в определении функции~-- он распаковывает коллекцию аргументов, а не собирает ее.
+
+\begin{minted}{pycon}
+>>> def f(a, b, c, d):
+...     return a, b, c, d
+...
+>>> args = (10, 20, 30, 40, )
+
+>>> f(*args)
+(10, 20, 30, 40)
+\end{minted}
+
+\item Подобным образом синтаксис \mintinline{python}|**| в вызове функции распаковывает словарь пар ключ~/~значение в отдельные именованные аргументы.
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> kwargs = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
+
+>>> f(**kwargs)
+(10, 20, 30, 40)
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Вызовы функций: распаковка аргументов}
+\scriptsize
+\begin{itemize}
+\item Разрешено комбинировать позиционные и ключевые аргументы очень гибкими способами:
+
+\begin{minted}[fontsize=\fontsize{8pt}{8pt}]{pycon}
+>>> def f(a, b, c, d):
+...     return a, b, c, d
+...
+>>> f(10, 20, **{'d': 40, 'c': 30})
+(10, 20, 30, 40)
+
+>>> f(*(10, 20), **{'d: 40, 'c': 30})
+(10, 20, 30, 40)
+
+>>> f(10, *(20, 30), **{'d': 40})
+(10, 20, 30, 40)
+
+>>> f(10, c=30, *(2, ), **{'d': 40})
+(10, 2, 30, 40)
+
+>>> f(10,  *(20, 30), d=40)
+(10, 20, 30, 40)
+
+>>> f(10,  *(20, ), c=30, **{'d': 40})
+(10, 20, 30, 40)
+\end{minted}
+
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\section{Рекурсивные функции}
+\sectionframe
+
+%\subsection{Суммирование с помощью рекурсии}
+\begin{frame}[fragile]{Рекурсивные функции}
+\footnotesize
+\begin{itemize}
+\item \textcolor{extraorange}{\textbf{Рекурсивные функции}}~-- это функции, которые вызывают самих себя либо прямо, либо косвенно с целью организации цикла.
+\item Рекурсия~-- довольно сложная тема и ее относительно редко можно встретить в коде Python, отчасти из-за того, что процедурные операторы Python включают более простые циклические структуры. 
+\item  Рекурсия  является альтернативой несложным циклам и итерациям, хотя не обязательно более простой или эффективной.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Суммирование с помощью рекурсии}
+\scriptsize
+\begin{itemize}
+\item Рассмотрим специальную реализацию функции суммирования с применением рекурсии:
+
+\begin{minted}{pycon}
+>>> def my_sum(arr):
+...     if not arr:
+...         return 0
+...     return arr[0] + my_sum(arr[1:])
+...
+>>> my_sum([10, 20, 30, 40, 50])
+150
+\end{minted}
+
+\item На каждом уровне функция \texttt{my\_sum} рекурсивно вызывает саму себя, чтобы вычислить сумму остатка списка, которая позже добавляется к элементу в начале списка. 
+\item Когда список становится пустым, рекурсивный цикл заканчивается и возвращается ноль. 
+\texttt{}В случае использования рекурсии такого рода каждый открытый уровень вызова функции имеет собственную копию локальной области видимости функции в стеке вызовов времени выполнения~-- здесь это означает, что переменная \texttt{arr} на каждом уровне разная.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Суммирование с помощью рекурсии}
+\scriptsize
+\begin{itemize}
+\item Попробуем добавить в функцию вывод \texttt{arr} и запустить ее снова, чтобы отследить текущий список на каждом уровне вызова:
+
+\begin{minted}{pycon}
+>>> def my_sum(arr):
+...     print(arr)
+...     if not arr:
+...         return 0
+...     return arr[0] + my_sum(arr[1:])
+...
+>>> my_sum([10, 20, 30, 40, 50])
+[10, 20, 30, 40, 50]
+[20, 30, 40, 50]
+[30, 40, 50]
+[40, 50]
+[50]
+[]
+150
+\end{minted}
+
+\item Суммируемый список на каждом уровне рекурсии становится все меньше, пока окончательно не опустеет~-- конец рекурсивного цикла. 
+\item Сумма вычисляется при раскручивании рекурсивных вызовов по возврату.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Сравнение операторов цикла с рекурсией}
+\scriptsize
+\begin{itemize}
+\item В большинстве случаев рекурсивные функции избыточны.
+\item Например, цикл \mintinline{python}|while| часто привносит чуть большую конкретику и не требует рекурсий:
+
+\begin{minted}[fontsize=\fontsize{8pt}{8pt}]{pycon}
+>>> arr = [10, 20, 30, 40, 50]
+
+>>> def sum_while(arr):
+...     s = 0
+...     while arr:
+...         s += arr[0]
+...         arr = arr[1:]
+...     return s
+...
+>>> sum_while(arr)
+150
+
+>>> def sum_while(arr):  # Альтернативный вариант
+...     s = 0
+...     while arr:
+...         s += arr.pop()
+...     return s
+...
+>>> sum_while(arr)
+150
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Сравнение операторов цикла с рекурсией}
+\scriptsize
+\begin{itemize}
+\item В дополнение циклы \mintinline{python}|for| обеспечивают автоматическую итерацию, делая рекурсию во многих случаях излишней и с высокой долей вероятности менее эффективной в плане расхода памяти и времени выполнения:
+
+\begin{minted}{pycon}
+>>> arr = [1, 2, 3, 4, 5]
+
+>>> def sum_for(arr):
+...     s = 0
+...     for x in arr:
+...         s += x
+...     return s
+...
+>>> sum_for(arr)
+150
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\contactsframe[\Large \textbf{Благодарю за внимание!}]{
+
+\includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\
+\includegraphics[width=.05\textwidth]{pics/mail} \quad chuva@tpu.ru \\
+\includegraphics[width=.03\textwidth]{pics/tel} \quad +7-962-782-66-15
+}
+
+\end{document}
+
