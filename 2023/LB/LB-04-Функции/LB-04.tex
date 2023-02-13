@@ -1,0 +1,472 @@
+
+% !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[aspectratio=169, mathserif]{beamer}% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+
+% Style options:
+% light --- light theme (default)
+% dark --- dark theme
+% enlogo --- english TPU logo {default}
+% rulogo --- russian TPU logo
+
+\usetheme[light, rulogo]{tpu}% dark theme used as an example of optional argument
+
+\usepackage[russian]{babel}%uncomment this to work in russian
+\usepackage[utf8]{inputenc}
+
+\usepackage{fontspec}
+
+\setromanfont{Brygada1918}[
+Path=./fonts/BrygadaFontFiles/,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\setsansfont{ALSSirius}[
+Path=./fonts/ALSSiriusFiles/,
+Extension = .otf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+%ItalicFont=*-Italic,
+%BoldItalicFont=*-BoldItalic
+]
+
+\setmonofont{Consolas}[
+Path=./fonts/ConsolasFontFiles/,
+%Scale=0.85,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\usepackage[cache=false]{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{onedarkBckGr}{RGB}{40, 44, 52}
+
+\usemintedstyle[python]{default}
+\setminted[python]{
+fontsize=\scriptsize,
+escapeinside=||,
+mathescape=true,
+numbersep=5pt,
+gobble=2,
+linenos=false,
+frame=single,
+framesep=1mm,
+python3=true,
+bgcolor=backcolour,
+}
+
+\usemintedstyle[pycon]{default}
+\setminted[pycon]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=false,
+	frame=single,
+	framesep=1mm,
+	python3=true,
+	bgcolor=backcolour,
+	linenos=true,
+}
+
+\newmint{python}{}
+
+\usepackage{booktabs}% good looking tables
+\usepackage{multicol}% text in multiple columns, useful for side-by-side text and pictures
+\usepackage{hyperref}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\captionsetup[table]{justification=raggedleft, 
+labelformat=empty,
+labelsep=endash,  
+textformat=center, 
+position=top, 
+skip=5pt
+}
+
+\hyphenpenalty=10000% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
+
+\title{\LARGE{Системный анализ процессов химической технологии}}
+\subtitle{Лабораторная работа №3 \\ Функции}
+\author[]{Вячеслав Алексеевич Чузлов, \\
+к.т.н., доцент ОХИ ИШПР}
+\date{\today}
+
+\begin{document}
+
+\newcommand{\pythoninline}[1]{%
+	\colorbox{white}{%
+		\parbox[b][.6em]{\widthof{\mintinline[fontsize=\tiny]{ipython}{#1}}}{\mintinline[fontsize=\tiny]{ipython}{#1}}%
+	}%
+}
+
+% notice usage of \titleframe and several other unconventional functions
+% the reason being is custom backgrounds on these slides
+
+\titleframe% title
+
+%\tocframe{}% this custom frame accepts options for ToC
+
+
+
+\section{Описание функций}
+\sectionframe
+
+
+\begin{frame}[fragile]{Написание кода функций}
+\scriptsize
+\begin{itemize}
+\item \textcolor{extraorange}{\textbf{Функции}}~-- это многократно используемые фрагменты программы. Они позволяют дать имя определенному блоку команд с тем, чтобы в последствии запускать блок по указанному имени в любом месте программы и сколь угодно много раз. Это называется \textbf{вызовом функции}.
+\item Функции определяются при помощи зарезервированного слова \mintinline{python}|def|. После этого слова указывается имя функции, за которым следует пара скобок, в которых можно указать имена некоторых переменных, и заключительное двоеточие в конце строки. Далее следует блок команд (инструкций), составляющих тело функции.
+
+\item \textcolor{extraorange}{\textbf{Сигнатура функции}}~-- часть общего объявления функции, позволяющая средствами трансляции идентифицировать функцию среди других. Составляющие сигнатуры:
+\begin{enumerate}
+\scriptsize
+\item имя функции;
+\item аргументы функции;
+\item возвращаемые значения.
+\end{enumerate} 
+
+\begin{minted}{pycon}
+>>> def say_hi():
+...     print("Hi!")       
+
+>>> say_hi()
+Hi!
+\end{minted}
+
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Оператор \texttt{return}}
+\scriptsize
+\begin{itemize}
+\item Тело функции почти всегда содержит оператор \mintinline{python}|return|:
+\begin{minted}{ipython}
+def имя_функции(аргумент1, аргумент2, ..., аргумент3):
+    операторы
+    ...
+    return ...
+\end{minted}
+\item Оператор \mintinline{python}|return| в Python может появляться где угодно в теле функции; по достижении он заканчивает выполнение функции и возвращает результат обратно вызывающему коду. 
+\item Оператор \mintinline{python}|return| состоит из необязательного выражения с объектным значением, которое дает результат функции. 
+\item Если значение опущено, тогда \mintinline{python}|return| возвращает \mintinline{python}|None|. 
+\item Оператор \mintinline{python}|return| сам по себе также необязателен; если он отсутствует, то выход из функции происходит, когда  интерпретатор достигает конца тела функции. Формально функция без оператора \mintinline{python}|return| автоматически возвращает объект \mintinline{python}|None|. 
+\item Хорошим тоном является явное использование пустого оператора \mintinline{python}|return| для дополнительного пояснения того, что функция ничего не возвращает в качестве результата.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Оператор \texttt{return}}
+
+\begin{frame}[fragile]{Оператор \texttt{return}}
+\scriptsize
+\begin{itemize}
+\item Оператор \mintinline{python}|return| используется для возврата из функции, т.е. для прекращения её работы и выхода из неё. При этом можно также вернуть некоторое значение из функции.
+\item Оператор \mintinline{python}|return| в Python может появляться где угодно в теле функции; по достижении он \textbf{заканчивает} \textbf{выполнение функции} и возвращает результат обратно вызывающему коду.
+\end{itemize}
+
+\begin{minipage}{.47\textwidth}
+\begin{minted}{pycon}
+>>> def maximum(x, y): 
+...     if x > y:
+...         return x
+...
+...     elif x == y:
+...         return 'Equals.' 
+...     
+...     else:
+...         return y
+
+>>> print(maximum(2, 3))
+3
+\end{minted}
+\end{minipage}
+\begin{minipage}{.05\textwidth}
+\hspace{.1ex}
+\end{minipage}
+\begin{minipage}{.47\textwidth}
+\begin{minted}{pycon}
+>>> def maximum(x, y): 
+...     if x > y:
+...         return x
+...
+...     if x == y:
+...         return 'Equals.' 
+...
+...     return y
+
+>>> print(maximum(2, 3))
+3
+\end{minted}
+\vspace{.08ex}
+\end{minipage}
+\vfill
+\end{frame}
+
+
+\subsection{Локальные переменные}
+
+\begin{frame}[fragile]{Локальные переменные}
+\scriptsize
+\begin{itemize}
+\item При объявлении переменных внутри определения функции, они никоим образом не связаны с другими переменными с таким же именем за пределами функции~-- т.е. имена переменных являются локальными в функции. 
+\item Это называется \textcolor{extraorange}{\textbf{областью видимости переменной}}. Область видимости всех переменных ограничена блоком, в котором они объявлены, начиная с точки объявления имени.
+
+\begin{minted}{pycon}
+>>> x = 50
+
+>>> def func(x):
+...     print('x =', x)
+...     x = 2
+...     print('Replace x to', x)
+...
+
+>>> func(x)
+x = 50
+Replace x to 2
+
+>>> print('x =', x)
+x = 50
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\section{Синтаксис передачи аргументов}
+\sectionframe
+
+\begin{frame}[fragile]{Позиционные аргументы}
+\scriptsize
+\begin{itemize}
+\item Если не использовать какой-то специальный синтаксис сопоставления, то Python будет сопоставлять имена по позиции слева направо подобно большинству других языков. Например, если Вы определили функцию, которая требует трех аргументов, тогда должны вызывать ее с тремя аргументами:
+
+\begin{minted}{pycon}
+>>> def f(x, y, z):
+...     return x, y, z
+...
+
+>>> f(0, 1, 2)
+(0, 1, 2)
+\end{minted}
+\item Здесь аргументы передаются по позиции~-- \texttt{x} соответствует \texttt{0}, \texttt{y}~-- \texttt{1} и \texttt{z}~-- \texttt{2}.
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Именованные параметры}
+\scriptsize
+\begin{itemize}
+\item \textcolor{extraorange}{\textbf{Именованные}} аргументы делают возможным сопоставление по имени, а не по позиции.
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> f(z=2, x=0, y=1)
+(0, 1, 2)
+\end{minted}
+
+\item Здесь \texttt{z=2} означает передачу значения \texttt{2} аргументу по имени \texttt{z}. Когда применяются ключевые слова, порядок следования аргументов несущественен, т.к. они сопоставляются по имени. 
+\item Разрешено комбинировать позиционные и ключевые аргументы. Сначала сопоставляются позиционные аргументы слева направо в заголовке, а затем ключевые аргументы по имени:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> f(0, z=2, y=1)
+(0, 1, 2)
+\end{minted}
+
+\item Ключевые аргументы делают вызовы функций самодокументированными. Вызов функции:
+
+\begin{minted}{python}
+func(name='James', age=20, job='student')
+\end{minted}
+
+\noindent выглядит более значащим по сравнению с вызовом, содержащим три разделенных запятыми значения, особенно в крупных программах.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Значения по умолчанию}
+\scriptsize
+\begin{itemize}
+\item Стандартные значения позволяют делать некоторые аргументы функции необязательными. 
+\item Если значение для аргумента не было передано, то используется стандартное значение.
+
+\begin{minted}[fontsize=\fontsize{7.pt}{7pt}]{pycon}
+>>> def f(x, y=1, z=2):  # Аргумент x обязательный
+...     return x, y, z   # y и z необязательные
+\end{minted}
+
+\item При вызове такой функции обязательно нужно передать значение для \texttt{x} по позиции, либо по имени;  передача значений для \texttt{y} и \texttt{z} необязательна:
+
+\begin{minted}[firstnumber=last, fontsize=\fontsize{7.pt}{7pt}]{pycon}
+>>> f(0)
+(0, 1, 2)
+>>> f(x=0)
+(0, 1, 2)
+\end{minted}
+
+\item В случае передачи двух значений стандартное значение получит только аргумент \texttt{z}, а при передаче трех значений стандартные значения не применяются:
+\begin{minted}[firstnumber=last, fontsize=\fontsize{7.pt}{7pt}]{pycon}
+>>> f(10, 20)
+(10, 20, 2)
+>>> f(10, 20, 30)
+(10, 20, 30)
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+\section{Пример}
+\sectionframe
+
+
+\begin{frame}[fragile]{\textcolor{tpugreen}{\textbf{Пример}}}
+\scriptsize
+По имеющимся исходным данным определите состав потока в объемных долях, используя следующию формулу:
+\begin{normalsize}
+\begin{equation*}
+	\varphi _i = \dfrac{\dfrac{\omega _i}{\rho _i}}{\sum \limits _{i=1}^{n} \dfrac{\omega _i}{\rho _i}} 
+\end{equation*}
+\end{normalsize}
+где $\varphi _i$~-- объемная доля $i$-го компонента; $\omega _i$~-- массовая доля $i$-го компонента; $\rho _i$~-- плотность $i$-го компонента; $n$~-- число компонентов в системе; $i$~-- индекс компонента в системе.
+Исходные данные:
+\begin{table}[h!]
+	\begin{tabular}{|p{.2\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|}
+		\hline
+		$\mathrm{Параметр}$ & $C_1$ & $C_2$ & $C_3$ & $iC_4$ & $nC_4$ & $iC_5$ & $nC_5$ & $C_6$ \\
+		\hline
+		$\omega _i$ & $0.1$ & $0.1$ & $0.1$ & $0.4$ & $0.2$ & $0.05$ & $0.03$ & $0.02$ \\
+		\hline
+		$\rho_i, \mathrm{г/см}^3$ & $0.416$ & $0.546$ & $0.585$ & $0.5510$ & $0.6$ & $0.616$ & $0.6262$ & $0.6594$\\
+		\hline
+		$M_i, \mathrm{г/моль}$ & $16$ & $30$ & $44$ & $58$ & $58$ & $72$ & $72$ & $86$ \\
+		\hline
+	\end{tabular}
+\end{table}
+Вычисления необходимо реализовать в виде функции.
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{\textcolor{tpugreen}{\textbf{Пример}}}
+\scriptsize
+\begin{minted}[linenos=true, fontsize=\fontsize{8pt}{8pt}]{python}
+def mass_to_volume_fractions(
+    mass_fractions: list[float],
+    densities: list[float]
+) -> list[float]:
+    
+    volume_fractions = [
+        mf / d for mf, d in zip(mass_fractions, densities)
+    ]
+    s = sum(volume_fractions)
+    volume_fractions = [v / s for v in volume_fractions]
+    
+    return volume_fractions
+
+
+mass_fractions = [.1, .1, .1, .4, .2, .05, .03, .02]
+densities = [0.416, 0.546, 0.585, 0.5510, 0.6, 0.616, 0.6262, 0.6594]
+mol_mass_list = [16, 30, 44, 58, 58, 72, 72, 86]
+
+volume_fractions = mass_to_volume_fractions(mass_fractions, densities)
+
+for vf in volume_fractions: # 0.1326 0.1010 0.0943 0.4004 0.1838 0.0448 0.0264 0.0167
+    print(f'{vf:.4f}', end=' ')  
+\end{minted}
+\vfill
+\end{frame}
+
+
+\section{Задания}
+\sectionframe
+
+\begin{frame}[fragile]
+\scriptsize
+\begin{alertblock}{\textbf{Задание 1}}
+Используя исходные данные из примера, рассчитайте, реализовав соответствующие функции:
+\end{alertblock}
+\vfill
+\begin{enumerate}
+	\item Состав потока в мольных долях: 
+	$$
+		\chi _i = \dfrac{\dfrac{\omega _i}{M_i}}{\sum \limits_{i=1}^{n}\dfrac{\omega _i}{M_i}}
+	$$
+	где $\chi _i$~-- мольная доля $i$-го компонента; $\omega _i$~-- массовая доля $i$-го компонента; $M_i$~-- молярная масса $i$-го компонента; $n$~-- число компонентов в системе; $i$~-- индекс компонента в системе.
+	\item Плотность потока:
+	$$
+		\rho = \dfrac{1}{\sum \limits_{i=1}^{n}\dfrac{\omega_i}{\rho_i}}
+	$$
+	где $\rho$~-- плотность потока; $\omega _i$~-- массовая доля $i$-го компонента; $\rho _i$~-- плотность $i$-го компонента; $n$~-- число компонентов в системе; $i$~-- индекс компонента в системе.
+	\item Среднюю молекулярную массу потока:
+	$$
+		m = \dfrac{1}{\sum \limits_{i=1}^{n}\dfrac{\omega_i}{M_i}}
+	$$
+	где $m$~-- средняя молекулярная масса потока; $\omega _i$~-- массовая доля $i$-го компонента; $M_i$~-- молярная масса $i$-го компонента; $n$~-- число компонентов в системе; $i$~-- индекс компонента в системе.
+\end{enumerate}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{\textcolor{tpugreen}{\textbf{Задание~2}}}
+\scriptsize
+Пусть на смешение поступают материальные потоки следующего состава (массовые доли):
+\vfill
+\begin{table}[h!]
+	\begin{tabular}{|p{.2\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|p{.05\linewidth}|}
+		\hline
+		$\mathrm{Поток}$ & $C_1$ & $C_2$ & $C_3$ & $iC_4$ & $nC_4$ & $iC_5$ & $nC_5$ & $C_6$ \\
+		\hline
+		$1$ & $0.1$ & $0.1$ & $0.1$ & $0.4$ & $0.2$ & $0.05$ & $0.03$ & $0.02$ \\
+		\hline
+		$2$ & $0.1$ & $0.2$ & $0.1$ & $0.3$ & $0.1$ & $0.15$ & $0.03$ & $0.02$ \\
+		\hline
+		$3$ & $0.1$ & $0.1$ & $0.15$ & $0.35$ & $0.1$ & $0.05$ & $0.08$ & $0.07$ \\
+		\hline
+	\end{tabular}
+\end{table}
+\vfill
+Расходы потоков $200$, $250$ и $120$ кг/ч, соответственно.
+Необходимо рассчитать состав итогового потока в массовых долях, реализовав соответствующую функцию.
+
+Состав смесевого потока можно найти следующим образом:
+$$
+	\dfrac{\sum\limits_{j=1}^{n}G_j \cdot \omega_{i, j}}{\sum\limits_{j=1}^{n}G_j}
+$$
+\vfill
+где $\omega_i$~-- массовая доля $i$-го компонента в смесевом потоке; $\omega_{i, j}$~-- массовая доля $i$-го компонента в $j$-ом потоке; $G_j$~-- массовый расход $j$-го потока; $j$~-- индекс потока; $i$~-- индекс компонента в системе; $n$~-- число потоков, подаваемых на смешение.
+\vfill
+\end{frame}
+
+\contactsframe[\Large \textbf{Благодарю за внимание!}]{
+
+\includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\
+\includegraphics[width=.05\textwidth]{pics/mail} \quad chuva@tpu.ru \\
+\includegraphics[width=.03\textwidth]{pics/tel} \quad +7-962-782-66-15
+}
+
+\end{document}
+

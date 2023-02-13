@@ -13,7 +13,7 @@
 ...     return s
 ...
 >>> sum_for(arr)
-150
+15
 \end{minted}
 \end{itemize}
 \vfill

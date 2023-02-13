@@ -1,0 +1,7 @@
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Описание функций}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Оператор \texttt {return}}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Локальные переменные}{6}{0}{1}
+\beamer@sectionintoc {2}{Синтаксис передачи аргументов}{7}{0}{2}
+\beamer@sectionintoc {3}{Пример}{11}{0}{3}
+\beamer@sectionintoc {4}{Задания}{14}{0}{4}
