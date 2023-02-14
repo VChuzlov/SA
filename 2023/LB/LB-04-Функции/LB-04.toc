@@ -1,4 +1,4 @@
-\babel@toc {russian}{}
+\babel@toc {russian}{}\relax 
 \beamer@sectionintoc {1}{Описание функций}{2}{0}{1}
 \beamer@subsectionintoc {1}{1}{Оператор \texttt {return}}{5}{0}{1}
 \beamer@subsectionintoc {1}{2}{Локальные переменные}{6}{0}{1}
