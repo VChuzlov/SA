@@ -1,0 +1,900 @@
+% !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[aspectratio=169, mathserif]{beamer}	% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+
+% Style options:
+% light --- light theme (default)
+% dark --- dark theme
+% enlogo --- english TPU logo {default}
+% rulogo --- russian TPU logo
+
+\usetheme[light, rulogo]{tpu}		% dark theme used as an example of optional argument
+
+\usepackage[english, russian]{babel}		%uncomment this to work in russian
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+
+\usepackage{fontspec}
+
+\setromanfont{Brygada1918}[
+Path=./fonts/BrygadaFontFiles/,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\setsansfont{ALSSirius}[
+Path=./fonts/ALSSiriusFiles/,
+Extension = .otf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+%ItalicFont=*-Italic,
+%BoldItalicFont=*-BoldItalic
+]
+
+\setmonofont{Consolas}[
+Path=./fonts/ConsolasFontFiles/,
+%Scale=0.85,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\usepackage[cache=false]{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{onedarkBckGr}{RGB}{40, 44, 52}
+
+\usemintedstyle[python]{default}
+\setminted[python]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=false,
+	frame=single,
+	framesep=1mm,
+	python3=true,
+	bgcolor=backcolour,
+}
+
+\usemintedstyle[pycon]{default}
+\setminted[pycon]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=false,
+	frame=single,
+	framesep=1mm,
+	python3=true,
+	bgcolor=backcolour,
+	linenos=true,
+}
+
+\usemintedstyle[numpy]{default}
+\setminted[numpy]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=false,
+	frame=lines,
+	framesep=1mm,
+	python3=true,
+	bgcolor=backcolour,
+	linenos=false,
+}
+
+\usepackage{booktabs}	% good looking tables
+\usepackage{multicol}	% text in multiple columns, useful for side-by-side text and pictures
+\usepackage{hyperref}
+%\usepackage{minted}
+\usepackage{xcolor}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{amsxtra}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\DeclareCaptionLabelFormat{figure}{Рисунок~#2}
+\captionsetup[table]{justification=raggedleft, 
+	labelformat=empty,	
+	labelsep=endash,  
+	textformat=center, 
+	position=top, 
+	skip=5pt
+}
+\captionsetup[figure]{justification=centering,
+	labelsep=endash, 
+	labelformat=figure,
+	font={tiny}
+}
+
+\usepackage{listings}
+\lstset{
+	breaklines=true,
+	%
+	extendedchars=true,
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1
+}
+
+%%
+%% Python definition (c) 1998 Michael Weber
+%% Additional definitions (2013) Alexis Dimitriadis
+%% modified by me (should not have empty lines)
+%%
+\lstdefinelanguage{iPython}{
+	morekeywords={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while, nonlocal, yield, with},%
+	%
+	% Built-ins
+	morekeywords=[2]{abs,all,any,basestring,bin,bool,bytearray,callable,chr,classmethod,cmp,compile,complex,delattr,dict,dir,divmod,enumerate,eval,execfile,file,filter,float,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,int,isinstance,issubclass,iter,len,list,locals,long,map,max,memoryview,min,next,object,oct,open,ord,pow,property,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,vars,xrange,zip,apply,buffer,coerce,intern, ascii, as, assert},%
+	%
+	sensitive=true,%
+	morecomment=[l]\#,%
+	morestring=[b]',%
+	morestring=[b]",%
+	%
+	morestring=[s]{'''}{'''},% used for documentation text (mulitiline strings)
+	morestring=[s]{"""}{"""},% added by Philipp Matthias Hahn
+	%
+	morestring=[s]{r'}{'},% `raw' strings
+	morestring=[s]{r"}{"},%
+	morestring=[s]{r'''}{'''},%
+	morestring=[s]{r"""}{"""},%
+	morestring=[s]{u'}{'},% unicode strings
+	morestring=[s]{u"}{"},%
+	morestring=[s]{u'''}{'''},%
+	morestring=[s]{u"""}{"""},%
+	morestring=[s]{b'}{'},% byte strings
+	morestring=[s]{b"}{"},%
+	morestring=[s]{b'''}{'''},%
+	morestring=[s]{b"""}{"""},%
+	%
+	% {replace}{replacement}{lenght of replace}
+	% *{-}{-}{1} will not replace in comments and so on
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1,
+	%
+	literate=
+	*{+}{{{\color{ipython_purple}+}}}1
+	{-}{{{\color{ipython_purple}-}}}1
+	{*}{{{\color{ipython_purple}$^\ast$}}}1
+	{/}{{{\color{ipython_purple}/}}}1
+	{^}{{{\color{ipython_purple}\^{}}}}1
+	{?}{{{\color{ipython_purple}?}}}1
+	{!}{{{\color{ipython_purple}!}}}1
+	{\%}{{{\color{ipython_purple}\%}}}1
+	{<}{{{\color{ipython_purple}<}}}1
+	{>}{{{\color{ipython_purple}>}}}1
+	{|}{{{\color{ipython_purple}|}}}1
+	{\&}{{{\color{ipython_purple}\&}}}1
+	{~}{{{\color{ipython_purple}~}}}1
+	%
+	%	{==}{{{\color{ipython_purple}==}}}2
+	%	{<=}{{{\color{ipython_purple}<=}}}2
+	%	{>=}{{{\color{ipython_purple}>=}}}2
+	%	
+	%	{+=}{{{\color{ipython_purple}>=}}}2
+	%	{&=}{{{\color{ipython_purple}>=}}}2
+	%	{-=}{{{\color{ipython_purple}>=}}}2
+	%	{|=}{{{\color{ipython_purple}>=}}}2
+	%	
+	%	{*=}{{{\color{ipython_purple}>=}}}2
+	%	{^=}{{{\color{ipython_purple}>=}}}2
+	%	{/=}{{{\color{ipython_purple}>=}}}2
+	%	{>>=}{{{\color{ipython_purple}>=}}}2
+	%	
+	%	{\%=}{{{\color{ipython_purple}>=}}}2
+	%	{<<=}{{{\color{ipython_purple}>=}}}2
+	%	{**=}{{{\color{ipython_purple}>=}}}2
+	%	{//=}{{{\color{ipython_purple}>=}}}2
+	%
+	{+=}{{{+=}}}2
+	{-=}{{{-=}}}2
+	{*=}{{{$^\ast$=}}}2
+	{/=}{{{/=}}}2,
+	%
+	%	identifierstyle=\color{red}\ttfamily,
+	commentstyle=\fontsize{7pt}{7}\color{ipython_cyan}\sffamily ,
+	texcl=true,
+	keepspaces=true,
+	stringstyle=\fontsize{7pt}{7}\color{ipython_red}\ttfamily ,
+	%	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+	%
+	rulecolor=\color{ipython_frame},
+	frame=leftline,
+	%	frameround=ffff,
+	framexleftmargin=2mm,
+	columns=fullflexible
+	numbers=left,
+	numberstyle=\tiny\color{halfgray},
+	numbersep=14pt,
+	%
+	%
+%		backgroundcolor=\color{ipython_bg},
+	extendedchars=true,
+	basicstyle=\fontsize{7pt}{7}\ttfamily,
+	keywordstyle=\fontsize{7pt}{7}\color{ipython_green}\ttfamily,
+	escapechar=\¢,escapebegin=\color{ipython_red},
+}
+
+\hyphenpenalty=10000	% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
+
+\title{\LARGE{Системный анализ процессов химической технологии}}
+\subtitle{\textbf{Лекция 4} \\ Введение в библиотеку NumPy}
+\author[]{\textbf{Вячеслав Алексеевич Чузлов}}
+\institute{к.т.н., доцент ОХИ ИШПР}
+\date{\today}
+
+\begin{document}
+
+% notice usage of \titleframe and several other unconventional functions
+% the reason being is custom backgrounds on these slides
+
+\titleframe		% title
+
+\tocframe{}		% this custom frame accepts options for ToC
+
+%\addcontentsline{toc}{section}{\textbf{I Численные методы решения систем \\ линейных уравнений}}
+
+\begin{frame}[fragile]{Введение}
+\scriptsize
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\begin{center}
+		\includegraphics[width=\linewidth]{./pics/NumPy_logo}
+	\end{center}
+\end{wrapfigure}
+\begin{itemize}
+	\item Библиотека NumPy (\textbf{Num}erical \textbf{Py}thon~-- <<числовой Python>>) предоставляет набор эффективных инструментов для хранения и работы с данными.
+	\item Массивы библиотеки NumPy отдаленно напоминают списки Python, однако обеспечивают намного более эффективное хранение и выполнение операций с данными при росте размера массивов.
+	\item Массивы библиотеки NumPy формируют ядро практически всей экосистемы утилит для исследования данных Python.
+\end{itemize}
+
+По установившейся традиции, большинство пользователей импортируют пакет NumPy, используя сокращение \texttt{np}:
+
+\begin{minted}{pycon}
+>>> import numpy as np
+|\space|
+\end{minted}
+\vfil
+\end{frame}
+
+\section{Преобразование списков Python в массивы NumPy}
+\begin{frame}[fragile]{Преобразование списков Python в массивы NumPy}
+\scriptsize
+\begin{itemize}
+	\item Для того, чтобы создать объект массива NumPy из объекта списка Python, можно использовать функцию \texttt{np.array}:
+\begin{minted}{pycon}
+>>> import numpy as np
+>>> np.array([1, 3, 5, 4, 2]) # Массив целочисленных значений
+array([1, 3, 5, 4, 2])
+\end{minted}
+
+\item В отличие от стандартных списков Python, массивы NumPy могут содержать элементы только одного типа. Если типы элементов не совпадают, NumPy сделает попытку повышающего приведения типов:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.array([3.14, 4, 2, 3, 2.71])
+array([3.14, 4.  , 2.  , 3.  , 2.71])
+\end{minted}
+
+\item В тех случаях, когда требуется явно задать тип результирующего массива, необходимо воспользоваться ключевым аргументом \texttt{dtype}:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.array([1, 3, 5, 4, 2], dtype='float32')
+array([1., 3., 5., 4., 2.], dtype=float32)
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Преобразование списков Python в массивы NumPy}
+\scriptsize
+\begin{itemize}
+	\item В отличие от списков, массивы NumPy можно явным образом описать как многомерные:
+	
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.array([range(i, i + 3) for i in [2, 4, 6]])
+array([[2, 3, 4],
+       [4, 5, 6],
+       [6, 7, 8]])
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+\section{Создание массивов}
+\begin{frame}[fragile]{Создание массивов}
+\scriptsize
+Массивы больших размеров эффективнее генерировать с помощью встроенных методов. 
+\begin{itemize}
+\item Создаем массив целых чисел длины 10, заполненный нулями:
+\begin{minted}{pycon}
+>>> np.zeros(10, dtype=int)
+array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+\end{minted}
+\item Создадим массив размером $3 \times 5$ значений с плавающей точкой, заполненный единицами:
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.ones((3, 5), dtype=float)
+array([[1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1.]])
+\end{minted}
+\item Создадим массив размером $3 \times 5$, заполненный значением $2.98$:
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.full((3, 5), 2.98)
+array([[2.98, 2.98, 2.98, 2.98, 2.98],
+       [2.98, 2.98, 2.98, 2.98, 2.98],
+       [2.98, 2.98, 2.98, 2.98, 2.98]])
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Создание массивов}
+\scriptsize
+\begin{itemize}
+\item Создадим массив, заполненный линейной последовательностью, начинающейся с $0$ и заканчивающейся $20$, с шагом $2$ (аналогично встроенной функции \mintinline{python}|range()|):
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.arange(0, 20, 2)
+array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18])
+\end{minted}
+\item Создадим массив из пяти значений, равномерно располагающихся между $0$ и $1$:
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.linspace(0, 1, 5)
+array([0.  , 0.25, 0.5 , 0.75, 1.  ])
+\end{minted}
+\item Создадим массив размером $3 \times 3$ равномерно распределенных случайных значений от $0$ до $1$
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.random.random((3, 3))
+array([[0.28209864, 0.0014687 , 0.71104325],
+       [0.58773349, 0.89099475, 0.87835838],
+       [0.81093666, 0.70139097, 0.12816416]])
+\end{minted}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Создание массивов}
+\scriptsize
+\begin{itemize}
+	\item Создадим массив размером $3 \times 3$ случайных целых чисел в интервале $\left[0, 10\right]$	
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.random.randint(0, 10, (3, 3))
+array([[0, 4, 0],
+       [6, 7, 2],
+       [0, 7, 3]])
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+\section{Доступ к элементам массива}
+\begin{frame}[fragile]{Доступ к элементам массива}
+\scriptsize
+Индексация массивов NumPy во многом похожа на индексацию списков в Python.
+В одномерном массиве обратиться к $\mathrm{i}$-му (считая с $0$) значению можно по требуемому индексу в квадратных скобках, по аналогии со стандартными списками:
+
+\begin{minted}{pycon}
+>>> x1 = np.array([5, 0, 3, 3, 7, 9])
+>>> x1[0]
+5
+>>> x1[4]
+7
+\end{minted}
+
+Для индексации элементов с конца массива следует использовать отрицательные индексы:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x1[-1]
+9
+>>> x1[-2]
+7
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Доступ к элементам массива}
+\scriptsize
+Для обращения к элементам многомерного массива нужно указать кортеж индексов, разделенных запятыми:
+\begin{minted}[firstnumber=last]{pycon}
+>>> x2 = np.array([[3, 5, 2, 4], [7, 6, 8, 8], [1, 6, 7, 7]])
+>>> x2
+array([[3, 5, 2, 4],
+       [7, 6, 8, 8],
+       [1, 6, 7, 7]])
+>>> x2[0, 0]
+3
+>>> x2[2, 0]
+1
+>>> x2[2, -1]
+7
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Доступ к элементам массива}
+\scriptsize
+При помощи любой из указанных выше нотаций можно изменять значения элементов массива:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x2[0, 0] = 24
+>>> x2
+array([[24,  5,  2,  4],
+       [ 7,  6,  8,  8],
+       [ 1,  6,  7,  7]])
+\end{minted}
+
+Следует помнить, что, в отличие от списков, массивы NumPy имеют фиксированный тип данных. 
+Если вставить в массив целых чисел значение с плавающей точкой, оно будет неявно усечено:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x1[0] = 2.71828  # Это значение будет усечено!
+>>> x1
+array([2, 0, 3, 3, 7, 9])
+\end{minted}
+\vfill
+\end{frame}
+
+\subsection{Срезы массивов: доступ к подмассивам}
+\begin{frame}[fragile]{Срезы массивов: доступ к подмассивам}
+\scriptsize
+\begin{itemize}
+\item По аналогии с доступом к определенным элементам массива квадратные скобки используются для доступа к отдельным частям массива при помощи операции среза (\texttt{slicing}), обозначаемой знаком двоеточия (\texttt{:}).
+\item Синтаксически срезы массивов NumPy соответствуют  срезам стандартных списков Python:
+\\
+
+\center{\texttt{x[начало:конец:шаг]}}
+\\ 
+\noindent при этом любое из значений можно не указывать, тогда по умолчанию будут приняты следующие значения: \texttt{начало = 0}, \texttt{конец = размер соответствующего измерения}, \texttt{шаг = 1}.
+\end{itemize} 
+\subsubsection{Одномерные подмассивы} 
+\begin{alertblock}{\textbf{Одномерные подмассивы}}
+\begin{minted}{pycon}
+>>> x = np.arange(10)
+>>> x
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> x[:5]    # первые пять элементов
+array([0, 1, 2, 3, 4])
+>>> x[5:]    # элементы после индекса = 5
+array([5, 6, 7, 8, 9])
+>>> x[4:7]   # подмассив из середины
+array([4, 5, 6])
+\end{minted}
+\end{alertblock}
+\vfil
+\end{frame}
+
+\begin{frame}[fragile]{Срезы массивов: доступ к подмассивам}
+\scriptsize
+\begin{minted}[firstnumber=last]{pycon}
+>>> x[::2]   # каждый второй элемент
+array([0, 2, 4, 6, 8])
+>>> x[1::2]  # каждый второй элемент, начиная с индекса 1 
+array([1, 3, 5, 7, 9])
+\end{minted}
+\begin{itemize}
+\item Также сохранена возможность использования отрицательного значения параметра \texttt{\textbf{шаг}}. Тогда значения по умолчанию для параметров \texttt{\textbf{начало}} и \texttt{\textbf{конец}} будут поменяны местами. Это быстрый способ перевернуть массив:
+\end{itemize}
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x[::-1]    # все элементы в обратном порядке
+array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+>>> x[5::-1]   # все элементы в обратном порядке, начиная с индекса 5
+array([5, 4, 3, 2, 1, 0])
+>>> x[5::-2]  # каждый второй элемент в обратном порядке, начиная с индекса 5
+array([5, 3, 1])
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Срезы массивов: доступ к подмассивам}
+\scriptsize
+\subsubsection{Многомерные подмассивы}
+\begin{alertblock}{\textbf{Многомерные подмассивы}}
+\begin{minted}{pycon}
+>>> x2
+array([[24,  5,  2,  4],
+       [ 7,  6,  8,  8],
+       [ 1,  6,  7,  7]])
+>>> x2[:2, :3]             # две строки, три столбца
+array([[24,  5,  2],
+       [ 7,  6,  8]])
+>>> x2[:3, ::2]            # все строки, каждый второй столбец
+array([[24,  2],
+       [ 7,  8],
+       [ 1,  7]])
+>>> x2[::-1, ::-1]         # обратный порядок строк и столбцов
+array([[ 7,  7,  6,  1],
+       [ 8,  8,  6,  7],
+       [ 4,  2,  5, 24]])
+\end{minted}
+\end{alertblock}
+\vfil
+\end{frame}
+
+\begin{frame}[fragile]{Срезы массивов: доступ к подмассивам}
+\scriptsize
+\subsubsection{Доступ к строкам и столбцам массива}
+\begin{alertblock}{\textbf{Доступ к строкам и столбцам массива}}
+Распространенной задачей является доступ к отдельным строкам или столбцам массива.
+Получить такой доступ можно при помощи комбинации операций индексации и среза:
+\begin{minted}[firstnumber=last]{pycon}
+>>> print(x2[:, 0])   # первый столбец массива x2
+[24  7  1]
+>>> print(x2[0, :])   # первая строка массива x2
+[24  5  2  4]
+\end{minted}
+При необходимости получения доступа к строке, операция взятия среза может быть опущена для более лаконичной записи:
+\begin{minted}{pycon}
+>>> print(x2[0])  # эквивалентно x2[0, :]
+[24  5  2  4]
+\end{minted}
+\end{alertblock}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Срезы массивов создают разделяемые ссылки}
+\scriptsize
+\begin{itemize}
+\item Срезы массивов возвращают \textcolor{extraorange}{\textbf{разделяемые ссылки}} (синонимы), а не \textcolor{extraorange}{\textbf{копии}} данных массива. 
+\item Этим срезы массивов библиотеки NumPy отличаются от срезов списков языка Python (срезы списков создают новые объекты):
+\begin{minted}{pycon}
+>>> print(x2)
+[[24  5  2  4]
+ [ 7  6  8  8]
+ [ 1  6  7  7]]
+\end{minted}
+
+Получим из него матрицу $2 \times 2$:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x2_sub = x2[:2, :2]
+>>> print(x2_sub)
+[[24  5]
+ [ 7  6]]
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Срезы массивов создают разделяемые ссылки}
+\scriptsize
+Теперь, если изменить значения этой матрицы, исходный массив также поменялся:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x2_sub[0, 0] = 100
+>>> print(x2_sub)
+[[100   5]
+ [  7   6]]
+>>> print(x2)
+[[100   5   2   4]
+ [  7   6   8   8]
+ [  1   6   7   7]]
+\end{minted}
+\vfill
+\end{frame}
+
+\subsection{Создание копий массивов}
+\begin{frame}[fragile]{Создание копий массивов}
+\scriptsize
+В ряде случаев требуется явно скопировать содержимое массива или его части. Для решения данной задачи существует метод \mintinline{python}|copy()|:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x2_sub_copy = x2[:2, :2].copy()
+>>> print(x2_sub_copy)
+[[100   5]
+ [  7   6]]
+\end{minted}
+
+Теперь, если изменить значения этого подмассива, то исходный массив не изменится:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x2_sub_copy[0, 0] = 24
+>>> print(x2_sub_copy)
+[[24  5]
+ [ 7  6]]
+>>> print(x2)
+[[100   5   2   4]
+ [  7   6   8   8]
+ [  1   6   7   7]]
+\end{minted}
+\vfill
+\end{frame}
+
+\section{Вычисления с массивами NumPy}
+\sectionframe
+
+\subsection{Арифметические функции с массивами}
+\begin{frame}[fragile]{Арифметические функции с массивами}
+\scriptsize
+Универсальные функции NumPy могут быть легко использованы, т.к. основаны на нативных арифметических операторах Python. Доступны обычные операторы сложения, вычитания, умножения и деления:
+
+\begin{minted}{pycon}
+>>> x = np.arange(4)
+>>> print('x      =', x)
+x      = [0 1 2 3]
+>>> print('x + 5  =', x + 5)
+x + 5  = [5 6 7 8]   
+>>> print('x - 5  =', x - 5)
+x - 5  = [-5 -4 -3 -2]   
+>>> print('x * 2  =', x * 2)
+x * 2  = [0 2 4 6]   
+>>> print('x / 2  =', x / 2)
+x / 2  = [0.  0.5 1.  1.5]   
+>>> print('x // 2 =', x // 2)
+x // 2 = [0 0 1 1]
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Арифметические функции с массивами}
+\scriptsize
+Определены также унарная универсальная функция изменения знака, оператор \mintinline{python}|**| для возведения в степень и оператор \mintinline{python}|%| для деления по модулю:
+\begin{minted}[firstnumber=last]{pycon}
+>>> print('-x     =', -x)
+-x     = [ 0 -1 -2 -3]
+>>> print('x ** 2 =', x ** 2)
+x ** 2 = [0 1 4 9]
+>>> print('x % 2  =', x % 2)
+x % 2  = [0 1 0 1]
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Арифметические функции с массивами}
+\scriptsize
+Данные операции могут быть использованы в выражениях любыми способами с соблюдением стандартных приоритетов:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> -(0.5 * x + 1) ** 2
+array([-1.  , -2.25, -4.  , -6.25])
+\end{minted}
+
+Все арифметические операторы~-- удобные аналоги для встроенных функций библиотеки NumPy. Например, оператор \mintinline{python}|+| является аналогом функции \mintinline{python}|add()|:
+
+%\begin{minted}[firstnumber=last]{pycon}
+%>>> np.add(x, 5)
+%array([5, 6, 7, 8])
+%\end{minted}
+\begin{table}[h!]
+%\caption{Реализованные в бибилотеке NumPy арифметические операторы}
+\label{tab:арифм.опер.np}
+\begin{tabular*}{\linewidth}{p{0.11\linewidth}p{0.28\linewidth}p{0.54\linewidth}}
+\hline
+{Оператор} & {Эквивалентная функция} & {Описание} \\
+\hline
+
+\mintinline{ipython}|+| & \mintinline{ipython}|np.add| & Сложение: \mintinline{ipython}|1 + 1 = 2| \\
+
+\mintinline{ipython}|-| & \mintinline{ipython}|np.subtract| & Вычитание: \mintinline{ipython}|3 - 2 = 1| \\
+
+\mintinline{ipython}|-| & \mintinline{ipython}|np.negative| & Унарная операция изменения знака: \mintinline{ipython}|-2| \\
+
+\mintinline{ipython}|*| & \mintinline{ipython}|np.multiply| & Умножение: \mintinline{ipython}|2 * 3 = 6| \\
+
+\mintinline{ipython}|/| & \mintinline{ipython}|np.divide| & Деление: \mintinline{ipython}|3 / 2 = 1.5| \\
+
+\mintinline{ipython}|//| & \mintinline{ipython}|np.floor_divide| & Деление с округлением в меньшую сторону: \mintinline{ipython}|3 // 2 = 1| \\
+
+\mintinline{ipython}|**| & \mintinline{ipython}|np.power| & Возведение в степень: \mintinline{ipython}|3 ** 2 = 9| \\
+
+\mintinline{ipython}|%| & \mintinline{ipython}|np.mod| & Модуль/остаток: \mintinline{ipython}|5 % 2 = 1| \\
+\hline
+\end{tabular*}
+\end{table}
+\vfil
+\end{frame}
+
+\subsection{Получение абсолютного значения}
+\begin{frame}[fragile]{Получение абсолютного значения}
+\scriptsize
+Наряду со встроенными арифметическими операторами, с массивами NumPy можно использовать стандартную функцию \mintinline{python}|abs()| языка Python для получения абсолютного значения:
+
+\begin{minted}{pycon}
+>>> x = np.array([-2, -1, 0, 1, 2])
+>>> abs(x)
+array([2, 1, 0, 1, 2])
+\end{minted}
+
+Аналогичная универсальная функция NumPy~-- \mintinline{python}|np.absolute()|, доступна также под псевдонимом \mintinline{python}|np.abs()|:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.absolute(x)
+array([2, 1, 0, 1, 2])
+>>> np.abs(x)
+array([2, 1, 0, 1, 2])
+\end{minted}
+\vfil
+\end{frame}
+
+\subsection{Тригонометрические функции}
+\begin{frame}[fragile]{Тригонометрические функции}
+\scriptsize
+Библиотека NumPy предоставляет набор тригонометрических функций:
+
+\begin{minted}{pycon}
+>>> alpha = np.linspace(0, np.pi, 3)
+>>> print('alpha      = ', alpha)
+alpha      =  [0.         1.57079633 3.14159265]
+>>> print('sin(alpha) = ', np.sin(alpha))
+sin(alpha) =  [0.0000000e+00 1.0000000e+00 1.2246468e-16]   
+>>> print('cos(alpha) = ', np.cos(alpha))
+cos(alpha) =  [ 1.000000e+00  6.123234e-17 -1.000000e+00]   
+>>> print('tan(alpha) = ', np.tan(alpha))
+tan(alpha) =  [ 0.00000000e+00  1.63312394e+16 -1.22464680e-16]
+\end{minted}
+
+Значения вычисляются в пределах точности конкретной вычислительной машины, вследствие чего некоторые из них не всегда точно равны нулю, хотя должны. 
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Тригонометрические функции}
+\scriptsize
+Определены также  и обратные тригонометрические функции:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x = [-1, 0, 1]
+>>> print('x = ', x)
+x =  [-1, 0, 1]
+>>> x = [-1, 0, 1]
+>>> print('x = ', x)
+x =  [-1, 0, 1]
+>>> print('arcsin(x) = ', np.arcsin(x))
+arcsin(x) =  [-1.57079633  0.          1.57079633]   
+>>> print('arccos(x) = ', np.arccos(x))
+arccos(x) =  [3.14159265 1.57079633 0.        ]   
+>>> print('arctan(x) = ', np.arctan(x))
+arctan(x) =  [-0.78539816  0.          0.78539816]
+\end{minted}
+\vfill
+\end{frame}
+
+\subsection{Показательные функции и логарифмы}
+\begin{frame}[fragile]{Показательные функции и логарифмы}
+\scriptsize
+Показательные функции~-- один из  распространенных типов операций, доступных в NumPy:
+
+\begin{minted}{pycon}
+>>> x = [1, 2, 3]
+>>> print('x   = ', x)
+x   =  [1, 2, 3]   
+>>> print('e^x = ', np.exp(x))
+e^x =  [ 2.71828183  7.3890561  20.08553692]   
+>>> print('2^x = ', np.exp2(x))
+2^x =  [2. 4. 8.]   
+>>> print('3^x = ', np.power(3, x))
+3^x =  [ 3  9 27]
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Показательные функции и логарифмы}
+\scriptsize
+Определены также и логарифмы. Простейшая функция \mintinline{python}|np.log()| возвращает натуральный логарифм числа. Если Вам требуется логарифм по основанию $2$ или $10$, они также доступны:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> x = [1, 2, 4, 10]
+>>> print('x        =', x)
+x        = [1, 2, 4, 10]   
+>>> print('ln(x)    =', np.log(x))
+ln(x)    = [0.         0.69314718 1.38629436 2.30258509]   
+>>> print('log2(x)  =', np.log2(x))
+log2(x)  = [0.         1.         2.         3.32192809]   
+>>> print('log10(x) =', np.log10(x))
+log10(x) = [0.         0.30103    0.60205999 1.        ]
+\end{minted}
+\vfill
+\end{frame}
+
+
+\section{Функции агрегирования}
+\sectionframe
+
+\subsection{Суммирование значений массива}
+\begin{frame}[fragile]{Суммирование значений массива}
+\scriptsize
+В стандартном Python данная задача решается при помощи встроенной функции \mintinline{ipython}|sum()|. Синтаксис этой функции крайне похож на функцию \mintinline{ipython}|sum()| библиотеки NumPy:
+
+\begin{minted}{pycon}
+>>> import numpy as np
+>>> arr = np.random.random(100)
+>>> sum(arr)
+49.496408327779065
+>>> np.sum(arr)
+49.49640832777906
+\end{minted}
+
+NumPy версия функции \mintinline{ipython}|sum()| работает намного быстрее:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> big_array = np.random.rand(1000000)
+>>> %timeit sum(big_array)  # Магическая команда в IPython
+62.8 ms |$\pm$| 598 |$\mu$|s per loop (mean |$\pm$| std. dev. of 7 runs, 10 loops each
+>>> %timeit np.sum(big_array)
+522 |$\mu$|s |$\pm$| 5.53 |$\mu$|s per loop (mean |$\pm$| std. dev. of 7 runs, 1000 loops each)
+\end{minted}
+
+Важно заметить, что функции \mintinline{ipython}|sum()| и \mintinline{ipython}|np.sum()| не идентичны. Так, смысл их опциональных аргументов отличается и функция \mintinline{ipython}|np.sum()| может работать с многомерными массивами.
+\vfill
+\end{frame}
+
+\subsection{Минимум и максимум}
+\begin{frame}[fragile]{Минимум и максимум}
+\scriptsize
+В стандартном Python определены встроенные функции \mintinline{ipython}|min()| и \mintinline{ipython}|max()|, служащие для вычисления минимального и максимального значений любой коллекции:
+
+\begin{minted}{pycon}
+>>> min(big_array), max(big_array)
+(1.4200179176970806e-07, 0.9999998044567884)
+\end{minted}
+
+Соответствующие функций NumPy имеют аналогичный синтаксис и работают быстрее:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.min(big_array), np.max(big_array)
+(1.4200179176970806e-07, 0.9999998044567884)
+>>> %timeit min(big_array)
+43.4 ms |$\pm$| 719 |$\mu$|s per loop (mean |$\pm$| std. dev. of 7 runs, 10 loops each)
+>>> %timeit np.min(big_array)
+304 |$\mu$|s |$\pm$| 2.03 |$\mu$|s per loop (mean |$\pm$| std. dev. of 7 runs, 1000 loops each)
+\end{minted}
+
+Существует возможность вычисления некоторых сводных показателей путем вызова соответствующих методов объекта массива NumPy для более лаконичной записи:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> print(big_array.min(), big_array.max(), big_array.sum())
+1.4200179176970806e-07 0.9999998044567884 499940.4506893933
+\end{minted}
+\vfill
+\end{frame}
+
+\contactsframe[\Large \textbf{Благодарю за внимание!}]{
+
+\bigskip
+\includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\
+\includegraphics[width=.05\textwidth]{pics/mail} \quad chuva@tpu.ru \\
+\includegraphics[width=.03\textwidth]{pics/tel} \quad +7-962-782-66-15
+}
+
+\end{document}
+

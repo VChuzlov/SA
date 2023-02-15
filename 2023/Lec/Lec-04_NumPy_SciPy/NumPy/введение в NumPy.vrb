@@ -1,0 +1,27 @@
+\frametitle{Минимум и максимум}
+\scriptsize
+В стандартном Python определены встроенные функции \mintinline{ipython}|min()| и \mintinline{ipython}|max()|, служащие для вычисления минимального и максимального значений любой коллекции:
+
+\begin{minted}{pycon}
+>>> min(big_array), max(big_array)
+(1.4200179176970806e-07, 0.9999998044567884)
+\end{minted}
+
+Соответствующие функций NumPy имеют аналогичный синтаксис и работают быстрее:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> np.min(big_array), np.max(big_array)
+(1.4200179176970806e-07, 0.9999998044567884)
+>>> %timeit min(big_array)
+43.4 ms |$\pm$| 719 |$\mu$|s per loop (mean |$\pm$| std. dev. of 7 runs, 10 loops each)
+>>> %timeit np.min(big_array)
+304 |$\mu$|s |$\pm$| 2.03 |$\mu$|s per loop (mean |$\pm$| std. dev. of 7 runs, 1000 loops each)
+\end{minted}
+
+Существует возможность вычисления некоторых сводных показателей путем вызова соответствующих методов объекта массива NumPy для более лаконичной записи:
+
+\begin{minted}[firstnumber=last]{pycon}
+>>> print(big_array.min(), big_array.max(), big_array.sum())
+1.4200179176970806e-07 0.9999998044567884 499940.4506893933
+\end{minted}
+\vfill
