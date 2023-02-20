@@ -1,0 +1,19 @@
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Преобразование списков Python в массивы NumPy}{2}{0}{1}
+\beamer@sectionintoc {2}{Создание массивов}{4}{0}{2}
+\beamer@sectionintoc {3}{Доступ к элементам массива}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{Срезы массивов: доступ к подмассивам}{10}{0}{3}
+\beamer@subsubsectionintoc {3}{1}{1}{Одномерные подмассивы}{10}{0}{3}
+\beamer@subsubsectionintoc {3}{1}{2}{Многомерные подмассивы}{12}{0}{3}
+\beamer@subsubsectionintoc {3}{1}{3}{Доступ к строкам и столбцам массива}{13}{0}{3}
+\beamer@subsectionintoc {3}{2}{Создание копий массивов}{16}{0}{3}
+\beamer@sectionintoc {4}{Вычисления с массивами NumPy}{17}{0}{4}
+\beamer@subsectionintoc {4}{1}{Арифметические функции с массивами}{18}{0}{4}
+\beamer@subsectionintoc {4}{2}{Получение абсолютного значения}{21}{0}{4}
+\beamer@subsectionintoc {4}{3}{Тригонометрические функции}{22}{0}{4}
+\beamer@subsectionintoc {4}{4}{Показательные функции и логарифмы}{24}{0}{4}
+\beamer@sectionintoc {5}{Функции агрегирования}{26}{0}{5}
+\beamer@subsectionintoc {5}{1}{Суммирование значений массива}{27}{0}{5}
+\beamer@subsectionintoc {5}{2}{Минимум и максимум}{28}{0}{5}
+\beamer@sectionintoc {6}{Примеры}{29}{0}{6}
+\beamer@sectionintoc {7}{Задания}{34}{0}{7}

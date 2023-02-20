@@ -1,0 +1,12 @@
+\frametitle{\textcolor {tpugreen}{\textbf {Задание~3}}}
+\scriptsize
+Найти сумму положительных ($p$) и количество отрицательных ($o$) элементов массива $\mathrm{z}\left(10\right)$, заполненного случайными целыми числами в диапазоне $\left[-7; 5\right]$ и минимальный элемент $\left(b_{min}\right)$ второго столбца матрицы $\mathrm{b\left(5, 5\right)}$, заполненной случайными числами в диапазоне $\left[-10; 20\right]$, и вычислить значения элементов массива $x_i$:
+\vfill
+\begin{normalsize}
+\begin{equation*}
+^^Ix_i = \dfrac{\sqrt{p}}{o + a \cdot c} + b_{min} \cdot k^2 + z_i
+\end{equation*}
+\end{normalsize}
+\vfill
+где $a = 2.5\mathrm{e-}3; \quad c = 175; \quad k = 8$.
+\vfill
