@@ -1,4 +1,4 @@
-\babel@toc {russian}{}\relax 
+\babel@toc {russian}{}
 \beamer@sectionintoc {1}{Преобразование списков Python в массивы NumPy}{2}{0}{1}
 \beamer@sectionintoc {2}{Создание массивов}{4}{0}{2}
 \beamer@sectionintoc {3}{Доступ к элементам массива}{7}{0}{3}
