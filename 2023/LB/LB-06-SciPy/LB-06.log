@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  26 FEB 2023 21:14
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  28 FEB 2023 01:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2158,7 +2158,7 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  [14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 939--939
+Underfull \hbox (badness 10000) in paragraph at lines 940--940
 
  []
 
@@ -2169,12 +2169,12 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 939--939
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 940--940
 [][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 939
+Overfull \vbox (5.0pt too high) detected at line 940
  []
 
 File: bgs/contacts.jpg Graphic file (type bmp)
@@ -2194,13 +2194,16 @@ File: logos/ru/light/logoclr.png Graphic file (type bmp)
 \openout10 = `LB-06.snm'.
 
  (./LB-06.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `LB-06.out' has not changed.
 (rerunfilecheck)             Checksum: 207C7C9309193DA8BB85A4A4D63CEE55;1174.
  ) 
 Here is how much of TeX's memory you used:
  37381 strings out of 476477
  783314 string characters out of 5817858
- 1296194 words of memory out of 5000000
+ 1296193 words of memory out of 5000000
  57007 multiletter control sequences out of 15000+600000
  410215 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
