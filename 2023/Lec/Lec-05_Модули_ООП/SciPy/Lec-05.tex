@@ -1,0 +1,487 @@
+% !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[aspectratio=169, mathserif]{beamer}	% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+
+% Style options:
+% light --- light theme (default)
+% dark --- dark theme
+% enlogo --- english TPU logo {default}
+% rulogo --- russian TPU logo
+
+\usetheme[light, rulogo]{tpu}		% dark theme used as an example of optional argument
+
+\usepackage[english, russian]{babel}		%uncomment this to work in russian
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+
+\usepackage{fontspec}
+
+\setromanfont{Brygada1918}[
+Path=./fonts/BrygadaFontFiles/,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\setsansfont{ALSSirius}[
+Path=./fonts/ALSSiriusFiles/,
+Extension = .otf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+%ItalicFont=*-Italic,
+%BoldItalicFont=*-BoldItalic
+]
+
+\setmonofont{Consolas}[
+Path=./fonts/ConsolasFontFiles/,
+%Scale=0.85,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\usepackage[cache=false]{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{onedarkBckGr}{RGB}{40, 44, 52}
+
+\usemintedstyle[python]{default}
+\setminted[python]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=true,
+	frame=leftline,
+	framesep=1mm,
+	python3=true,
+}
+
+\usemintedstyle[pycon]{default}
+\setminted[pycon]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=false,
+	frame=single,
+	framesep=1mm,
+	python3=true,
+%	bgcolor=backcolour,
+	linenos=true,
+}
+
+%\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
+%\setmainfont[Ligatures={TeX,Historic}]{Times New Roman} %% задаёт основной шрифт документа
+%\setsansfont{Comic Sans MS}                    %% задаёт шрифт без засечек
+%\setmonofont{Courier New}
+%\usepackage[default]{droidserif}
+%\usepackage[defaultsans]{droidsans}
+
+\usepackage{booktabs}	% good looking tables
+\usepackage{multicol}	% text in multiple columns, useful for side-by-side text and pictures
+\usepackage{hyperref}
+%\usepackage{minted}
+\usepackage{xcolor}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{amsxtra}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\DeclareCaptionLabelFormat{figure}{Рисунок~#2}
+\captionsetup[table]{justification=raggedleft,
+	labelformat=empty,
+	labelsep=endash,
+	textformat=center,
+	position=top,
+	skip=5pt
+}
+\captionsetup[figure]{justification=centering,
+	labelsep=endash,
+	labelformat=figure,
+	font={tiny}
+}
+
+\usepackage{listings}
+\lstset{
+	breaklines=true,
+	%
+	extendedchars=true,
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1
+}
+
+%%
+%% Python definition (c) 1998 Michael Weber
+%% Additional definitions (2013) Alexis Dimitriadis
+%% modified by me (should not have empty lines)
+%%
+\lstdefinelanguage{iPython}{
+	morekeywords={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while, nonlocal, yield, with},%
+	%
+	% Built-ins
+	morekeywords=[2]{abs,all,any,basestring,bin,bool,bytearray,callable,chr,classmethod,cmp,compile,complex,delattr,dict,dir,divmod,enumerate,eval,execfile,file,filter,float,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,int,isinstance,issubclass,iter,len,list,locals,long,map,max,memoryview,min,next,object,oct,open,ord,pow,property,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,vars,xrange,zip,apply,buffer,coerce,intern, ascii, as, assert},%
+	%
+	sensitive=true,%
+	morecomment=[l]\#,%
+	morestring=[b]',%
+	morestring=[b]",%
+	%
+	morestring=[s]{'''}{'''},% used for documentation text (mulitiline strings)
+	morestring=[s]{"""}{"""},% added by Philipp Matthias Hahn
+	%
+	morestring=[s]{r'}{'},% `raw' strings
+	morestring=[s]{r"}{"},%
+	morestring=[s]{r'''}{'''},%
+	morestring=[s]{r"""}{"""},%
+	morestring=[s]{u'}{'},% unicode strings
+	morestring=[s]{u"}{"},%
+	morestring=[s]{u'''}{'''},%
+	morestring=[s]{u"""}{"""},%
+	morestring=[s]{b'}{'},% byte strings
+	morestring=[s]{b"}{"},%
+	morestring=[s]{b'''}{'''},%
+	morestring=[s]{b"""}{"""},%
+	%
+	% {replace}{replacement}{lenght of replace}
+	% *{-}{-}{1} will not replace in comments and so on
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1,
+	%
+	literate=
+	*{+}{{{\color{ipython_purple}+}}}1
+	{-}{{{\color{ipython_purple}-}}}1
+	{*}{{{\color{ipython_purple}$^\ast$}}}1
+	{/}{{{\color{ipython_purple}/}}}1
+	{^}{{{\color{ipython_purple}\^{}}}}1
+	{?}{{{\color{ipython_purple}?}}}1
+	{!}{{{\color{ipython_purple}!}}}1
+	{\%}{{{\color{ipython_purple}\%}}}1
+	{<}{{{\color{ipython_purple}<}}}1
+	{>}{{{\color{ipython_purple}>}}}1
+	{|}{{{\color{ipython_purple}|}}}1
+	{\&}{{{\color{ipython_purple}\&}}}1
+	{~}{{{\color{ipython_purple}~}}}1
+	%
+	%	{==}{{{\color{ipython_purple}==}}}2
+	%	{<=}{{{\color{ipython_purple}<=}}}2
+	%	{>=}{{{\color{ipython_purple}>=}}}2
+	%
+	%	{+=}{{{\color{ipython_purple}>=}}}2
+	%	{&=}{{{\color{ipython_purple}>=}}}2
+	%	{-=}{{{\color{ipython_purple}>=}}}2
+	%	{|=}{{{\color{ipython_purple}>=}}}2
+	%
+	%	{*=}{{{\color{ipython_purple}>=}}}2
+	%	{^=}{{{\color{ipython_purple}>=}}}2
+	%	{/=}{{{\color{ipython_purple}>=}}}2
+	%	{>>=}{{{\color{ipython_purple}>=}}}2
+	%
+	%	{\%=}{{{\color{ipython_purple}>=}}}2
+	%	{<<=}{{{\color{ipython_purple}>=}}}2
+	%	{**=}{{{\color{ipython_purple}>=}}}2
+	%	{//=}{{{\color{ipython_purple}>=}}}2
+	%
+	{+=}{{{+=}}}2
+	{-=}{{{-=}}}2
+	{*=}{{{$^\ast$=}}}2
+	{/=}{{{/=}}}2,
+	%
+	%	identifierstyle=\color{red}\ttfamily,
+	commentstyle=\fontsize{7pt}{7}\color{ipython_cyan}\sffamily ,
+	texcl=true,
+	keepspaces=true,
+	stringstyle=\fontsize{7pt}{7}\color{ipython_red}\ttfamily ,
+	%	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+	%
+	rulecolor=\color{ipython_frame},
+	frame=leftline,
+	%	frameround=ffff,
+	framexleftmargin=2mm,
+	columns=fullflexible
+	numbers=left,
+	numberstyle=\tiny\color{halfgray},
+	numbersep=14pt,
+	%
+	%
+%		backgroundcolor=\color{ipython_bg},
+	extendedchars=true,
+	basicstyle=\fontsize{7pt}{7}\ttfamily,
+	keywordstyle=\fontsize{7pt}{7}\color{ipython_green}\ttfamily,
+	escapechar=\¢,escapebegin=\color{ipython_red},
+}
+
+\hyphenpenalty=10000	% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
+
+\title{\LARGE{Системный анализ процессов химической технологии}}
+\subtitle{\textcolor{tpugreen}{\textbf{Лекция 5}} \\ \textbf{Модули. Объектно-ориентированное \\ программирование}}
+\author[]{\textbf{Вячеслав Алексеевич Чузлов}}
+\institute{к.т.н., доцент ОХИ ИШПР}
+\date{\today}
+
+\begin{document}
+
+% notice usage of \titleframe and several other unconventional functions
+% the reason being is custom backgrounds on these slides
+
+\titleframe		% title
+
+\tocframe{}		% this custom frame accepts options for ToC
+
+%\addcontentsline{toc}{section}{\textbf{I Численные методы решения систем \\ линейных уравнений}}
+
+\section{Модули}
+\sectionframe
+
+\begin{frame}[fragile]{Модули}
+\scriptsize
+\begin{itemize}
+	\item \textcolor{extraorange}{\textbf{Модуль}}~-- самая крупная организационная программная единица в Python, которая вмещает в себя программный код и данные, готовые для многократного использования.
+	\item Каждый файл~-- это отдельный модуль, и модули могут импортировать другие модули для доступа к именам, которые в них определены.
+	\item Обработка модулей выполняется двумя инструкциями:
+	\vfill
+	\mint{ipython}|import|
+	\qquad Позволяет клиентам получать модуль целиком.
+	\vfill
+	\mint{ipython}|from|
+	\qquad Позволяет клиентам получать определенные имена из модуля.
+	\vfill
+	\item Модули Python позволяют связывать индивидуальные файлы в более крупную программную систему.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Назначение модулей}
+
+\begin{frame}[fragile]{Назначение модулей}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Многократное использование кода}}
+\vfill
+\begin{itemize}
+	\item В отличие от кода, набираемого в интерактивном режиме Python, который исчезает после выхода из него, код в файлах модулей постоянен~-- его можно перезагружать и повторно запускать столько раз, сколько нужно.
+	\vfill
+	\item Модули представляют собой место для определения имен, известных как \textcolor{extraorange}{\textbf{атрибуты}}, на которые могут ссылаться многочисленные клиенты.
+	\vfill
+	\item Обеспечивается \textcolor{extraorange}{\textbf{модульная}} конструкция программ, группрующая функциональность в многократно используемые единицы.
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Назначение модулей}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Разделение пространства имен системы}}
+\vfill
+\begin{itemize}
+	\item Модули являются изолированными пакетами имен~-- нет возможности увидеть имя из другого файла, пока он не будет явно импортирован.
+	\vfill
+	\item Во многом подобно локальным областям видимости функций такое решение помогает избежать конфлоктов имен в программах.
+	\vfill
+	\item Модули являются интсрументами для гуппирования компонентов системы: прграммного кода и создаваемых объектов.
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Назначение модулей}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Реализация разделяемых служб или данных}}
+\vfill
+\begin{itemize}
+	\item Модули удобны для реализации компонентов, которые разделяются в рамках системы и потому требуют только одной копии.
+	\vfill
+	\item Например, если необходимо предоставить глобальный объект, применяемый в нескольких функциях или файлах, то его можно реализовать в модуле, который затем будет импортироваться многими клиентами.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Создание модулей}
+\begin{frame}[fragile]{Создание модулей}
+\scriptsize
+\begin{itemize}
+\item Для определения модуля нужно набрать любой код Python и сохранить его в текстовом файле с расширением <<\texttt{.py}>>; любой подобный файл автоматически считается модулем Python.
+\item Например, если поместить следующий оператор \mintinline{python}|def| в файл \texttt{module1.py} и импортировать его, то будет создан объект модуля с одним атрибутом~-- именем \texttt{printer}, которое будет ссылаться на объект функции:
+\end{itemize}
+\vfill
+\begin{minted}{python}
+# module1.py
+
+def printer(x):
+    print(x)
+|\space|
+\end{minted}
+\vfill
+\end{frame}
+
+\section{Имена файлов модулей}
+\begin{frame}[fragile]{Имена файлов модулей}
+\scriptsize
+\begin{itemize}
+\item Имена файлов модулей должны заканчиваться суффиксом <<.py>>.
+\item Имена модулей становятся именами переменных внутри программы Python (без суффикса <<.py>>), поэтому они также обязаны следовать обычным правилам именования переменных.
+\item Например, можно создать файл модуля с именем \texttt{if.py}, но его нельзя будет импортировать. Так как \mintinline{python}|if| является зарезервированным словом, оператор \mintinline{python}|import if| приведет к синтаксической ошибке.
+\end{itemize}
+\vfill
+\begin{minted}{pycon}
+>>> import if
+  File "<stdin>", line 1
+    import if
+           ^^
+SyntaxError: invalid syntax
+>>> |\space|
+\end{minted}
+\vfill
+\end{frame}
+
+
+\subsection{Инструкция \texttt{import}}
+\begin{frame}[fragile]{Инструкция \texttt{import}}
+\scriptsize
+\begin{itemize}
+	\item В операторе \mintinline{python}|import| просто указывается одно или несколько имен модулей для загрузки, разделенные запятыми.
+	\item Так как оператор \mintinline{python}|import| дает имя, которое ссылается на полный объект модуля, мы обязаны задавать имя модуля, чтобы извлечь его атрибуты (например, \mintinline{python}|module1.printer|).
+\end{itemize}
+\vfill
+\begin{minted}{pycon}
+>>> import module1  # Модуль как единое целое (один или несколько)
+>>> module1.printer('Hello world!')  # Указать имя модуля, чтобы получить имена
+Hello world!
+>>> |\space|
+\end{minted}
+\vfill
+\end{frame}
+
+\subsection{Инструкция \texttt{from ... import}}
+\begin{frame}[fragile]{Инструкция \texttt{from ... import}}
+\scriptsize
+\begin{itemize}
+	\item Оператор \mintinline{python}|from| дает возможность применять импортированные имена напрямую, не уточняя их именем модуля.
+\vfill
+\begin{minted}{pycon}
+>>> from module1 import printer  # Импортировать объект (один или несколько)
+>>> printer('Hello world!')      # Уточнение не требуется
+Hello world!
+>>> |\space|
+\end{minted}
+\vfill
+\item Такая форма  \mintinline{python}|from| позволяет указывать одно или несколько имен для копирования, разделенных запятыми.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Расширение \texttt{as} для операторов \texttt{import} и \texttt{from}}
+\begin{frame}[fragile]{Расширение \texttt{as} для операторов \texttt{import} и \texttt{from}}
+\scriptsize
+\begin{itemize}
+	\item Со временем операторы \mintinline{python}|import| и \mintinline{python}|from| были расширены, чтобы позволить назначать импортированному имени другое имя в сценарии:
+\vfill
+\begin{minted}{python}
+import modulename as name  # Использовать name вместо modulename
+|\space|
+\end{minted}
+\vfill
+\item Это расширение часто применяется с целью предоставления кратких псевдонимов для более длинных имен и устранения конфликтов имен, когда в сценарии уже используется имя, которое иначе было бы перезаписано обычным оператором:
+\begin{minted}{python}
+import reallylongname as name
+from module1 import utility as util1
+from module2 import utility as util2
+
+name.func()
+util1()
+util2()
+|\space|
+\end{minted}
+\item Если в новом выпуске библиотеки модуль или инструмент, широко используемый в вашем коде, получает новое имя, тогда Вы при импортировании всего лишь назначаете ему прежнее имя и предотвращаете нарушение работоспособности имеющегося кода:
+\vfill
+\begin{minted}{python}
+import newname as oldname
+from library import newname as oldname
+|\space|
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Смешанные режимы использования: \texttt{\_\_name\_\_} и \texttt{\_\_main\_\_}}
+\begin{frame}[fragile]{Смешанные режимы использования:  \\ \texttt{\_\_name\_\_} и \texttt{\_\_main\_\_}}
+\scriptsize
+\begin{itemize}
+	\item Со временем операторы \mintinline{python}|import| и \mintinline{python}|from| были расширены, чтобы позволить назначать импортированному имени другое имя в сценарии:
+\vfill
+\begin{minted}{python}
+import modulename as name  # Использовать name вместо modulename
+|\space|
+\end{minted}
+\vfill
+\item Это расширение часто применяется с целью предоставления кратких псевдонимов для более длинных имен и устранения конфликтов имен, когда в сценарии уже используется имя, которое иначе было бы перезаписано обычным оператором:
+\begin{minted}{python}
+import reallylongname as name
+from module1 import utility as util1
+from module2 import utility as util2
+
+name.func()
+util1()
+util2()
+|\space|
+\end{minted}
+\item Если в новом выпуске библиотеки модуль или инструмент, широко используемый в вашем коде, получает новое имя, тогда Вы при импортировании всего лишь назначаете ему прежнее имя и предотвращаете нарушение работоспособности имеющегося кода:
+\vfill
+\begin{minted}{python}
+import newname as oldname
+from library import newname as oldname
+|\space|
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\contactsframe[\Large \textbf{Благодарю за внимание!}]{
+
+	\bigskip
+	\includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\
+	\includegraphics[width=.05\textwidth]{pics/mail} \quad chuva@tpu.ru \\
+	\includegraphics[width=.03\textwidth]{pics/tel} \quad +7-962-782-66-15
+}
+
+\end{document}
+
