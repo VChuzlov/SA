@@ -1,0 +1,23 @@
+\frametitle{Пример создания класса}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+f1.volume_fractions = f1.convert_mass_to_volume_fractions(densities)
+f1.mole_fractions = f1.convert_mass_to_mole_fractions(mr)
+f1.density = f1.get_flow_density(densities)
+f1.mol_mass = f1.get_average_molar_mass(mr)
+
+print(f1.volume_fractions)
+print(f1.mole_fractions)
+print(f1.density)
+print(f1.mol_mass)
+\end{minted}
+\vfill
+    \begin{Verbatim}[commandchars=\\\{\}]
+[0.13257709 0.10101112 0.09427704 0.400378   0.18384023 0.04476629
+ 0.02642226 0.01672796]
+[0.26545413 0.14157554 0.09652877 0.2929149  0.14645745 0.0294949
+ 0.01769694 0.00987736]
+0.5515207014243224
+42.47266071679689
+    \end{Verbatim}
+\vfill

@@ -1,9 +1,0 @@
-\babel@toc {russian}{}\relax 
-\beamer@sectionintoc {1}{Модули}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Назначение модулей}{5}{0}{1}
-\beamer@subsectionintoc {1}{2}{Создание модулей}{8}{0}{1}
-\beamer@sectionintoc {2}{Имена файлов модулей}{9}{0}{2}
-\beamer@subsectionintoc {2}{1}{Инструкция \texttt {import}}{10}{0}{2}
-\beamer@subsectionintoc {2}{2}{Инструкция \texttt {from ... import}}{11}{0}{2}
-\beamer@subsectionintoc {2}{3}{Расширение \texttt {as} для операторов \texttt {import} и \texttt {from}}{12}{0}{2}
-\beamer@subsectionintoc {2}{4}{Смешанные режимы использования: \texttt {\_\_name\_\_} и \texttt {\_\_main\_\_}}{13}{0}{2}

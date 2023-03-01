@@ -1,0 +1,16 @@
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Модули}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Назначение модулей}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Создание модулей}{8}{0}{1}
+\beamer@sectionintoc {2}{Имена файлов модулей}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{Инструкция \texttt {import}}{10}{0}{2}
+\beamer@subsectionintoc {2}{2}{Инструкция \texttt {from ... import}}{11}{0}{2}
+\beamer@subsectionintoc {2}{3}{Расширение \texttt {as} для операторов \texttt {import} и \texttt {from}}{12}{0}{2}
+\beamer@subsectionintoc {2}{4}{Смешанные режимы использования: \texttt {\_\_name\_\_} и \texttt {\_\_main\_\_}}{13}{0}{2}
+\beamer@sectionintoc {3}{Объектно-ориентированное \\ программирование на языке Python}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Классы и объекты}{17}{0}{3}
+\beamer@subsectionintoc {3}{2}{Конструктор}{18}{0}{3}
+\beamer@subsectionintoc {3}{3}{Переменные класса и объекта}{19}{0}{3}
+\beamer@subsectionintoc {3}{4}{Методы}{25}{0}{3}
+\beamer@subsectionintoc {3}{5}{Наследование}{29}{0}{3}
+\beamer@sectionintoc {4}{Пример создания класса}{31}{0}{4}

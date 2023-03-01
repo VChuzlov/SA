@@ -1,0 +1,1321 @@
+% !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[aspectratio=169, mathserif]{beamer}	% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+
+% Style options:
+% light --- light theme (default)
+% dark --- dark theme
+% enlogo --- english TPU logo {default}
+% rulogo --- russian TPU logo
+
+\usetheme[light, rulogo]{tpu}		% dark theme used as an example of optional argument
+
+\usepackage[english, russian]{babel}		%uncomment this to work in russian
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+
+\usepackage{fontspec}
+
+\setromanfont{Brygada1918}[
+Path=./fonts/BrygadaFontFiles/,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\setsansfont{ALSSirius}[
+Path=./fonts/ALSSiriusFiles/,
+Extension = .otf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+%ItalicFont=*-Italic,
+%BoldItalicFont=*-BoldItalic
+]
+
+\setmonofont{Consolas}[
+Path=./fonts/ConsolasFontFiles/,
+%Scale=0.85,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\usepackage[cache=false]{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{onedarkBckGr}{RGB}{40, 44, 52}
+
+\usemintedstyle[python]{default}
+\setminted[python]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=true,
+	frame=leftline,
+	framesep=1mm,
+	python3=true,
+}
+
+\usemintedstyle[pycon]{default}
+\setminted[pycon]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=false,
+	frame=single,
+	framesep=1mm,
+	python3=true,
+%	bgcolor=backcolour,
+	linenos=true,
+}
+
+%\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
+%\setmainfont[Ligatures={TeX,Historic}]{Times New Roman} %% задаёт основной шрифт документа
+%\setsansfont{Comic Sans MS}                    %% задаёт шрифт без засечек
+%\setmonofont{Courier New}
+%\usepackage[default]{droidserif}
+%\usepackage[defaultsans]{droidsans}
+
+\usepackage{booktabs}	% good looking tables
+\usepackage{multicol}	% text in multiple columns, useful for side-by-side text and pictures
+\usepackage{hyperref}
+%\usepackage{minted}
+\usepackage{xcolor}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{amsxtra}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\DeclareCaptionLabelFormat{figure}{Рисунок~#2}
+\captionsetup[table]{justification=raggedleft,
+	labelformat=empty,
+	labelsep=endash,
+	textformat=center,
+	position=top,
+	skip=5pt
+}
+\captionsetup[figure]{justification=centering,
+	labelsep=endash,
+	labelformat=figure,
+	font={tiny}
+}
+
+\usepackage{listings}
+\lstset{
+	breaklines=true,
+	%
+	extendedchars=true,
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1
+}
+
+%%
+%% Python definition (c) 1998 Michael Weber
+%% Additional definitions (2013) Alexis Dimitriadis
+%% modified by me (should not have empty lines)
+%%
+\lstdefinelanguage{iPython}{
+	morekeywords={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while, nonlocal, yield, with},%
+	%
+	% Built-ins
+	morekeywords=[2]{abs,all,any,basestring,bin,bool,bytearray,callable,chr,classmethod,cmp,compile,complex,delattr,dict,dir,divmod,enumerate,eval,execfile,file,filter,float,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,int,isinstance,issubclass,iter,len,list,locals,long,map,max,memoryview,min,next,object,oct,open,ord,pow,property,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,vars,xrange,zip,apply,buffer,coerce,intern, ascii, as, assert},%
+	%
+	sensitive=true,%
+	morecomment=[l]\#,%
+	morestring=[b]',%
+	morestring=[b]",%
+	%
+	morestring=[s]{'''}{'''},% used for documentation text (mulitiline strings)
+	morestring=[s]{"""}{"""},% added by Philipp Matthias Hahn
+	%
+	morestring=[s]{r'}{'},% `raw' strings
+	morestring=[s]{r"}{"},%
+	morestring=[s]{r'''}{'''},%
+	morestring=[s]{r"""}{"""},%
+	morestring=[s]{u'}{'},% unicode strings
+	morestring=[s]{u"}{"},%
+	morestring=[s]{u'''}{'''},%
+	morestring=[s]{u"""}{"""},%
+	morestring=[s]{b'}{'},% byte strings
+	morestring=[s]{b"}{"},%
+	morestring=[s]{b'''}{'''},%
+	morestring=[s]{b"""}{"""},%
+	%
+	% {replace}{replacement}{lenght of replace}
+	% *{-}{-}{1} will not replace in comments and so on
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1,
+	%
+	literate=
+	*{+}{{{\color{ipython_purple}+}}}1
+	{-}{{{\color{ipython_purple}-}}}1
+	{*}{{{\color{ipython_purple}$^\ast$}}}1
+	{/}{{{\color{ipython_purple}/}}}1
+	{^}{{{\color{ipython_purple}\^{}}}}1
+	{?}{{{\color{ipython_purple}?}}}1
+	{!}{{{\color{ipython_purple}!}}}1
+	{\%}{{{\color{ipython_purple}\%}}}1
+	{<}{{{\color{ipython_purple}<}}}1
+	{>}{{{\color{ipython_purple}>}}}1
+	{|}{{{\color{ipython_purple}|}}}1
+	{\&}{{{\color{ipython_purple}\&}}}1
+	{~}{{{\color{ipython_purple}~}}}1
+	%
+	%	{==}{{{\color{ipython_purple}==}}}2
+	%	{<=}{{{\color{ipython_purple}<=}}}2
+	%	{>=}{{{\color{ipython_purple}>=}}}2
+	%
+	%	{+=}{{{\color{ipython_purple}>=}}}2
+	%	{&=}{{{\color{ipython_purple}>=}}}2
+	%	{-=}{{{\color{ipython_purple}>=}}}2
+	%	{|=}{{{\color{ipython_purple}>=}}}2
+	%
+	%	{*=}{{{\color{ipython_purple}>=}}}2
+	%	{^=}{{{\color{ipython_purple}>=}}}2
+	%	{/=}{{{\color{ipython_purple}>=}}}2
+	%	{>>=}{{{\color{ipython_purple}>=}}}2
+	%
+	%	{\%=}{{{\color{ipython_purple}>=}}}2
+	%	{<<=}{{{\color{ipython_purple}>=}}}2
+	%	{**=}{{{\color{ipython_purple}>=}}}2
+	%	{//=}{{{\color{ipython_purple}>=}}}2
+	%
+	{+=}{{{+=}}}2
+	{-=}{{{-=}}}2
+	{*=}{{{$^\ast$=}}}2
+	{/=}{{{/=}}}2,
+	%
+	%	identifierstyle=\color{red}\ttfamily,
+	commentstyle=\fontsize{7pt}{7}\color{ipython_cyan}\sffamily ,
+	texcl=true,
+	keepspaces=true,
+	stringstyle=\fontsize{7pt}{7}\color{ipython_red}\ttfamily ,
+	%	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+	%
+	rulecolor=\color{ipython_frame},
+	frame=leftline,
+	%	frameround=ffff,
+	framexleftmargin=2mm,
+	columns=fullflexible
+	numbers=left,
+	numberstyle=\tiny\color{halfgray},
+	numbersep=14pt,
+	%
+	%
+%		backgroundcolor=\color{ipython_bg},
+	extendedchars=true,
+	basicstyle=\fontsize{7pt}{7}\ttfamily,
+	keywordstyle=\fontsize{7pt}{7}\color{ipython_green}\ttfamily,
+	escapechar=\¢,escapebegin=\color{ipython_red},
+}
+
+\hyphenpenalty=10000	% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
+
+%\usepackage[breakable]{tcolorbox}
+%    \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
+
+    \usepackage{iftex}
+    \ifPDFTeX
+        \usepackage[T1]{fontenc}
+        \usepackage{mathpazo}
+    \else
+        \usepackage{fontspec}
+    \fi
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+%    \usepackage{graphicx}
+    % Maintain compatibility with old templates. Remove in nbconvert 6.0
+    \let\Oldincludegraphics\includegraphics
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionFormat{nocaption}{}
+    \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+
+    \usepackage[Export]{adjustbox} % Used to constrain images to a maximum size
+    \adjustboxset{max size={0.9\linewidth}{0.9\paperheight}}
+    \usepackage{float}
+    \floatplacement{figure}{H} % forces figures to be placed at the correct location
+%    \usepackage{xcolor} % Allow colors to be defined
+%    \usepackage{enumerate} % Needed for markdown enumerations to work
+%    \usepackage{geometry} % Used to adjust the document margins
+%    \usepackage{amsmath} % Equations
+%    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics
+                         % to support a larger range
+    \makeatletter % fix for grffile with XeLaTeX
+    \def\Gread@@xetex#1{%
+      \IfFileExists{"\Gin@base".bb}%
+      {\Gread@eps{\Gin@base.bb}}%
+      {\Gread@@xetex@aux#1}%
+    }
+    \makeatother
+
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+%    \usepackage{hyperref}
+    % The default LaTeX title has an obnoxious amount of whitespace. By default,
+    % titling removes some of it. It also provides customization options.
+%    \usepackage{titling}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+%    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{mathrsfs}
+
+
+
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+
+
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{Untitled8}
+
+% Pygments definitions
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % For linebreaks inside Verbatim environment from package fancyvrb.
+    \makeatletter
+        \newbox\Wrappedcontinuationbox
+        \newbox\Wrappedvisiblespacebox
+        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}}
+        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}}
+        \newcommand*\Wrappedcontinuationindent {3ex }
+        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox}
+        % Take advantage of the already applied Pygments mark-up to insert
+        % potential linebreaks for TeX processing.
+        %        {, <, #, %, $, ' and ": go to next line.
+        %        _, }, ^, &, >, - and ~: stay at end of broken line.
+        % Use of \textquotesingle for straight quote.
+        \newcommand*\Wrappedbreaksatspecials {%
+            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}%
+            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}%
+            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}%
+            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}%
+            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}%
+            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}%
+            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}%
+            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}%
+            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}%
+            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}%
+            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}%
+            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}%
+            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}%
+            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}%
+        }
+        % Some characters . , ; ? ! / are not pygmentized.
+        % This macro makes them "active" and they will insert potential linebreaks
+        \newcommand*\Wrappedbreaksatpunct {%
+            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}%
+            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}%
+            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}%
+            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}%
+            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}%
+            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}%
+            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}%
+            \catcode`\.\active
+            \catcode`\,\active
+            \catcode`\;\active
+            \catcode`\:\active
+            \catcode`\?\active
+            \catcode`\!\active
+            \catcode`\/\active
+            \lccode`\~`\~
+        }
+    \makeatother
+
+    \let\OriginalVerbatim=\Verbatim
+    \makeatletter
+    \renewcommand{\Verbatim}[1][1]{%
+        %\parskip\z@skip
+        \sbox\Wrappedcontinuationbox {\Wrappedcontinuationsymbol}%
+        \sbox\Wrappedvisiblespacebox {\FV@SetupFont\Wrappedvisiblespace}%
+        \def\FancyVerbFormatLine ##1{\hsize\linewidth
+            \vtop{\raggedright\hyphenpenalty\z@\exhyphenpenalty\z@
+                \doublehyphendemerits\z@\finalhyphendemerits\z@
+                \strut ##1\strut}%
+        }%
+        % If the linebreak is at a space, the latter will be displayed as visible
+        % space at end of first line, and a continuation symbol starts next line.
+        % Stretch/shrink are however usually zero for typewriter font.
+        \def\FV@Space {%
+            \nobreak\hskip\z@ plus\fontdimen3\font minus\fontdimen4\font
+            \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
+            {\kern\fontdimen2\font}%
+        }%
+
+        % Allow breaks at special characters using \PYG... macros.
+        \Wrappedbreaksatspecials
+        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active
+        \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
+    }
+    \makeatother
+
+    % Exact colors from NB
+    \definecolor{incolor}{HTML}{303F9F}
+    \definecolor{outcolor}{HTML}{D84315}
+    \definecolor{cellborder}{HTML}{CFCFCF}
+    \definecolor{cellbackground}{HTML}{F7F7F7}
+
+    % prompt
+    \makeatletter
+    \newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+    \makeatother
+    \newcommand{\prompt}[4]{
+        \ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}
+    }
+
+
+\title{\LARGE{Системный анализ процессов химической технологии}}
+\subtitle{\textcolor{tpugreen}{\textbf{Лекция 5}} \\ \textbf{Модули. Объектно-ориентированное \\ программирование}}
+\author[]{\textbf{Вячеслав Алексеевич Чузлов}}
+\institute{к.т.н., доцент ОХИ ИШПР}
+\date{\today}
+
+\begin{document}
+
+% notice usage of \titleframe and several other unconventional functions
+% the reason being is custom backgrounds on these slides
+
+\titleframe		% title
+
+\tocframe{}		% this custom frame accepts options for ToC
+
+%\addcontentsline{toc}{section}{\textbf{I Численные методы решения систем \\ линейных уравнений}}
+
+\section{Модули}
+\sectionframe
+
+\begin{frame}[fragile]{Модули}
+\scriptsize
+\begin{itemize}
+	\item \textcolor{extraorange}{\textbf{Модуль}}~-- самая крупная организационная программная единица в Python, которая вмещает в себя программный код и данные, готовые для многократного использования.
+	\item Каждый файл~-- это отдельный модуль, и модули могут импортировать другие модули для доступа к именам, которые в них определены.
+	\item Обработка модулей выполняется двумя инструкциями:
+	\vfill
+	\mint{ipython}|import|
+	\qquad Позволяет клиентам получать модуль целиком.
+	\vfill
+	\mint{ipython}|from|
+	\qquad Позволяет клиентам получать определенные имена из модуля.
+	\vfill
+	\item Модули Python позволяют связывать индивидуальные файлы в более крупную программную систему.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Назначение модулей}
+
+\begin{frame}[fragile]{Назначение модулей}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Многократное использование кода}}
+\vfill
+\begin{itemize}
+	\item В отличие от кода, набираемого в интерактивном режиме Python, который исчезает после выхода из него, код в файлах модулей постоянен~-- его можно перезагружать и повторно запускать столько раз, сколько нужно.
+	\vfill
+	\item Модули представляют собой место для определения имен, известных как \textcolor{extraorange}{\textbf{атрибуты}}, на которые могут ссылаться многочисленные клиенты.
+	\vfill
+	\item Обеспечивается \textcolor{extraorange}{\textbf{модульная}} конструкция программ, группрующая функциональность в многократно используемые единицы.
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Назначение модулей}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Разделение пространства имен системы}}
+\vfill
+\begin{itemize}
+	\item Модули являются изолированными пакетами имен~-- нет возможности увидеть имя из другого файла, пока он не будет явно импортирован.
+	\vfill
+	\item Во многом подобно локальным областям видимости функций такое решение помогает избежать конфлоктов имен в программах.
+	\vfill
+	\item Модули являются интсрументами для гуппирования компонентов системы: прграммного кода и создаваемых объектов.
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Назначение модулей}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Реализация разделяемых служб или данных}}
+\vfill
+\begin{itemize}
+	\item Модули удобны для реализации компонентов, которые разделяются в рамках системы и потому требуют только одной копии.
+	\vfill
+	\item Например, если необходимо предоставить глобальный объект, применяемый в нескольких функциях или файлах, то его можно реализовать в модуле, который затем будет импортироваться многими клиентами.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Создание модулей}
+\begin{frame}[fragile]{Создание модулей}
+\scriptsize
+\begin{itemize}
+\item Для определения модуля нужно набрать любой код Python и сохранить его в текстовом файле с расширением <<\texttt{.py}>>; любой подобный файл автоматически считается модулем Python.
+\item Например, если поместить следующий оператор \mintinline{python}|def| в файл \texttt{module1.py} и импортировать его, то будет создан объект модуля с одним атрибутом~-- именем \texttt{printer}, которое будет ссылаться на объект функции:
+\end{itemize}
+\vfill
+\begin{minted}{python}
+# module1.py
+
+def printer(x):
+    print(x)
+|\space|
+\end{minted}
+\vfill
+\end{frame}
+
+\section{Имена файлов модулей}
+\begin{frame}[fragile]{Имена файлов модулей}
+\scriptsize
+\begin{itemize}
+\item Имена файлов модулей должны заканчиваться суффиксом <<.py>>.
+\item Имена модулей становятся именами переменных внутри программы Python (без суффикса <<.py>>), поэтому они также обязаны следовать обычным правилам именования переменных.
+\item Например, можно создать файл модуля с именем \texttt{if.py}, но его нельзя будет импортировать. Так как \mintinline{python}|if| является зарезервированным словом, оператор \mintinline{python}|import if| приведет к синтаксической ошибке.
+\end{itemize}
+\vfill
+\begin{minted}{pycon}
+>>> import if
+  File "<stdin>", line 1
+    import if
+           ^^
+SyntaxError: invalid syntax
+>>> |\space|
+\end{minted}
+\vfill
+\end{frame}
+
+
+\subsection{Инструкция \texttt{import}}
+\begin{frame}[fragile]{Инструкция \texttt{import}}
+\scriptsize
+\begin{itemize}
+	\item В операторе \mintinline{python}|import| просто указывается одно или несколько имен модулей для загрузки, разделенные запятыми.
+	\item Так как оператор \mintinline{python}|import| дает имя, которое ссылается на полный объект модуля, мы обязаны задавать имя модуля, чтобы извлечь его атрибуты (например, \mintinline{python}|module1.printer|).
+\end{itemize}
+\vfill
+\begin{minted}{pycon}
+>>> import module1  # Модуль как единое целое (один или несколько)
+>>> module1.printer('Hello world!')  # Указать имя модуля, чтобы получить имена
+Hello world!
+>>> |\space|
+\end{minted}
+\vfill
+\end{frame}
+
+\subsection{Инструкция \texttt{from ... import}}
+\begin{frame}[fragile]{Инструкция \texttt{from ... import}}
+\scriptsize
+\begin{itemize}
+	\item Оператор \mintinline{python}|from| дает возможность применять импортированные имена напрямую, не уточняя их именем модуля.
+\vfill
+\begin{minted}{pycon}
+>>> from module1 import printer  # Импортировать объект (один или несколько)
+>>> printer('Hello world!')      # Уточнение не требуется
+Hello world!
+>>> |\space|
+\end{minted}
+\vfill
+\item Такая форма  \mintinline{python}|from| позволяет указывать одно или несколько имен для копирования, разделенных запятыми.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Расширение \texttt{as} для операторов \texttt{import} и \texttt{from}}
+\begin{frame}[fragile]{Расширение \texttt{as} для операторов \texttt{import} и \texttt{from}}
+\scriptsize
+\begin{itemize}
+	\item Со временем операторы \mintinline{python}|import| и \mintinline{python}|from| были расширены, чтобы позволить назначать импортированному имени другое имя в сценарии:
+\vfill
+\begin{minted}{python}
+import modulename as name  # Использовать name вместо modulename
+|\space|
+\end{minted}
+\vfill
+\item Это расширение часто применяется с целью предоставления кратких псевдонимов для более длинных имен и устранения конфликтов имен, когда в сценарии уже используется имя, которое иначе было бы перезаписано обычным оператором:
+\vfill
+\begin{minted}{python}
+import reallylongname as name
+from module1 import utility as util1
+from module2 import utility as util2
+
+name.func()
+util1()
+util2()
+|\space|
+\end{minted}
+\item Если в новом выпуске библиотеки модуль или инструмент, широко используемый в вашем коде, получает новое имя, тогда Вы при импортировании всего лишь назначаете ему прежнее имя и предотвращаете нарушение работоспособности имеющегося кода:
+\vfill
+\begin{minted}{python}
+import newname as oldname
+from library import newname as oldname
+|\space|
+\end{minted}
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Смешанные режимы использования: \texttt{\_\_name\_\_} и \texttt{\_\_main\_\_}}
+\begin{frame}[fragile]{Смешанные режимы использования:  \\ \texttt{\_\_name\_\_} и \texttt{\_\_main\_\_}}
+\scriptsize
+\begin{itemize}
+	\item Каждый модуль имеет встроенный атрибут по имени \texttt{\_\_name\_\_}, который
+	Python автоматически создает и присваивает следующим образом:
+	\begin{enumerate}
+		\scriptsize
+		\item  Если файл запускается как программа верхнего уровня, тогда во время старта атрибут \texttt{\_\_name\_\_} устанавливается в строку \texttt{'\_\_main\_\_'}.
+
+		\item  Если взамен файл импортируется, то атрибут \texttt{\_\_name\_\_} устанавливается в имя модуля, как известно его пользователям.
+	\end{enumerate}
+	\item Результатом будет то, что модуль может проверять собственный атрибут \texttt{\_\_name\_\_} для выяснения, запущен он или импортирован.
+\end{itemize}
+\vfill
+Например, пусть создан следующий файл модуля по имени \texttt{runme.ру}, экспортирующий единственную функцию \texttt{tester}:
+\vfill
+\begin{minted}{python}
+def tester():
+    print("It's Christmas in Heaven...")
+
+if __name__ == '__main__':  # Выполняется только когда запущен, а не импортирован
+    print('Run as program')
+    tester()
+|\space|
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Смешанные режимы использования:  \\ \texttt{\_\_name\_\_} и \texttt{\_\_main\_\_}}
+\scriptsize
+\begin{itemize}
+	\item В модуле определена функция для импортирования и использования обычным образом:
+\vfill
+\begin{minted}{pycon}
+>>> import runme
+>>> runme.tester()
+It's Christmas in Heaven...
+>>> |\space|
+\end{minted}
+\vfill
+\item Но модуль в самом конце содержит код, который настроен на автоматический вызов функции \texttt{tester}, когда данный файл запускается как программа:
+\vfill
+\begin{minted}{pycon}
+c:\code> python runme.py
+Run as program
+It's Christmas in Heaven...
+c:\code>
+\end{minted}
+\vfill
+\item В сущности, переменная \texttt{\_\_name\_\_} модуля служит флагом режима использования, позволяющим его коду быть задействованным как импортируемая библиотека и как сценарий верхнего уровня.
+\end{itemize}
+\vfill
+\end{frame}
+
+\section{Объектно-ориентированное \\ программирование на языке Python}
+\sectionframe
+
+\begin{frame}[fragile]{Объектно-ориентированное программирование}
+\scriptsize
+\begin{itemize}
+	\item \textcolor{tpugreen}{\textbf{Классы}} и \textcolor{tpugreen}{\textbf{объекты}}~-- это два основных аспекта объектно-ориентированного программирования. Класс создаёт новый тип, а объекты являются экземплярами класса.
+%	\vfill
+	\item Объекты могут хранить данные в обычных переменных, которые принадлежат объекту.
+%	\vfill
+	\item Переменные, принадлежащие объекту или классу, называют \textcolor{extraorange}{\textbf{полями}}.
+%	\vfill
+	\item Объекты могут также обладать функционалом, т.е. иметь функции, принадлежащие классу. Такие функции принято называть \textcolor{extraorange}{\textbf{методами}} класса.
+%	\vfill
+	\item Всё вместе (поля и методы) принято называть \textcolor{extraorange}{\textbf{атрибутами}} класса.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Классы и объекты}
+\begin{frame}[fragile]{Классы и объекты}
+\scriptsize
+\begin{itemize}
+	\item \textcolor{tpugreen}{\textbf{Класс}}~-- это способ описания сущности, определяющий состояние и поведение, зависящее от этого состояния, а также правила для взаимодействия с данной сущностью (контракт).
+\vfill
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{1}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{class} \PY{n+nc}{Person}\PY{p}{:}
+    \PY{k}{def} \PY{n+nf}{go}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{where}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nowhere}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{where}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+\vfill
+	\item \textcolor{tpugreen}{\textbf{Объект}} (\textbf{экземпляр})~-- это отдельный представитель класса, имеющий конкретное состояние и поведение, полностью определяемое классом.
+	Объект имеет конкретные значения атрибутов и методы, работающие с этими значениями на основе правил, заданных в классе.
+\vfill
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{2}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{petr} \PY{o}{=} \PY{n}{Person}\PY{p}{(}\PY{p}{)}
+\PY{n}{ivan} \PY{o}{=} \PY{n}{Person}\PY{p}{(}\PY{p}{)}
+
+\PY{n+nb}{print}\PY{p}{(}\PY{n}{petr}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<\_\_main\_\_.Person object at 0x000001C97D98DD90>
+    \end{Verbatim}
+\vfill
+\item Методы класса должны иметь дополнительно имя, добавляемое к началу списка параметров. Однако, при вызове метода никакого значения этому параметру присваивать не нужно~-- его укажет Python. Эта переменная указывает на сам объект экземпляра класса, и по традиции она называется \mintinline{python}|self|.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Конструктор}
+\begin{frame}[fragile]{Конструктор}
+\scriptsize
+\textbf{Конструктор класса}~-- специальный блок инструкций, вызываемый при создании объекта. В Python это \mintinline{python}|__init__| метод.
+\vfill
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{1}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{class} \PY{n+nc}{Person}\PY{p}{(}\PY{n+nb}{object}\PY{p}{)}\PY{p}{:}
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{name}\PY{p}{,} \PY{n}{surname}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{name} \PY{o}{=} \PY{n}{name}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{surname} \PY{o}{=} \PY{n}{surname}
+
+\PY{n}{person} \PY{o}{=} \PY{n}{Person}\PY{p}{(}\PY{n}{name}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Petr}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{surname}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Petrov}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Hi, }\PY{l+s+si}{\PYZob{}}\PY{n}{person}\PY{o}{.}\PY{n}{name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{ }\PY{l+s+si}{\PYZob{}}\PY{n}{person}\PY{o}{.}\PY{n}{surname}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{!}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+
+\PY{k}{for} \PY{n}{person} \PY{o+ow}{in} \PY{p}{[}\PY{n}{Person}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Maxim}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ivanov}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{,} \PY{n}{Person}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mariya}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Petrova}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}\PY{p}{:}
+    \PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Hi, }\PY{l+s+si}{\PYZob{}}\PY{n}{person}\PY{o}{.}\PY{n}{name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{ }\PY{l+s+si}{\PYZob{}}\PY{n}{person}\PY{o}{.}\PY{n}{surname}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{!}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Hi, Petr Petrov!
+Hi, Maxim Ivanov!
+Hi, Mariya Petrova!
+    \end{Verbatim}
+\vfill
+\end{frame}
+
+\subsection{Переменные класса и объекта}
+\begin{frame}[fragile]{Переменные класса и объекта}
+\scriptsize
+\begin{itemize}
+	\item Поля можно воспринимать как обычные переменные, заключённые в \textbf{пространствах имён} классов и объектов. Их имена действительны только в контексте (пространстве имен) этих классов или объектов.
+
+	\item \textcolor{extraorange}{\textbf{Переменные класса}} разделяемы~-- доступ к ним могут получать все экземпляры этого класса. Переменная класса существует только одна, поэтому когда любой из объектов изменяет переменную класса, это изменение отразится и во всех остальных экземплярах класса.
+
+	\item \textcolor{extraorange}{\textbf{Переменные объекта}} принадлежат каждому отдельному экземпляру класса. В этом случае у каждого объекта есть своя собственная копия поля, т.е. не разделяемая с другими такими же полями в других экземплярах. Доступ к полям объекта осуществляется через переменную \mintinline{python}|self|.
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Переменные класса и объекта}
+\scriptsize
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{1}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{class} \PY{n+nc}{Droid}\PY{p}{:}
+    \PY{n}{population} \PY{o}{=} \PY{l+m+mi}{0}
+
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{name}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{name} \PY{o}{=} \PY{n}{name}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{  **Инициализация }\PY{l+s+si}{\PYZob{}}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{**}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{Droid}\PY{o}{.}\PY{n}{population} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+
+    \PY{k}{def} \PY{n+nf}{say\PYZus{}hi}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Приветствую! Мои хозяева называют меня }\PY{l+s+si}{\PYZob{}}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+
+    \PY{n+nd}{@staticmethod}
+    \PY{k}{def} \PY{n+nf}{how\PYZus{}many}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{У нас }\PY{l+s+si}{\PYZob{}}\PY{n}{Droid}\PY{o}{.}\PY{n}{population}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{ дроидов.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Переменные класса и объекта}
+\scriptsize
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{2}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{droid1} \PY{o}{=} \PY{n}{Droid}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R2\PYZhy{}D2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{droid1}\PY{o}{.}\PY{n}{say\PYZus{}hi}\PY{p}{(}\PY{p}{)}
+
+\PY{n}{Droid}\PY{o}{.}\PY{n}{how\PYZus{}many}\PY{p}{(}\PY{p}{)}
+
+\PY{n}{droid2} \PY{o}{=} \PY{n}{Droid}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{C\PYZhy{}3PO}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{droid2}\PY{o}{.}\PY{n}{say\PYZus{}hi}\PY{p}{(}\PY{p}{)}
+\PY{n}{Droid}\PY{o}{.}\PY{n}{how\PYZus{}many}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+  **Инициализация R2-D2**
+Приветствую! Мои хозяева называют меня R2-D2.
+У нас 1 дроидов.
+  **Инициализация C-3PO**
+Приветствую! Мои хозяева называют меня C-3PO.
+У нас 2 дроидов.
+    \end{Verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Переменные класса и объекта}
+\scriptsize
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{3}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{def} \PY{n+nf}{how\PYZus{}many}\PY{p}{(}\PY{n}{obj}\PY{p}{:} \PY{n}{Droid}\PY{p}{)} \PY{o}{\PYZhy{}}\PY{o}{\PYZgt{}} \PY{n+nb}{int}\PY{p}{:}
+    \PY{k}{return} \PY{n}{obj}\PY{o}{.}\PY{n}{population}
+
+\PY{n}{droids\PYZus{}count} \PY{o}{=} \PY{n}{how\PYZus{}many}\PY{p}{(}\PY{n}{Droid}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{У вас }\PY{l+s+si}{\PYZob{}}\PY{n}{droids\PYZus{}count}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{ дроидов.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+У вас 2 дроидов.
+    \end{Verbatim}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Переменные класса и объекта}
+\scriptsize
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{4}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{class} \PY{n+nc}{Droid}\PY{p}{(}\PY{n+nb}{object}\PY{p}{)}\PY{p}{:}
+    \PY{n}{population} \PY{o}{=} \PY{l+m+mi}{0}
+
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{name}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{name} \PY{o}{=} \PY{n}{name}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{  **Инициализация }\PY{l+s+si}{\PYZob{}}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{**}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{Droid}\PY{o}{.}\PY{n}{population} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+
+    \PY{k}{def} \PY{n+nf}{say\PYZus{}hi}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Приветствую! Мои хозяева называют меня }\PY{l+s+si}{\PYZob{}}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{name}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{.}\PY{l+s+s1}{\PYZsq{}} \PY{p}{)}
+
+    \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}len\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        \PY{k}{return} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{population}
+\end{Verbatim}
+\end{tcolorbox}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Переменные класса и объекта}
+\scriptsize
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{5}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{droid1} \PY{o}{=} \PY{n}{Droid}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R2\PYZhy{}D2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{droid1}\PY{o}{.}\PY{n}{say\PYZus{}hi}\PY{p}{(}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{У вас }\PY{l+s+si}{\PYZob{}}\PY{n+nb}{len}\PY{p}{(}\PY{n}{droid1}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{ дроидов.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+
+\PY{n}{droid2} \PY{o}{=} \PY{n}{Droid}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{C\PYZhy{}3PO}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{droid2}\PY{o}{.}\PY{n}{say\PYZus{}hi}\PY{p}{(}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{У вас }\PY{l+s+si}{\PYZob{}}\PY{n+nb}{len}\PY{p}{(}\PY{n}{droid2}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s1}{ дроидов.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+  **Инициализация R2-D2**
+Приветствую! Мои хозяева называют меня R2-D2.
+У вас 1 дроидов.
+  **Инициализация C-3PO**
+Приветствую! Мои хозяева называют меня C-3PO.
+У вас 2 дроидов.
+    \end{Verbatim}
+\vfill
+\end{frame}
+
+\subsection{Методы}
+\begin{frame}[fragile]{Методы}
+\scriptsize
+Существуют три модификатора доступа:
+\vfill
+\begin{itemize}
+\item private: \mintinline{python}|__x|
+\item protected: \mintinline{python}|_x|
+\item public: \mintinline{python}|x|
+\end{itemize}
+\vfill
+\begin{minted}{python}
+class Car:
+    def __init__(self, engine, wheels=4):
+        self.engine = engine
+        self.wheels = wheels
+        self.__speed = 0
+
+    def go(self, acceleration_speed=20):
+        if self.engine:
+            self.__speed += acceleration_speed
+            self.engine.go(self.__speed)
+            print(self.status)
+        else:
+            print('Looks like you forgot to insert engine, '
+                  'please do this before going anywhere.')
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Методы}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+    def brake(self, braking_speed=20):
+        self.__speed -= braking_speed
+        self.engine.rotation -= braking_speed * 8
+        print(self.status)
+
+    def upgrade_engine(self, power):
+        self.engine.power += power
+
+    def get_status(self):
+        return "We're driving so fast, " \
+               f'our speed is {self.__speed}, rotation is {self.engine.rotation}'
+
+    @property
+    def status(self):
+        return "We're driging so fast, " \
+               f'our speed is {self.__speed}, rotation is {self.engine.rotation}'
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Методы}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+class Engine:
+    def __init__(self, power):
+        self.power = power
+        self.rotation = 0
+
+    def start(self):
+        self.rotation = 800
+
+    def stop(self):
+        self.rotation = 0
+
+    def __eq__(self, other):
+        if not isinstance(other, Engine):
+            return False
+        return self.power == other.power
+
+    def go(self, speed):
+        if not self.rotation:
+            self.start()
+        self.rotation = (3000 * speed) / self.power
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Методы}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+if __name__ == '__main__':
+    my_car = Car(engine=None)
+    my_car.go(100)
+
+    my_car.engine = Engine(100)
+    my_car.go(100)
+    my_car.go(200)
+
+    my_car.upgrade_engine(50)
+    my_car.go()
+
+    my_car.upgrade_engine(100)
+    my_car.go(0)
+\end{minted}
+\vfill
+    \begin{Verbatim}[commandchars=\\\{\}]
+Looks like you forgot to insert engine, please do this before going anywhere.
+We're driging so fast, our speed is 100, rotation is 3000.0
+We're driging so fast, our speed is 300, rotation is 9000.0
+We're driging so fast, our speed is 320, rotation is 6400.0
+We're driging so fast, our speed is 320, rotation is 3840.0
+    \end{Verbatim}
+\vfill
+\end{frame}
+
+\subsection{Наследование}
+\begin{frame}[fragile]{Наследование}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Наследование}}~-- концепция объектно-ориентированного программирования, согласно которой абстрактный тип данных может наследовать данные и функциональность некоторого существующего типа, способствуя повторному использованию его компонентов.
+\vfill
+\begin{minted}{python}
+class Car:
+    def __init__(self, engine_power, material='iron', wheels=4):
+        self.engine_power = engine_power
+        self.wheels = wheels
+        self.material = material
+
+        self._color = 'transparent'
+
+    def paint(self, color):
+        print('I do not know how to paint myself')
+
+    def get_price(self):
+        price = self.engine_power * 100 if self.engine_power else 0
+        return price
+
+    def __str__(self):
+        return (f'Car ({self.get_price()}$): power: {self.engine_power},'
+        f' material: {self.material}, color: {self._color}')
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Наследование}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+class Toyota(Car):
+    def __init__(self, engine_power, material='iron', **kwargs):
+        super().__init__(engine_power, material='super iron', **kwargs)
+
+    def paint(self, color):
+        self._color = f'Toyota special "{color}"'
+
+class Lexus(Toyota):
+    def get_price(self):
+        return super(Lexus, self).get_price() * 1.24
+
+camry = Toyota(211)
+camry.paint('black')
+print('Camry', camry)
+
+lx500 = Lexus(300)
+lx500.paint('gray')
+print('LX500', lx500)
+\end{minted}
+\vfill
+    \begin{Verbatim}[commandchars=\\\{\}]
+Camry Car (21100$): power: 211, material: super iron, color: Toyota special "black"
+LX500 Car (37200.0$): power: 300, material: super iron, color: Toyota special "gray"
+    \end{Verbatim}
+\vfill
+\end{frame}
+
+\section{Пример создания класса}
+\sectionframe
+
+\begin{frame}[fragile]{Пример создания класса}
+\scriptsize
+Рассмотрим пример реализации класса \mintinline{python}|Flow|, являющегося представлением объекта материального потока.
+\vfill
+\begin{minted}{python}
+import numpy as np
+
+class Flow:
+    def __init__(
+        self,
+        mass_flow_rate: float,
+        mass_fractions: np.ndarray,
+        temperature: float,
+        pressure: float
+    ) -> None:
+        self.mass_flow_rate = mass_flow_rate
+        self.mass_fractions = mass_fractions
+        self.temperature = temperature
+        self.pressure = pressure
+
+    def convert_mass_to_volume_fractions(self, densities: np.ndarray) -> np.ndarray:
+        x = self.mass_fractions / densities
+        s = x.sum()
+        return x / s
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Пример создания класса}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+    def convert_mass_to_mole_fractions(self, mr: np.ndarray) -> np.ndarray:
+        x = self.mass_fractions / mr
+        s = x.sum()
+        return x / s
+
+    def get_flow_density(self, densities: np.ndarray) -> float:
+        return (self.mass_fractions / densities).sum() ** -1
+
+    def get_average_molar_mass(self, mr: np.ndarray) -> float:
+        return (self.mass_fractions / mr).sum() ** -1
+
+
+densities = np.array([.416, .546, .585, .5510, .6, .616, .6262, .6594])
+mr = np.array([16, 30, 44, 58, 58, 72, 72, 86])
+mass_fractions = np.array([.1, .1, .1, .4, .2, .05, .03, .02])
+
+f1 = Flow(
+    mass_flow_rate=100, mass_fractions=mass_fractions,
+    temperature=150, pressure=101.325
+)
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Пример создания класса}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+f1.volume_fractions = f1.convert_mass_to_volume_fractions(densities)
+f1.mole_fractions = f1.convert_mass_to_mole_fractions(mr)
+f1.density = f1.get_flow_density(densities)
+f1.mol_mass = f1.get_average_molar_mass(mr)
+
+print(f1.volume_fractions)
+print(f1.mole_fractions)
+print(f1.density)
+print(f1.mol_mass)
+\end{minted}
+\vfill
+    \begin{Verbatim}[commandchars=\\\{\}]
+[0.13257709 0.10101112 0.09427704 0.400378   0.18384023 0.04476629
+ 0.02642226 0.01672796]
+[0.26545413 0.14157554 0.09652877 0.2929149  0.14645745 0.0294949
+ 0.01769694 0.00987736]
+0.5515207014243224
+42.47266071679689
+    \end{Verbatim}
+\vfill
+\end{frame}
+
+
+\contactsframe[\Large \textbf{Благодарю за внимание!}]{
+
+	\bigskip
+	\includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\
+	\includegraphics[width=.05\textwidth]{pics/mail} \quad chuva@tpu.ru \\
+	\includegraphics[width=.03\textwidth]{pics/tel} \quad +7-962-782-66-15
+}
+
+\end{document}
+
