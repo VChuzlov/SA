@@ -1,0 +1,311 @@
+% !TeX document-id = {d14e3550-73bb-4219-9039-3bfa77854141}
+% !BIB TS-program = biber
+
+\documentclass[a4, 12pt, openany]{book}
+\usepackage[left=2.5cm, right=2.0cm, top=2.0cm, bottom=2.0cm]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}	
+\usepackage[english, main=russian]{babel}
+%\usepackage{polyglossia}
+%\setdefaultlanguage{russian} %язык по умолчанию
+%\setotherlanguage{english}
+%\hyphenpenalty=10000
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}     % задаёт \rmfamily, основной шрифт документа
+\setsansfont{Arial}     % задаёт \sffamily, шрифт без засечек
+\setmonofont[Scale=0.9]{Consolas} % задаёт \ttfamily, моношрифт
+
+\usepackage{import}
+\usepackage{indentfirst}
+\usepackage{textcase}
+\usepackage{cmap}
+\usepackage{graphicx}
+\graphicspath{{pics/}}
+\usepackage[citecolor=black]{hyperref}
+\usepackage{pythonhighlight}
+\usepackage{wrapfig}
+
+\usepackage{tabularx}
+
+%\usepackage[labelsep=endash]{caption}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\DeclareCaptionLabelFormat{figure}{Рисунок~#2}
+\captionsetup[table]{justification=raggedleft, 	
+	labelsep=newline, 
+	%	textfont=it, 
+	textformat=center, 
+	position=top, 
+	skip=5pt
+}
+\captionsetup[figure]{justification=centering,
+	labelsep=endash, 
+	labelformat=figure
+	%	textfont=it
+}
+\captionsetup[lstlisting]{justification=raggedright,
+	labelsep=endash}
+
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+\usepackage{amsmath, amsfonts, amssymb}
+
+\usepackage{xcolor}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{type1ec}% Чтобы можно было делать буквицы высотой 3 строки и более.
+%\usepackage{fix-cm}% Не уловил разницы.
+\usepackage[T1,T2A]{fontenc}
+%\usepackage[cp1251]{inputenc}
+
+\usepackage{xecyr}
+\usepackage{lettrine} % БУКВИЦЫ
+\usepackage{yfonts}
+\setcounter{DefaultLines}{2} % Высота буквицы в строках.
+\renewcommand{\DefaultLoversize}{0.5} % по умолчанию 0, минимум 0.17
+\renewcommand{\DefaultLhang}{0} % по умолчанию 0 — выступ буквицы на поле
+
+%\renewcommand{\LettrineFontHook}{\fontseries{bx}} % Начертание буквицы, по умолчанию обычное.
+\renewcommand{\LettrineTextFont}{\relax}% Начертание текста рядом с буквицей, по умолчанию капитель.
+
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+\usepackage{tocloft}
+%\renewcommand{\cftchapfont}{\bfseries}
+%\renewcommand{\cftchappagefont}{\bfseries}
+\renewcommand{\cftchappresnum}{Глава }
+%\renewcommand{\cftchapaftersnum}{:}
+\renewcommand{\cftchapnumwidth}{4.5em}
+
+\usepackage{listings}
+\lstset{
+	breaklines=true,
+	%
+	extendedchars=true,
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1
+}
+
+%%
+%% Python definition (c) 1998 Michael Weber
+%% Additional definitions (2013) Alexis Dimitriadis
+%% modified by me (should not have empty lines)
+%%
+\lstdefinelanguage{iPython}{
+	morekeywords={access,and,break,class,continue,def,del,elif,else,except,exec,finally,for,from,global,if,import,in,is,lambda,not,or,pass,print,raise,return,try,while, nonlocal, yield, with},%
+	%
+	% Built-ins
+	morekeywords=[2]{abs,all,any,basestring,bin,bool,bytearray,callable,chr,classmethod,cmp,compile,complex,delattr,dict,dir,divmod,enumerate,eval,execfile,file,filter,float,format,frozenset,getattr,globals,hasattr,hash,help,hex,id,input,int,isinstance,issubclass,iter,len,list,locals,long,map,max,memoryview,min,next,object,oct,open,ord,pow,property,range,raw_input,reduce,reload,repr,reversed,round,set,setattr,slice,sorted,staticmethod,str,sum,super,tuple,type,unichr,unicode,vars,xrange,zip,apply,buffer,coerce,intern, ascii, as, assert},%
+	%
+	sensitive=true,%
+	morecomment=[l]\#,%
+	morestring=[b]',%
+	morestring=[b]",%
+	%
+	morestring=[s]{'''}{'''},% used for documentation text (mulitiline strings)
+	morestring=[s]{"""}{"""},% added by Philipp Matthias Hahn
+	%
+	morestring=[s]{r'}{'},% `raw' strings
+	morestring=[s]{r"}{"},%
+	morestring=[s]{r'''}{'''},%
+	morestring=[s]{r"""}{"""},%
+	morestring=[s]{u'}{'},% unicode strings
+	morestring=[s]{u"}{"},%
+	morestring=[s]{u'''}{'''},%
+	morestring=[s]{u"""}{"""},%
+	morestring=[s]{b'}{'},% byte strings
+	morestring=[s]{b"}{"},%
+	morestring=[s]{b'''}{'''},%
+	morestring=[s]{b"""}{"""},%
+	%
+	% {replace}{replacement}{lenght of replace}
+	% *{-}{-}{1} will not replace in comments and so on
+	literate=
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1,
+	%
+	literate=
+	*{+}{{{\color{ipython_purple}+}}}1
+	{-}{{{\color{ipython_purple}-}}}1
+	{*}{{{\color{ipython_purple}$^\ast$}}}1
+	{/}{{{\color{ipython_purple}/}}}1
+	{^}{{{\color{ipython_purple}\^{}}}}1
+	{?}{{{\color{ipython_purple}?}}}1
+	{!}{{{\color{ipython_purple}!}}}1
+	{\%}{{{\color{ipython_purple}\%}}}1
+	{<}{{{\color{ipython_purple}<}}}1
+	{>}{{{\color{ipython_purple}>}}}1
+	{|}{{{\color{ipython_purple}|}}}1
+	{\&}{{{\color{ipython_purple}\&}}}1
+	{~}{{{\color{ipython_purple}~}}}1
+	%
+	%	{==}{{{\color{ipython_purple}==}}}2
+	%	{<=}{{{\color{ipython_purple}<=}}}2
+	%	{>=}{{{\color{ipython_purple}>=}}}2
+	%	
+	%	{+=}{{{\color{ipython_purple}>=}}}2
+	%	{&=}{{{\color{ipython_purple}>=}}}2
+	%	{-=}{{{\color{ipython_purple}>=}}}2
+	%	{|=}{{{\color{ipython_purple}>=}}}2
+	%	
+	%	{*=}{{{\color{ipython_purple}>=}}}2
+	%	{^=}{{{\color{ipython_purple}>=}}}2
+	%	{/=}{{{\color{ipython_purple}>=}}}2
+	%	{>>=}{{{\color{ipython_purple}>=}}}2
+	%	
+	%	{\%=}{{{\color{ipython_purple}>=}}}2
+	%	{<<=}{{{\color{ipython_purple}>=}}}2
+	%	{**=}{{{\color{ipython_purple}>=}}}2
+	%	{//=}{{{\color{ipython_purple}>=}}}2
+	%
+	{+=}{{{+=}}}2
+	{-=}{{{-=}}}2
+	{*=}{{{$^\ast$=}}}2
+	{/=}{{{/=}}}2,
+	%
+	%	identifierstyle=\color{red}\ttfamily,
+	commentstyle=\fontsize{10pt}{10}\color{ipython_cyan}\ttfamily,
+	texcl=true,
+	keepspaces=true,
+	stringstyle=\fontsize{10pt}{10}\color{ipython_red}\ttfamily,
+	%	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+	%
+	rulecolor=\color{ipython_frame},
+	frame=leftline,
+	%	frameround=ffff,
+	framexleftmargin=5mm,
+	columns=fullflexible
+	numbers=left,
+	numberstyle=\tiny\color{halfgray},
+	numbersep=5pt,
+	%
+	%
+	%	backgroundcolor=\color{ipython_bg},
+	%   extendedchars=true,
+	basicstyle=\fontsize{10pt}{10}\ttfamily,
+	keywordstyle=\fontsize{10pt}{10}\color{ipython_green}\ttfamily,
+	escapechar=\¢,escapebegin=\color{ipython_red},
+}
+
+
+\usepackage{icomma}
+%\DeclareUnicodeCharacter{00A0}{ }
+
+%\usepackage[Conny]{fncychap}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15.0pt}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+%\fancyhead[RE]{\bfseries\nouppercase{\rightmark}}
+%\fancyhead[LO]{\bfseries\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{pgf}
+\usepackage{capt-of}
+\usepackage{amsmath}
+\usepackage{nicefrac}
+
+\usepackage[backend=biber, 
+style=gost-numeric,  
+autolang=other, 
+clearlang=true, 
+bibencoding=utf8,
+sorting=none
+]{biblatex}
+\renewcommand*{\multicitedelim}{\addcomma\space} 
+\usepackage{csquotes}
+\addbibresource{ref.bib}
+
+\begin{document}
+	
+	\include{titlepage}
+	
+	%\addcontentsline{toc}{chapter}{Начало работы}
+	
+%	\include{secondpage}
+	\renewcommand\contentsname{Содержание}
+%	\tableofcontents
+	
+	\lstlistoflistings
+	\include{chapter1} % Введение
+	\include{chapter2} % Как пользователь выполняет программы
+	\include{chapter3}
+%	\include{chapter20} % IPython
+%	\include{chapter5} % Числовые типы в Python
+%	\include{chapter6} % Динамическая типизация
+%	\include{chapter7} % Строки в Python
+%	\include{chapter8} % Списки и словари
+%	\include{chapter9} % Кортежи, файлы и прочие типы 
+%	\include{chapter10} % Операторы и синтаксис
+%	\include{chapter11} % Проверки if и правила синтаксиса
+%	\include{chapter12} % Циклы while и for
+%	\include{chapter13} % Итерации и итерируемые объекты
+%	\include{chapter14} % Функции
+%	\include{chapter15} % Области видимости
+%	\include{chapter16} % Расширенные возможности функций
+%	\include{chapter17} % Генераторы и генераторные выражения
+%	\include{chapter18} % Модули
+%	\include{chapter19} % Классы и объектно-ориентрированное программирование
+%	% Часть II
+%%	\include{intro} % Веедение
+%	\include{chapter21} % NumPy
+%	\include{chapter23} % Matplotlib
+%	\include{chapter24} % SciPy
+%	\include{chapter25} % Численные методы решения нелинейных уравнений
+%	\include{chapter30} % Методы решения систем линейных уравнений
+%	\include{chapter26} % Обработка экспериментальных данных
+%	\include{chapter27} % Численные методы интегрирования
+%	\include{chapter28} % Численные методы решения ОДУ
+%	\include{chapter29} % Сисемы дифференциальных уравнений
+%	\include{chapter31} % Методы оптимизации
+%	\include{conclusion}
+%	
+%	\lstlistoflistings
+%	
+%	\addcontentsline{toc}{chapter}{Листинги}
+%	
+%	\printbibliography
+%	
+	\addcontentsline{toc}{chapter}{Список литературы}
+%	
+%	\newpage
+%	
+%	\include{lastpage}
+	
+\end{document}

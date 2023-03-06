@@ -1,0 +1,9 @@
+\babel@toc {russian}{}
+\beamer@subsectionintoc {0}{1}{Задача}{2}{0}{0}
+\beamer@subsectionintoc {0}{2}{Описание класса \texttt {Flow}}{3}{0}{0}
+\beamer@subsectionintoc {0}{3}{Функции для пересчета составов}{4}{0}{0}
+\beamer@subsectionintoc {0}{4}{Функции для расчета плотности и средней \\ молекулярной массы}{5}{0}{0}
+\beamer@subsectionintoc {0}{5}{Функции для расчета теплоемкости потока}{6}{0}{0}
+\beamer@sectionintoc {1}{Численное интегрирование}{7}{0}{1}
+\beamer@sectionintoc {2}{Системы ОДУ первого порядка}{9}{0}{2}
+\beamer@sectionintoc {3}{Задания}{12}{0}{3}
