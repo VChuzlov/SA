@@ -1,31 +1,21 @@
-\frametitle{\textcolor {tpugreen}{\textbf {Задание~3}}}
+\frametitle{Функции для расчета теплоемкости потока}
 \scriptsize
-Дана схема химических превращений:
-\begin{center}
-\schemestart
-^^IC \arrow{<->[$k_2$][$k_3$]}[30] A \arrow{->[$k_1$]}[-30] B
-\schemestop
-
-\begin{minipage}{.45\textwidth}
-\begin{align*}
-^^IC_{A_0} &= 0.7 \left(\text{моль/л}\right); &\quad k_1 &= 0.21 \left(c^{-1}\right); \\
-^^IC_{B_0} &= 0.0 \left(\text{моль/л}\right); &\quad k_2 &= 0.12 \left(c^{-1}\right); \\
-^^IC_{C_0} &= 0.0 \left(\text{моль/л}\right); &\quad k_3 &= 0.18 \left(c^{-1}\right).\\
-\end{align*}
-\vfil
-\end{minipage}
-\begin{minipage}{.5\textwidth}
-\begin{equation*}
-\left\{
-^^I\begin{aligned}
-^^I^^I\dfrac{dC_A}{dt} &= -k_1 \cdot C_A -k_2 \cdot C_A + k_3 \cdot C_C \\
-^^I^^I\dfrac{dC_B}{dt} &=  k_1 \cdot C_A  \\
-^^I^^I\dfrac{dC_C}{dt} &=  k_2 \cdot C_A - k_3 \cdot C_C \\
-^^I\end{aligned}
-\right.
-\end{equation*}
-\end{minipage}
-\end{center}
-
-
+Расчет теплоемкости потока в зависимости от состава потока и температуры среды осуществляется следующим образом:
+\begin{itemize}
+\item определяется теплоемкость компонентов потока при температуре среды:
+\vfill
+$$
+^^ICp_i = \sum \limits _{j=1} ^{5} j \cdot k\left[i, j\right] \cdot T^{j-1}
+$$
+\vfill
+где $Cp_i$~-- теплоемкость $i$-го компонента, кДж / кг; $k\left[i, j\right]$~-- коэффициенты аппроксимации температурной зависимости энтальпии для $i$-го компонента; $T$~-- температура потока, К;
+\vfill
+\item определяется общая теплоемкость потока:
+\vfill
+$$
+^^ICp = \sum \limits _{i=1} ^{n} \omega _i \cdot Cp_i
+$$
+\vfill
+где $\omega _i$~-- массовая доля $i$-го компонента; $Cp_i$~-- теплоемкость $i$-го компонента, кДж / кг; $n$~-- число компонентов в системе.
+\end{itemize}
 \vfill
