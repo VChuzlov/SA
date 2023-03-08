@@ -27,16 +27,14 @@ class Flow:
             self.mass_fractions, const.MR
         )
         self.mole_flow_rate = self.mass_flow_rate / self.average_mol_mass
-        self.volume_flow_rate = self.mass_flow_rate / self.density
-        self.flow_cp = conv.get_flow_cp(
-            self.mass_fractions, const.HEATCAPACITYCOEFFS, self.temperature
-        )
+        self.volume_flow_rate = self.mass_flow_rate / (self.density * 1e3)
 
-    def recalculate(self) -> None:
-        self.flow_cp = conv.get_flow_cp(
+    @property
+    def flow_cp(self) -> float:
+        flow_cp = conv.get_flow_cp(
             self.mass_fractions, const.HEATCAPACITYCOEFFS, self.temperature
         )
-        return
+        return flow_cp
 
 
 if __name__ == '__main__':
