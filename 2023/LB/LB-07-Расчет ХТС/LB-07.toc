@@ -1,4 +1,4 @@
-\babel@toc {russian}{}\relax 
+\babel@toc {russian}{}
 \beamer@subsectionintoc {0}{1}{Задача}{2}{0}{0}
 \beamer@subsectionintoc {0}{2}{Описание класса \texttt {Flow}}{3}{0}{0}
 \beamer@subsectionintoc {0}{3}{Функции для пересчета составов}{4}{0}{0}
@@ -7,3 +7,4 @@
 \beamer@subsectionintoc {0}{6}{Описание класса \texttt {Mixer}}{7}{0}{0}
 \beamer@subsectionintoc {0}{7}{Материальный и тепловой балансы смешения}{8}{0}{0}
 \beamer@subsectionintoc {0}{8}{Описание класса \texttt {HeatExchanger}}{10}{0}{0}
+\beamer@subsectionintoc {0}{9}{Описание класса \texttt {Splitter}}{12}{0}{0}

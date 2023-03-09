@@ -113,7 +113,7 @@ skip=5pt
 
 
 \title{\LARGE{Системный анализ процессов химической технологии}}
-\subtitle{\textcolor{tpugreen}{\textbf{Лабораторная работа №7}} \\ \textbf{Расчет химико-технологической системы \\ переменной структуры}}
+\subtitle{\textcolor{tpugreen}{\textbf{Лекция №6}} \\ \textbf{Расчет химико-технологической системы \\ переменной структуры}}
 \author[]{Вячеслав Алексеевич Чузлов, \\
 к.т.н., доцент ОХИ ИШПР}
 \date{\today}
@@ -378,6 +378,55 @@ def calculate(
 		& Расчет теплообменного аппарата.
 
 		 В качестве результата возращается объект кортежа, состоящий из двух элементов: горячего и холодного потоков (объекты класса \texttt{Flow})\\
+		\hline
+	\end{tabular}
+\end{table}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Описание класса \texttt{HeatExchanger}}
+\scriptsize
+В стационарном режиме уравнения теплового баланса теплообменного аппарата примут следующий вид:
+\vfill
+\begin{equation*}
+\left\{
+\begin{aligned}
+	\dfrac{dT_h}{dl} &= -\dfrac{k \cdot \pi \cdot d}{v_h \cdot \rho _h \cdot Cp_h} \cdot \left(T_h - T_c\right) \\
+	\dfrac{dT_c}{dl} &= \dfrac{k \cdot \pi \cdot d}{v_c \cdot \rho _c \cdot Cp_c} \cdot \left(T_h - T_c\right)
+\end{aligned}
+\right.
+\end{equation*}
+\vfill
+где $T_h$ и $T_c$~-- температуры горячего и холодного потоков, соответственно, К; $k$~-- коэффициент теплопередачи; $d$~-- диаметр трубы, м; $v_h$ и $v_c$~-- объемные скорости горячего и холодного теплоносителей, c$^{-1}$; $\rho _h$ и $\rho _c$~-- плотности горячего и холодного потоков, кг/м$^3$; $Cp _h$ и $Cp _c$~-- теплоемкости горячего и холодного потоков, кДж/кг $\cdot$ K.
+\vfill
+С целью упрощения выберем для решения данной системы дифференциальных уравнений метод Эйлера.
+\vfill
+\end{frame}
+
+
+\subsection{Описание класса \texttt{Splitter}}
+\begin{frame}[fragile]{Описание класса \texttt{Splitter}}
+\scriptsize
+\vfill
+\begin{table}[h!]
+	\centering
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
+		\hline
+		\textbf{Атрибуты класса} & \textbf{Описание}  \\
+		\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def calculate(
+    self,
+    flow: Flow,
+    *ratio: float
+) -> list[Flow]:
+\end{minted}
+\vfill
+\end{minipage}
+		& Расчет делителя потока; возвращает в качестве результата список объектов \texttt{Flow} \\
 		\hline
 	\end{tabular}
 \end{table}

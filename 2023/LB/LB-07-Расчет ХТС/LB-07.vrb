@@ -1,6 +1,5 @@
-\frametitle{Описание класса \texttt {HeatExchanger}}
+\frametitle{Описание класса \texttt {Splitter}}
 \scriptsize
-Будем рассматривать теплообменник типа <<труба в трубе>>.
 \vfill
 \begin{table}[h!]
 ^^I\centering
@@ -12,33 +11,15 @@
 \begin{minipage}{\linewidth}
 \vfill
 \begin{minted}[frame=none, linenos=false]{python}
-def __init__(
-    self,
-    d_in: float = .1,
-    d_out: float = .25,
-    length: float = 3.0,
-    k: float = 4900
-) -> None
-\end{minted}
-\vfill
-\end{minipage}
-^^I^^I& Конструктор класса \texttt{HeatExchanger}\\
-^^I^^I\hline
-\begin{minipage}{\linewidth}
-\vfill
-\begin{minted}[frame=none, linenos=false]{python}
 def calculate(
     self,
-    hot: Flow,
-    cold: Flow,
-    h: float = .01
-) -> tuple[Flow]:
+    flow: Flow,
+    *ratio: float
+) -> list[Flow]:
 \end{minted}
 \vfill
 \end{minipage}
-^^I^^I& Расчет теплообменного аппарата.
-
-^^I^^I В качестве результата возращается объект кортежа, состоящий из двух элементов: горячего и холодного потоков (объекты класса \texttt{Flow})\\
+^^I^^I& Расчет делителя потока; возвращает в качестве результата список объектов \texttt{Flow} \\
 ^^I^^I\hline
 ^^I\end{tabular}
 \end{table}
