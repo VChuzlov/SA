@@ -268,6 +268,122 @@ $$
 \end{frame}
 
 
+\subsection{Описание класса \texttt{Mixer}}
+\begin{frame}[fragile]{Описание класса \texttt{Mixer}}
+\scriptsize
+\begin{table}[h!]
+	\centering
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
+		\hline
+		\textbf{Атрибуты класса} & \textbf{Описание}  \\
+		\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def mix(self, *flows: Flow) -> Flow
+\end{minted}
+\vfill
+\end{minipage}
+		& Реализация метода смешения потоков. Возвращает результирующий поток в виде объекта класса \texttt{Flow}\\
+		\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def __calculate_temperature(self) -> float
+\end{minted}
+\vfill
+\end{minipage}
+		& Закрытый метод, необходимый для расчета температуры смесевого потока \\
+		\hline
+	\end{tabular}
+\end{table}
+\vfill
+\end{frame}
+
+\subsection{Материальный и тепловой балансы смешения}
+\begin{frame}[fragile]{Материальный и тепловой балансы смешения}
+\scriptsize
+Состав смесевого потока (в массовых долях) можно найти следующим образом:
+\vfill
+$$
+	\omega _i = \dfrac{\sum \limits_ {j=1} ^{n} G_j \cdot \omega _{i,j}}{\sum \limits_ {j=1} ^{n} G_j}
+$$
+\vfill
+где $\omega _i$~-- массовая доля $i$-го компонента; $G_j$~-- массовый расход $j$-го потока, кг/ч; $\omega _{i,j}$~-- массовая доля $i$-го компонента в $j$-ом потоке; $n$~-- количество смешиваемых потоков.
+\vfill
+Теплоемкость смесевого потока можно найти следующим образом:
+\vfill
+$$
+	Cp = \dfrac{\sum \limits _{i=1} ^{n} G_i \cdot Cp_i}{\sum \limits _{i=1} ^{n} G_i}
+$$
+\vfill
+где $Cp$~-- теплоемкость смесевого потока, кДж/кг $\cdot$ К; $G_i$~-- массовый расход $i$-го потока, кг/ч; $Cp_i$~-- теплоемкость $i$-го потока, кДж/кг $\cdot$ К; $n$~-- количество смешиваемых потоков.
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Материальный и тепловой балансы смешения}
+\scriptsize
+Температура смесевого потока определяется следующим образом:
+\vfill
+$$
+	T = \dfrac{\sum \limits _{i=1} ^{n} G_i \cdot Cp_i \cdot T_i}{G \cdot Cp\left(T\right)}
+$$
+\vfill
+где $T$~-- температура смесевого потока, К; $G_i$~-- массовый расход $i$-го потока, кг/ч; $Cp_i$~-- теплоемкость $i$-го потока, кДж/кг $\cdot$ К; $n$~-- количество смешиваемых потоков; $G$~-- массовый расход смесевого потока, кг/ч; $Cp\left(T\right)$~-- теплоемкость смесевого потока, кДж/кг $\cdot$ К, являющаяся функцией от температуры.
+\vfill
+В итоге получаем нелинейное уравнение, корнем которого является искомое значение температуры смесевого потока.
+\vfill
+\end{frame}
+
+\subsection{Описание класса \texttt{HeatExchanger}}
+\begin{frame}[fragile]{Описание класса \texttt{HeatExchanger}}
+\scriptsize
+Будем рассматривать теплообменник типа <<труба в трубе>>.
+\vfill
+\begin{table}[h!]
+	\centering
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
+		\hline
+		\textbf{Атрибуты класса} & \textbf{Описание}  \\
+		\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def __init__(
+    self,
+    d_in: float = .1,
+    d_out: float = .25,
+    length: float = 3.0,
+    k: float = 4900
+) -> None
+\end{minted}
+\vfill
+\end{minipage}
+		& Конструктор класса \texttt{HeatExchanger}\\
+		\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def calculate(
+    self,
+    hot: Flow,
+    cold: Flow,
+    h: float = .01
+) -> tuple[Flow]:
+\end{minted}
+\vfill
+\end{minipage}
+		& Расчет теплообменного аппарата.
+
+		 В качестве результата возращается объект кортежа, состоящий из двух элементов: горячего и холодного потоков (объекты класса \texttt{Flow})\\
+		\hline
+	\end{tabular}
+\end{table}
+\vfill
+\end{frame}
+
 \contactsframe[\Large \textbf{Благодарю за внимание!}]{
 
 \includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\

@@ -22,12 +22,13 @@ class HeatExchanger:
         h: float = .01
     ) -> tuple[Flow]:
         cold_space_velocity = (
-            cold.volume_flow_rate 
+            cold.volume_flow_rate
             / (np.pi * self.d_out ** 2 / 4 * self.length 
             - np.pi * self.d_in ** 2 / 4 * self.length)
         )
         hot_space_velocity = (
-            hot.volume_flow_rate / (np.pi * self.d_in ** 2 / 4 * self.length)
+            hot.volume_flow_rate 
+             / (np.pi * self.d_in ** 2 / 4 * self.length)
         )
         cold_ = Flow(
             mass_flow_rate=cold.mass_flow_rate, 
@@ -48,12 +49,12 @@ class HeatExchanger:
                 * (hot_.temperature - cold_.temperature) * h
             )
             cold_.temperature += (
-                self.k * np.pi * self.d_out
+                self.k * np.pi * self.d_in
                 / (cold_space_velocity * cold_.density * 1e3 * cold_.flow_cp)
                 * (hot_.temperature - cold_.temperature) * h
             )
             l += h
-            print(hot_.temperature, cold_.temperature)
+            
         return hot_, cold_
 
 

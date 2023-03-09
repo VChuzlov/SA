@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  7 MAR 2023 09:25
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  9 MAR 2023 14:11
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1699,7 +1699,106 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 276--276
+\openout4 = `LB-07.vrb'.
+
+ (./LB-07.vrb
+\openout5 = `LB-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o LB-07.out.pyg LB-07.pyg)...executed.
+
+
+(./LB-07.out.pyg)
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+[]\TU/ALSSirius(0)/m/n/8 Реализация метода смешения потоков.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+\TU/ALSSirius(0)/m/n/8 Возвращает результирующий поток в виде
+ []
+
+\openout5 = `LB-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o LB-07.out.pyg LB-07.pyg)...executed.
+
+(./LB-07.out.pyg)
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+[]\TU/ALSSirius(0)/m/n/8 Закрытый метод, необходимый для расчета
+ []
+
+
+Overfull \hbox (16.26518pt too wide) in paragraph at lines 6--29
+ [] 
+ []
+
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [7
+
+]
+\openout4 = `LB-07.vrb'.
+
+ (./LB-07.vrb)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [8
+
+]
+\openout4 = `LB-07.vrb'.
+
+ (./LB-07.vrb)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [9
+
+]
+\openout4 = `LB-07.vrb'.
+
+ (./LB-07.vrb
+\openout5 = `LB-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o LB-07.out.pyg LB-07.pyg)...executed.
+
+ (./LB-07.out.pyg)
+\openout5 = `LB-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o LB-07.out.pyg LB-07.pyg)...executed.
+
+
+(./LB-07.out.pyg)
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+[]\TU/ALSSirius(0)/m/n/8 В качестве результата возращается объект
+ []
+
+
+Overfull \hbox (16.26518pt too wide) in paragraph at lines 8--44
+ [] 
+ []
+
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [10
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
 
  []
 
@@ -1710,19 +1809,19 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 276--276
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 392--392
 [][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 276
+Overfull \vbox (5.0pt too high) detected at line 392
  []
 
 File: bgs/contacts.jpg Graphic file (type bmp)
 <bgs/contacts.jpg>
 File: logos/ru/light/logoclr.png Graphic file (type bmp)
 <logos/ru/light/logoclr.png>
-[7
+[11
 
 ]
 \tf@nav=\write8
@@ -1736,19 +1835,19 @@ File: logos/ru/light/logoclr.png Graphic file (type bmp)
 
  (./LB-07.aux)
 Package rerunfilecheck Info: File `LB-07.out' has not changed.
-(rerunfilecheck)             Checksum: 28BB3F0732CB2C2190EFBEBCFEED847B;1463.
+(rerunfilecheck)             Checksum: 20A8468BC9A689964493DA0DA850A23C;2271.
 runsystem(del LB-07.pyg)...executed.
 
 runsystem(del LB-07.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 37457 strings out of 475848
- 818729 string characters out of 5805114
- 1234283 words of memory out of 5000000
- 57776 multiletter control sequences out of 15000+600000
+ 37491 strings out of 475848
+ 819140 string characters out of 5805114
+ 1235354 words of memory out of 5000000
+ 57794 multiletter control sequences out of 15000+600000
  475248 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,13n,104p,558b,884s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on LB-07.pdf (7 pages).
+Output written on LB-07.pdf (11 pages).

@@ -4,3 +4,6 @@
 \beamer@subsectionintoc {0}{3}{Функции для пересчета составов}{4}{0}{0}
 \beamer@subsectionintoc {0}{4}{Функции для расчета плотности и средней \\ молекулярной массы}{5}{0}{0}
 \beamer@subsectionintoc {0}{5}{Функции для расчета теплоемкости потока}{6}{0}{0}
+\beamer@subsectionintoc {0}{6}{Описание класса \texttt {Mixer}}{7}{0}{0}
+\beamer@subsectionintoc {0}{7}{Материальный и тепловой балансы смешения}{8}{0}{0}
+\beamer@subsectionintoc {0}{8}{Описание класса \texttt {HeatExchanger}}{10}{0}{0}

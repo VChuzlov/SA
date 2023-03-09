@@ -22,7 +22,6 @@ class Mixer:
             temperature=t_mean
         )
         self.mixture.temperature = self.__calculate_temperature()
-        print(self.mixture.flow_cp)
         return self.mixture
     
     def __calculate_temperature(self) -> float:
