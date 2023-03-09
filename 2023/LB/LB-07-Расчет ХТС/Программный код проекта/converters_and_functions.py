@@ -48,4 +48,9 @@ def normalize(x: np.ndarray) -> np.ndarray:
 
 
 if __name__ == '__main__':
-    ...
+    import constants as const
+    x = np.random.randint(1, 5, 24)
+    x = normalize(x)
+    t = 273.15
+    cp = get_flow_cp(x, const.HEATCAPACITYCOEFFS, t)
+    print(cp)

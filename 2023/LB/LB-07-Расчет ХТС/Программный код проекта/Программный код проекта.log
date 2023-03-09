@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  6 MAR 2023 23:33
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  9 MAR 2023 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1642,7 +1642,38 @@ Package Listings Warning: Unknown column format `fullflexible numbers' on input
 Package Listings Warning: Unknown column format `fullflexible numbers' on input
  line 14.
 
-(./flows.py)) [5]
+(./flows.py) [5]
+
+Package Listings Warning: Unknown column format `fullflexible numbers' on input
+ line 17.
+
+
+Package Listings Warning: Unknown column format `fullflexible numbers' on input
+ line 17.
+
+(./mixer.py) [6]
+
+Package Listings Warning: Unknown column format `fullflexible numbers' on input
+ line 20.
+
+
+Package Listings Warning: Unknown column format `fullflexible numbers' on input
+ line 20.
+
+(./heat_exchanger.py
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7])
+[8]
+
+Package Listings Warning: Unknown column format `fullflexible numbers' on input
+ line 23.
+
+
+Package Listings Warning: Unknown column format `fullflexible numbers' on input
+ line 23.
+
+(./splitter.py)) [9]
 \openout2 = `chapter2.aux'.
 
 
@@ -1671,12 +1702,12 @@ Package logreq Info: Writing requests to '"Программный код про�
 
  ) 
 Here is how much of TeX's memory you used:
- 37325 strings out of 476477
- 697591 string characters out of 5817858
- 2089761 words of memory out of 5000000
- 57096 multiletter control sequences out of 15000+600000
+ 37386 strings out of 476477
+ 698277 string characters out of 5817858
+ 2192764 words of memory out of 5000000
+ 57148 multiletter control sequences out of 15000+600000
  412884 words of font info for 111 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,11n,85p,1150b,3792s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,12n,85p,1150b,3792s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Программный код проекта.pdf (5 pages).
+Output written on Программный код проекта.pdf (9 pages).
