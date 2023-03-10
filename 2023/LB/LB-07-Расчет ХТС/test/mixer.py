@@ -49,6 +49,11 @@ if __name__ == '__main__':
         mass_fractions=conv.normalize(np.random.randint(1, 5, 24)), 
         temperature=300
     )
+    f3 = Flow(
+        mass_flow_rate=150, 
+        mass_fractions=conv.normalize(np.random.randint(1, 5, 24)), 
+        temperature=220
+    )
     m = Mixer()
-    fmixture = m.mix(f1, f2)
+    fmixture = m.mix(f1, f2, f3)
     print(fmixture.temperature)

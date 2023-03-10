@@ -24,5 +24,6 @@ if __name__ == '__main__':
         temperature=273.15
     )
     spl = Splitter()
-    f1, f2, f3 = spl.calculate(f, .33333, .33333, .33)
+    f1, f2, f3 = spl.calculate(f, .43333, .23333, .33333)
     print(f1.mass_flow_rate, f2.mass_flow_rate, f3.mass_flow_rate)
+    print(f1.volume_fractions)
