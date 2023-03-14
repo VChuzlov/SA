@@ -1,0 +1,6 @@
+\babel@toc {russian}{}\relax 
+\beamer@sectionintoc {1}{Минимизация функций \\ нескольких переменных}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Метод Нелдера-Мида}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Пример}{9}{0}{1}
+\beamer@subsectionintoc {1}{3}{Программная реализация}{10}{0}{1}
+\beamer@sectionintoc {2}{Генетический алгоритм}{13}{0}{2}
