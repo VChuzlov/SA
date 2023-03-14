@@ -249,7 +249,7 @@ BoldItalicFont=*-BoldItalic
 	extendedchars=true,
 	basicstyle=\fontsize{7pt}{7}\ttfamily,
 	keywordstyle=\fontsize{7pt}{7}\color{ipython_green}\ttfamily,
-	escapechar=\¢,escapebegin=\color{ipython_red},
+	escapechar=\,escapebegin=\color{ipython_red},
 }
 
 \hyphenpenalty=10000	% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
@@ -808,35 +808,25 @@ def nelder_mead(func, initial, alpha=1, beta=0.5, gamma=2, eps=1e-8):
             if yr <= y[high]:
                 p[high] = pr[:]
             # сжатие
-            ps = [beta * p[high][i] + (1 - beta) * pc[i]
-                  for i in range(n - 1)]
+            ps = [beta * p[high][i] + (1 - beta) * pc[i] for i in range(n - 1)]
             ys = func(ps)
-
             if ys > y[high]:
-                p = [[(p[i][j] + p[low][j]) / 2
-                      for j in range(n - 1)]
-                     for i in range(n)]
+                p = [[(p[i][j] + p[low][j]) / 2 for j in range(n - 1)] for i in range(n)]
             else:
                 p[high] = ps[:]
-
         else:
             p[high] = pr[:]
-
         y = [func(item) for item in p]
-
         y_mean = sum(y) / n
         error = sum((y[i] - y_mean) ** 2 / n for i in range(n)) ** 0.5
         iteration += 1
         condition = error <= eps or iteration >= n * 200
-
     return p[low]
 
 
-print(nelder_mead(func, [[0, 0], [1, 0], [0, 1]]))
+print(nelder_mead(func, [[0, 0], [1, 0], [0, 1]]))  # [1.0000959008633465, 3.999973542055873]
 \end{minted}
-\begin{minted}{python}
-[1.0000959008633465, 3.999973542055873]
-\end{minted}
+\vfill
 \end{frame}
 
 
@@ -977,9 +967,260 @@ def selection(func, population, selected, args):
     return sorted_population[:selected]
 \end{minted}
 
-На каждой итерации генетического алгоритма происходит обновление популяции созданием новых особей и уничтожения наименее приспособленных особей. Создание новых особей происходит путем моделирования процесса размножения при помощи \textit{оператора скрещивания}. Порождающие особи называют родителями, а порожденные~-- потомками. Выбор родительских особей происходит случайным образом. При этом возможна ситуация, при которой один родитель участвует в нескольких скрещиваниях, и нет гарантированного участия в размножении всех родительских особей. Родительская пара генерирует пару потомков за счет обмена случайно выбранным набором генов.
+На каждой итерации генетического алгоритма происходит обновление популяции созданием новых особей и уничтожения наименее приспособленных особей. Создание новых особей происходит путем моделирования процесса размножения при помощи \textbf{оператора скрещивания}. Порождающие особи называют родителями, а порожденные~-- потомками. Выбор родительских особей происходит случайным образом. При этом возможна ситуация, при которой один родитель участвует в нескольких скрещиваниях, и нет гарантированного участия в размножении всех родительских особей. Родительская пара генерирует пару потомков за счет обмена случайно выбранным набором генов.
 \vfill
 \end{frame}
+
+
+\begin{frame}[fragile]{Программная реализация}
+\scriptsize
+\alert{\textbf{Реализация оператора скрещивания}}
+\begin{minted}{python}
+from random import randint
+
+
+def crossover(selected_pop, popsize):
+    """
+    Реализация оператора скрещивания
+    :param: selected_pop <list-object> наиболее приспособленные особи
+    :param: popsize <int-object> исходный размер популяции
+    :return: <list-object> популяция наиболее приспособленных особей
+                           после скрещивания размера popsize
+    """
+    length = len(selected_pop)
+    crossovered = int((popsize - length / 2)) or 1  # оператор скрещивания
+                                               # выполнится хотябы один раз
+    count = 0
+    genome1, genome2 = [], []  # вспомогательные списки для мутирующих генов
+
+    while count != crossovered:  # индексы выбираются случайным образом
+        index1 = randint(0, length - 1)
+        index2 = randint(0, length - 1)
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Программная реализация}
+\scriptsize
+\begin{minted}{python}
+        if index1 == index2:
+            continue
+
+        genome1.append(selected_pop[index1])
+        genome2.append(selected_pop[index2])
+        count += 1
+
+    # граница деления генома также выбирается случайным образом
+    new1 = [gen1[:(s := randint(1, len(gen1) - 1))] + gen2[s:]
+            for gen1, gen2 in zip(genome1, genome2)]
+    new2 = [gen1[:(s := randint(1, len(gen1) - 1))] + gen2[s:]
+            for gen1, gen2 in zip(genome2, genome1)]
+    new_population = selected_pop + new1 + new2
+
+    return new_population[:popsize]
+\end{minted}
+Моделирование процесса мутации лучших с точки зрения приспособленности особей происходит при помощи оператора мутации, который применяется к случайным особям и изменяет случайный ген (гены) у этих особей.
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Программная реализация}
+\scriptsize
+\alert{\textbf{Реализация оператора мутации}}
+\begin{minted}{python}
+from random import uniform
+
+def mutate(crossed_pop, limits, m_range):
+    """
+    Реализация оператора мутации
+    :param: selected_pop <list-object> наиболее приспособленные особи
+    :param: limits <list-object> пределы мутации, в которых будут изменяться гены
+    :param: m_range <float-object> коэффициент затухания мутации m_range >= 1
+    :return: <list-object> популяция отобранных особей размера selected
+    """
+    low = 1 - (1 - limits[0]) / m_range # стремится к 1 с ростом поколений
+    high = 1 + (limits[1] - 1) / m_range
+    length = len(crossed_pop)
+    # особи для мутации выбираются случайным образом
+    indexes = [randint(0, length - 1) for _ in range(length)]
+    mutation_coeff = uniform(low, high)
+    mutated = crossed_pop[:]
+    for i in indexes:
+        mutated[i] = [item * mutation_coeff for item in mutated[i]]
+    return mutated
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Программная реализация}
+\scriptsize
+\alert{\textbf{Реализация функции генетического алгоритма}}
+\begin{minted}[fontsize=\fontsize{7.5pt}{8pt}]{python}
+import math
+
+def genetic_algorithm(bounds, func, initial_guess=(), args=(),
+                      popsize=1000, selection_size=200, mutation_limits=(0.5, 1.2),
+                      mutation_range=1, generations_count=100):
+    """
+    Реализация генетического алгоритма для оптимизации целевой функции
+    :param: bounds <list-object> границы для каждого параметра в искомом решении
+    :param: func <function-object> целевая функция, значение которой нужно оптимизировать
+    :param: initial_guess <list-object> список начальных приближений к решению,
+            по умолчанию пустой кортеж
+    :param: args <tuple-object> дополнительные аргументы целевой функции (опционально)
+    :param: popsize <int-object> размер популяции, по умолчанию popsize=1000
+    :param: selection_size <int-object> количество отобранных особей,
+            по умолчанию selection_size=200
+    :param: mutation_limits <tuple-object> пределы мутации, в которых будут изменяться гены,
+            по умолчанию mutation_limits=(0.5, 1.2)
+    :param: mutation_range <float-object> коэффициент затухания мутации,
+            mutation_range >= 1, увеличивается с ростом числа поколений,
+            по умолчанию mutation_range=1
+    :param: generations_count <int-object> количество поколений,
+            по умолчанию  generations_count=100
+    :return: <list-object> лучшие особи каждого поколения, отсортированные по приспособленности
+    """
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Программная реализация}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+    best = [None for _ in range(generations_count)]
+    for generation in range(generations_count):
+        mutation_decrease = mutation_range + math.log(1 + generation)
+        population = create_population(bounds, popsize, initial_guess)
+        selected = selection(func, population, selection_size, args)
+        crossed = crossover(selected, popsize)
+        mutated = mutate(crossed, mutation_limits, mutation_decrease)
+        population = mutated[:]
+        best[generation], = selection(func, population, 1, args)
+        initial_guess = [best[generation]]
+    return selection(func, best, generations_count, args)
+\end{minted}
+\vfill
+\begin{itemize}
+	\item Поскольку генетический алгоритм предполагает итерационный процесс, вызов генетических операторов будет происходить внутри цикла.
+	\item Критерием завершения цикла выберем достижение определенного числа поколений.
+	\item Для различных задач оптимальное число поколений может отличаться, однако для обеспечения высокой степени вероятности нахождения хорошего решения зададим требуемое число поколений равное $100$.
+	\item Для удобства многократного использования генетического алгоритма, его реализацию следует поместить в отдельный модуль и подключать в различные проекты по мере необходимости.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Пример}
+\begin{frame}[fragile]{Пример}
+\scriptsize
+Пусть дана схема химических реакций:
+\vfill
+$$
+A \overset{k_1}{\underset{k_2}{\rightleftarrows}} B
+$$
+\vfill
+Скорость прямой реакции: $r_1 = k_1 \cdot C_A$; скорость обратной реакции:
+$r_2 = k_2 \cdot C_B$; $C_A$ и $C_B$~-- концентрации компонентов $A$ и $B$.
+Изменение концентрации реагирующих веществ во времени описывается следующей системой дифференциальных уравнений:
+\vfill
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		\dfrac{\partial C_A}{\partial t} &= -r_1 + r_2 \\
+		\dfrac{\partial C_B}{\partial t} &= r_1 - r_2
+	\end{aligned}
+	\right.
+\end{equation*}
+\vfill
+Необходимо определить константы скоростей реакций: $k_1$ и $k_2$, если известно, что к моменту времени $t=1 (c)$   $C_A = 0.4513$; $C_B = 0.5487$. Начальные условия: $C_A(0) = 1$~(моль/л); $C_B(0) = 0$~(моль/л).
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Пример}
+\scriptsize
+\begin{itemize}
+	\item Для получения более точного решения выберем метод Рунге-Кутты и предположим, что его реализация, а также реализация генетического алгоритма, сохранены в отдельных модулях под именами \texttt{solve\_ode} и  \texttt{genetic\_algorithm}, соответственно.
+	\item Для того, чтобы найти константы скоростей химических реакций по данным лабораторного эксперимента при помощи генетического алгоритма потребуется составить целевую функцию, которую нужно будет минимизировать.
+	\item В данном случае можно использовать сумму квадратов разности расчетных и экспериментальных значений концентраций компонентов, участвующих в химическом превращении:
+\end{itemize}
+\vfill
+\begin{equation*}
+	F = \sum\limits_{i=1}^{n}\left(C_i^{calc}-C_i^{act}\right)^2
+\end{equation*}
+\noindent где $C_i^{calc}$~-- расчетная концентрация $i$-го компонента; $C_i^{act}$~-- концентрация $i$-го компонента, определенная экспериментально; $n$~-- число компонентов.
+
+Прежде всего необходимо задать систему дифференциальных уравнений в виде функции:
+\vfill
+\begin{minted}{python}
+def equations(t, c, k):
+    right_parts = [
+        -k[0] * c[0] + k[1] * c[1],
+        k[0] * c[0] - k[1] * c[1]
+    ]
+    return right_parts
+\end{minted}
+\vfill
+\end{frame}
+
+
+\subsection{Программная реализация}
+\begin{frame}[fragile]{Программная реализация}
+\scriptsize
+\alert{\textbf{Реализация целевой функции}}
+\begin{minted}[fontsize=\fontsize{8pt}{8pt}]{python}
+def obj_func(k, equations, method, t, h,
+             initial_composition, actual_values):
+    """
+    Целевая функция для минимизации генетическим алгоритмом
+    :param: k <list-object> список констант скоростей химических реакций
+    :param: equations <function-object> правые части дифф. уравнений
+    :param: method <function-object> численный метод решения систем дифф. уравнений
+    :param: t <list-object> пределы интегрирования
+    :param: h <float-object> шаг интегрирования
+    :param: initial_composition <list-object> начальные условия
+    :param: actual_values <list-object> фактические значения концентраций из эксперимента
+    :return: <float-object> квадрат суммы октлонений расчетных концентраций от эксп-ных
+    """
+    # решение системы ОДУ численным методом
+    c = method(equations, t[0], t[-1],
+               initial_composition, h, args=(k,))
+
+    return sum((c[-1][i] - actual_values[i]) ** 2
+               for i in range(len(actual_values)))
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Программная реализация}
+\scriptsize
+Ограничим область поиска для значения констант диапазоном $[0, 1]$.
+\vfill
+\begin{minted}{python}
+import genetic_algorithm as ga
+from solve_ode import rk
+
+
+def obj_func(k, equations, method, t, h, initial_composition, actual_values):
+    # решение системы ОДУ численным методом
+    c = method(equations, t[0], t[-1],
+    initial_composition, h, args=(k,))
+    return sum((c[-1][i] - actual_values[i]) ** 2
+               for i in range(len(actual_values)))
+
+
+actual_values = [0.4513, 0.5487]  # экспериментальные значения
+k = ga.genetic_algorithm([[0, 1], [0, 1]], obj_func,
+                         args=(equations, rk, [0, 1], 0.1,
+                               [1, 0], actual_values))
+print(k[0])  # [0.8614790508500587, 0.12043760065726794]
+\end{minted}
+\vfill
+По аргументу \texttt{method} можно передавать различные численные методы решения систем обыкновенных дифференциальных уравнений.
+\vfill
+\end{frame}
+
+
 
 \contactsframe[\Large \textbf{Благодарю за внимание!}]{
 

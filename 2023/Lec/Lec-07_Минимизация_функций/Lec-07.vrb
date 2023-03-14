@@ -1,19 +1,26 @@
 \frametitle{Программная реализация}
 \scriptsize
-\alert{\textbf{Реализация оператора селекции}}
+Ограничим область поиска для значения констант диапазоном $[0, 1]$.
+\vfill
 \begin{minted}{python}
-def selection(func, population, selected, args):
-    """
-    Реализация оператора селекции
-    :param: func <function-object> целевая функция, значение которой нужно оптимизировать
-    :param: population <list-object> популяция особей, которые нужно отсортировать
-    :param: selected <int-object> количество отобранных особей
-    :param: args <tuple-object> дополнительные аргументы целевой функции (опционально)
-    :return: <list-object> популяция отобранных особей размера selected
-    """
-    sorted_population = sorted(population, key=lambda x: func(x, *args))
-    return sorted_population[:selected]
-\end{minted}
+import genetic_algorithm as ga
+from solve_ode import rk
 
-На каждой итерации генетического алгоритма происходит обновление популяции созданием новых особей и уничтожения наименее приспособленных особей. Создание новых особей происходит путем моделирования процесса размножения при помощи \textit{оператора скрещивания}. Порождающие особи называют родителями, а порожденные~-- потомками. Выбор родительских особей происходит случайным образом. При этом возможна ситуация, при которой один родитель участвует в нескольких скрещиваниях, и нет гарантированного участия в размножении всех родительских особей. Родительская пара генерирует пару потомков за счет обмена случайно выбранным набором генов.
-\vfil
+
+def obj_func(k, equations, method, t, h, initial_composition, actual_values):
+    # решение системы ОДУ численным методом
+    c = method(equations, t[0], t[-1],
+    initial_composition, h, args=(k,))
+    return sum((c[-1][i] - actual_values[i]) ** 2
+               for i in range(len(actual_values)))
+
+
+actual_values = [0.4513, 0.5487]  # экспериментальные значения
+k = ga.genetic_algorithm([[0, 1], [0, 1]], obj_func,
+                         args=(equations, rk, [0, 1], 0.1,
+                               [1, 0], actual_values))
+print(k[0])  # [0.8614790508500587, 0.12043760065726794]
+\end{minted}
+\vfill
+По аргументу \texttt{method} можно передавать различные численные методы решения систем обыкновенных дифференциальных уравнений.
+\vfill
