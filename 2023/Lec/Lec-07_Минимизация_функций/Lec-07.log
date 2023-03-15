@@ -1,33 +1,36 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  15 MAR 2023 15:56
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  15 MAR 2023 20:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **Lec-07.tex
 (./Lec-07.tex
-LaTeX2e <2022-06-01> patch level 5
-L3 programming layer <2022-08-23>
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamer.cls
-Document Class: beamer 2022/05/17 v3.67 A class for typesetting presentations
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
-(c:/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-07-12>
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2021/05/26 v3.63 A class for typesetting presentations
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count181
+\etb@tempcnta=\count178
 )
-\beamer@tempbox=\box51
-\beamer@tempcount=\count182
-\c@beamerpauses=\count183
+\beamer@tempbox=\box50
+\beamer@tempcount=\count179
+\c@beamerpauses=\count180
 
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
-\beamer@slideinframe=\count184
-\beamer@minimum=\count185
-\beamer@decode@box=\box52
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
+\beamer@slideinframe=\count181
+\beamer@minimum=\count182
+\beamer@decode@box=\box51
 )
-\beamer@commentbox=\box53
-\beamer@modecount=\count186
+\beamer@commentbox=\box52
+\beamer@modecount=\count183
 )
-(c:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-)
+(c:/texlive/2021/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
 \headdp=\dimen138
 \footheight=\dimen139
 \sidebarheight=\dimen140
@@ -45,50 +48,50 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \beamer@descdefault=\dimen152
 \beamer@descriptionwidth=\dimen153
 \beamer@lastskip=\skip47
-\beamer@areabox=\box54
-\beamer@animcurrent=\box55
-\beamer@animshowbox=\box56
-\beamer@sectionbox=\box57
-\beamer@logobox=\box58
-\beamer@linebox=\box59
-\beamer@sectioncount=\count187
-\beamer@subsubsectionmax=\count188
-\beamer@subsectionmax=\count189
-\beamer@sectionmax=\count190
-\beamer@totalheads=\count191
-\beamer@headcounter=\count192
-\beamer@partstartpage=\count193
-\beamer@sectionstartpage=\count194
-\beamer@subsectionstartpage=\count195
-\beamer@animationtempa=\count196
-\beamer@animationtempb=\count197
-\beamer@xpos=\count198
-\beamer@ypos=\count199
-\beamer@ypos@offset=\count266
-\beamer@showpartnumber=\count267
-\beamer@currentsubsection=\count268
-\beamer@coveringdepth=\count269
-\beamer@sectionadjust=\count270
-\beamer@toclastsection=\count271
-\beamer@tocsectionnumber=\count272
+\beamer@areabox=\box53
+\beamer@animcurrent=\box54
+\beamer@animshowbox=\box55
+\beamer@sectionbox=\box56
+\beamer@logobox=\box57
+\beamer@linebox=\box58
+\beamer@sectioncount=\count184
+\beamer@subsubsectionmax=\count185
+\beamer@subsectionmax=\count186
+\beamer@sectionmax=\count187
+\beamer@totalheads=\count188
+\beamer@headcounter=\count189
+\beamer@partstartpage=\count190
+\beamer@sectionstartpage=\count191
+\beamer@subsectionstartpage=\count192
+\beamer@animationtempa=\count193
+\beamer@animationtempb=\count194
+\beamer@xpos=\count195
+\beamer@ypos=\count196
+\beamer@ypos@offset=\count197
+\beamer@showpartnumber=\count198
+\beamer@currentsubsection=\count199
+\beamer@coveringdepth=\count266
+\beamer@sectionadjust=\count267
+\beamer@toclastsection=\count268
+\beamer@tocsectionnumber=\count269
 
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
-(c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 ))
 \beamer@paperwidth=\skip48
 \beamer@paperheight=\skip49
 
-(c:/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+(c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(c:/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+(c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count273
-\Gm@cntv=\count274
-\c@Gm@tempcnt=\count275
+\Gm@cnth=\count270
+\Gm@cntv=\count271
+\c@Gm@tempcnt=\count272
 \Gm@bindingoffset=\dimen154
 \Gm@wd@mp=\dimen155
 \Gm@odd@mp=\dimen156
@@ -99,411 +102,387 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen161
 \Gm@dimlist=\toks17
 )
-(c:/texlive/2022/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks18
-\pgfutil@tempdima=\dimen162
-\pgfutil@tempdimb=\dimen163
-
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)
-) (c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box60
-)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
-))
-(c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks19
-\pgfkeys@temptoks=\toks20
-
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks21
-))) (c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
-\pgf@x=\dimen164
-\pgf@xa=\dimen165
-\pgf@xb=\dimen166
-\pgf@xc=\dimen167
-\pgf@y=\dimen168
-\pgf@ya=\dimen169
-\pgf@yb=\dimen170
-\pgf@yc=\dimen171
-\c@pgf@counta=\count276
-\c@pgf@countb=\count277
-\c@pgf@countc=\count278
-\c@pgf@countd=\count279
-)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen172
-\pgfmath@count=\count280
-\pgfmath@box=\box61
-\pgfmath@toks=\toks22
-\pgfmath@stack@operand=\toks23
-\pgfmath@stack@operation=\toks24
-)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
-x)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
-.code.tex)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
-ex)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
-de.tex)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
-)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
-x)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
-)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
-etics.code.tex)))
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count281
-)))
 
 Class beamer Warning: ``mathserif'' is obsolete. Use font theme ``serif'' with 
-option ``onlymath'' on input line 357.
+option ``onlymath'' on input line 337.
 
-(c:/texlive/2022/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+(c:/texlive/2021/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 )
-(c:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
 
-(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 
-(c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+(c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 107.
 
-(c:/texlive/2022/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2022/04/16 v5.0m Graphics/color driver for xetex
+(c:/texlive/2021/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen173
-\Gin@req@width=\dimen174
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
 )
-(c:/texlive/2022/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)
+) (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box59
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-\pgf@x=\dimen175
-\pgf@y=\dimen176
-\pgf@xa=\dimen177
-\pgf@ya=\dimen178
-\pgf@xb=\dimen179
-\pgf@yb=\dimen180
-\pgf@xc=\dimen181
-\pgf@yc=\dimen182
-\pgf@xd=\dimen183
-\pgf@yd=\dimen184
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks21
+))
+\pgf@x=\dimen166
+\pgf@y=\dimen167
+\pgf@xa=\dimen168
+\pgf@ya=\dimen169
+\pgf@xb=\dimen170
+\pgf@yb=\dimen171
+\pgf@xc=\dimen172
+\pgf@yc=\dimen173
+\pgf@xd=\dimen174
+\pgf@yd=\dimen175
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count282
-\c@pgf@countb=\count283
-\c@pgf@countc=\count284
-\c@pgf@countd=\count285
-\t@pgf@toka=\toks25
-\t@pgf@tokb=\toks26
-\t@pgf@tokc=\toks27
-\pgf@sys@id@count=\count286
-
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+\c@pgf@counta=\count273
+\c@pgf@countb=\count274
+\c@pgf@countc=\count275
+\c@pgf@countd=\count276
+\t@pgf@toka=\toks22
+\t@pgf@tokb=\toks23
+\t@pgf@tokc=\toks24
+\pgf@sys@id@count=\count277
+ (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
 Driver file for pgf: pgfsys-xetex.def
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
 File: pgfsys-xetex.def 2021/05/15 v3.1.9a (3.1.9a)
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
 File: pgfsys-dvipdfmx.def 2021/05/15 v3.1.9a (3.1.9a)
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 )
-\pgfsys@objnum=\count287
+\pgfsys@objnum=\count278
 )))
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count288
-\pgfsyssoftpath@bigbuffer@items=\count289
+\pgfsyssoftpath@smallbuffer@items=\count279
+\pgfsyssoftpath@bigbuffer@items=\count280
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)) (c:/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+)) (c:/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: xetex.def on input line 227.
-
-(c:/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1369.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen185
-\pgf@picmaxx=\dimen186
-\pgf@picminy=\dimen187
-\pgf@picmaxy=\dimen188
-\pgf@pathminx=\dimen189
-\pgf@pathmaxx=\dimen190
-\pgf@pathminy=\dimen191
-\pgf@pathmaxy=\dimen192
-\pgf@xx=\dimen193
-\pgf@xy=\dimen194
-\pgf@yx=\dimen195
-\pgf@yy=\dimen196
-\pgf@zx=\dimen197
-\pgf@zy=\dimen198
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen176
+\pgfmath@count=\count281
+\pgfmath@box=\box60
+\pgfmath@toks=\toks25
+\pgfmath@stack@operand=\toks26
+\pgfmath@stack@operation=\toks27
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count282
+))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen177
+\pgf@picmaxx=\dimen178
+\pgf@picminy=\dimen179
+\pgf@picmaxy=\dimen180
+\pgf@pathminx=\dimen181
+\pgf@pathmaxx=\dimen182
+\pgf@pathminy=\dimen183
+\pgf@pathmaxy=\dimen184
+\pgf@xx=\dimen185
+\pgf@xy=\dimen186
+\pgf@yx=\dimen187
+\pgf@yy=\dimen188
+\pgf@zx=\dimen189
+\pgf@zy=\dimen190
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
 e.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen199
-\pgf@path@lasty=\dimen256
+\pgf@path@lastx=\dimen191
+\pgf@path@lasty=\dimen192
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
 x
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen257
-\pgf@shorten@start@additional=\dimen258
+\pgf@shorten@end@additional=\dimen193
+\pgf@shorten@start@additional=\dimen194
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box62
-\pgf@hbox=\box63
-\pgf@layerbox@main=\box64
-\pgf@picture@serial@count=\count290
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
+\pgf@picture@serial@count=\count283
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
 .tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen259
+\pgflinewidth=\dimen195
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
 ode.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen260
-\pgf@pt@y=\dimen261
-\pgf@pt@temp=\dimen262
+\pgf@pt@x=\dimen196
+\pgf@pt@y=\dimen197
+\pgf@pt@temp=\dimen198
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
 de.tex
 File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen263
+\pgfarrowsep=\dimen199
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen264
-\pgf@sys@shading@range@num=\count291
-\pgf@shadingcount=\count292
+\pgf@max=\dimen256
+\pgf@sys@shading@range@num=\count284
+\pgf@shadingcount=\count285
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box65
+\pgfexternal@startupbox=\box64
 ))
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
 .tex
 File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (c:/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))) (c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
+))) (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
 Package: xxcolor 2003/10/24 ver 0.1
-\XC@nummixins=\count293
-\XC@countmixins=\count294
+\XC@nummixins=\count286
+\XC@countmixins=\count287
 )
-(c:/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+(c:/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-(c:/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2022-06-20 v7.00s Hypertext links for LaTeX
+(c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 
-(c:/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(c:/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(c:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
 )
-(c:/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+(c:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(c:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(c:/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
+(c:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(c:/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+(c:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(c:/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
+(c:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(c:/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
-
-(c:/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+(c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+\@linkdim=\dimen257
+\Hy@linkcounter=\count288
+\Hy@pagecounter=\count289
 
-(c:/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-))
-\c@section@level=\count295
+(c:/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 )
-\@linkdim=\dimen265
-\Hy@linkcounter=\count296
-\Hy@pagecounter=\count297
-
-(c:/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2022-06-20 v7.00s Hyperref: PDFDocEncoding definition (HO)
+(c:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
 )
-(c:/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
+(c:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+(c:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count298
+\Hy@SavedSpaceFactor=\count290
 
-(c:/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2022-06-20 v7.00s Hyperref: PDF Unicode definition (HO)
+(c:/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Option `bookmarks' set `true' on input line 4045.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 4045.
-Package hyperref Info: Option `implicit' set `false' on input line 4045.
-Package hyperref Info: Hyper figures OFF on input line 4162.
-Package hyperref Info: Link nesting OFF on input line 4167.
-Package hyperref Info: Hyper index ON on input line 4170.
-Package hyperref Info: Plain pages OFF on input line 4177.
-Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4073.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4073.
+Package hyperref Info: Option `implicit' set `false' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
-Package hyperref Info: Bookmarks ON on input line 4408.
-\c@Hy@tempcnt=\count299
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count291
 
-(c:/texlive/2022/texmf-dist/tex/latex/url/url.sty
+(c:/texlive/2021/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4746.
-\XeTeXLinkMargin=\dimen266
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen258
 
-(c:/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+(c:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(c:/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+(c:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count300
-\Field@Width=\dimen267
-\Fld@charsize=\dimen268
-Package hyperref Info: Hyper figures OFF on input line 6024.
-Package hyperref Info: Link nesting OFF on input line 6029.
-Package hyperref Info: Hyper index ON on input line 6032.
-Package hyperref Info: backreferencing OFF on input line 6039.
-Package hyperref Info: Link coloring OFF on input line 6044.
-Package hyperref Info: Link coloring with OCG OFF on input line 6049.
-Package hyperref Info: PDF/A mode OFF on input line 6054.
-\Hy@abspage=\count301
+\Fld@menulength=\count292
+\Field@Width=\dimen259
+\Fld@charsize=\dimen260
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+\Hy@abspage=\count293
 
 
 Package hyperref Message: Stopped early.
 
 )
 Package hyperref Info: Driver (autodetected): hxetex.
- (c:/texlive/2022/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2022-06-20 v7.00s Hyperref driver for XeTeX
+ (c:/texlive/2021/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2021-06-07 v7.00m Hyperref driver for XeTeX
 
-(c:/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty
+(c:/texlive/2021/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box66
-\c@Hy@AnnotLevel=\count302
-\HyField@AnnotCount=\count303
-\Fld@listcount=\count304
-\c@bookmark@seq@number=\count305
+\pdfm@box=\box65
+\c@Hy@AnnotLevel=\count294
+\HyField@AnnotCount=\count295
+\Fld@listcount=\count296
+\c@bookmark@seq@number=\count297
 
-(c:/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
-Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(c:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(c:/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
-kage
+(c:/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
 with kernel methods
 )
-(c:/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(c:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-85.
+86.
 ))
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty)
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasefont.sty
-(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty)
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks28
 \symAMSa=\mathgroup4
@@ -512,160 +491,150 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )))
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
-(c:/texlive/2022/texmf-dist/tex/latex/translator/translator.sty
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(c:/texlive/2021/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
 ))
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
-\beamer@argscount=\count306
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+\beamer@argscount=\count298
 \beamer@lastskipcover=\skip50
-\beamer@trivlistdepth=\count307
+\beamer@trivlistdepth=\count299
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasesection.sty
-\c@lecture=\count308
-\c@part=\count309
-\c@section=\count310
-\c@subsection=\count311
-\c@subsubsection=\count312
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+\c@lecture=\count300
+\c@part=\count301
+\c@section=\count302
+\c@subsection=\count303
+\c@subsubsection=\count304
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
-\beamer@framebox=\box67
-\beamer@frametitlebox=\box68
-\beamer@zoombox=\box69
-\beamer@zoomcount=\count313
-\beamer@zoomframecount=\count314
-\beamer@frametextheight=\dimen269
-\c@subsectionslide=\count315
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+\beamer@framebox=\box66
+\beamer@frametitlebox=\box67
+\beamer@zoombox=\box68
+\beamer@zoomcount=\count305
+\beamer@zoomframecount=\count306
+\beamer@frametextheight=\dimen261
+\c@subsectionslide=\count307
 \beamer@frametopskip=\skip51
 \beamer@framebottomskip=\skip52
 \beamer@frametopskipautobreak=\skip53
 \beamer@framebottomskipautobreak=\skip54
 \beamer@envbody=\toks29
-\framewidth=\dimen270
-\c@framenumber=\count316
+\framewidth=\dimen262
+\c@framenumber=\count308
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
 \beamer@verbatimfileout=\write4
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
-\beamer@splitbox=\box70
-\beamer@autobreakcount=\count317
-\beamer@autobreaklastheight=\dimen271
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+\beamer@splitbox=\box69
+\beamer@autobreakcount=\count309
+\beamer@autobreaklastheight=\dimen263
 \beamer@frametitletoks=\toks30
 \beamer@framesubtitletoks=\toks31
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
-\beamer@footins=\box71
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
+\beamer@footins=\box70
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
-\beamer@frameboxcopy=\box72
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+\beamer@frameboxcopy=\box71
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
 \beamer@sbttoks=\toks32
 
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
-\bmb@box=\box73
-\bmb@colorbox=\box74
-\bmb@boxwidth=\dimen272
-\bmb@boxheight=\dimen273
-\bmb@prevheight=\dimen274
-\bmb@temp=\dimen275
-\bmb@dima=\dimen276
-\bmb@dimb=\dimen277
-\bmb@prevheight=\dimen278
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+\bmb@box=\box72
+\bmb@colorbox=\box73
+\bmb@boxwidth=\dimen264
+\bmb@boxheight=\dimen265
+\bmb@prevheight=\dimen266
+\bmb@temp=\dimen267
+\bmb@dima=\dimen268
+\bmb@dimb=\dimen269
+\bmb@prevheight=\dimen270
 )
-\beamer@blockheadheight=\dimen279
+\beamer@blockheadheight=\dimen271
 ))
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
-(c:/texlive/2022/texmf-dist/tex/latex/tools/enumerate.sty
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
+(c:/texlive/2021/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks33
 )
 \beamer@bibiconwidth=\skip55
-\c@figure=\count318
-\c@table=\count319
+\c@figure=\count310
+\c@table=\count311
 \abovecaptionskip=\skip56
 \belowcaptionskip=\skip57
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
-\beamer@section@min@dim=\dimen280
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+\beamer@section@min@dim=\dimen272
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
-(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2022/04/08 v2.17n AMS math features
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/04/20 v2.17j AMS math features
 \@mathmargin=\skip58
 
 For additional information on amsmath, use the `?' option.
-(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2021/08/26 v2.01 AMS text
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
 
-(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks34
-\ex@=\dimen281
+\ex@=\dimen273
 ))
-(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen282
+\pmbraise@=\dimen274
 )
-(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2022/04/08 v2.04 operator names
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count320
+\inf@bad=\count312
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count321
-\leftroot@=\count322
+\uproot@=\count313
+\leftroot@=\count314
 LaTeX Info: Redefining \overline on input line 399.
-LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count323
-\DOTSCASE@=\count324
+\classnum@=\count315
+\DOTSCASE@=\count316
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box75
-\strutbox@=\box76
-LaTeX Info: Redefining \big on input line 722.
-LaTeX Info: Redefining \Big on input line 723.
-LaTeX Info: Redefining \bigg on input line 724.
-LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen283
+\Mathstrutbox@=\box74
+\strutbox@=\box75
+\big@size=\dimen275
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count325
-LaTeX Info: Redefining \bmod on input line 905.
-LaTeX Info: Redefining \pmod on input line 910.
-LaTeX Info: Redefining \smash on input line 940.
-LaTeX Info: Redefining \relbar on input line 970.
-LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count326
+\macc@depth=\count317
+\c@MaxMatrixCols=\count318
 \dotsspace@=\muskip17
-\c@parentequation=\count327
-\dspbrk@lvl=\count328
+\c@parentequation=\count319
+\dspbrk@lvl=\count320
 \tag@help=\toks35
-\row@=\count329
-\column@=\count330
-\maxfields@=\count331
+\row@=\count321
+\column@=\count322
+\maxfields@=\count323
 \andhelp@=\toks36
-\eqnshift@=\dimen284
-\alignsep@=\dimen285
-\tagshift@=\dimen286
-\tagwidth@=\dimen287
-\totwidth@=\dimen288
-\lineht@=\dimen289
+\eqnshift@=\dimen276
+\alignsep@=\dimen277
+\tagshift@=\dimen278
+\tagwidth@=\dimen279
+\totwidth@=\dimen280
+\lineht@=\dimen281
 \@envbody=\toks37
 \multlinegap=\skip59
 \multlinetaggap=\skip60
 \mathdisplay@stack=\toks38
-LaTeX Info: Redefining \[ on input line 2953.
-LaTeX Info: Redefining \] on input line 2954.
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
 )
-(c:/texlive/2022/texmf-dist/tex/latex/amscls/amsthm.sty
+(c:/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks39
 \thm@bodyfont=\toks40
@@ -677,144 +646,152 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip63
 \dth@everypar=\toks44
 )
-\c@theorem=\count332
+\c@theorem=\count324
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty)
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty)
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
-\beamer@dima=\dimen290
-\beamer@dimb=\dimen291
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty)
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty)
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
+\beamer@dima=\dimen282
+\beamer@dimb=\dimen283
 )
-(c:/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
+(c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
 (./beamerthemetpu.sty
-(c:/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(c:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box77
+\pgfnodeparttextbox=\box76
 )
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-(c:/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
 y
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen292
-\pgf@nodesepend=\dimen293
+\pgf@nodesepstart=\dimen284
+\pgf@nodesepend=\dimen285
 )
-(c:/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
 y
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
-)) (c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen294
-\pgffor@skip=\dimen295
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen286
+\pgffor@skip=\dimen287
 \pgffor@stack=\toks45
 \pgffor@toks=\toks46
 ))
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
 de.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count333
-\pgfplotmarksize=\dimen296
+\pgf@plot@mark@count=\count325
+\pgfplotmarksize=\dimen288
 )
-\tikz@lastx=\dimen297
-\tikz@lasty=\dimen298
-\tikz@lastxsaved=\dimen299
-\tikz@lastysaved=\dimen300
-\tikz@lastmovetox=\dimen301
-\tikz@lastmovetoy=\dimen302
-\tikzleveldistance=\dimen303
-\tikzsiblingdistance=\dimen304
-\tikz@figbox=\box78
-\tikz@figbox@bg=\box79
-\tikz@tempbox=\box80
-\tikz@tempbox@bg=\box81
-\tikztreelevel=\count334
-\tikznumberofchildren=\count335
-\tikznumberofcurrentchild=\count336
-\tikz@fig@count=\count337
+\tikz@lastx=\dimen289
+\tikz@lasty=\dimen290
+\tikz@lastxsaved=\dimen291
+\tikz@lastysaved=\dimen292
+\tikz@lastmovetox=\dimen293
+\tikz@lastmovetoy=\dimen294
+\tikzleveldistance=\dimen295
+\tikzsiblingdistance=\dimen296
+\tikz@figbox=\box77
+\tikz@figbox@bg=\box78
+\tikz@tempbox=\box79
+\tikz@tempbox@bg=\box80
+\tikztreelevel=\count326
+\tikznumberofchildren=\count327
+\tikznumberofcurrentchild=\count328
+\tikz@fig@count=\count329
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count338
-\pgfmatrixcurrentcolumn=\count339
-\pgf@matrix@numberofcolumns=\count340
+\pgfmatrixcurrentrow=\count330
+\pgfmatrixcurrentcolumn=\count331
+\pgf@matrix@numberofcolumns=\count332
 )
-\tikz@expandcount=\count341
+\tikz@expandcount=\count333
 
-(c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
-(c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2022/06/24 version 5.1.1 text color boxes
+(c:/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2021/06/14 version 4.51 text color boxes
 
-(c:/texlive/2022/texmf-dist/tex/latex/tools/verbatim.sty
+(c:/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks47
 \verbatim@line=\toks48
 \verbatim@in@stream=\read3
 )
-(c:/texlive/2022/texmf-dist/tex/latex/environ/environ.sty
+(c:/texlive/2021/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
-(c:/texlive/2022/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+(c:/texlive/2021/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box82
-\tcb@upperbox=\box83
-\tcb@lowerbox=\box84
-\tcb@phantombox=\box85
-\c@tcbbreakpart=\count342
-\c@tcblayer=\count343
-\c@tcolorbox@number=\count344
+\tcb@titlebox=\box81
+\tcb@upperbox=\box82
+\tcb@lowerbox=\box83
+\tcb@phantombox=\box84
+\c@tcbbreakpart=\count334
+\c@tcblayer=\count335
+\c@tcolorbox@number=\count336
+\tcb@temp=\box85
 \tcb@temp=\box86
 \tcb@temp=\box87
 \tcb@temp=\box88
-\tcb@temp=\box89
 
-(c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '5.1.1'
-\tcb@waterbox=\box90
-(c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
-Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '5.1.1'
-)) (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
-Library (tcolorbox): 'tcbbreakable.code.tex' version '5.1.1'
-(c:/texlive/2022/texmf-dist/tex/generic/oberdiek/pdfcol.sty
+(c:/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '4.51'
+\tcb@waterbox=\box89
+(c:/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.51'
+)) (c:/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.51'
+(c:/texlive/2021/texmf-dist/tex/generic/oberdiek/pdfcol.sty
 Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
 Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
 )
 Package pdfcol Info: pdfTeX's color stacks are not available.
-\tcb@testbox=\box91
-\tcb@totalupperbox=\box92
-\tcb@totallowerbox=\box93
+\tcb@testbox=\box90
+\tcb@totalupperbox=\box91
+\tcb@totallowerbox=\box92
 ))
 (./beamerinnerthemetpu.sty) (./beamerouterthemetpu.sty)
 (./beamercolorthemetpu.sty) (./beamerfontthemetpu.sty))
-(c:/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2022/08/29 3.79 The Babel package
-\babel@savecnt=\count345
-\U@D=\dimen305
+(c:/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/06/28 3.61 The Babel package
+
+(c:/texlive/2021/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/06/28 3.61 Babel common definitions
+\babel@savecnt=\count337
+\U@D=\dimen297
 \l@unhyphenated=\language87
 
-(c:/texlive/2022/texmf-dist/tex/generic/babel/xebabel.def
-(c:/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def))
+(c:/texlive/2021/texmf-dist/tex/generic/babel/xebabel.def
+(c:/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def))
 \bbl@readstream=\read4
-LaTeX Info: Redefining \textlatin on input line 4079.
-\bbl@dirlevel=\count346
+)
+LaTeX Info: Redefining \textlatin on input line 734.
+\bbl@dirlevel=\count338
 
-(c:/texlive/2022/texmf-dist/tex/generic/babel-english/english.ldf
+(c:/texlive/2021/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -823,21 +800,13 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language21). Reported on input line 108.
 )
-(c:/texlive/2022/texmf-dist/tex/generic/babel-russian/russianb.ldf
+(c:/texlive/2021/texmf-dist/tex/generic/babel-russian/russianb.ldf
 File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
 Language: russian 2020/09/09 1.3k Russian support for the Babel system
 Package babel Info: Making " an active character on input line 124.
 Package babel Info: Default for \cyrdash is provided on input line 163.
 ))
-(c:/texlive/2022/texmf-dist/tex/generic/babel/locale/ru/babel-russian.tex
-Package babel Info: Importing font and identification data for russian
-(babel)             from babel-ru.ini. Reported on input line 11.
-)
-(c:/texlive/2022/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 11.
-)
-(c:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
+(c:/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks49
 \inpenc@posthook=\toks50
@@ -845,11 +814,11 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 
 Package inputenc Warning: inputenc package ignored with utf8 based engines.
 
-) (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+) (c:/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 
-(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/t2aenc.def
-File: t2aenc.def 2022/06/11 v1.0j Cyrillic encoding definition file
+(c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2aenc.def
+File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
 )
 LaTeX Font Info:    Trying to load font information for T2A+lmss on input line 
 112.
@@ -857,52 +826,57 @@ LaTeX Font Info:    No file T2Almss.fd. on input line 112.
 LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 1
 12.
 
-(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+(c:/texlive/2021/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 
 LaTeX Font Warning: Font shape `T2A/lmss/m/n' undefined
 (Font)              using `T2A/cmr/m/n' instead on input line 112.
 
-) (c:/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec.sty
-(c:/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(c:/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-08-23 L3 programming layer (loader) 
+) (c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.sty
+(c:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(c:/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-07-12 L3 programming layer (loader) 
 
-(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
-File: l3backend-xetex.def 2022-08-23 L3 backend support: XeTeX
-\g__graphics_track_int=\count347
-\l__pdf_internal_box=\box94
-\g__pdf_backend_object_int=\count348
-\g__pdf_backend_annotation_int=\count349
-\g__pdf_backend_link_int=\count350
+(c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2021-07-12 L3 backend support: XeTeX
+
+(|extractbb --version)
+\c__kernel_sys_dvipdfmx_version_int=\count339
+\l__color_backend_stack_int=\count340
+\g__color_backend_stack_int=\count341
+\g__graphics_track_int=\count342
+\l__pdf_internal_box=\box93
+\g__pdf_backend_object_int=\count343
+\g__pdf_backend_annotation_int=\count344
+\g__pdf_backend_link_int=\count345
 ))
-Package: xparse 2022-06-22 L3 Experimental document command parser
+Package: xparse 2021-06-18 L3 Experimental document command parser
 )
-Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 
-(c:/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+(c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count351
-\l__fontspec_language_int=\count352
-\l__fontspec_strnum_int=\count353
-\l__fontspec_tmp_int=\count354
-\l__fontspec_tmpa_int=\count355
-\l__fontspec_tmpb_int=\count356
-\l__fontspec_tmpc_int=\count357
-\l__fontspec_em_int=\count358
-\l__fontspec_emdef_int=\count359
-\l__fontspec_strong_int=\count360
-\l__fontspec_strongdef_int=\count361
-\l__fontspec_tmpa_dim=\dimen306
-\l__fontspec_tmpb_dim=\dimen307
-\l__fontspec_tmpc_dim=\dimen308
+\l__fontspec_script_int=\count346
+\l__fontspec_language_int=\count347
+\l__fontspec_strnum_int=\count348
+\l__fontspec_tmp_int=\count349
+\l__fontspec_tmpa_int=\count350
+\l__fontspec_tmpb_int=\count351
+\l__fontspec_tmpc_int=\count352
+\l__fontspec_em_int=\count353
+\l__fontspec_emdef_int=\count354
+\l__fontspec_strong_int=\count355
+\l__fontspec_strongdef_int=\count356
+\l__fontspec_tmpa_dim=\dimen298
+\l__fontspec_tmpb_dim=\dimen299
+\l__fontspec_tmpc_dim=\dimen300
 
-(c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+(c:/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
-(c:/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(c:/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
 
 Package fontspec Info: Font family 'Brygada1918(0)' created for font
 (fontspec)             'Brygada1918' with options
@@ -1007,173 +981,310 @@ OT:script=latn;language=dflt;"
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(c:/texlive/2022/texmf-dist/tex/latex/minted/minted.sty
-Package: minted 2021/12/24 v2.6 Yet another Pygments shim for LaTeX
+(c:/texlive/2021/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
 
-(c:/texlive/2022/texmf-dist/tex/latex/fvextra/fvextra.sty
+(c:/texlive/2021/texmf-dist/tex/latex/fvextra/fvextra.sty
 Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
 
-(c:/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+(c:/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(c:/texlive/2022/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2022/06/06 4.5 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count362
+(c:/texlive/2021/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count357
 \FV@InFile=\read5
-\FV@TabBox=\box95
-\c@FancyVerbLine=\count363
-\FV@StepNumber=\count364
+\FV@TabBox=\box94
+\c@FancyVerbLine=\count358
+\FV@StepNumber=\count359
 \FV@OutFile=\write5
 )
-(c:/texlive/2022/texmf-dist/tex/latex/upquote/upquote.sty
+(c:/texlive/2021/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 
-(c:/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
+(c:/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ))
-(c:/texlive/2022/texmf-dist/tex/latex/lineno/lineno.sty
+(c:/texlive/2021/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
-\linenopenalty=\count365
+\linenopenalty=\count360
 \output=\toks51
-\linenoprevgraf=\count366
-\linenumbersep=\dimen309
-\linenumberwidth=\dimen310
-\c@linenumber=\count367
-\c@pagewiselinenumber=\count368
-\c@LN@truepage=\count369
-\c@internallinenumber=\count370
-\c@internallinenumbers=\count371
-\quotelinenumbersep=\dimen311
-\bframerule=\dimen312
-\bframesep=\dimen313
-\bframebox=\box96
+\linenoprevgraf=\count361
+\linenumbersep=\dimen301
+\linenumberwidth=\dimen302
+\c@linenumber=\count362
+\c@pagewiselinenumber=\count363
+\c@LN@truepage=\count364
+\c@internallinenumber=\count365
+\c@internallinenumbers=\count366
+\quotelinenumbersep=\dimen303
+\bframerule=\dimen304
+\bframesep=\dimen305
+\bframebox=\box95
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@FV@TrueTabGroupLevel=\count372
-\c@FV@TrueTabCounter=\count373
-\FV@TabBox@Group=\box97
+\c@FV@TrueTabGroupLevel=\count367
+\c@FV@TrueTabCounter=\count368
+\FV@TabBox@Group=\box96
 \FV@TmpLength=\skip64
-\c@FV@HighlightLinesStart=\count374
-\c@FV@HighlightLinesStop=\count375
-\FV@LoopCount=\count376
-\FV@NCharsBox=\box98
-\FV@BreakIndent=\dimen314
-\FV@BreakIndentNChars=\count377
-\FV@BreakSymbolSepLeft=\dimen315
-\FV@BreakSymbolSepLeftNChars=\count378
-\FV@BreakSymbolSepRight=\dimen316
-\FV@BreakSymbolSepRightNChars=\count379
-\FV@BreakSymbolIndentLeft=\dimen317
-\FV@BreakSymbolIndentLeftNChars=\count380
-\FV@BreakSymbolIndentRight=\dimen318
-\FV@BreakSymbolIndentRightNChars=\count381
-\c@FancyVerbLineBreakLast=\count382
-\FV@LineBox=\box99
-\FV@LineIndentBox=\box100
-\FV@LineWidth=\dimen319
+\c@FV@HighlightLinesStart=\count369
+\c@FV@HighlightLinesStop=\count370
+\FV@LoopCount=\count371
+\FV@NCharsBox=\box97
+\FV@BreakIndent=\dimen306
+\FV@BreakIndentNChars=\count372
+\FV@BreakSymbolSepLeft=\dimen307
+\FV@BreakSymbolSepLeftNChars=\count373
+\FV@BreakSymbolSepRight=\dimen308
+\FV@BreakSymbolSepRightNChars=\count374
+\FV@BreakSymbolIndentLeft=\dimen309
+\FV@BreakSymbolIndentLeftNChars=\count375
+\FV@BreakSymbolIndentRight=\dimen310
+\FV@BreakSymbolIndentRightNChars=\count376
+\c@FancyVerbLineBreakLast=\count377
+\FV@LineBox=\box98
+\FV@LineIndentBox=\box99
+\FV@LineWidth=\dimen311
 )
-(c:/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
+(c:/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count383
-\calc@Bcount=\count384
-\calc@Adimen=\dimen320
-\calc@Bdimen=\dimen321
+\calc@Acount=\count378
+\calc@Bcount=\count379
+\calc@Adimen=\dimen312
+\calc@Bdimen=\dimen313
 \calc@Askip=\skip65
 \calc@Bskip=\skip66
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count385
+\calc@Ccount=\count380
 \calc@Cskip=\skip67
 )
-(c:/texlive/2022/texmf-dist/tex/latex/tools/shellesc.sty
+(c:/texlive/2021/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
-(c:/texlive/2022/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+(c:/texlive/2021/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
 
-(c:/texlive/2022/texmf-dist/tex/generic/catchfile/catchfile.sty
+(c:/texlive/2021/texmf-dist/tex/generic/catchfile/catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 )
-(c:/texlive/2022/texmf-dist/tex/generic/iftex/ifluatex.sty
+(c:/texlive/2021/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ))
-(c:/texlive/2022/texmf-dist/tex/generic/xstring/xstring.sty
-(c:/texlive/2022/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count386
-\decimalpart=\count387
+(c:/texlive/2021/texmf-dist/tex/generic/xstring/xstring.sty
+(c:/texlive/2021/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count381
+Invalid UTF-8 byte or sequence at line 35 replaced by U+FFFD.
+\decimalpart=\count382
+Invalid UTF-8 byte or sequence at line 79 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 79 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 83 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 86 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 102 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 114 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 120 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 125 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 147 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 147 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 147 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 182 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 182 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 182 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 183 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 184 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 185 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 185 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 185 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 189 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 189 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 190 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 190 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 193 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 221 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 221 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 266 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 295 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 300 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 300 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 301 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 301 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 301 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 302 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 303 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 334 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 334 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 334 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 406 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 406 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 409 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 428 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 457 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 457 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 464 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 464 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 466 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 466 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 588 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 588 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 595 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 597 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 602 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 605 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 605 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 610 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 615 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 632 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 632 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 633 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 635 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 637 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 647 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 653 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 678 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 700 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 705 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 715 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 715 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 715 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 719 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 732 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 732 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 741 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 741 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 742 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 742 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 773 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 773 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 774 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 774 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 774 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 797 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 797 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 810 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 824 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 824 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 831 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 838 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 838 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 846 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 846 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 861 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 862 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 864 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 864 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 908 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 909 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 909 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 934 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 934 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 936 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 936 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 940 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 940 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 962 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 962 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 964 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 965 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1006 replaced by U+FFFD.
 )
-Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
-(c:/texlive/2022/texmf-dist/tex/latex/framed/framed.sty
+(c:/texlive/2021/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip68
-\fb@frw=\dimen322
-\fb@frh=\dimen323
-\FrameRule=\dimen324
-\FrameSep=\dimen325
+\fb@frw=\dimen314
+\fb@frh=\dimen315
+\FrameRule=\dimen316
+\FrameSep=\dimen317
 )
-(c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+(c:/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count388
+\c@float@type=\count383
 \float@exts=\toks52
-\float@box=\box101
+\float@box=\box100
 \@float@everytoks=\toks53
-\@floatcapt=\box102
+\@floatcapt=\box101
 )
 \minted@appexistsfile=\read6
-\minted@bgbox=\box103
+\minted@bgbox=\box102
 \minted@code=\write6
-\c@minted@FancyVerbLineTemp=\count389
-\c@minted@pygmentizecounter=\count390
+\c@minted@FancyVerbLineTemp=\count384
+\c@minted@pygmentizecounter=\count385
 \@float@every@listing=\toks54
-\c@listing=\count391
+\c@listing=\count386
 )
-(c:/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
+(c:/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen326
-\lightrulewidth=\dimen327
-\cmidrulewidth=\dimen328
-\belowrulesep=\dimen329
-\belowbottomsep=\dimen330
-\aboverulesep=\dimen331
-\abovetopsep=\dimen332
-\cmidrulesep=\dimen333
-\cmidrulekern=\dimen334
-\defaultaddspace=\dimen335
-\@cmidla=\count392
-\@cmidlb=\count393
-\@aboverulesep=\dimen336
-\@belowrulesep=\dimen337
-\@thisruleclass=\count394
-\@lastruleclass=\count395
-\@thisrulewidth=\dimen338
+\heavyrulewidth=\dimen318
+\lightrulewidth=\dimen319
+\cmidrulewidth=\dimen320
+\belowrulesep=\dimen321
+\belowbottomsep=\dimen322
+\aboverulesep=\dimen323
+\abovetopsep=\dimen324
+\cmidrulesep=\dimen325
+\cmidrulekern=\dimen326
+\defaultaddspace=\dimen327
+\@cmidla=\count387
+\@cmidlb=\count388
+\@aboverulesep=\dimen328
+\@belowrulesep=\dimen329
+\@thisruleclass=\count389
+\@lastruleclass=\count390
+\@thisrulewidth=\dimen330
 )
-(c:/texlive/2022/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
-\c@tracingmulticols=\count396
-\mult@box=\box104
-\multicol@leftmargin=\dimen339
-\c@unbalance=\count397
-\c@collectmore=\count398
-\doublecol@number=\count399
-\multicoltolerance=\count400
-\multicolpretolerance=\count401
-\full@width=\dimen340
-\page@free=\dimen341
-\premulticols=\dimen342
-\postmulticols=\dimen343
+(c:/texlive/2021/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count391
+\mult@box=\box103
+\multicol@leftmargin=\dimen331
+\c@unbalance=\count392
+\c@collectmore=\count393
+\doublecol@number=\count394
+\multicoltolerance=\count395
+\multicolpretolerance=\count396
+\full@width=\dimen332
+\page@free=\dimen333
+\premulticols=\dimen334
+\postmulticols=\dimen335
 \multicolsep=\skip69
 \multicolbaselineskip=\skip70
-\partial@page=\box105
-\last@line=\box106
-\maxbalancingoverflow=\dimen344
-\mult@rightbox=\box107
-\mult@grightbox=\box108
+\partial@page=\box104
+\last@line=\box105
+\maxbalancingoverflow=\dimen336
+\mult@rightbox=\box106
+\mult@grightbox=\box107
+\mult@gfirstbox=\box108
 \mult@firstbox=\box109
-\mult@gfirstbox=\box110
+\@tempa=\box110
 \@tempa=\box111
 \@tempa=\box112
 \@tempa=\box113
@@ -1210,49 +1321,49 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \@tempa=\box144
 \@tempa=\box145
 \@tempa=\box146
-\c@minrows=\count402
-\c@columnbadness=\count403
-\c@finalcolumnbadness=\count404
-\last@try=\dimen345
-\multicolovershoot=\dimen346
-\multicolundershoot=\dimen347
+\c@minrows=\count397
+\c@columnbadness=\count398
+\c@finalcolumnbadness=\count399
+\last@try=\dimen337
+\multicolovershoot=\dimen338
+\multicolundershoot=\dimen339
 \mult@nat@firstbox=\box147
 \colbreak@box=\box148
-\mc@col@check@num=\count405
+\mc@col@check@num=\count400
 )
-(c:/texlive/2022/texmf-dist/tex/latex/amsmath/amsxtra.sty
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsxtra.sty
 Package: amsxtra 1999/11/15 v1.2c AMS extra commands
 LaTeX Info: Redefining \nobreakspace on input line 54.
 )
-(c:/texlive/2022/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+(c:/texlive/2021/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \LTleft=\skip71
 \LTright=\skip72
 \LTpre=\skip73
 \LTpost=\skip74
-\LTchunksize=\count406
-\LTcapwidth=\dimen348
+\LTchunksize=\count401
+\LTcapwidth=\dimen340
 \LT@head=\box149
 \LT@firsthead=\box150
 \LT@foot=\box151
 \LT@lastfoot=\box152
 \LT@gbox=\box153
-\LT@cols=\count407
-\LT@rows=\count408
-\c@LT@tables=\count409
-\c@LT@chunks=\count410
+\LT@cols=\count402
+\LT@rows=\count403
+\c@LT@tables=\count404
+\c@LT@chunks=\count405
 \LT@p@ftn=\toks55
 )
-(c:/texlive/2022/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen349
-\WF@size=\dimen350
-\c@WF@wrappedlines=\count411
+(c:/texlive/2021/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen341
+\WF@size=\dimen342
+\c@WF@wrappedlines=\count406
 \WF@box=\box154
 \WF@everypar=\toks56
 Package: wrapfig 2003/01/31  v 3.6
 )
-(c:/texlive/2022/texmf-dist/tex/latex/ragged2e/ragged2e.sty
-Package: ragged2e 2021/12/15 v3.1 ragged2e Package
+(c:/texlive/2021/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2021/02/05 v3.0 ragged2e Package
 \CenteringLeftskip=\skip75
 \RaggedLeftLeftskip=\skip76
 \RaggedRightLeftskip=\skip77
@@ -1268,59 +1379,58 @@ Package: ragged2e 2021/12/15 v3.1 ragged2e Package
 \RaggedRightParindent=\skip87
 \JustifyingParindent=\skip88
 )
-(c:/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+(c:/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
-(c:/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen351
-\captionmargin=\dimen352
-\caption@leftmargin=\dimen353
-\caption@rightmargin=\dimen354
-\caption@width=\dimen355
-\caption@indent=\dimen356
-\caption@parindent=\dimen357
-\caption@hangindent=\dimen358
+(c:/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen343
+\captionmargin@=\dimen344
+\captionwidth=\dimen345
+\caption@tempdima=\dimen346
+\caption@indent=\dimen347
+\caption@parindent=\dimen348
+\caption@hangindent=\dimen349
 Package caption Info: beamer document class detected.
 
-(c:/texlive/2022/texmf-dist/tex/latex/caption/caption-beamer.sto
-File: caption-beamer.sto 2022/01/06 v2.0c Adaption of the caption package to th
-e beamer document classes (AR)
+(c:/texlive/2021/texmf-dist/tex/latex/caption/caption-beamer.sto
+File: caption-beamer.sto 2020/08/22 v2.0 Adaption of the caption package to the
+ beamer document classes (AR)
 ))
-\c@caption@flags=\count412
-\c@continuedfloat=\count413
+\c@caption@flags=\count407
+\c@continuedfloat=\count408
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
 Package caption Info: longtable package is loaded.
 
-(c:/texlive/2022/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+(c:/texlive/2021/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: wrapfig package is loaded.
 )
-(c:/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count414
+(c:/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count409
 \lst@gtempboxa=\box155
 \lst@token=\toks57
-\lst@length=\count415
-\lst@currlwidth=\dimen359
-\lst@column=\count416
-\lst@pos=\count417
-\lst@lostspace=\dimen360
-\lst@width=\dimen361
-\lst@newlines=\count418
-\lst@lineno=\count419
-\lst@maxwidth=\dimen362
+\lst@length=\count410
+\lst@currlwidth=\dimen350
+\lst@column=\count411
+\lst@pos=\count412
+\lst@lostspace=\dimen351
+\lst@width=\dimen352
+\lst@newlines=\count413
+\lst@lineno=\count414
+\lst@maxwidth=\dimen353
 
-(c:/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
+(c:/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count420
-\lst@skipnumbers=\count421
+\c@lstnumber=\count415
+\lst@skipnumbers=\count416
 \lst@framebox=\box156
 )
-(c:/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
+(c:/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
@@ -1344,7 +1454,7 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 605.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
 05.
 
-(c:/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
+(c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 605.
@@ -1396,6 +1506,21 @@ LaTeX Font Info:    ... okay on input line 605.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 605.
+(c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count417
+)
+LaTeX Info: Redefining \ref on input line 605.
+LaTeX Info: Redefining \pageref on input line 605.
+LaTeX Info: Redefining \nameref on input line 605.
+
 (./Lec-07.out) (./Lec-07.out)
 \@outlinefile=\write7
 \openout7 = `Lec-07.out'.
@@ -1453,27 +1578,27 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  TU/Consolas(0)/m/n --> TU/Consolas(0)/b/n on input line
  605.
 
-(c:/texlive/2022/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
+(c:/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
 glish.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-(c:/texlive/2022/texmf-dist/tex/latex/translator/translator-bibliography-dictio
+(c:/texlive/2021/texmf-dist/tex/latex/translator/translator-bibliography-dictio
 nary-English.dict
 Dictionary: translator-bibliography-dictionary, Language: English 
 )
-(c:/texlive/2022/texmf-dist/tex/latex/translator/translator-environment-diction
+(c:/texlive/2021/texmf-dist/tex/latex/translator/translator-environment-diction
 ary-English.dict
 Dictionary: translator-environment-dictionary, Language: English 
 )
-(c:/texlive/2022/texmf-dist/tex/latex/translator/translator-months-dictionary-E
+(c:/texlive/2021/texmf-dist/tex/latex/translator/translator-months-dictionary-E
 nglish.dict
 Dictionary: translator-months-dictionary, Language: English 
 )
-(c:/texlive/2022/texmf-dist/tex/latex/translator/translator-numbers-dictionary-
+(c:/texlive/2021/texmf-dist/tex/latex/translator/translator-numbers-dictionary-
 English.dict
 Dictionary: translator-numbers-dictionary, Language: English 
 )
-(c:/texlive/2022/texmf-dist/tex/latex/translator/translator-theorem-dictionary-
+(c:/texlive/2021/texmf-dist/tex/latex/translator/translator-theorem-dictionary-
 English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
@@ -1550,18 +1675,18 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count422
+\c@lstlisting=\count418
  (./Lec-07.nav)
 LaTeX Font Info:    Trying to load font information for U+msa on input line 610
 .
 
-(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 610
 .
 
-(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Overfull \hbox (68.29076pt too wide) in paragraph at lines 610--610
@@ -1628,17 +1753,21 @@ runsystem(pygmentize -S default -f latex -P commandprefix=PYG > Lec-07.out.pyg)
 ...executed.
 
  (./Lec-07.out.pyg)
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -S default -f latex -P commandprefix=PYGdefault > Lec-07.o
+ut.pyg)...executed.
 
- (./Lec-07.out.pyg))
+ (./Lec-07.out.pyg)
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+
+(./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-
-[5
+ [5
 
 ]
 \openout4 = `Lec-07.vrb'.
@@ -1659,26 +1788,26 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  (./Lec-07.vrb
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg)
 \openout5 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P st
-ripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=Tr
-ue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out.
+pyg Lec-07.pyg)...executed.
 
- (./Lec-07.out.pyg)
+
+(./Lec-07.out.pyg)
 \openout5 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P st
-ripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=Tr
-ue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out.
+pyg Lec-07.pyg)...executed.
 
-
-(./Lec-07.out.pyg))
+ (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -1691,38 +1820,38 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  (./Lec-07.vrb
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg)
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
-
- (./Lec-07.out.pyg)
-\openout6 = `Lec-07.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
 
 (./Lec-07.out.pyg)
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg)
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg)
+\openout6 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg)
 Underfull \hbox (badness 1325) in paragraph at lines 17--18
@@ -1732,16 +1861,16 @@ Underfull \hbox (badness 1325) in paragraph at lines 17--18
 
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
 (./Lec-07.out.pyg)
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg)
 Underfull \hbox (badness 2269) in paragraph at lines 21--22
@@ -1767,30 +1896,30 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  (./Lec-07.vrb
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg)
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg)
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg)
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
 
 (./Lec-07.out.pyg)
@@ -1807,23 +1936,23 @@ Underfull \hbox (badness 6510) in paragraph at lines 16--17
 
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
 (./Lec-07.out.pyg)
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg)
 \openout6 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg)
 Underfull \hbox (badness 10000) in paragraph at lines 22--23
@@ -1844,39 +1973,51 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  [9
 
 ]
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 798--798
-[][][]  
- []
+\openout4 = `Lec-07.vrb'.
 
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
 
-Overfull \vbox (5.0pt too high) detected at line 798
- []
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out.
+pyg Lec-07.pyg)...executed.
 
-File: bgs/light/section.jpg Graphic file (type bmp)
-<bgs/light/section.jpg>
+ (./Lec-07.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[10
+ [10
 
 ]
 \openout4 = `Lec-07.vrb'.
 
  (./Lec-07.vrb
+\openout6 = `Lec-07.pyg'.
 
-LaTeX Font Warning: Font shape `TU/ALSSirius(0)/m/it' undefined
-(Font)              using `TU/ALSSirius(0)/m/n' instead on input line 4.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
-)
+ (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [11
+
+[11
 
 ]
 \openout4 = `Lec-07.vrb'.
 
- (./Lec-07.vrb)
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out.
+pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -1886,17 +2027,61 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 ]
 \openout4 = `Lec-07.vrb'.
 
- (./Lec-07.vrb)
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out.
+pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [13
+
+[13
 
 ]
 \openout4 = `Lec-07.vrb'.
 
- (./Lec-07.vrb)
+ (./Lec-07.vrb
+\openout6 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg)
+\openout6 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg)
+\openout6 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg)
+\openout6 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+
+(./Lec-07.out.pyg)
+\openout6 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -1906,49 +2091,45 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 ]
 \openout4 = `Lec-07.vrb'.
 
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
 
-(./Lec-07.vrb
-File: ./pics/Nelder-Mead.pdf Graphic file (type pdf)
-<use ./pics/Nelder-Mead.pdf>
-)
-Overfull \vbox (6.32585pt too high) detected at line 898
- []
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out.
+pyg Lec-07.pyg)...executed.
 
+ (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
+
 [15
 
 ]
 \openout4 = `Lec-07.vrb'.
 
  (./Lec-07.vrb
-File: ./pics/3dplot.pdf Graphic file (type pdf)
-<use ./pics/3dplot.pdf>
-File: ./pics/contour.pdf Graphic file (type pdf)
-<use ./pics/contour.pdf>
-)
-Overfull \vbox (1.27261pt too high) detected at line 928
- []
+\openout6 = `Lec-07.pyg'.
 
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[16
+ [16
 
 ]
 \openout4 = `Lec-07.vrb'.
 
  (./Lec-07.vrb
-\openout5 = `Lec-07.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
-
- (./Lec-07.out.pyg))
+File: ./pics/Figure_40.pdf Graphic file (type pdf)
+<use ./pics/Figure_40.pdf>
+)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -1959,29 +2140,51 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 \openout4 = `Lec-07.vrb'.
 
  (./Lec-07.vrb
+\openout6 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+
+(./Lec-07.out.pyg)
 \openout5 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out.
+pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg)
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out.
+pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-
-[18
+ [18
 
 ]
 \openout4 = `Lec-07.vrb'.
 
  (./Lec-07.vrb
+\openout6 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+
+(./Lec-07.out.pyg)
 \openout5 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out.
+pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
@@ -1991,12 +2194,12 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  [19
 
 ]
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 1015--1015
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 1000--1000
 [][][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 1015
+Overfull \vbox (5.0pt too high) detected at line 1000
  []
 
 File: bgs/light/section.jpg Graphic file (type bmp)
@@ -2008,7 +2211,12 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 ]
 \openout4 = `Lec-07.vrb'.
 
- (./Lec-07.vrb)
+ (./Lec-07.vrb
+
+LaTeX Font Warning: Font shape `TU/ALSSirius(0)/m/it' undefined
+(Font)              using `TU/ALSSirius(0)/m/n' instead on input line 4.
+
+)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -2038,33 +2246,47 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 ]
 \openout4 = `Lec-07.vrb'.
 
- (./Lec-07.vrb
-File: pics/crossover.pdf Graphic file (type pdf)
-<use pics/crossover.pdf>
-)
+ (./Lec-07.vrb)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[24
+ [24
 
 ]
 \openout4 = `Lec-07.vrb'.
 
- (./Lec-07.vrb
-File: pics/ga3.pdf Graphic file (type pdf)
-<use pics/ga3.pdf>
 
-Overfull \hbox (30.76146pt too wide) in paragraph at lines 16--17
- [] 
+(./Lec-07.vrb
+File: ./pics/Nelder-Mead.pdf Graphic file (type pdf)
+<use ./pics/Nelder-Mead.pdf>
+)
+Overfull \vbox (6.32585pt too high) detected at line 1100
  []
 
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[25
+
+]
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb
+File: ./pics/3dplot.pdf Graphic file (type pdf)
+<use ./pics/3dplot.pdf>
+File: ./pics/contour.pdf Graphic file (type pdf)
+<use ./pics/contour.pdf>
 )
+Overfull \vbox (1.27261pt too high) detected at line 1130
+ []
+
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [25
+[26
 
 ]
 \openout4 = `Lec-07.vrb'.
@@ -2072,16 +2294,16 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  (./Lec-07.vrb
 \openout5 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [26
+ [27
 
 ]
 \openout4 = `Lec-07.vrb'.
@@ -2089,43 +2311,9 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  (./Lec-07.vrb
 \openout5 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
-
- (./Lec-07.out.pyg))
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
-[27
-
-]
-\openout4 = `Lec-07.vrb'.
-
- (./Lec-07.vrb
-\openout5 = `Lec-07.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
-
- (./Lec-07.out.pyg))
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [28
-
-]
-\openout4 = `Lec-07.vrb'.
-
- (./Lec-07.vrb
-\openout5 = `Lec-07.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
@@ -2133,7 +2321,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
 
-[29
+[28
 
 ]
 \openout4 = `Lec-07.vrb'.
@@ -2141,46 +2329,46 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  (./Lec-07.vrb
 \openout5 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [30
+ [29
+
+]
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 1217--1217
+[][][]  
+ []
+
+
+Overfull \vbox (5.0pt too high) detected at line 1217
+ []
+
+File: bgs/light/section.jpg Graphic file (type bmp)
+<bgs/light/section.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[30
 
 ]
 \openout4 = `Lec-07.vrb'.
 
- (./Lec-07.vrb
-\openout5 = `Lec-07.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
-
- (./Lec-07.out.pyg))
+ (./Lec-07.vrb)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-
-[31
+ [31
 
 ]
 \openout4 = `Lec-07.vrb'.
 
- (./Lec-07.vrb
-\openout5 = `Lec-07.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
-
- (./Lec-07.out.pyg))
+ (./Lec-07.vrb)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -2201,17 +2389,9 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 \openout4 = `Lec-07.vrb'.
 
  (./Lec-07.vrb
-\openout5 = `Lec-07.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
-
-
-(./Lec-07.out.pyg))
-Overfull \vbox (0.52783pt too high) detected at line 1344
- []
-
+File: pics/crossover.pdf Graphic file (type pdf)
+<use pics/crossover.pdf>
+)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -2222,13 +2402,14 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 \openout4 = `Lec-07.vrb'.
 
  (./Lec-07.vrb
-\openout5 = `Lec-07.pyg'.
+File: pics/ga3.pdf Graphic file (type pdf)
+<use pics/ga3.pdf>
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+Overfull \hbox (30.76146pt too wide) in paragraph at lines 16--17
+ [] 
+ []
 
- (./Lec-07.out.pyg))
+)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -2241,9 +2422,60 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  (./Lec-07.vrb
 \openout5 = `Lec-07.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-07.out.pyg Lec-07.pyg)...executed.
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [36
+
+]
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[37
+
+]
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [38
+
+]
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
 
  (./Lec-07.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
@@ -2251,10 +2483,128 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
 
-[36
+[39
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1412--1412
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [40
+
+]
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+
+[41
+
+]
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [42
+
+]
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [43
+
+]
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+
+(./Lec-07.out.pyg))
+Overfull \vbox (0.52783pt too high) detected at line 1546
+ []
+
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[44
+
+]
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [45
+
+]
+\openout4 = `Lec-07.vrb'.
+
+ (./Lec-07.vrb
+\openout5 = `Lec-07.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-07.out
+.pyg Lec-07.pyg)...executed.
+
+ (./Lec-07.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+
+[46
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1614--1614
 
  []
 
@@ -2265,19 +2615,19 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 1412--1412
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 1614--1614
 [][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 1412
+Overfull \vbox (5.0pt too high) detected at line 1614
  []
 
 File: bgs/contacts.jpg Graphic file (type bmp)
 <bgs/contacts.jpg>
 File: logos/ru/light/logoclr.png Graphic file (type bmp)
 <logos/ru/light/logoclr.png>
-[37
+[47
 
 ]
 \tf@nav=\write8
@@ -2294,19 +2644,19 @@ File: logos/ru/light/logoclr.png Graphic file (type bmp)
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Lec-07.out' has not changed.
-(rerunfilecheck)             Checksum: B1560F9611698AFAA4BDAF98DF2661E0;1881.
+(rerunfilecheck)             Checksum: 8911E4F3A9468C4752E5CE50005395A8;2503.
 runsystem(del Lec-07.pyg)...executed.
 
 runsystem(del Lec-07.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 38524 strings out of 475848
- 835889 string characters out of 5805114
- 1230903 words of memory out of 5000000
- 58715 multiletter control sequences out of 15000+600000
- 476104 words of font info for 99 fonts, out of 8000000 for 9000
+ 36660 strings out of 476477
+ 766626 string characters out of 5817858
+ 1213894 words of memory out of 5000000
+ 56166 multiletter control sequences out of 15000+600000
+ 410275 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,12n,104p,691b,954s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,12n,108p,691b,943s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Lec-07.pdf (37 pages).
+Output written on Lec-07.pdf (47 pages).

@@ -695,6 +695,7 @@ $$
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{./pics/contour2}
 \caption{Контурный график функции $f\left(x, y\right) = \left(x^2 + y - 11\right)^2 + \left(x + y^2 - 7\right)^2$}
+\label{fig:contour2}
 \end{figure}
 \end{minipage}
 \vfill
@@ -793,6 +794,207 @@ $$
 \vfill
 \end{frame}
 
+
+\begin{frame}[fragile]{Минимизация без ограничений}
+\scriptsize
+Найдем максимум функции $f\left(x, y\right) = \left(x^2 + y - 11\right)^2 + \left(x + y^2 - 7\right)^2$ при помощи алгоритма BFGS, для этого минимизируем функцию $-f\left(x, y\right)$:
+\vfill
+\begin{minted}{pycon}
+>>> from scipy.optimize import minimize
+>>> def f(X):
+...     x, y = X
+...     return (x ** 2 + y - 11) ** 2 + (x + y ** 2 - 7) ** 2
+...
+>>> minimize(lambda X: -f(X), (-.2, -1))
+      fun: -181.61652152258267
+ hess_inv: array([[ 0.02312334, -0.0065379 ],
+       [-0.0065379 ,  0.06119262]])
+      jac: array([0., 0.])
+  message: 'Optimization terminated successfully.'
+     nfev: 24
+      nit: 5
+     njev: 8
+   status: 0
+  success: True
+        x: array([-0.27084461, -0.9230386 ])
+>>> |\space|
+\end{minted}
+\vfill
+\end{frame}
+
+\subsection{Минимизация с ограничениями}
+\begin{frame}[fragile]{Минимизация с ограничениями}
+\scriptsize
+\begin{itemize}
+\item Иногда необходимо найти максимум или минимум объекта функции с одним или несколькими ограничениями. Чтобы воспользоваться описанным выше методом в качестве примера, можно попытаться найти один минимум функции $f(x,y)$, который удовлетворяет условию $x > 0$, $y > 0$, или значение минимума функции на прямой $x = y$.
+\item Алгоритмы \texttt{l-bfgs-b}, \texttt{tnc} и \texttt{slsqp} поддерживают аргумент \texttt{bounds} для передачи в метод \texttt{minimize}.
+\item Значение аргумента \texttt{bounds}~-- это последовательность
+кортежей, каждый из которых содержит пары (\texttt{min}, \texttt{max}) для каждой переменной функции, определяющие границы минимизации для соответствующей переменной.
+\item Если в каком-либо направлении не существует ограничений, то используется значение \mintinline{python}|None|.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Минимизация с ограничениями}
+\scriptsize
+Например, если выполняется попытка найти минимум функции $f\left(x, y\right) = \left(x^2 + y - 11\right)^2 + \left(x + y^2 - 7\right)^2$, начиная с $\left(−1/2, −1/2\right)$ без определения каких-либо границ, то метод \texttt{slsqp} обеспечивает сходимость (почти точную) к минимуму в точке $(−2.805118, 3.131312)$:
+\vfill
+\begin{minted}{pycon}
+>>> from scipy.optimize import minimize
+>>> def f(X):
+...     x, y = X
+...     return (x ** 2 + y - 11) ** 2 + (x + y ** 2 - 7) ** 2
+...
+>>> minimize(f, (-.5, -.5), method='slsqp')
+     fun: 4.0198726971069946e-07
+     jac: array([-0.00721077,  0.00037714])
+ message: 'Optimization terminated successfully'
+    nfev: 36
+     nit: 10
+    njev: 10
+  status: 0
+ success: True
+       x: array([-2.80522924,  3.131319  ])
+>>> |\space|
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Минимизация с ограничениями}
+\scriptsize
+Для обеспечения условий $x < 0$, $y < 0$, необходимо установить значения \texttt{bounds} без минимальных границ по $x$ и $y$ и максимальные границы $x = 0$ и $y = 0$:
+\vfill
+\begin{minted}[firstnumber=last]{pycon}
+>>> xbounds = (None, 0)
+>>> ybounds = (None, 0)
+>>> bounds = (xbounds, ybounds)
+>>> minimize(f, (-.5, -.5), method='slsqp', bounds=bounds)
+     fun: 4.115667606325133e-08
+     jac: array([-0.00283595, -0.00034243])
+ message: 'Optimization terminated successfully'
+    nfev: 39
+     nit: 11
+    njev: 11
+  status: 0
+ success: True
+       x: array([-3.77933774, -3.28319868])
+>>> |\space|
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Минимизация с ограничениями}
+\scriptsize
+\begin{itemize}
+\item Предположим, что необходимо найти точки экстремума функции $f\left(x, y\right) = \left(x^2 + y - 11\right)^2 + \left(x + y^2 - 7\right)^2$, которые также соответствуют условию x = y (т. е. лежат на диагонали графика, изображенного на рисунке~\ref{fig:contour2}).
+\item Ограничения определяются как аргумент \texttt{constrains} для метода \texttt{minimize} в виде словаря, определяющего строковые ключи: \mintinline{python}|'type'|~-- тип ограничения и \mintinline{python}|'fun'|~-- вызываемый объект, реализующий это ограничение.
+\item Значением \mintinline{python}|'type'| может быть \mintinline{python}|'eq'| или \mintinline{python}|'ineq'| для ограничения, основанного на равенстве (например, $x = y$) или на неравенстве (например, $x > 2y - 1$).
+\item Функция ограничения, основанного на равенстве, должна возвращать ноль, если ограничение соблюдено, а функция ограничения, основанного на неравенстве, должна возвращать неотрицательное значение, если ограничение соблюдено.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Минимизация с ограничениями}
+\scriptsize
+Для поиска минимума функции $f(x, y)$ с ограничением $x = y$ можно воспользоваться методом \texttt{slsqp} с функцией ограничения, основанного на равенстве, возвращающей $x - y$.
+\vfill
+\begin{minted}[firstnumber=last]{pycon}
+>>> constr = {'type': 'eq', 'fun': lambda X: X[0] - X[1]}
+>>> minimize(f, (0, 0), method='slsqp', constraints=constr)
+     fun: 8.000000000716087
+     jac: array([-16.33084416,  16.33130538])
+ message: 'Optimization terminated successfully'
+    nfev: 25
+     nit: 7
+    njev: 7
+  status: 0
+ success: True
+       x: array([2.54138438, 2.54138438])
+>>> |\space|
+\end{minted}
+\vfill
+\end{frame}
+
+
+\subsection{Минимизация функции одной переменной}
+\begin{frame}[fragile]{Минимизация функции одной переменной}
+\scriptsize
+\begin{itemize}
+\item В том случае когда оптимизируемая функция зависит только от одной переменной, можно использовать более быстрый метод \texttt{scipy.optimize.minimize\_scalar}.
+\item Для быстрого определения минимума данный метод можно вызвать с аргументом \mintinline{python}|method='brent'|, определяющим использование реализации метода Брента для нахождения минимума.
+\item Для данного метода желательно сначала установить интервал поиска минимума, подставив для \texttt{x} значения \texttt{(a, b, c)} такие, что $f(a) > f(b)$ и $f(c) > f(b)$. Это можно выполнить при помощи аргумента \texttt{bracket}, в который передается кортеж \texttt{(a, b, c)}.
+\item Однако, если это невозможно или слишком сложно, то можно передать интервал из двух значений \texttt{x}, в котором начинается поиск минимума ограниченный области в направлении убывания функции.
+\item В тех случаях, когда значение параметра \texttt{bracket} не задано, поиск минимума начинается с интервала $(0, 1)$.
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Минимизация функции одной переменной}
+\scriptsize
+\begin{minipage}{.4\textwidth}
+На рисунке \ref{fig:figure_40} приведен пример графика полинома с двумя минимумами и одним максимумом.
+\vfill
+\end{minipage}
+\begin{minipage}{.59\textwidth}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\linewidth]{./pics/Figure_40}
+	\caption{График полинома $f(x) = x^4 - 3x^3 - 24x^2 + 28x + 48$}
+	\label{fig:figure_40}
+\end{figure}
+\end{minipage}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Минимизация функции одной переменной}
+\scriptsize
+Если не указывать значения аргумента \texttt{bracket} метод \mintinline{python}|minimize_scalar| определяет минимум функции в точке $-2.841$.
+\vfill
+\begin{minted}{pycon}
+>>> from scipy.optimize import minimize_scalar
+>>> import numpy as np
+>>> p = np.polynomial.Polynomial((48., 28., -24., -3., 1.))
+>>> minimize_scalar(p)
+     fun: -91.32163915433344
+    nfev: 15
+     nit: 10
+ success: True
+       x: -2.841044326595826
+\end{minted}
+\vfill
+Если задать ограниченную область поиска второго минимума, передав значения $(a, b, c) = (3, 4, 6)$, соответствующие условию $f(a) > f(b) < f(c)$, то метод определит минимум функции в точке $4.549$:
+\vfill
+\begin{minted}[firstnumber=last]{pycon}
+>>> minimize_scalar(p, bracket=(3, 4, 6))
+     fun: -175.45563549487974
+    nfev: 14
+     nit: 10
+ success: True
+       x: 4.549468364257193
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Минимизация функции одной переменной}
+\scriptsize
+Для поиска максимума методу \mintinline{python}|minimize_scalar| передается функция $-f(x)$. В этом случае область поиск минимума функции $-f(x)$ ограничивается парой значений $(-1, 0)$:
+\vfill
+\begin{minted}[firstnumber=last]{pycon}
+>>> minimize_scalar(-p, bracket=(-1, 0))
+     fun: -55.734305899213226
+    nfev: 12
+     nit: 8
+ success: True
+       x: 0.5415759589734416
+>>> |\space|
+\end{minted}
+\vfill
+\end{frame}
 
 \section{Минимизация функций \\ нескольких переменных}
 \sectionframe

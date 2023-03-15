@@ -21,80 +21,104 @@
 \headcommand {\beamer@framepages {8}{8}}
 \headcommand {\slideentry {1}{1}{5}{9/9}{Минимизация без ограничений}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@sectionpages {3}{9}}
-\headcommand {\beamer@subsectionpages {5}{9}}
-\headcommand {\sectionentry {2}{Минимизация функций \\ нескольких переменных}{10}{Минимизация функций \\ нескольких переменных}{0}}
-\headcommand {\slideentry {2}{0}{1}{10/10}{}{0}}
+\headcommand {\slideentry {1}{1}{6}{10/10}{Минимизация без ограничений}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {2}{0}{2}{11/11}{}{0}}
+\headcommand {\beamer@subsectionpages {5}{10}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{11}{Минимизация с ограничениями}}
+\headcommand {\slideentry {1}{2}{1}{11/11}{Минимизация с ограничениями}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@subsectionpages {10}{11}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{Метод Нелдера-Мида}}
-\headcommand {\slideentry {2}{1}{1}{12/12}{Метод Нелдера-Мида}{0}}
+\headcommand {\slideentry {1}{2}{2}{12/12}{Минимизация с ограничениями}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {2}{1}{2}{13/13}{Метод Нелдера-Мида}{0}}
+\headcommand {\slideentry {1}{2}{3}{13/13}{Минимизация с ограничениями}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {2}{1}{3}{14/14}{Метод Нелдера-Мида}{0}}
+\headcommand {\slideentry {1}{2}{4}{14/14}{Минимизация с ограничениями}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {2}{1}{4}{15/15}{Метод Нелдера-Мида}{0}}
+\headcommand {\slideentry {1}{2}{5}{15/15}{Минимизация с ограничениями}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@subsectionpages {12}{15}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{16}{Пример}}
-\headcommand {\slideentry {2}{2}{1}{16/16}{Пример}{0}}
+\headcommand {\beamer@subsectionpages {11}{15}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{16}{Минимизация функции одной переменной}}
+\headcommand {\slideentry {1}{3}{1}{16/16}{Минимизация функции одной переменной}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{17}{Программная реализация}}
-\headcommand {\slideentry {2}{3}{1}{17/17}{Программная реализация}{0}}
+\headcommand {\slideentry {1}{3}{2}{17/17}{Минимизация функции одной переменной}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {2}{3}{2}{18/18}{Программная реализация}{0}}
+\headcommand {\slideentry {1}{3}{3}{18/18}{Минимизация функции одной переменной}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {2}{3}{3}{19/19}{Программная реализация}{0}}
+\headcommand {\slideentry {1}{3}{4}{19/19}{Минимизация функции одной переменной}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@sectionpages {10}{19}}
-\headcommand {\beamer@subsectionpages {17}{19}}
-\headcommand {\sectionentry {3}{Генетический алгоритм}{20}{Генетический алгоритм}{0}}
-\headcommand {\slideentry {3}{0}{1}{20/20}{}{0}}
+\headcommand {\beamer@sectionpages {3}{19}}
+\headcommand {\beamer@subsectionpages {16}{19}}
+\headcommand {\sectionentry {2}{Минимизация функций \\ нескольких переменных}{20}{Минимизация функций \\ нескольких переменных}{0}}
+\headcommand {\slideentry {2}{0}{1}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {3}{0}{2}{21/21}{}{0}}
+\headcommand {\slideentry {2}{0}{2}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {3}{0}{3}{22/22}{}{0}}
+\headcommand {\beamer@subsectionpages {20}{21}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{22}{Метод Нелдера-Мида}}
+\headcommand {\slideentry {2}{1}{1}{22/22}{Метод Нелдера-Мида}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {3}{0}{4}{23/23}{}{0}}
+\headcommand {\slideentry {2}{1}{2}{23/23}{Метод Нелдера-Мида}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {3}{0}{5}{24/24}{}{0}}
+\headcommand {\slideentry {2}{1}{3}{24/24}{Метод Нелдера-Мида}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {3}{0}{6}{25/25}{}{0}}
+\headcommand {\slideentry {2}{1}{4}{25/25}{Метод Нелдера-Мида}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\slideentry {3}{0}{7}{26/26}{}{0}}
+\headcommand {\beamer@subsectionpages {22}{25}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{26}{Пример}}
+\headcommand {\slideentry {2}{2}{1}{26/26}{Пример}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {3}{0}{8}{27/27}{}{0}}
+\headcommand {\beamer@subsectionpages {26}{26}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{27}{Программная реализация}}
+\headcommand {\slideentry {2}{3}{1}{27/27}{Программная реализация}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\slideentry {3}{0}{9}{28/28}{}{0}}
+\headcommand {\slideentry {2}{3}{2}{28/28}{Программная реализация}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\slideentry {3}{0}{10}{29/29}{}{0}}
+\headcommand {\slideentry {2}{3}{3}{29/29}{Программная реализация}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {3}{0}{11}{30/30}{}{0}}
+\headcommand {\beamer@sectionpages {20}{29}}
+\headcommand {\beamer@subsectionpages {27}{29}}
+\headcommand {\sectionentry {3}{Генетический алгоритм}{30}{Генетический алгоритм}{0}}
+\headcommand {\slideentry {3}{0}{1}{30/30}{}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\slideentry {3}{0}{12}{31/31}{}{0}}
+\headcommand {\slideentry {3}{0}{2}{31/31}{}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {3}{0}{13}{32/32}{}{0}}
+\headcommand {\slideentry {3}{0}{3}{32/32}{}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\beamer@subsectionpages {20}{32}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{33}{Пример}}
-\headcommand {\slideentry {3}{1}{1}{33/33}{Пример}{0}}
+\headcommand {\slideentry {3}{0}{4}{33/33}{}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\slideentry {3}{1}{2}{34/34}{Пример}{0}}
+\headcommand {\slideentry {3}{0}{5}{34/34}{}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\beamer@subsectionpages {33}{34}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{35}{Программная реализация}}
-\headcommand {\slideentry {3}{2}{1}{35/35}{Программная реализация}{0}}
+\headcommand {\slideentry {3}{0}{6}{35/35}{}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\slideentry {3}{2}{2}{36/36}{Программная реализация}{0}}
+\headcommand {\slideentry {3}{0}{7}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\slideentry {3}{2}{3}{37/37}{Программная реализация}{0}}
+\headcommand {\slideentry {3}{0}{8}{37/37}{}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\beamer@partpages {1}{37}}
-\headcommand {\beamer@subsectionpages {35}{37}}
-\headcommand {\beamer@sectionpages {20}{37}}
-\headcommand {\beamer@documentpages {37}}
-\headcommand {\gdef \inserttotalframenumber {37}}
+\headcommand {\slideentry {3}{0}{9}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {3}{0}{10}{39/39}{}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {3}{0}{11}{40/40}{}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {3}{0}{12}{41/41}{}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\slideentry {3}{0}{13}{42/42}{}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\beamer@subsectionpages {30}{42}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{43}{Пример}}
+\headcommand {\slideentry {3}{1}{1}{43/43}{Пример}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {3}{1}{2}{44/44}{Пример}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\beamer@subsectionpages {43}{44}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{45}{Программная реализация}}
+\headcommand {\slideentry {3}{2}{1}{45/45}{Программная реализация}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {3}{2}{2}{46/46}{Программная реализация}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {3}{2}{3}{47/47}{Программная реализация}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\beamer@partpages {1}{47}}
+\headcommand {\beamer@subsectionpages {45}{47}}
+\headcommand {\beamer@sectionpages {30}{47}}
+\headcommand {\beamer@documentpages {47}}
+\headcommand {\gdef \inserttotalframenumber {47}}
