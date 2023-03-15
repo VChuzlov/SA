@@ -613,6 +613,187 @@ BoldItalicFont=*-BoldItalic
 
 %\addcontentsline{toc}{section}{\textbf{I Численные методы решения систем \\ линейных уравнений}}
 
+\section{Минимизация}
+\sectionframe
+
+\begin{frame}[fragile]{Минимизация}
+\scriptsize
+\begin{itemize}
+\item Методы оптимизации библиотеки SciPy выполняют поиск минимума функции одной или нескольких переменных $f(x_1, x_2, \dots, x_n)$. Для поиска максимума: $\left(-f(x_1, x_2, \dots, x_n)\right)$.
+
+\item Для некоторых алгоритмов достаточно задать только анализируемую функцию, для прочих нужна первая производная этой функции по каждой переменной (все частные производные):
+\vfill
+\begin{equation}
+	J(f) = \left(\dfrac{\partial f}{\partial x_1}, \dfrac{\partial f}{\partial x_2}, \dots, \dfrac{\partial f}{\partial x_n}\right) - \mathrm{~матрица \text{ } Якоби \text{ } (якобиан)}
+\end{equation}
+\vfill
+\item Для некоторых алгоритмов необходима информация о вторых частных производных исследуемой функции в виде симметричной матрицы значений:
+\vfill
+\begin{equation}
+H(f) =
+\begin{bmatrix}
+	 \dfrac{\partial^2 f}{\partial x^2_1} & \dfrac{\partial^2 f}{\partial x_2 \partial x_1}
+	 & \dots & \dfrac{\partial^2 f}{\partial x_n \partial x_1} \\
+
+	 \dfrac{\partial^2 f}{\partial x_1 \partial x_2} & \dfrac{\partial^2 f}{\partial x^2_2}
+	 & \dots & \dfrac{\partial^2 f}{\partial x_n \partial x_2} \\
+
+	 \vdots & \vdots & \ddots & \vdots \\
+
+	 \dfrac{\partial^2 f}{\partial x_1 \partial x_n} & \dfrac{\partial^2 f}{\partial x_2 \partial x_n}
+	 & \dots & \dfrac{\partial^2 f}{\partial x^2_n} \\
+\end{bmatrix} - \mathrm{матрица \text{ } Гессе \text{ } (гессиан)}
+\end{equation}
+\vfill
+\item Матрица Якоби представляет локальный градиент функции нескольких переменных, в то время как матрица Гессе показывает локальный радиус кривизны.
+\end{itemize}
+\vfill
+\end{frame}
+
+\subsection{Минимизация без ограничений}
+\begin{frame}[fragile]{Минимизация без ограничений}
+\scriptsize
+\begin{itemize}
+\item Обобщенный алгоритм минимизации для скалярной функции нескольких переменных \texttt{scipy.optimize.minimize} принимает два обязательных аргумента:
+\vfill
+\mint[linenos=false, frame=none]{python}|minimize(fun, x0, ...)|
+\vfill
+\item Первый аргумент~-- объект функции \texttt{fun} для вычисления минимизируемой функции: эта функция должна принимать массив значений \texttt{x}, определяющий точки, в которых должны выполняться вычисления $(x_1, x_2, \ldots, x_n)$, с последующими любыми требуемыми аргументами.
+\item Второй обязательный аргумент \texttt{x0}~-- это массив значений, представляющих начальные предпосылки, с которых алгоритм минимизации должен начать работу.
+\end{itemize}
+\vfill
+Рассмотрим следующую функцию:
+\begin{equation}
+	f\left(x, y\right) = \left(x^2 + y - 11\right)^2 + \left(x + y^2 - 7\right)^2
+\end{equation}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Минимизация без ограничений}
+\scriptsize
+\begin{minipage}{.4\textwidth}
+Область $-5 \leqslant x \leqslant 5$, $-5 \leqslant y \leqslant 5$ содержит один локальный максимум:
+\vfill
+$$
+	f\left(-0.270845, -0.923039\right) = 181.617
+$$
+\vfill
+В этой же области существуют четыре минимума:
+\vfill
+\begin{equation*}
+\begin{aligned}
+	f\left(3, 2\right) &= 0 \\
+	f\left(-2.805118, 3.131312\right) &= 0 \\
+	f\left(-3.779310, -3.283186\right) &= 0 \\
+	f\left(3.584428, -1.848126\right) &= 0
+\end{aligned}
+\end{equation*}
+\vfill
+\end{minipage}
+\begin{minipage}{.59\textwidth}
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{./pics/contour2}
+\caption{Контурный график функции $f\left(x, y\right) = \left(x^2 + y - 11\right)^2 + \left(x + y^2 - 7\right)^2$}
+\end{figure}
+\end{minipage}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Минимизация без ограничений}
+\scriptsize
+Исходную функцию можно определить при помощи оператора \mintinline{python}|def|:
+\vfill
+\begin{minted}[fontsize=\fontsize{8pt}{8pt}]{pycon}
+>>> def f(X):
+...     x, y = X
+...     return (x ** 2 + y - 11) ** 2 + (x + y ** 2 - 7) ** 2
+...
+\end{minted}
+\vfill
+где массив \texttt{X} распакован в именованные переменные \texttt{x} и \texttt{y}.
+\vfill
+Для поиска минимума воспользуемся методом \texttt{minimize} с начальным приближением $\left(x, y\right) = \left(0, 0\right)$.
+\vfill
+\begin{minted}[firstnumber=last]{pycon}
+>>> from scipy.optimize import minimize
+>>> minimize(f, (0, 0))
+      fun: 1.3782267979368085e-13
+ hess_inv: array([[ 0.01578229, -0.0094806 ],
+       [-0.0094806 ,  0.03494937]])
+      jac: array([-3.95019932e-06, -1.19075692e-06])
+  message: 'Optimization terminated successfully.'
+     nfev: 48
+      nit: 10
+     njev: 16
+   status: 0
+  success: True
+        x: array([2.99999994, 1.99999999])
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Минимизация без ограничений}
+\scriptsize
+Метод \texttt{minimize} возвращает объект типа словарь с информацией о минимизации.
+\begin{table}[h!]
+\begin{tabular}{|p{.2\textwidth}|p{.8\textwidth}|}
+\hline
+\textbf{Параметр} & \textbf{Значение} \\
+\hline
+\mintinline{python}|success| & Логическое значение, сообщающее, была минимизация успешной или нет \\
+\hline
+\mintinline{python}|x| & Если минимизация успешна, то содержит решение: значения $\left(x_1, x_2, \ldots, x_n\right)$, в которых найден минимум функции. Если алгоритм минимизации завершился неудачно, то \texttt{x} содержит точку аварийного останова \\
+\hline
+\mintinline{python}|fun| & Если минимизация успешна, то содержит значение функции в точке минимума, определенной как \texttt{x} \\
+\hline
+\mintinline{python}|message| & Строка, описывающая результат минимизации \\
+\hline
+\mintinline{python}|jac| & Значение матрицы Якоби: если минимизация успешна, то значения в этом массиве должны быть близкими к нулю \\
+\hline
+\mintinline{python}|hess, hess_inv| & Матрица Гессе и обратная ей матрица (если использовалась) \\
+\hline
+\mintinline{python}|nfev, njev, nhev| & Количество операций вычисления анализируемой функции, ее якобиана и гессиана \\
+\hline
+\end{tabular}
+\end{table}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Минимизация без ограничений}
+\scriptsize
+Некоторые из методов оптимизации, используемые методом \texttt{scipy.optimize.minimize}:
+\begin{table}[h!]
+\begin{tabular}{|p{.2\textwidth}|p{.8\textwidth}|}
+\hline
+\textbf{Метод} & \textbf{Описание} \\
+\hline
+\mintinline{python}|BFGS| & Алгоритм BFGS (Broyden-Fletcher-Goldfarb-Shanno), принятый по умолчанию для минимизации без ограничений или граничных условий \\
+\hline
+\mintinline{python}|Nelder-Mead| & Алгоритм Нелдера–Мида, также известный как симплекс-метод (спуска) или
+метод деформируемого многогранника (амебы). Не требует производных \\
+\hline
+\mintinline{python}|CG| & Метод сопряженных градиентов \\
+\hline
+\mintinline{python}|Powell| & Ломано-линейный алгоритм в доверительной области (неограниченная минимизация). Требуются матрицы Якоби и Гессе (которые обязательно должны быть положительно определенными) \\
+\hline
+\mintinline{python}|TNC| & Усеченный алгоритм Ньютона для минимизации с граничными условиями \\
+\hline
+\mintinline{python}|l-bfgs-b| & Минимизация с ограничениями и граничными условиями с использованием алгоритма L-BFGS-B \\
+\hline
+\mintinline{python}|slsqp| & Метод минимизации <<последовательное программирование методом наименьших квадратов>> (sequential least-squares programming) с граничными условиями и ограничениями по равенству и неравенству \\
+\hline
+\end{tabular}
+\end{table}
+\vfill
+Алгоритм, используемый \texttt{minimize}, определяется с помощью передаваеймой в аргументе строки \texttt{method} строки. Алгоритм, применяемый по умолчанию~-- BFGS.
+\vfill
+\end{frame}
+
+
 \section{Минимизация функций \\ нескольких переменных}
 \sectionframe
 
