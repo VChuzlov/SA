@@ -982,7 +982,7 @@ $$
 
 \begin{frame}[fragile]{Минимизация функции одной переменной}
 \scriptsize
-Для поиска максимума методу \mintinline{python}|minimize_scalar| передается функция $-f(x)$. В этом случае область поиск минимума функции $-f(x)$ ограничивается парой значений $(-1, 0)$:
+Для поиска максимума методу \mintinline{python}|minimize_scalar| передается функция $-f(x)$. В этом случае область поиска минимума функции $-f(x)$ ограничивается парой значений $(-1, 0)$:
 \vfill
 \begin{minted}[firstnumber=last]{pycon}
 >>> minimize_scalar(-p, bracket=(-1, 0))
