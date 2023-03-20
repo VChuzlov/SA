@@ -1,0 +1,36 @@
+\frametitle{Пример~2}
+\label{slide:example2}
+\scriptsize
+Пусть дана схема химических реакций:
+\vfill
+$$
+A \overset{k_1}{\underset{k_2}{\rightleftarrows}} B
+$$
+\vfill
+Скорость прямой реакции: $r_1 = k_1 \cdot C_A$; скорость обратной реакции:
+$r_2 = k_2 \cdot C_B$. Константы скоростей реакций: $k_1 = 0.85$; $k_2 = 0.1$, $C_A$ и $C_B$~-- концентрации компонентов $A$ и $B$.
+Изменение концентрации реагирующих веществ во времени описывается следующей системой дифференциальных уравнений:
+\vfill
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^I\dfrac{\partial C_A}{\partial t} &= -r_1 + r_2 \\
+^^I^^I\dfrac{\partial C_B}{\partial t} &= r_1 - r_2
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
+\vfill
+Необходимо определить изменение концентрации каждого компонента по времени методом Эйлера на отрезке $[0, 1]$ с  шагом $h=0.1$. Начальные условия: $C_A(0) = 1$~(моль/л); $C_B(0) = 0$~(моль/л).
+\vfill
+Воспользуемся формулой~\eqref{Eiler_system} и запишем выражения для $C_{A,i}$ и $C_{B,i}$:
+\vfill
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^IC_{A, i} &= C_{A, (i-1)} + 0.1 \cdot \left(-k_1\cdot C_{A, (i-1)} + k_2 \cdot C_{B, (i-1)}\right) \\
+^^I^^IC_{B, i} &= C_{B, (i-1)} + 0.1 \cdot \left(k_1\cdot C_{A, (i-1)} - k_2 \cdot C_{B, (i-1)}\right) \\
+^^I^^It_i &= t_{i-1} + h
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
+\vfill

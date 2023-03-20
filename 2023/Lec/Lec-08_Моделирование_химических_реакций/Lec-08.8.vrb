@@ -1,0 +1,53 @@
+\frametitle{Пример~1}
+\scriptsize
+Результаты вычислений сведем в таблице.
+\vfill
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{|r|r|r|r|}
+%^^I\caption{}
+%^^I\label{tab:eiler_system} \\
+
+^^I\hline \multicolumn{1}{|r|}{$i$} & \multicolumn{1}{r|}{$x_i$} & \multicolumn{1}{r|}{$y_{i,1} = y_{(i-1),1} + 0.1 \cdot y_{(i-1),2}$} & \multicolumn{1}{r|}{$y_{i,2} = y_{(i-1),2} + 0.1 \cdot e^{-x_{i-1}\cdot y_{(i-1),1}}$}  \\
+^^I\hline
+^^I\endfirsthead
+
+^^I\multicolumn{4}{r}{Продолжение таблицы \thetable{}} \\
+^^I\hline
+^^I\multicolumn{1}{|r|}{$i$} & \multicolumn{1}{r|}{$x_i$} & \multicolumn{1}{r|}{$y_{i,1} = y_{(i-1),1} + 0.1 \cdot y_{(i-1),2}$} & \multicolumn{1}{r|}{$y_{i,2} = y_{(i-1),2} + 0.1 \cdot e^{-x_{i-1}\cdot y_{(i-1),1}}$}  \\
+^^I\hline
+^^I\endhead
+
+^^I$0$  &$0.0$ & $0.0000$ & $0.0000$  \\
+^^I\hline
+
+^^I$1$  &$0.1$ & $0.0000$ & $0.1000$  \\
+^^I\hline
+
+^^I$2$  &$0.2$ & $0.0100$ & $0.2000$  \\
+^^I\hline
+
+^^I$3$  &$0.3$ & $0.0300$ & $0.2998$ \\
+^^I\hline
+
+^^I$4$  &$0.4$ & $0.0600$ & $0.3989$  \\
+^^I\hline
+
+^^I$5$  &$0.5$ & $0.0999$ & $0.4965$  \\
+^^I\hline
+
+^^I$6$  &$0.6$ & $0.1495$ & $0.5917$  \\
+^^I\hline
+
+^^I$7$  &$0.7$ & $0.2087$ & $0.6831$  \\
+^^I\hline
+
+^^I$8$  &$0.8$ & $0.2770$ & $0.7695$  \\
+^^I\hline
+
+^^I$9$  &$0.9$ & $0.3539$ & $0.8496$  \\
+^^I\hline
+
+^^I$10$  &$1.0$ & $0.4389$ & $0.9223$  \\
+^^I\hline
+\end{longtable}
+\vfill

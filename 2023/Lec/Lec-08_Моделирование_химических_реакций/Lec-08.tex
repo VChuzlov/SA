@@ -1,0 +1,462 @@
+% !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[aspectratio=169, mathserif]{beamer}	% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+
+% Style options:
+% light --- light theme (default)
+% dark --- dark theme
+% enlogo --- english TPU logo {default}
+% rulogo --- russian TPU logo
+
+\usetheme[light, rulogo]{tpu}		% dark theme used as an example of optional argument
+
+\usepackage[english, russian]{babel}		%uncomment this to work in russian
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+
+\usepackage{fontspec}
+
+\setromanfont{Brygada1918}[
+Path=./fonts/BrygadaFontFiles/,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\setsansfont{ALSSirius}[
+Path=./fonts/ALSSiriusFiles/,
+Extension = .otf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+%ItalicFont=*-Italic,
+%BoldItalicFont=*-BoldItalic
+]
+
+\setmonofont{Consolas}[
+Path=./fonts/ConsolasFontFiles/,
+%Scale=0.85,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\usepackage[cache=false]{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{onedarkBckGr}{RGB}{40, 44, 52}
+
+\usemintedstyle[python]{default}
+\setminted[python]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=true,
+	frame=leftline,
+	framesep=1mm,
+	python3=true,
+}
+
+\usemintedstyle[pycon]{default}
+\setminted[pycon]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	linenos=false,
+	frame=single,
+	framesep=1mm,
+	python3=true,
+%	bgcolor=backcolour,
+	linenos=true,
+}
+
+%\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
+%\setmainfont[Ligatures={TeX,Historic}]{Times New Roman} %% задаёт основной шрифт документа
+%\setsansfont{Comic Sans MS}                    %% задаёт шрифт без засечек
+%\setmonofont{Courier New}
+%\usepackage[default]{droidserif}
+%\usepackage[defaultsans]{droidsans}
+
+\usepackage{booktabs}	% good looking tables
+\usepackage{multicol}	% text in multiple columns, useful for side-by-side text and pictures
+\usepackage{hyperref}
+%\usepackage{minted}
+\usepackage{xcolor}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{amsxtra}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\DeclareCaptionLabelFormat{figure}{Рисунок~#2}
+\captionsetup[table]{justification=raggedleft,
+	labelformat=empty,
+	labelsep=endash,
+	textformat=center,
+	position=top,
+	skip=5pt
+}
+\captionsetup[figure]{justification=centering,
+	labelsep=endash,
+	labelformat=figure,
+	font={tiny}
+}
+
+
+\hyphenpenalty=10000	% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
+
+\includeonlyframes{c}
+
+\title{\LARGE{Системный анализ процессов химической технологии}}
+\subtitle{\textcolor{tpugreen}{\textbf{Лекция 8}} \\ \textbf{Моделирование химических реакций}}
+\author[]{\textbf{Вячеслав Алексеевич Чузлов}}
+\institute{к.т.н., доцент ОХИ ИШПР}
+\date{\today}
+
+\begin{document}
+
+% notice usage of \titleframe and several other unconventional functions
+% the reason being is custom backgrounds on these slides
+
+\titleframe		% title
+
+\tocframe{}		% this custom frame accepts options for ToC
+
+%\addcontentsline{toc}{section}{\textbf{I Численные методы решения систем \\ линейных уравнений}}
+
+
+\begin{frame}[fragile, label=c]{Численные методы решения систем \\ дифференциальных уравнений}
+\scriptsize
+Задачи, в которых необходимо решить систему из нескольких дифференциальных уравнений с несколькими искомыми функциями, очень распространены в предметной области химической технологии.
+\vfill
+Будем рассматривать системы, в которых число неизвестных функций совпадает с числом уравнений, разрешенных относительно производных.
+\vfill
+К примеру, система из двух уравнений с двумя неизвестными функциями $y$ и $z$ от одного и того же аргумента $x$ имеет вид:
+\vfill
+\begin{equation}\label{system-ODE}
+	\left\{
+	\begin{aligned}
+		y' &= f_1\left(x, y, z\right)\\
+		z' &= f_2\left(x, y, z\right)
+	\end{aligned}
+	\right.
+\end{equation}
+\vfill
+\noindent при этом штрих означает производную по $x$.
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Численные методы решения систем \\ дифференциальных уравнений}
+\scriptsize
+Общий вид системы из $n$ уравнений с $n$ неизвестными функциями $x_1, x_2, \ldots, x_n$ от переменной $t$ имеет вид:
+\vfill
+\begin{equation}\label{system-ODE2}
+	\left\{
+	\begin{aligned}
+		\dfrac{dx_1}{dt} &= f_1\left(t, x_1, x_2, \ldots, x_n\right) \\
+		\dfrac{dx_2}{dt} &= f_2\left(t, x_1, x_2, \ldots, x_n\right) \\
+		\ldots & \\
+		\dfrac{dx_n}{dt} &= f_n\left(t, x_1, x_2, \ldots, x_n\right)
+	\end{aligned}
+	\right.
+\end{equation}
+\vfill
+Ранее мы рассмотрели численные методы решения обыкновенных дифференциальных уравнений вида $y'=f(x,y)$ (методы Эйлера и Рунге-Кутты). Данные методы применяются и в случае решения систем обыкновенных дифференциальных уравнений.
+\vfill
+\end{frame}
+
+
+\section{Метод Эйлера}
+\sectionframe
+
+\begin{frame}[fragile, label=c]{Метод Эйлера}
+\scriptsize
+Пусть дана следующая система обыкновенных дифференциальных уравнений:
+\vfill
+\begin{equation}
+	\left\{
+	\begin{aligned}
+		\dfrac{dy_1}{dx} &= f_1 \left(x, y_1, y_2\right) \\
+		\dfrac{dy_2}{dx} &= f_2\left(x, y_1, y_2\right)
+	\end{aligned}
+	\right.
+\end{equation}
+\vfill
+\noindent с начальными условиями:
+\vfill
+\begin{equation}
+	\begin{aligned}
+		y_1 \big |_{x=x_0} &= y_{01} \\
+		y_2 \big |_{x=x_0} &= y_{02}
+	\end{aligned}
+\end{equation}
+\vfill
+При использовании метода Эйлера, расчетные формулы примут следующий вид:
+\vfill
+\begin{equation}\label{Eiler_system}
+	\left\{
+	\begin{aligned}
+		y_{(i), 1} &= y_{i-1,1} + h \cdot f_1 \left(x_{i-1}, y_{(i-1),1}, y_{(i-1),2}\right) \\
+		y_{(i), 2} &= y_{i-1,2} + h \cdot f_2 \left(x_{i-1}, y_{(i-1),1}, y_{(i-1),2}\right) \\
+		x_{i} &= x_{i-1} + h
+	\end{aligned}
+	\right.
+\end{equation}
+\vfill
+\noindent где $h$~-- шаг интегрирования; $f_1\left(x_i, y_{i, 1}, y_{i, 2}\right)$ и $f_2\left(x_i, y_{i, 1}, y_{i, 2}\right)$~-- правые части дифференциальных уравнений.
+\vfill
+\end{frame}
+
+
+\subsection{Пример~1}
+\begin{frame}[fragile, label=c]{Пример~1}\label{slide:example1}
+\scriptsize
+Пусть требуется решить систему дифференциальных уравнений первого порядка:
+\vfill
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		\dfrac{dy_1}{dx} &= y_2 \\
+		\dfrac{dy_2}{dx} &= e^{-x\cdot y_1}
+	\end{aligned}
+	\right.
+\end{equation*}
+\vfill
+\noindent методом Эйлера на отрезке $[0, 1]$ с шагом $h=0.1$.
+\vfill
+Начальные условия: $x_0 = 0$; $y_1(0)=0$; $y_2(0)=0$.
+\vfill
+Воспользуемся формулой~\eqref{Eiler_system} и запишем выражения для $y_{i,1}$ и $y_{i,2}$:
+\vfill
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		y_{i,1} &= y_{(i-1),1} + 0.1 \cdot y_{(i-1),2} \\
+		y_{i,2} &= y_{(i-1),2} + 0.1 \cdot e^{-x_{i-1}\cdot y_{(i-1),1}} \\
+		x_i &= x_{i-1} + h
+	\end{aligned}
+	\right.
+\end{equation*}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile, label=c]{Пример~1}
+\scriptsize
+Результаты вычислений сведем в таблице.
+\vfill
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{|r|r|r|r|}
+%	\caption{}
+%	\label{tab:eiler_system} \\
+
+	\hline \multicolumn{1}{|r|}{$i$} & \multicolumn{1}{r|}{$x_i$} & \multicolumn{1}{r|}{$y_{i,1} = y_{(i-1),1} + 0.1 \cdot y_{(i-1),2}$} & \multicolumn{1}{r|}{$y_{i,2} = y_{(i-1),2} + 0.1 \cdot e^{-x_{i-1}\cdot y_{(i-1),1}}$}  \\
+	\hline
+	\endfirsthead
+
+	\multicolumn{4}{r}{Продолжение таблицы \thetable{}} \\
+	\hline
+	\multicolumn{1}{|r|}{$i$} & \multicolumn{1}{r|}{$x_i$} & \multicolumn{1}{r|}{$y_{i,1} = y_{(i-1),1} + 0.1 \cdot y_{(i-1),2}$} & \multicolumn{1}{r|}{$y_{i,2} = y_{(i-1),2} + 0.1 \cdot e^{-x_{i-1}\cdot y_{(i-1),1}}$}  \\
+	\hline
+	\endhead
+
+	$0$  &$0.0$ & $0.0000$ & $0.0000$  \\
+	\hline
+
+	$1$  &$0.1$ & $0.0000$ & $0.1000$  \\
+	\hline
+
+	$2$  &$0.2$ & $0.0100$ & $0.2000$  \\
+	\hline
+
+	$3$  &$0.3$ & $0.0300$ & $0.2998$ \\
+	\hline
+
+	$4$  &$0.4$ & $0.0600$ & $0.3989$  \\
+	\hline
+
+	$5$  &$0.5$ & $0.0999$ & $0.4965$  \\
+	\hline
+
+	$6$  &$0.6$ & $0.1495$ & $0.5917$  \\
+	\hline
+
+	$7$  &$0.7$ & $0.2087$ & $0.6831$  \\
+	\hline
+
+	$8$  &$0.8$ & $0.2770$ & $0.7695$  \\
+	\hline
+
+	$9$  &$0.9$ & $0.3539$ & $0.8496$  \\
+	\hline
+
+	$10$  &$1.0$ & $0.4389$ & $0.9223$  \\
+	\hline
+\end{longtable}
+\vfill
+\end{frame}
+
+\subsubsection{Программная реализация}
+\begin{frame}[fragile, label=c]{Программная реализация}
+\scriptsize
+\begin{minted}{python}
+import numpy as np
+
+
+def eiler(func, x0, xf, y0, h):
+    count = int((xf - x0) / h) + 1
+    y = [y0[:]]  # создание массива y с начальными условиями
+    x = x0
+
+    for i in range(1, count):
+        right_parts = func(x, y[i-1])
+        y.append([])  # добавление пустой строки
+
+        for j in range(len(y0)):
+            y[i].append(y[i-1][j] + h * right_parts[j])
+
+        x += h
+
+    return y
+|\space|
+|\space|
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Программная реализация}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+def equations(x, y):  # Функция, содержащая правые части дифференциальных уравнений
+    return [y[1], np.exp(-x * y[0])]
+
+
+if __name__ == '__main__':
+    print(eiler(equations, 0, 1, [0, 0], 0.1))
+|\space|
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+[[0, 0],
+ [0.0, 0.1],
+ [0.010000000000000002, 0.2],
+ [0.030000000000000006, 0.29980019986673334],
+ [0.05998001998667334, 0.39890423774402173],
+ [0.09987044376107551, 0.4965335889709902],
+ [0.14952380265817453, 0.5916626935059732],
+ [0.20869007200877185, 0.6830819284599525],
+ [0.2769982648547671, 0.7694905222116074],
+ [0.35394731707592786, 0.8496142128887387],
+ [0.4389087383648017, 0.9223342965713657]]
+\end{minted}
+\vfill
+\end{frame}
+
+\subsection{Пример~2}
+\begin{frame}[fragile, label=c]{Пример~2}
+\scriptsize
+\alert{\textbf{Закон действующих масс}}
+\vfill
+Скорость химической реакции прямо пропорциональна произведению концентраций реагирующих веществ, возведенных в степени, равные их стехиометрическим коэффициентам.
+\vfill
+\begin{multicols}{2}
+Схема химической реакции:
+\vfill
+$$
+	n_1A_1 + n_2A_2 + n_3A_3 \overset{k}{\longrightarrow} B
+$$
+\vfill
+Скорость данной реакции:
+\vfill
+$$
+r = k \cdot \left[A_1\right]^{n_1} \cdot \left[A_2\right]^{n_2} \cdot \left[A_3\right]^{n_3}
+$$
+\vfill
+\columnbreak
+Изменение концентрации каждого компонента во времени:
+\vfill
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		\dfrac{\partial C_{A_1}}{\partial t} &= -n_1 \cdot r \\
+		\dfrac{\partial C_{A_2}}{\partial t} &= -n_2 \cdot r \\
+		\dfrac{\partial C_{A_3}}{\partial t} &= -n_3 \cdot r \\
+		\dfrac{\partial C_B}{\partial t} &= r
+	\end{aligned}
+	\right.
+\end{equation*}
+\end{multicols}
+\vfill
+где $k$~-- константа скорости химической реакции; $C_{A_1}$, $C_{A_2}$, $C_{A_3}$, $C_B$~-- концентрации веществ (моль/л), участвующих в химической реакции, $n_1$, $n_2$, $n_3$~-- стехиометрические коэффициенты в уравнении реакции.
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Пример~2}\label{slide:example2}
+\scriptsize
+Пусть дана схема химических реакций:
+\vfill
+$$
+A \overset{k_1}{\underset{k_2}{\rightleftarrows}} B
+$$
+\vfill
+Скорость прямой реакции: $r_1 = k_1 \cdot C_A$; скорость обратной реакции:
+$r_2 = k_2 \cdot C_B$. Константы скоростей реакций: $k_1 = 0.85$; $k_2 = 0.1$, $C_A$ и $C_B$~-- концентрации компонентов $A$ и $B$.
+Изменение концентрации реагирующих веществ во времени описывается следующей системой дифференциальных уравнений:
+\vfill
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		\dfrac{\partial C_A}{\partial t} &= -r_1 + r_2 \\
+		\dfrac{\partial C_B}{\partial t} &= r_1 - r_2
+	\end{aligned}
+	\right.
+\end{equation*}
+\vfill
+Необходимо определить изменение концентрации каждого компонента по времени методом Эйлера на отрезке $[0, 1]$ с  шагом $h=0.1$. Начальные условия: $C_A(0) = 1$~(моль/л); $C_B(0) = 0$~(моль/л).
+\vfill
+Воспользуемся формулой~\eqref{Eiler_system} и запишем выражения для $C_{A,i}$ и $C_{B,i}$:
+\vfill
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		C_{A, i} &= C_{A, (i-1)} + 0.1 \cdot \left(-k_1\cdot C_{A, (i-1)} + k_2 \cdot C_{B, (i-1)}\right) \\
+		C_{B, i} &= C_{B, (i-1)} + 0.1 \cdot \left(k_1\cdot C_{A, (i-1)} - k_2 \cdot C_{B, (i-1)}\right) \\
+		t_i &= t_{i-1} + h
+	\end{aligned}
+	\right.
+\end{equation*}
+\vfill
+\end{frame}
+
+
+\contactsframe[\Large \textbf{Благодарю за внимание!}]{
+
+	\bigskip
+	\includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\
+	\includegraphics[width=.05\textwidth]{pics/mail} \quad chuva@tpu.ru \\
+	\includegraphics[width=.03\textwidth]{pics/tel} \quad +7-962-782-66-15
+}
+
+\end{document}
+

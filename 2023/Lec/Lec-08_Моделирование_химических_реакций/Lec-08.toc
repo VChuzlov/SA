@@ -1,0 +1,5 @@
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Метод Эйлера}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Пример\nobreakspace 1}{4}{0}{1}
+\beamer@subsubsectionintoc {1}{1}{1}{Программная реализация}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{Пример\nobreakspace 2}{8}{0}{1}

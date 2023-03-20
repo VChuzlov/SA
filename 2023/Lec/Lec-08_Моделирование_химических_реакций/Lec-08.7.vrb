@@ -1,0 +1,30 @@
+\frametitle{Пример~1}
+\label{slide:example1}
+\scriptsize
+Пусть требуется решить систему дифференциальных уравнений первого порядка:
+\vfill
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^I\dfrac{dy_1}{dx} &= y_2 \\
+^^I^^I\dfrac{dy_2}{dx} &= e^{-x\cdot y_1}
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
+\vfill
+\noindent методом Эйлера на отрезке $[0, 1]$ с шагом $h=0.1$.
+\vfill
+Начальные условия: $x_0 = 0$; $y_1(0)=0$; $y_2(0)=0$.
+\vfill
+Воспользуемся формулой~\eqref{Eiler_system} и запишем выражения для $y_{i,1}$ и $y_{i,2}$:
+\vfill
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^Iy_{i,1} &= y_{(i-1),1} + 0.1 \cdot y_{(i-1),2} \\
+^^I^^Iy_{i,2} &= y_{(i-1),2} + 0.1 \cdot e^{-x_{i-1}\cdot y_{(i-1),1}} \\
+^^I^^Ix_i &= x_{i-1} + h
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
+\vfill

@@ -1,0 +1,36 @@
+\frametitle{Пример~2}
+\scriptsize
+\alert{\textbf{Закон действующих масс}}
+\vfill
+Скорость химической реакции прямо пропорциональна произведению концентраций реагирующих веществ, возведенных в степени, равные их стехиометрическим коэффициентам.
+\vfill
+\begin{multicols}{2}
+Схема химической реакции:
+\vfill
+$$
+^^In_1A_1 + n_2A_2 + n_3A_3 \overset{k}{\longrightarrow} B
+$$
+\vfill
+Скорость данной реакции:
+\vfill
+$$
+r = k \cdot \left[A_1\right]^{n_1} \cdot \left[A_2\right]^{n_2} \cdot \left[A_3\right]^{n_3}
+$$
+\vfill
+\columnbreak
+Изменение концентрации каждого компонента во времени:
+\vfill
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^I\dfrac{\partial C_{A_1}}{\partial t} &= -n_1 \cdot r \\
+^^I^^I\dfrac{\partial C_{A_2}}{\partial t} &= -n_2 \cdot r \\
+^^I^^I\dfrac{\partial C_{A_3}}{\partial t} &= -n_3 \cdot r \\
+^^I^^I\dfrac{\partial C_B}{\partial t} &= r
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
+\end{multicols}
+\vfill
+где $k$~-- константа скорости химической реакции; $C_{A_1}$, $C_{A_2}$, $C_{A_3}$, $C_B$~-- концентрации веществ (моль/л), участвующих в химической реакции, $n_1$, $n_2$, $n_3$~-- стехиометрические коэффициенты в уравнении реакции.
+\vfill

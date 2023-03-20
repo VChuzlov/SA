@@ -1,0 +1,36 @@
+\frametitle{Метод Эйлера}
+\scriptsize
+Пусть дана следующая система обыкновенных дифференциальных уравнений:
+\vfill
+\begin{equation}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^I\dfrac{dy_1}{dx} &= f_1 \left(x, y_1, y_2\right) \\
+^^I^^I\dfrac{dy_2}{dx} &= f_2\left(x, y_1, y_2\right)
+^^I\end{aligned}
+^^I\right.
+\end{equation}
+\vfill
+\noindent с начальными условиями:
+\vfill
+\begin{equation}
+^^I\begin{aligned}
+^^I^^Iy_1 \big |_{x=x_0} &= y_{01} \\
+^^I^^Iy_2 \big |_{x=x_0} &= y_{02}
+^^I\end{aligned}
+\end{equation}
+\vfill
+При использовании метода Эйлера, расчетные формулы примут следующий вид:
+\vfill
+\begin{equation}\label{Eiler_system}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^Iy_{(i), 1} &= y_{i-1,1} + h \cdot f_1 \left(x_{i-1}, y_{(i-1),1}, y_{(i-1),2}\right) \\
+^^I^^Iy_{(i), 2} &= y_{i-1,2} + h \cdot f_2 \left(x_{i-1}, y_{(i-1),1}, y_{(i-1),2}\right) \\
+^^I^^Ix_{i} &= x_{i-1} + h
+^^I\end{aligned}
+^^I\right.
+\end{equation}
+\vfill
+\noindent где $h$~-- шаг интегрирования; $f_1\left(x_i, y_{i, 1}, y_{i, 2}\right)$ и $f_2\left(x_i, y_{i, 1}, y_{i, 2}\right)$~-- правые части дифференциальных уравнений.
+\vfill

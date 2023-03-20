@@ -1,0 +1,17 @@
+\frametitle{Численные методы решения систем \\ дифференциальных уравнений}
+\scriptsize
+Общий вид системы из $n$ уравнений с $n$ неизвестными функциями $x_1, x_2, \ldots, x_n$ от переменной $t$ имеет вид:
+\vfill
+\begin{equation}\label{system-ODE2}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^I\dfrac{dx_1}{dt} &= f_1\left(t, x_1, x_2, \ldots, x_n\right) \\
+^^I^^I\dfrac{dx_2}{dt} &= f_2\left(t, x_1, x_2, \ldots, x_n\right) \\
+^^I^^I\ldots & \\
+^^I^^I\dfrac{dx_n}{dt} &= f_n\left(t, x_1, x_2, \ldots, x_n\right)
+^^I\end{aligned}
+^^I\right.
+\end{equation}
+\vfill
+Ранее мы рассмотрели численные методы решения обыкновенных дифференциальных уравнений вида $y'=f(x,y)$ (методы Эйлера и Рунге-Кутты). Данные методы применяются и в случае решения систем обыкновенных дифференциальных уравнений.
+\vfill
