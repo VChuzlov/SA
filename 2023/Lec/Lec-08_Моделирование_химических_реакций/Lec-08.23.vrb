@@ -1,0 +1,30 @@
+\frametitle{Пример~2}
+\scriptsize
+Рассмотрим также решение примера, приведенного на слайде~\ref{slide:example2}, методом Рунге-Кутты.
+Воспользуемся формулами~\eqref{RK_system},~\eqref{RK-params-system} и запишем выражения для нахождения значений искомых концентраций компонентов $C_{A,i}$ и $C_{B,i}$:
+\vfill
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^IC_{A,i} &= C_{A,(i-1)} + \dfrac{0.1}{6} \cdot \left(k_{1,1} + 2\cdot k_{2,1} + 2 \cdot k_{3,1} + k_{4,1}\right) \\
+^^I^^IC_{B,i} &= C_{B,(i-1)} + \dfrac{0.1}{6} \cdot \left(k_{1,2} + 2\cdot k_{2,2} + 2 \cdot k_{3,2} + k_{4,2}\right) \\
+^^I^^It_{i} &= t_{i-1} + 0.1
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
+\vfill
+\begin{equation*}
+^^I\begin{tiny}
+^^I^^I\begin{aligned}
+^^I^^I^^Ik_{1,1} &= -k_1  C_{A,(i-1)} + k_2  C_{B,(i-1)}; &
+^^I^^I^^Ik_{1,2} &= k_1  C_{A,(i-1)} - k_2  C_{B,(i-1)}; \\
+^^I^^I^^Ik_{2,1} &= -k_1  \left(C_{A,(i-1)} + k_{1,1}  \dfrac{h}{2}\right) + k_2  \left(C_{B,(i-1)}+ k_{1,2} \cdot \dfrac{h}{2}\right); &
+^^I^^I^^Ik_{2,2} &= k_1 \left(C_{A,(i-1)} + k_{1,1} \dfrac{h}{2}\right) - k_2 \left(C_{B,(i-1)}+ k_{1,2}  \dfrac{h}{2}\right); \\
+^^I^^I^^Ik_{3,1} &= -k_1  \left(C_{A,(i-1)} + k_{2,1}  \dfrac{h}{2}\right) + k_2  \left(C_{B,(i-1)}+ k_{2,2}  \dfrac{h}{2}\right); &
+^^I^^I^^Ik_{3,2} &= k_1  \left(C_{A,(i-1)} + k_{2,1}  \dfrac{h}{2}\right) - k_2  \left(C_{B,(i-1)}+ k_{2,2}  \dfrac{h}{2}\right); \\
+^^I^^I^^Ik_{4,1} &= -k_1  \left(C_{A,(i-1)} + k_{3,1}  h\right) + k_2  \left(C_{B,(i-1)}+ k_{3,2}  h\right); &
+^^I^^I^^Ik_{4,2} &= k_1  \left(C_{A,(i-1)} + k_{3,1}  h\right) - k_2  \left(C_{B,(i-1)}+ k_{3,2}  h\right) \\
+^^I^^I\end{aligned}
+^^I\end{tiny}
+\end{equation*}
+\vfill

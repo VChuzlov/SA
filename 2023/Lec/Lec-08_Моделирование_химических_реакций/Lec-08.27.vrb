@@ -1,0 +1,11 @@
+\frametitle{Графическая визуализация}
+\scriptsize
+Построим графическую визуализацию полученного решения:
+\vfill
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.6\linewidth]{./pics/figure_64}
+^^I\caption{Изменение концентрации реагирующих веществ во времени}
+^^I\label{fig:fig_64}
+\end{figure}
+\vfill

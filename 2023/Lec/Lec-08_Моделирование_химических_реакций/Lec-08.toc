@@ -5,3 +5,10 @@
 \beamer@subsectionintoc {1}{2}{Пример\nobreakspace 2}{1}{0}{1}
 \beamer@subsubsectionintoc {1}{2}{1}{Программная реализация}{1}{0}{1}
 \beamer@sectionintoc {2}{Метод Рунге-Кутты}{2}{0}{2}
+\beamer@subsectionintoc {2}{1}{Пример\nobreakspace 1}{4}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{1}{Программная реализация}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Пример\nobreakspace 2}{8}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{1}{Программная реализация}{10}{0}{2}
+\beamer@sectionintoc {3}{Расчет схемы химических реакций}{13}{0}{3}
+\beamer@subsectionintoc {3}{1}{Решение методом Эйлера}{14}{0}{3}
+\beamer@subsectionintoc {3}{2}{Решение методом Рунге-Кутты}{16}{0}{3}

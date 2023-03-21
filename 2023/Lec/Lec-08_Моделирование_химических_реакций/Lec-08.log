@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  21 MAR 2023 09:27
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  21 MAR 2023 15:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1318,6 +1318,90 @@ LaTeX Warning: Label `c<1>' multiply defined.
 
 LaTeX Warning: Label `c' multiply defined.
 
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
 )
 \openout1 = `Lec-08.aux'.
 
@@ -1655,7 +1739,268 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 642--642
+\openout4 = `Lec-08.19.vrb'.
+
+ (./Lec-08.19.vrb
+
+LaTeX Warning: Reference `slide:example1' on page 4 undefined on input line 3.
+
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [4
+
+]
+\openout4 = `Lec-08.20.vrb'.
+
+ (./Lec-08.20.vrb
+Overfull \hbox (12.52275pt too wide) in alignment at lines 5--12
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.52275pt too wide) in alignment at lines 12--18
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.52275pt too wide) in alignment at lines 18--43
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [5
+
+]
+\openout4 = `Lec-08.21.vrb'.
+
+ (./Lec-08.21.vrb
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o Lec-08.out.pyg Lec-08.pyg)...executed.
+
+ (./Lec-08.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [6
+
+]
+\openout4 = `Lec-08.22.vrb'.
+
+ (./Lec-08.22.vrb
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o Lec-08.out.pyg Lec-08.pyg)...executed.
+
+
+(./Lec-08.out.pyg)
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P st
+ripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=Tr
+ue -o Lec-08.out.pyg Lec-08.pyg)...executed.
+
+ (./Lec-08.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [7
+
+]
+\openout4 = `Lec-08.23.vrb'.
+
+ (./Lec-08.23.vrb
+
+LaTeX Warning: Reference `slide:example2' on page 8 undefined on input line 3.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 17.
+
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [8
+
+]
+\openout4 = `Lec-08.24.vrb'.
+
+ (./Lec-08.24.vrb
+Overfull \hbox (3.21005pt too wide) in alignment at lines 7--13
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.21005pt too wide) in alignment at lines 13--19
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.21005pt too wide) in alignment at lines 19--43
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [9
+
+]
+\openout4 = `Lec-08.25.vrb'.
+
+ (./Lec-08.25.vrb
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o Lec-08.out.pyg Lec-08.pyg)...executed.
+
+ (./Lec-08.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [10
+
+]
+\openout4 = `Lec-08.26.vrb'.
+
+ (./Lec-08.26.vrb
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o Lec-08.out.pyg Lec-08.pyg)...executed.
+
+
+(./Lec-08.out.pyg)
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P st
+ripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=Tr
+ue -o Lec-08.out.pyg Lec-08.pyg)...executed.
+
+ (./Lec-08.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [11
+
+]
+\openout4 = `Lec-08.27.vrb'.
+
+ (./Lec-08.27.vrb
+File: ./pics/figure_64.pdf Graphic file (type pdf)
+<use ./pics/figure_64.pdf>
+)
+Overfull \vbox (10.38142pt too high) detected at line 922
+ []
+
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[12
+
+]
+\openout4 = `Lec-08.28.vrb'.
+
+ (./Lec-08.28.vrb)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [13
+
+]
+\openout4 = `Lec-08.29.vrb'.
+
+ (./Lec-08.29.vrb
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o Lec-08.out.pyg Lec-08.pyg)...executed.
+
+ (./Lec-08.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [14
+
+]
+\openout4 = `Lec-08.30.vrb'.
+
+
+(./Lec-08.30.vrb
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o Lec-08.out.pyg Lec-08.pyg)...executed.
+
+ (./Lec-08.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [15
+
+]
+\openout4 = `Lec-08.31.vrb'.
+
+ (./Lec-08.31.vrb
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o Lec-08.out.pyg Lec-08.pyg)...executed.
+
+ (./Lec-08.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+
+[16
+
+]
+\openout4 = `Lec-08.32.vrb'.
+
+ (./Lec-08.32.vrb
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o Lec-08.out.pyg Lec-08.pyg)...executed.
+
+ (./Lec-08.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [17
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
 
  []
 
@@ -1666,7 +2011,7 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 642--642
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 1078--1078
 []  
  []
 
@@ -1683,10 +2028,6 @@ Overfull \hbox (68.29076pt too wide) in paragraph at lines 642--642
 Package caption Warning: Unused \captionsetup[table] on input line 117.
 See the caption package documentation for explanation.
 
-
-Package caption Warning: Unused \captionsetup[figure] on input line 122.
-See the caption package documentation for explanation.
-
 (./Lec-08.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1698,19 +2039,19 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Lec-08.out' has not changed.
-(rerunfilecheck)             Checksum: C3F5FDCA1AADF61A8FA3915333C21BEE;551.
+(rerunfilecheck)             Checksum: 157211E22C955D74D55119855E5873D8;1583.
 runsystem(del Lec-08.pyg)...executed.
 
 runsystem(del Lec-08.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 36869 strings out of 475848
- 808590 string characters out of 5805114
- 1208667 words of memory out of 5000000
- 57191 multiletter control sequences out of 15000+600000
+ 37085 strings out of 475848
+ 812484 string characters out of 5805114
+ 1229916 words of memory out of 5000000
+ 57343 multiletter control sequences out of 15000+600000
  476064 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,12n,104p,419b,911s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,104p,601b,911s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Lec-08.pdf (3 pages).
+Output written on Lec-08.pdf (17 pages).
