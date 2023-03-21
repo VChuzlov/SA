@@ -1,0 +1,10 @@
+\frametitle{Метод Нелдера-Мида}
+\scriptsize
+Методе Нелдера-Мида доступен как опциональный параметр функции \mintinline{python}|scipy.optimize.minimize()|.
+
+Для применения данной функции потребуется предварительно описать целевую функцию:
+\vfill
+$$
+^^Ierror = \sum \limits _{i=1} ^{n} \left(c_i - c_{i, \mathrm{расч.}}\right)^2
+$$
+\vfill

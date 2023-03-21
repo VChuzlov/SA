@@ -14,9 +14,9 @@ def eiler(func, x0, xf, y0, h, args=()):
 
 
 if __name__ == '__main__':
-    k, y0 = np.array([.2, .1, .1, .1]), np.array([1, .5, .2])
-    t0, tf = 0, 10
-    y_eiler = eiler(func, t0, tf, y0, 0.1, args=(k, ))
+    k, y0 = np.array([.5, .8, .95, .1]), np.array([1, 0, 0])
+    t0, tf, h = 0, 10, .5
+    y_eiler = eiler(func, t0, tf, y0, h, args=(k, ))
 |\space|
 \end{minted}
 \vfill

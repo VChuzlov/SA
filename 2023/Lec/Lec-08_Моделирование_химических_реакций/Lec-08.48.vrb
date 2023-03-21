@@ -1,0 +1,30 @@
+\frametitle{Генетический алгоритм}
+\scriptsize
+В результате получим следующие значения констант скоростей:
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+[0.5221326229161222, 0.7950758008292743, 0.8293744138383334, 0.08219397763058496]
+\end{minted}
+\vfill
+Данные значения можно улучшить, еще раз применив генетический алгоритм или метод Нелдера-Мида с полученным решением в качестве начального приближения:
+\vfill
+\begin{minted}{python}
+initial_k = [
+    0.5221326229161222, 0.7950758008292743,
+    0.8293744138383334, 0.08219397763058496
+]
+k = minimize(
+    obj_func,
+    x0=initial_k,
+    args=(
+        c,
+        kinetic_by_matrix,
+        time,
+        c0,
+        stoich_matrix
+    ),
+    method='Nelder-Mead'
+)
+print(k)
+\end{minted}
+\vfill

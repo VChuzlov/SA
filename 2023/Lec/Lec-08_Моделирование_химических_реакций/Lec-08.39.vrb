@@ -1,0 +1,26 @@
+\frametitle{Расчет химической кинетики матричным методом}
+\scriptsize
+\begin{itemize}
+\item Запишем все вышеперечисленное в виде отдельной функции:
+\vfill
+\begin{minted}{python}
+def kinetic_by_matrix(
+    time: float,
+    c: np.ndarray,
+    stoich_matrix: np.ndarray,
+    k: np.ndarray
+) -> np.ndarray:
+
+    mask = stoich_matrix < 0
+    p = (c ** -(stoich_matrix * mask)).prod(axis=1)
+    reaction_rates = p * k
+
+    right_parts = (
+        (stoich_matrix.T * reaction_rates).sum(axis=1)
+    )
+
+    return right_parts
+|\space|
+\end{minted}
+\end{itemize}
+\vfill

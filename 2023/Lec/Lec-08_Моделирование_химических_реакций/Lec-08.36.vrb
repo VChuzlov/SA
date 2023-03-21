@@ -1,0 +1,34 @@
+\frametitle{Расчет химической кинетики матричным методом}
+\scriptsize
+\begin{itemize}
+\item Зададим матрицу стехиометрических коэффициентов
+\begin{minted}[frame=single]{python}
+import numpy as np
+
+
+stoich_matrix = np.array([[-1, 2, 0], [1, -2, 0], [0, -2, 1], [0, 2, -1]])
+print(stoich_matrix)
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+[[-1  2  0]
+ [ 1 -2  0]
+ [ 0 -2  1]
+ [ 0  2 -1]]
+\end{minted}
+\vfill
+\item Для записи выражений скоростей реакций необходимо из стехиометрической матрицы выбрать элементы с отрицательными коэффициентами. Создадим для этого массив \mintinline{python}|mask|:
+\vfill
+\begin{minted}[frame=single]{python}
+mask = stoich_matrix < 0
+print(mask)
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+[[ True False False]
+ [False  True False]
+ [False  True False]
+ [False False  True]]
+\end{minted}
+\end{itemize}
+\vfill

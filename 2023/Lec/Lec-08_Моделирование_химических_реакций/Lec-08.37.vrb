@@ -1,0 +1,21 @@
+\frametitle{Расчет химической кинетики матричным методом}
+\scriptsize
+\begin{itemize}
+\item Зададим значения констант скоростей химических реакций и начальных концентраций компонентов:
+\begin{minted}[frame=single]{python}
+k = np.array([.5, .8, .95, .1])
+c = np.array([1, 0, 0])
+\end{minted}
+\vfill
+\item Вычислим произведение концентраций компонентов в степенях соответствующих стехиометрических коэффициентов для каждой реакции, но только в том случае, если коэффициент $< 0$:
+\vfill
+\begin{minted}[frame=single]{python}
+p = (c ** -(stoich_matrix * mask)).prod(axis=1)
+print(p)
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+[1.   0.25 0.25 0.2 ]
+\end{minted}
+\end{itemize}
+\vfill

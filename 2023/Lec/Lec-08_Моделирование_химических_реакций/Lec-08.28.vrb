@@ -6,7 +6,7 @@ $$
 ^^IA \longleftrightarrow 2B \longleftrightarrow C
 $$
 \vfill
-\noindent с константами скоростей $k_1$, $k_2$, $k_3$ и $k_4$.
+\noindent с константами скоростей $k_1=0.5$, $k_2=0.8$, $k_3=0.95$ и $k_4=0.1$.
 Уравнения, описывающие скорость изменения концентраций компонентов по времени, записываются следующим образом:
 \vfill
 \begin{minipage}{.49\textwidth}
@@ -28,4 +28,6 @@ $$
 ^^I\right.
 \end{equation*}
 \end{minipage}
+\vfill
+$C_{A_0} = 1$, $C_{B_0} = C_{C_0} = 0$ $\mathrm{моль/л}$.
 \vfill

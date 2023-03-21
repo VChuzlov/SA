@@ -1,0 +1,27 @@
+\frametitle{Расчет химической кинетики матричным методом}
+\scriptsize
+\begin{itemize}
+\item Вычислим скорости реакций:
+\begin{minted}[frame=single]{python}
+reaction_rates = p * k
+print(reaction_rates)
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+[0.2   0.025 0.025 0.02 ]
+\end{minted}
+\vfill
+\item Правые части дифференциальных уравнений:
+\vfill
+\begin{minted}[frame=single]{python}
+right_parts = (
+    (stoich_matrix.T * reaction_rates).sum(axis=1)
+)
+print(right_parts)
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+[-0.175  0.34   0.005]
+\end{minted}
+\end{itemize}
+\vfill

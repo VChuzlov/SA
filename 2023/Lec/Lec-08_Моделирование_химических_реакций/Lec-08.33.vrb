@@ -1,0 +1,6 @@
+\frametitle{Графическая визуализация}
+\scriptsize
+\begin{figure}
+^^I\includegraphics[width=.6\textwidth]{./pics/plot}
+^^I\caption{Изменение концентрации реагирующих веществ по времени}
+\end{figure}

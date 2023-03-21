@@ -1,0 +1,26 @@
+\frametitle{Метод Нелдера-Мида}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+if __name__ == '__main__':
+    c = np.array([.1606, .2945, .6922])
+    c0 = np.array([1, 0, 0])
+    time = np.linspace(0, 10, 50)
+    stoich_matrix = np.array([[-1, 2, 0], [1, -2, 0], [0, -2, 1], [0, 2, -1]])
+
+    initial_k = (.5, .5, .5, .5)
+    k = minimize(
+        obj_func,
+        x0=initial_k,
+        args=(
+            c,
+            kinetic_by_matrix,
+            time,
+            c0,
+            stoich_matrix
+        ),
+        method='Nelder-Mead'
+    )
+    print(k)
+|\space|
+\end{minted}
+\vfill

@@ -1,0 +1,26 @@
+\frametitle{Расчет химической кинетики матричным методом}
+\scriptsize
+\begin{itemize}
+\item Решим данную систему с использованием функции \mintinline{python}|scipy.integrete.solve_ivp()|:
+\vfill
+\begin{minted}{python}
+from scipy.integrate import solve_ivp
+
+
+if __name__ == '__main__':
+    t = np.linspace(0, 10, 20)  # массив времени
+    solution = solve_ivp(
+        fun=kinetic_by_matrix,
+        t_span=(0, t[-1]),
+        y0=c,
+        dense_output=True,
+        args=(stoich_matrix, k)
+    )
+
+    ca, cb, cc = solution.sol(t)
+    for a, b, c in zip(ca, cb, cc):
+        print(f'{a:>8.4f} {b:>8.4f} {c:>8.4f}')
+|\space|
+\end{minted}
+\end{itemize}
+\vfill

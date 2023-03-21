@@ -1,0 +1,55 @@
+\frametitle{Расчет химической кинетики матричным методом}
+\scriptsize
+Рассмотрим следующую схему химических реакций:
+\vfill
+$$
+^^IA \longleftrightarrow 2B \longleftrightarrow C
+$$
+\vfill
+\noindent с константами скоростей $k_1=0.5$, $k_2=0.8$, $k_3=0.95$ и $k_4=0.1$.
+Уравнения, описывающие скорость изменения концентраций компонентов по времени, записываются следующим образом:
+\vfill
+\begin{minipage}{.3\textwidth}
+\begin{enumerate}
+\item $A \longrightarrow 2B$ \quad $r_1 = k_1 \cdot C_A$
+\item $2B \longrightarrow A$ \quad $r_2 = k_2 \cdot C_B ^2$
+\item $2B \longrightarrow C$ \quad $r_3 = k_3 \cdot C_B ^2$
+\item $C \longrightarrow 2B$ \quad $r_4 = k_4 \cdot C_C$
+\end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}{.3\textwidth}
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^I\dfrac{dC_A}{dt} &= -r_1 + r_2 \\
+^^I^^I\dfrac{dC_B}{dt} &=  2 \cdot \left(r_1 - r_2 - r_3 + r_4\right) \\
+^^I^^I\dfrac{dC_C}{dt} &=  r_3 - r_4 \\
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
+\end{minipage}
+\hfill
+\begin{minipage}{.3\textwidth}
+Стехиометрическая матрица:
+\vfill
+\begin{table}[h!]
+\begin{tabular}{|p{.25\linewidth}|r|r|r|}
+\hline
+Реакция & $A$ & $B$ & $C$ \\
+\hline
+$r_1$ & $-1$ &  $2$ &  $0$ \\
+\hline
+$r_2$ &  $1$ & $-2$ &  $0$ \\
+\hline
+$r_3$ &  $0$ & $-2$ &  $1$ \\
+\hline
+$r_4$ &  $0$ &  $2$ & $-1$ \\
+\hline
+\end{tabular}
+\end{table}
+\vfill
+\end{minipage}
+\vfill
+$C_{A_0} = 1$, $C_{B_0} = C_{C_0} = 0$ $\mathrm{моль/л}$.
+\vfill

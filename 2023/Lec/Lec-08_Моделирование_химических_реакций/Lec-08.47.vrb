@@ -1,0 +1,26 @@
+\frametitle{Генетический алгоритм}
+\scriptsize
+Для применения генетического алгоритма также понадобится целевая функция и границы изменения искомых констант скоростей химических реакций:
+\vfill
+\begin{minted}{python}
+import genetic_algorithm as ga
+
+
+bounds = ((.05, 1), (.05, 1), (.05, 1), (.05, 1))  # пределы для искомых значений
+k = ga.genetic_algorithm(
+    bounds,
+    obj_func,
+    args=(
+        c,
+        kinetic_by_matrix,
+        time,
+        c0,
+        stoich_matrix
+    ),
+    popsize=100,
+    selection_size=20,
+    generations_count=10
+)
+print(k[0])
+\end{minted}
+\vfill
