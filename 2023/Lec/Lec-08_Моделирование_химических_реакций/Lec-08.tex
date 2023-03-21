@@ -144,7 +144,7 @@ BoldItalicFont=*-BoldItalic
 %\addcontentsline{toc}{section}{\textbf{I Численные методы решения систем \\ линейных уравнений}}
 
 
-\begin{frame}[fragile, label=c]{Численные методы решения систем \\ дифференциальных уравнений}
+\begin{frame}[fragile, ]{Численные методы решения систем \\ дифференциальных уравнений}
 \scriptsize
 Задачи, в которых необходимо решить систему из нескольких дифференциальных уравнений с несколькими искомыми функциями, очень распространены в предметной области химической технологии.
 \vfill
@@ -166,7 +166,7 @@ BoldItalicFont=*-BoldItalic
 \end{frame}
 
 
-\begin{frame}[fragile, label=c]{Численные методы решения систем \\ дифференциальных уравнений}
+\begin{frame}[fragile, ]{Численные методы решения систем \\ дифференциальных уравнений}
 \scriptsize
 Общий вид системы из $n$ уравнений с $n$ неизвестными функциями $x_1, x_2, \ldots, x_n$ от переменной $t$ имеет вид:
 \vfill
@@ -189,7 +189,7 @@ BoldItalicFont=*-BoldItalic
 \section{Метод Эйлера}
 \sectionframe
 
-\begin{frame}[fragile, label=c]{Метод Эйлера}
+\begin{frame}[fragile, ]{Метод Эйлера}
 \scriptsize
 Пусть дана следующая система обыкновенных дифференциальных уравнений:
 \vfill
@@ -229,7 +229,7 @@ BoldItalicFont=*-BoldItalic
 
 
 \subsection{Пример~1}
-\begin{frame}[fragile, label=c]{Пример~1}\label{slide:example1}
+\begin{frame}[fragile, ]{Пример~1}\label{slide:example1}
 \scriptsize
 Пусть требуется решить систему дифференциальных уравнений первого порядка:
 \vfill
@@ -260,7 +260,7 @@ BoldItalicFont=*-BoldItalic
 \vfill
 \end{frame}
 
-\begin{frame}[fragile, label=c]{Пример~1}
+\begin{frame}[fragile, ]{Пример~1}
 \scriptsize
 Результаты вычислений сведем в таблице.
 \vfill
@@ -316,7 +316,7 @@ BoldItalicFont=*-BoldItalic
 \end{frame}
 
 \subsubsection{Программная реализация}
-\begin{frame}[fragile, label=c]{Программная реализация}
+\begin{frame}[fragile, ]{Программная реализация}
 \scriptsize
 \begin{minted}{python}
 import numpy as np
@@ -344,7 +344,7 @@ def eiler(func, x0, xf, y0, h):
 \end{frame}
 
 
-\begin{frame}[fragile, label=c]{Программная реализация}
+\begin{frame}[fragile]{Программная реализация}
 \scriptsize
 \begin{minted}[firstnumber=last]{python}
 def equations(x, y):  # Функция, содержащая правые части дифференциальных уравнений
@@ -373,7 +373,7 @@ if __name__ == '__main__':
 \end{frame}
 
 \subsection{Пример~2}
-\begin{frame}[fragile, label=c]{Пример~2}
+\begin{frame}[fragile]{Пример~2}
 \scriptsize
 \alert{\textbf{Закон действующих масс}}
 \vfill
@@ -412,7 +412,7 @@ $$
 \end{frame}
 
 
-\begin{frame}[fragile, label=c]{Пример~2}\label{slide:example2}
+\begin{frame}[fragile]{Пример~2}\label{slide:example2}
 \scriptsize
 Пусть дана схема химических реакций:
 \vfill
@@ -446,6 +446,189 @@ $r_2 = k_2 \cdot C_B$. Константы скоростей реакций: $k_
 	\end{aligned}
 	\right.
 \end{equation*}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Пример 2}
+\scriptsize
+\begin{equation*}
+	\left\{
+	\begin{aligned}
+		C_{A, i} &= C_{A, (i-1)} + 0.1 \cdot \left(-k_1\cdot C_{A, (i-1)} + k_2 \cdot C_{B, (i-1)}\right) \\
+		C_{B, i} &= C_{B, (i-1)} + 0.1 \cdot \left(k_1\cdot C_{A, (i-1)} - k_2 \cdot C_{B, (i-1)}\right) \\
+		t_i &= t_{i-1} + h
+	\end{aligned}
+	\right.
+\end{equation*}
+Результаты вычислений сведем в таблице.
+\vfill
+\begin{longtable}{|r|r|r|r|}
+%	\caption{}
+%	\label{tab:eiler_system2} \\
+
+	\hline \multicolumn{1}{|r|}{$i$} & \multicolumn{1}{r|}{$t_i$} & \multicolumn{1}{r|}{$C_{A,i}$} & \multicolumn{1}{r|}{$C_{B,i}$}  \\
+	\hline
+	\endfirsthead
+
+	\multicolumn{4}{r}{Продолжение таблицы \thetable{}} \\
+	\hline
+	\multicolumn{1}{|r|}{$i$} & \multicolumn{1}{r|}{$t_i$} & \multicolumn{1}{r|}{$C_{A,i}$} & \multicolumn{1}{r|}{$C_{B,i}$}  \\
+	\hline
+	\endhead
+
+	$0$  &$0.0$ & $1.0000$ & $0.0000$  \\
+	\hline
+
+	$1$  &$0.1$ & $0.9150$ & $0.0850$  \\
+	\hline
+
+	$2$  &$0.2$ & $0.8381$ & $0.1619$  \\
+	\hline
+
+	$3$  &$0.3$ & $0.7685$ & $0.2315$ \\
+	\hline
+
+	$4$  &$0.4$ & $0.7055$ & $0.2945$  \\
+	\hline
+
+	$5$  &$0.5$ & $0.6484$ & $0.3516$  \\
+	\hline
+
+	$6$  &$0.6$ & $0.5968$ & $0.4032$  \\
+	\hline
+
+	$7$  &$0.7$ & $0.5501$ & $0.4499$  \\
+	\hline
+
+	$8$  &$0.8$ & $0.5079$ & $0.4921$  \\
+	\hline
+
+	$9$  &$0.9$ & $0.4696$ & $0.5304$  \\
+	\hline
+
+	$10$  &$1.0$ & $0.4350$ & $0.5650$  \\
+	\hline
+\end{longtable}
+\vfill
+\end{frame}
+
+
+\subsubsection{Программная реализация}
+\begin{frame}[fragile]{Программная реализация}
+\scriptsize
+\begin{minted}{python}
+def equations(t, c, k):  # Функция, содержащая правые части дифф. уравнений
+    right_parts = [
+        -k[0] * c[0] + k[1] * c[1],
+        k[0] * c[0] - k[1] * c[1],
+    ]
+    return right_parts
+
+
+def eiler(func, x0, xf, y0, h, args=()):
+    count = int((xf - x0) / h) + 1
+    y, x = [y0[:]], x0
+    for i in range(1, count):
+        right_parts = func(x, y[i-1], *args)
+        y.append([])
+        for j in range(len(y0)):
+            y[i].append(y[i-1][j] + h * right_parts[j])
+        x += h
+    return y
+|\space|
+|\space|
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Программная реализация}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+k = [0.85, 0.1]
+print(eiler(equations, 0, 1, [1, 0], 0.1, args=(k, )))
+|\space|
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+[[1, 0],
+ [0.915, 0.085],
+ [0.838075, 0.16192500000000004],
+ [0.7684578750000001, 0.23154212500000004],
+ [0.7054543768750001, 0.29454562312500004],
+ [0.6484362110718751, 0.35156378892812506],
+ [0.596834771020047, 0.4031652289799532],
+ [0.5501354677731425, 0.4498645322268577],
+ [0.5078725983346939, 0.4921274016653062],
+ [0.469624701492898, 0.5303752985071022],
+ [0.4350103548510727, 0.5649896451489275]]
+\end{minted}
+\vfill
+\end{frame}
+
+
+\section{Метод Рунге-Кутты}
+\sectionframe
+
+
+\begin{frame}[fragile, label=c]{Метод Рунге-Кутты}
+\scriptsize
+Пусть дана следующая система обыкновенных дифференциальных уравнений:
+\vfill
+\begin{equation}
+	\left\{
+	\begin{aligned}
+		\dfrac{dy_1}{dx} &= f_1 \left(x, y_1, y_2\right) \\
+		\dfrac{dy_2}{dx} &= f_2\left(x, y_1, y_2\right)
+	\end{aligned}
+	\right.
+\end{equation}
+\vfill
+\noindent с начальными условиями:
+\vfill
+\begin{equation}
+	\begin{aligned}
+		y_1 \big |_{x=x_0} &= y_{01} \\
+		y_2 \big |_{x=x_0} &= y_{02}
+	\end{aligned}
+\end{equation}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Метод Рунге-Кутты}
+\scriptsize
+При использовании метода Рунге-Кутты, расчетные формулы примут следующий вид:
+\vfill
+\begin{equation}\label{RK_system}
+	\left\{
+	\begin{aligned}
+		y_{i, 1} &= y_{(i-1),1} + h / 6 \cdot \left(k_{1,1} + 2 \cdot k_{2,1} + 2 \cdot k_{3,1} + k_{4,1}\right) \\
+		y_{i, 2} &= y_{(i-1),2} + h / 6 \cdot \left(k_{1,2} + 2 \cdot k_{2,2} + 2 \cdot k_{3,2} + k_{4,2}\right) \\
+		x_{i} &= x_{i-1} + h
+	\end{aligned}
+	\right.
+\end{equation}
+\vfill
+\noindent где
+\vfill
+\begin{equation}\label{RK-params-system}
+	\begin{tiny}
+		\begin{aligned}
+			k_{1,1} &= f_1\left(x, y_{(i-1),1}, y_{(i-1),2}\right); &\space
+			k_{1,2} &= f_2\left(x, y_{(i-1),1}, y_{(i-1),2}\right); \\
+			k_{2,1} &= f_1 \left(x + \dfrac{h}{2}, y_{(i-1),1} + k_{1,1}  \cdot \dfrac{h}{2}, y_{(i-1),2} + k_{1,2} \cdot \dfrac{h}{2}\right); &\space
+			k_{2,2} &= f_2 \left(x + \dfrac{h}{2}, y_{(i-1),1} + k_{1,1} \cdot \dfrac{h}{2}, y_{(i-1),2} + k_{1,2} \cdot \dfrac{h}{2}\right); \\
+			k_{3,1} &= f_1 \left(x + \dfrac{h}{2}, y_{(i-1),1} + k_{2,1}  \cdot \dfrac{h}{2}, y_{(i-1),2} + k_{2,2} \cdot \dfrac{h}{2}\right); &\space
+			k_{3,2} &= f_2 \left(x + \dfrac{h}{2}, y_{(i-1),1} + k_{2,1} \cdot \dfrac{h}{2}, y_{(i-1),2} + k_{2,2} \cdot \dfrac{h}{2}\right); \\
+			k_{4,1} &= f_1 \left(x + h, y_{(i-1),1} + k_{3,1}  \cdot h, y_{(i-1),2} + k_{3,2} \cdot h\right); &\space
+			k_{4,2} &= f_2 \left(x + h, y_{(i-1),1} + k_{3,1} \cdot h, y_{(i-1),2} + k_{3,2} \cdot h \right).
+		\end{aligned}
+	\end{tiny}
+\end{equation}
+\vfill
+\noindent где $h$~-- шаг интегрирования; $f_1\left(x_i, y_{(i-1), 1}, y_{(i-1), 2}\right)$ и $f_2\left(x_i, y_{(i-1), 1}, y_{(i-1), 2}\right)$~-- правые части дифференциальных уравнений, $k_{1,j}$, $k_{2,j}$, $k_{3,j}$, $k_{4,j}$~-- параметры метода Рунге-Кутты для $j$-го уравнения.
 \vfill
 \end{frame}
 

@@ -1,0 +1,33 @@
+\frametitle{Метод Рунге-Кутты}
+\scriptsize
+При использовании метода Рунге-Кутты, расчетные формулы примут следующий вид:
+\vfill
+\begin{equation}\label{RK_system}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^Iy_{i, 1} &= y_{(i-1),1} + h / 6 \cdot \left(k_{1,1} + 2 \cdot k_{2,1} + 2 \cdot k_{3,1} + k_{4,1}\right) \\
+^^I^^Iy_{i, 2} &= y_{(i-1),2} + h / 6 \cdot \left(k_{1,2} + 2 \cdot k_{2,2} + 2 \cdot k_{3,2} + k_{4,2}\right) \\
+^^I^^Ix_{i} &= x_{i-1} + h
+^^I\end{aligned}
+^^I\right.
+\end{equation}
+\vfill
+\noindent где
+\vfill
+\begin{equation}\label{RK-params-system}
+^^I\begin{tiny}
+^^I^^I\begin{aligned}
+^^I^^I^^Ik_{1,1} &= f_1\left(x, y_{(i-1),1}, y_{(i-1),2}\right); &\space
+^^I^^I^^Ik_{1,2} &= f_2\left(x, y_{(i-1),1}, y_{(i-1),2}\right); \\
+^^I^^I^^Ik_{2,1} &= f_1 \left(x + \dfrac{h}{2}, y_{(i-1),1} + k_{1,1}  \cdot \dfrac{h}{2}, y_{(i-1),2} + k_{1,2} \cdot \dfrac{h}{2}\right); &\space
+^^I^^I^^Ik_{2,2} &= f_2 \left(x + \dfrac{h}{2}, y_{(i-1),1} + k_{1,1} \cdot \dfrac{h}{2}, y_{(i-1),2} + k_{1,2} \cdot \dfrac{h}{2}\right); \\
+^^I^^I^^Ik_{3,1} &= f_1 \left(x + \dfrac{h}{2}, y_{(i-1),1} + k_{2,1}  \cdot \dfrac{h}{2}, y_{(i-1),2} + k_{2,2} \cdot \dfrac{h}{2}\right); &\space
+^^I^^I^^Ik_{3,2} &= f_2 \left(x + \dfrac{h}{2}, y_{(i-1),1} + k_{2,1} \cdot \dfrac{h}{2}, y_{(i-1),2} + k_{2,2} \cdot \dfrac{h}{2}\right); \\
+^^I^^I^^Ik_{4,1} &= f_1 \left(x + h, y_{(i-1),1} + k_{3,1}  \cdot h, y_{(i-1),2} + k_{3,2} \cdot h\right); &\space
+^^I^^I^^Ik_{4,2} &= f_2 \left(x + h, y_{(i-1),1} + k_{3,1} \cdot h, y_{(i-1),2} + k_{3,2} \cdot h \right).
+^^I^^I\end{aligned}
+^^I\end{tiny}
+\end{equation}
+\vfill
+\noindent где $h$~-- шаг интегрирования; $f_1\left(x_i, y_{(i-1), 1}, y_{(i-1), 2}\right)$ и $f_2\left(x_i, y_{(i-1), 1}, y_{(i-1), 2}\right)$~-- правые части дифференциальных уравнений, $k_{1,j}$, $k_{2,j}$, $k_{3,j}$, $k_{4,j}$~-- параметры метода Рунге-Кутты для $j$-го уравнения.
+\vfill

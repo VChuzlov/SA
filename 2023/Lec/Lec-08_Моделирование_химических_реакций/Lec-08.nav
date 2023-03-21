@@ -1,31 +1,23 @@
-\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@sectionpages {1}{0}}
+\headcommand {\beamer@subsectionpages {1}{0}}
+\headcommand {\sectionentry {1}{Метод Эйлера}{1}{Метод Эйлера}{0}}
+\headcommand {\beamer@subsectionpages {1}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{1}{Пример\nobreakspace 1}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{1}{1}{1}{Программная реализация}}
+\headcommand {\beamer@subsectionpages {1}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{1}{Пример\nobreakspace 2}}
+\headcommand {\beamer@subsubsectionentry {0}{1}{2}{1}{1}{Программная реализация}}
+\headcommand {\slideentry {1}{2}{1}{1/1}{Пример\nobreakspace 2}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@sectionpages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\sectionentry {2}{Метод Рунге-Кутты}{2}{Метод Рунге-Кутты}{0}}
+\headcommand {\slideentry {2}{0}{1}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\beamer@sectionpages {1}{2}}
-\headcommand {\beamer@subsectionpages {1}{2}}
-\headcommand {\sectionentry {1}{Метод Эйлера}{3}{Метод Эйлера}{0}}
-\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
+\headcommand {\slideentry {2}{0}{2}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Пример\nobreakspace 1}}
-\headcommand {\slideentry {1}{1}{1}{4/4}{Пример\nobreakspace 1}{0}}
-\headcommand {\beamer@framepages {4}{4}}
-\headcommand {\slideentry {1}{1}{2}{5/5}{Пример\nobreakspace 1}{0}}
-\headcommand {\beamer@framepages {5}{5}}
-\headcommand {\beamer@subsubsectionentry {0}{1}{1}{1}{6}{Программная реализация}}
-\headcommand {\slideentry {1}{1}{3}{6/6}{Пример\nobreakspace 1}{0}}
-\headcommand {\beamer@framepages {6}{6}}
-\headcommand {\slideentry {1}{1}{4}{7/7}{Пример\nobreakspace 1}{0}}
-\headcommand {\beamer@framepages {7}{7}}
-\headcommand {\beamer@subsectionpages {4}{7}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{8}{Пример\nobreakspace 2}}
-\headcommand {\slideentry {1}{2}{1}{8/8}{Пример\nobreakspace 2}{0}}
-\headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {1}{2}{2}{9/9}{Пример\nobreakspace 2}{0}}
-\headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@partpages {1}{9}}
-\headcommand {\beamer@subsectionpages {8}{9}}
-\headcommand {\beamer@sectionpages {3}{9}}
-\headcommand {\beamer@documentpages {9}}
-\headcommand {\gdef \inserttotalframenumber {13}}
+\headcommand {\beamer@partpages {1}{3}}
+\headcommand {\beamer@subsectionpages {2}{3}}
+\headcommand {\beamer@sectionpages {2}{3}}
+\headcommand {\beamer@documentpages {3}}
+\headcommand {\gdef \inserttotalframenumber {19}}

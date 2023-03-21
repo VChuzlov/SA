@@ -1,0 +1,61 @@
+\frametitle{Пример 2}
+\scriptsize
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^IC_{A, i} &= C_{A, (i-1)} + 0.1 \cdot \left(-k_1\cdot C_{A, (i-1)} + k_2 \cdot C_{B, (i-1)}\right) \\
+^^I^^IC_{B, i} &= C_{B, (i-1)} + 0.1 \cdot \left(k_1\cdot C_{A, (i-1)} - k_2 \cdot C_{B, (i-1)}\right) \\
+^^I^^It_i &= t_{i-1} + h
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
+Результаты вычислений сведем в таблице.
+\vfill
+\begin{longtable}{|r|r|r|r|}
+%^^I\caption{}
+%^^I\label{tab:eiler_system2} \\
+
+^^I\hline \multicolumn{1}{|r|}{$i$} & \multicolumn{1}{r|}{$t_i$} & \multicolumn{1}{r|}{$C_{A,i}$} & \multicolumn{1}{r|}{$C_{B,i}$}  \\
+^^I\hline
+^^I\endfirsthead
+
+^^I\multicolumn{4}{r}{Продолжение таблицы \thetable{}} \\
+^^I\hline
+^^I\multicolumn{1}{|r|}{$i$} & \multicolumn{1}{r|}{$t_i$} & \multicolumn{1}{r|}{$C_{A,i}$} & \multicolumn{1}{r|}{$C_{B,i}$}  \\
+^^I\hline
+^^I\endhead
+
+^^I$0$  &$0.0$ & $1.0000$ & $0.0000$  \\
+^^I\hline
+
+^^I$1$  &$0.1$ & $0.9150$ & $0.0850$  \\
+^^I\hline
+
+^^I$2$  &$0.2$ & $0.8381$ & $0.1619$  \\
+^^I\hline
+
+^^I$3$  &$0.3$ & $0.7685$ & $0.2315$ \\
+^^I\hline
+
+^^I$4$  &$0.4$ & $0.7055$ & $0.2945$  \\
+^^I\hline
+
+^^I$5$  &$0.5$ & $0.6484$ & $0.3516$  \\
+^^I\hline
+
+^^I$6$  &$0.6$ & $0.5968$ & $0.4032$  \\
+^^I\hline
+
+^^I$7$  &$0.7$ & $0.5501$ & $0.4499$  \\
+^^I\hline
+
+^^I$8$  &$0.8$ & $0.5079$ & $0.4921$  \\
+^^I\hline
+
+^^I$9$  &$0.9$ & $0.4696$ & $0.5304$  \\
+^^I\hline
+
+^^I$10$  &$1.0$ & $0.4350$ & $0.5650$  \\
+^^I\hline
+\end{longtable}
+\vfill
