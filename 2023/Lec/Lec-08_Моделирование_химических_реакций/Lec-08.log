@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  21 MAR 2023 23:40
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  23 MAR 2023 22:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1761,12 +1761,7 @@ File: logos/ru/light/logoclr.png Graphic file (type bmp)
 <logos/ru/light/logoclr.png>
 [1
 
-] (./Lec-08.toc
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
-[]\TU/ALSSirius(0)/m/n/10 4. []Расчет химической кинетики матричным
- []
-
-)
+] (./Lec-08.toc)
 Overfull \hbox (68.29076pt too wide) in paragraph at lines 142--142
 [][]  
  []
@@ -2279,11 +2274,6 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  [33
 
 ]
-Underfull \hbox (badness 7814) in paragraph at lines 1083--1083
-[][][]\TU/ALSSirius(0)/b/n/14.4 Расчет химической кинетики матричным
- []
-
-
 Overfull \hbox (68.29076pt too wide) in paragraph at lines 1083--1083
 [][][]  
  []
@@ -2492,26 +2482,24 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  [41
 
 ]
-\openout4 = `Lec-08.42.vrb'.
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 1327--1327
+[][][]  
+ []
 
- (./Lec-08.42.vrb)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
+
+Overfull \vbox (5.0pt too high) detected at line 1327
+ []
+
+File: bgs/light/section.jpg Graphic file (type bmp)
+<bgs/light/section.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [42
+[42
 
 ]
 \openout4 = `Lec-08.43.vrb'.
 
- (./Lec-08.43.vrb
-\openout6 = `Lec-08.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-08.out
-.pyg Lec-08.pyg)...executed.
-
- (./Lec-08.out.pyg))
+ (./Lec-08.43.vrb)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -2521,9 +2509,8 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 ]
 \openout4 = `Lec-08.44.vrb'.
 
-
-(./Lec-08.44.vrb
-\openout5 = `Lec-08.pyg'.
+ (./Lec-08.44.vrb
+\openout6 = `Lec-08.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
 escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-08.out
@@ -2539,7 +2526,25 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 ]
 \openout4 = `Lec-08.45.vrb'.
 
- (./Lec-08.45.vrb
+
+(./Lec-08.45.vrb
+\openout5 = `Lec-08.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-08.out
+.pyg Lec-08.pyg)...executed.
+
+ (./Lec-08.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [45
+
+]
+\openout4 = `Lec-08.46.vrb'.
+
+ (./Lec-08.46.vrb
 \openout5 = `Lec-08.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -2552,12 +2557,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
 
-[45
+[46
 
 ]
-\openout4 = `Lec-08.46.vrb'.
+\openout4 = `Lec-08.47.vrb'.
 
- (./Lec-08.46.vrb
+ (./Lec-08.47.vrb
 \openout5 = `Lec-08.pyg'.
 
 runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
@@ -2569,12 +2574,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [46
+ [47
 
 ]
-\openout4 = `Lec-08.47.vrb'.
+\openout4 = `Lec-08.48.vrb'.
 
- (./Lec-08.47.vrb
+ (./Lec-08.48.vrb
 \openout5 = `Lec-08.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -2587,12 +2592,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [47
+ [48
 
 ]
-\openout4 = `Lec-08.48.vrb'.
+\openout4 = `Lec-08.49.vrb'.
 
- (./Lec-08.48.vrb
+ (./Lec-08.49.vrb
 \openout5 = `Lec-08.pyg'.
 
 runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
@@ -2611,12 +2616,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [48
+ [49
 
 ]
-\openout4 = `Lec-08.49.vrb'.
+\openout4 = `Lec-08.50.vrb'.
 
- (./Lec-08.49.vrb
+ (./Lec-08.50.vrb
 \openout5 = `Lec-08.pyg'.
 
 runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
@@ -2628,10 +2633,10 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [49
+ [50
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1536--1536
+Underfull \hbox (badness 10000) in paragraph at lines 1538--1538
 
  []
 
@@ -2642,19 +2647,19 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 1536--1536
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 1538--1538
 [][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 1536
+Overfull \vbox (5.0pt too high) detected at line 1538
  []
 
 File: bgs/contacts.jpg Graphic file (type bmp)
 <bgs/contacts.jpg>
 File: logos/ru/light/logoclr.png Graphic file (type bmp)
 <logos/ru/light/logoclr.png>
-[50
+[51
 
 ]
 \tf@nav=\write8
@@ -2673,20 +2678,26 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Lec-08.out' has not changed.
-(rerunfilecheck)             Checksum: 31EEE2D198C3E75E38C493B1538A5480;2741.
+
+Package rerunfilecheck Warning: File `Lec-08.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Lec-08.out':
+(rerunfilecheck)             Before: 17F742834F12FEF2254005A053A58589;2757
+(rerunfilecheck)             After:  EF9EA2DB8F546448ADB53B5B7F70EE7A;2757.
 runsystem(del Lec-08.pyg)...executed.
 
 runsystem(del Lec-08.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 35494 strings out of 476477
- 748386 string characters out of 5817858
- 1213546 words of memory out of 5000000
- 55014 multiletter control sequences out of 15000+600000
+ 35495 strings out of 476477
+ 748414 string characters out of 5817858
+ 1213562 words of memory out of 5000000
+ 55015 multiletter control sequences out of 15000+600000
  410235 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,12n,108p,640b,945s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Lec-08.pdf (50 pages).
+Output written on Lec-08.pdf (51 pages).
