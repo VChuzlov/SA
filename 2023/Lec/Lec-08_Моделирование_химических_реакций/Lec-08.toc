@@ -14,5 +14,5 @@
 \beamer@subsectionintoc {3}{2}{Решение методом Рунге-Кутты}{31}{0}{3}
 \beamer@sectionintoc {4}{Расчет химической кинетики \\ матричным методом}{34}{0}{4}
 \beamer@sectionintoc {5}{Решение обратной кинетической задачи}{42}{0}{5}
-\beamer@subsectionintoc {5}{1}{Метод Нелдера-Мида}{44}{0}{5}
-\beamer@subsectionintoc {5}{2}{Генетический алгоритм}{48}{0}{5}
+\beamer@subsectionintoc {5}{1}{Метод Нелдера-Мида}{43}{0}{5}
+\beamer@subsectionintoc {5}{2}{Генетический алгоритм}{47}{0}{5}

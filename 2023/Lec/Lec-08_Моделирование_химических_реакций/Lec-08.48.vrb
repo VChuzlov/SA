@@ -1,15 +1,21 @@
 \frametitle{Генетический алгоритм}
 \scriptsize
-Для применения генетического алгоритма также понадобится целевая функция и границы изменения искомых констант скоростей химических реакций:
+В результате получим следующие значения констант скоростей:
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+[0.5221326229161222, 0.7950758008292743, 0.8293744138383334, 0.08219397763058496]
+\end{minted}
+\vfill
+Данные значения можно улучшить, еще раз применив генетический алгоритм или метод Нелдера-Мида с полученным решением в качестве начального приближения:
 \vfill
 \begin{minted}{python}
-import genetic_algorithm as ga
-
-
-bounds = ((.05, 1), (.05, 1), (.05, 1), (.05, 1))  # пределы для искомых значений
-k = ga.genetic_algorithm(
-    bounds,
+initial_k = [
+    0.5221326229161222, 0.7950758008292743,
+    0.8293744138383334, 0.08219397763058496
+]
+k = minimize(
     obj_func,
+    x0=initial_k,
     args=(
         c,
         kinetic_by_matrix,
@@ -17,10 +23,8 @@ k = ga.genetic_algorithm(
         c0,
         stoich_matrix
     ),
-    popsize=100,
-    selection_size=20,
-    generations_count=10
+    method='Nelder-Mead'
 )
-print(k[0])
+print(k)
 \end{minted}
 \vfill

@@ -1,26 +1,21 @@
 \frametitle{Метод Нелдера-Мида}
 \scriptsize
-\begin{minted}[firstnumber=last]{python}
-if __name__ == '__main__':
-    c = np.array([.1606, .2945, .6922])
-    c0 = np.array([1, 0, 0])
-    time = np.linspace(0, 10, 50)
-    stoich_matrix = np.array([[-1, 2, 0], [1, -2, 0], [0, -2, 1], [0, 2, -1]])
-
-    initial_k = (.5, .5, .5, .5)
-    k = minimize(
-        obj_func,
-        x0=initial_k,
-        args=(
-            c,
-            kinetic_by_matrix,
-            time,
-            c0,
-            stoich_matrix
-        ),
-        method='Nelder-Mead'
-    )
-    print(k)
-|\space|
+\begin{minted}[frame=none, linenos=false]{pycon}
+ final_simplex: (array([[0.40298608, 0.56866624, 0.80859594, 0.07419382],
+       [0.40291713, 0.56867713, 0.80862377, 0.07417934],
+       [0.40290911, 0.56866281, 0.80862946, 0.07418973],
+       [0.40300475, 0.56866888, 0.80856544, 0.07421872],
+       [0.40295754, 0.56867751, 0.80859871, 0.07417644]]),
+       array([1.61244305e-09, 1.63992065e-09, 1.65274699e-09, 2.05524296e-09,
+              2.06513227e-09]))
+           fun: 1.612443051432878e-09
+       message: 'Optimization terminated successfully.'
+          nfev: 142
+           nit: 77
+        status: 0
+       success: True
+             x: array([0.40298608, 0.56866624, 0.80859594, 0.07419382])
 \end{minted}
+\vfill
+Действительные значения констант: $k_1=0.5$, $k_2=0.8$, $k_3=0.95$ и $k_4=0.1$.
 \vfill

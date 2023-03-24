@@ -113,30 +113,28 @@
 \headcommand {\sectionentry {5}{Решение обратной кинетической задачи}{42}{Решение обратной кинетической задачи}{0}}
 \headcommand {\slideentry {5}{0}{1}{42/42}{}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\slideentry {5}{0}{2}{43/43}{}{0}}
+\headcommand {\beamer@subsectionpages {42}{42}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{43}{Метод Нелдера-Мида}}
+\headcommand {\slideentry {5}{1}{1}{43/43}{Метод Нелдера-Мида}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\beamer@subsectionpages {42}{43}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{44}{Метод Нелдера-Мида}}
-\headcommand {\slideentry {5}{1}{1}{44/44}{Метод Нелдера-Мида}{0}}
+\headcommand {\slideentry {5}{1}{2}{44/44}{Метод Нелдера-Мида}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\slideentry {5}{1}{2}{45/45}{Метод Нелдера-Мида}{0}}
+\headcommand {\slideentry {5}{1}{3}{45/45}{Метод Нелдера-Мида}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\slideentry {5}{1}{3}{46/46}{Метод Нелдера-Мида}{0}}
+\headcommand {\slideentry {5}{1}{4}{46/46}{Метод Нелдера-Мида}{0}}
 \headcommand {\beamer@framepages {46}{46}}
-\headcommand {\slideentry {5}{1}{4}{47/47}{Метод Нелдера-Мида}{0}}
+\headcommand {\beamer@subsectionpages {43}{46}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{47}{Генетический алгоритм}}
+\headcommand {\slideentry {5}{2}{1}{47/47}{Генетический алгоритм}{0}}
 \headcommand {\beamer@framepages {47}{47}}
-\headcommand {\beamer@subsectionpages {44}{47}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{48}{Генетический алгоритм}}
-\headcommand {\slideentry {5}{2}{1}{48/48}{Генетический алгоритм}{0}}
+\headcommand {\slideentry {5}{2}{2}{48/48}{Генетический алгоритм}{0}}
 \headcommand {\beamer@framepages {48}{48}}
-\headcommand {\slideentry {5}{2}{2}{49/49}{Генетический алгоритм}{0}}
+\headcommand {\slideentry {5}{2}{3}{49/49}{Генетический алгоритм}{0}}
 \headcommand {\beamer@framepages {49}{49}}
-\headcommand {\slideentry {5}{2}{3}{50/50}{Генетический алгоритм}{0}}
+\headcommand {\slideentry {5}{2}{4}{50/50}{Генетический алгоритм}{0}}
 \headcommand {\beamer@framepages {50}{50}}
-\headcommand {\slideentry {5}{2}{4}{51/51}{Генетический алгоритм}{0}}
-\headcommand {\beamer@framepages {51}{51}}
-\headcommand {\beamer@partpages {1}{51}}
-\headcommand {\beamer@subsectionpages {48}{51}}
-\headcommand {\beamer@sectionpages {42}{51}}
-\headcommand {\beamer@documentpages {51}}
-\headcommand {\gdef \inserttotalframenumber {51}}
+\headcommand {\beamer@partpages {1}{50}}
+\headcommand {\beamer@subsectionpages {47}{50}}
+\headcommand {\beamer@sectionpages {42}{50}}
+\headcommand {\beamer@documentpages {50}}
+\headcommand {\gdef \inserttotalframenumber {50}}
