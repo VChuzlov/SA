@@ -1,0 +1,986 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  26 MAR 2023 21:44
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**titlepage.tex
+(./titlepage.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-07-12>
+
+! LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{titlepage}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ^^I\begin{center}
+                     
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--2
+[] 
+ []
+
+! Undefined control sequence.
+l.3 \sffamily^^I\small
+                      {\MakeUppercase {Министерство науки и высшего образования
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no М (U+041C) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no И (U+0418) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Н (U+041D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no И (U+0418) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no С (U+0421) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Т (U+0422) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Е (U+0415) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Р (U+0420) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no С (U+0421) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Т (U+0422) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no В (U+0412) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no О (U+041E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Н (U+041D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no А (U+0410) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no У (U+0423) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no К (U+041A) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no И (U+0418) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no И (U+0418) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no В (U+0412) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Ы (U+042B) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no С (U+0421) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Ш (U+0428) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Е (U+0415) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Г (U+0413) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no О (U+041E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no О (U+041E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Б (U+0411) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Р (U+0420) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no А (U+0410) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no З (U+0417) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no О (U+041E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no В (U+0412) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no А (U+0410) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Н (U+041D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no И (U+0418) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Я (U+042F) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Р (U+0420) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no О (U+041E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no С (U+0421) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no С (U+0421) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no И (U+0418) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Й (U+0419) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no С (U+0421) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no К (U+041A) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no О (U+041E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Й (U+0419) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Ф (U+0424) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Е (U+0415) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Д (U+0414) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Е (U+0415) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Р (U+0420) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no А (U+0410) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no Ц (U+0426) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no И (U+0418) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no И (U+0418) in font [lmsans10-regular]:mapping=te
+x-text;!
+
+Overfull \hbox (33.6pt too wide) in paragraph at lines 4--4
+ \TU/lmss/m/n/10 МИНИСТЕРСТВО 
+ []
+
+
+Overfull \hbox (14.0pt too wide) in paragraph at lines 4--4
+ \TU/lmss/m/n/10 НАУКИ 
+ []
+
+
+Overfull \hbox (2.8pt too wide) in paragraph at lines 4--4
+ \TU/lmss/m/n/10 И 
+ []
+
+
+Overfull \hbox (19.6pt too wide) in paragraph at lines 4--4
+ \TU/lmss/m/n/10 ВЫСШЕГО 
+ []
+
+
+Overfull \hbox (30.8pt too wide) in paragraph at lines 4--4
+ \TU/lmss/m/n/10 ОБРАЗОВАНИЯ 
+ []
+
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 4--4
+ \TU/lmss/m/n/10 РОССИЙСКОЙ 
+ []
+
+
+Overfull \hbox (25.2pt too wide) in paragraph at lines 4--4
+ \TU/lmss/m/n/10 ФЕДЕРАЦИИ 
+ []
+
+! Undefined control sequence.
+<recently read> \footnotesize 
+                              
+l.5 ^^I^^I\footnotesize
+                        {Федеральное государственное автономное образователь...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Ф (U+0424) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no д (U+0434) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no л (U+043B) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ь (U+044C) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no г (U+0433) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no у (U+0443) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no д (U+0434) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no в (U+0432) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no в (U+0432) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no м (U+043C) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no б (U+0431) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no з (U+0437) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no в (U+0432) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no л (U+043B) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ь (U+044C) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no у (U+0443) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ч (U+0447) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ж (U+0436) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no д (U+0434) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no в (U+0432) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ы (U+044B) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ш (U+0448) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no г (U+0433) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no б (U+0431) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no з (U+0437) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no в (U+0432) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no я (U+044F) in font [lmsans10-regular]:mapping=te
+x-text;!
+
+Overfull \hbox (30.8pt too wide) in paragraph at lines 5--5
+ []\TU/lmss/m/n/10 Федеральное 
+ []
+
+
+Overfull \hbox (42.0pt too wide) in paragraph at lines 5--5
+ \TU/lmss/m/n/10 государственное 
+ []
+
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 5--5
+ \TU/lmss/m/n/10 автономное 
+ []
+
+
+Overfull \hbox (42.0pt too wide) in paragraph at lines 5--5
+ \TU/lmss/m/n/10 образовательное 
+ []
+
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 5--5
+ \TU/lmss/m/n/10 учреждение 
+ []
+
+
+Overfull \hbox (19.6pt too wide) in paragraph at lines 5--5
+ \TU/lmss/m/n/10 высшего 
+ []
+
+
+Overfull \hbox (30.8pt too wide) in paragraph at lines 5--5
+ \TU/lmss/m/n/10 образования 
+ []
+
+! Undefined control sequence.
+<recently read> \small 
+                       
+l.6 ^^I\small
+             ^^I\MakeTextUppercase{\textbf{<<Национальный исследовательский}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.6 ^^I\small^^I\MakeTextUppercase
+                                  {\textbf{<<Национальный исследовательский}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Н (U+041D) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no а (U+0430) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no ц (U+0446) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no и (U+0438) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no о (U+043E) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no н (U+043D) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no а (U+0430) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no л (U+043B) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no ь (U+044C) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no н (U+043D) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no ы (U+044B) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no й (U+0439) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no и (U+0438) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no с (U+0441) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no с (U+0441) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no л (U+043B) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no е (U+0435) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no д (U+0434) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no о (U+043E) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no в (U+0432) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no а (U+0430) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no т (U+0442) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no е (U+0435) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no л (U+043B) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no ь (U+044C) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no с (U+0441) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no к (U+043A) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no и (U+0438) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no й (U+0439) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+
+Overfull \hbox (39.1pt too wide) in paragraph at lines 6--6
+ []\TU/lmss/bx/n/10 «Национальный 
+ []
+
+
+Overfull \hbox (47.6pt too wide) in paragraph at lines 6--6
+ \TU/lmss/bx/n/10 исследовательский 
+ []
+
+Missing character: There is no Т (U+0422) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no о (U+043E) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no м (U+043C) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no с (U+0441) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no к (U+043A) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no и (U+0438) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no й (U+0439) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no п (U+043F) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no о (U+043E) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no л (U+043B) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no и (U+0438) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no т (U+0442) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no е (U+0435) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no х (U+0445) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no н (U+043D) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no и (U+0438) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no ч (U+0447) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no е (U+0435) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no с (U+0441) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no к (U+043A) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no и (U+0438) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no й (U+0439) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no у (U+0443) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no н (U+043D) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no и (U+0438) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no в (U+0432) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no е (U+0435) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no р (U+0440) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no с (U+0441) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no и (U+0438) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no т (U+0442) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no е (U+0435) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no т (U+0442) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+
+Overfull \hbox (19.6pt too wide) in paragraph at lines 6--6
+ []\TU/lmss/bx/n/10 Томский 
+ []
+
+
+Overfull \hbox (42.0pt too wide) in paragraph at lines 6--6
+ \TU/lmss/bx/n/10 политехнический 
+ []
+
+
+Overfull \hbox (36.3pt too wide) in paragraph at lines 6--6
+ \TU/lmss/bx/n/10 университет» 
+ []
+
+! Undefined control sequence.
+l.14 ^^I^^I^^I\Large
+                     \MakeUppercase{\textbf{Программный код}} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no П (U+041F) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no Р (U+0420) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no О (U+041E) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no Г (U+0413) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no Р (U+0420) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no А (U+0410) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no М (U+041C) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no М (U+041C) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no Н (U+041D) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no Ы (U+042B) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no Й (U+0419) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no К (U+041A) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no О (U+041E) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+Missing character: There is no Д (U+0414) in font [lmsans10-bold]:mapping=tex-t
+ext;!
+
+Overfull \hbox (30.8pt too wide) in paragraph at lines 14--14
+ []\TU/lmss/bx/n/10 ПРОГРАММНЫЙ 
+ []
+
+
+Overfull \hbox (8.4pt too wide) in paragraph at lines 14--14
+ \TU/lmss/bx/n/10 КОД 
+ []
+
+Missing character: There is no С (U+0421) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no м (U+043C) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ы (U+044B) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no й (U+0439) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no л (U+043B) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no з (U+0437) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no п (U+043F) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ц (U+0446) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no в (U+0432) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no х (U+0445) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no м (U+043C) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ч (U+0447) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no к (U+043A) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no й (U+0439) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no х (U+0445) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no л (U+043B) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no г (U+0433) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+
+Overfull \hbox (25.2pt too wide) in paragraph at lines 16--16
+ []\TU/lmss/m/n/10 Системный 
+ []
+
+
+Overfull \hbox (16.8pt too wide) in paragraph at lines 16--16
+ \TU/lmss/m/n/10 анализ 
+ []
+
+
+Overfull \hbox (25.2pt too wide) in paragraph at lines 16--16
+ \TU/lmss/m/n/10 процессов 
+ []
+
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 16--16
+ \TU/lmss/m/n/10 химической 
+ []
+
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 16--16
+ \TU/lmss/m/n/10 технологии 
+ []
+
+Missing character: There is no Л (U+041B) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no б (U+0431) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no я (U+044F) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no б (U+0431) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+
+Overfull \hbox (33.6pt too wide) in paragraph at lines 17--17
+ []\TU/lmss/m/n/10 Лабораторная 
+ []
+
+
+Overfull \hbox (16.8pt too wide) in paragraph at lines 17--17
+ \TU/lmss/m/n/10 работа 
+ []
+
+
+Overfull \hbox (13.19pt too wide) in paragraph at lines 17--17
+ \TU/lmss/m/n/10 №7 
+ []
+
+Missing character: There is no Р (U+0420) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no а (U+0430) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ч (U+0447) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no х (U+0445) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no м (U+043C) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no к (U+043A) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no х (U+0445) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no л (U+043B) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no г (U+0433) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ч (U+0447) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no к (U+043A) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no й (U+0439) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no и (U+0438) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no м (U+043C) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ы (U+044B) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no п (U+043F) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no м (U+043C) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no е (U+0435) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no н (U+043D) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no й (U+0439) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no у (U+0443) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no к (U+043A) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no т (U+0442) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no у (U+0443) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no р (U+0440) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no ы (U+044B) in font [lmsans10-regular]:mapping=te
+x-text;!
+
+Overfull \hbox (21.8pt too wide) in paragraph at lines 18--21
+ []\TU/lmss/m/n/10 «Расчет 
+ []
+
+
+Overfull \hbox (20.13pt too wide) in paragraph at lines 18--21
+ \TU/lmss/m/n/10 химико- 
+ []
+
+
+Overfull \hbox (42.0pt too wide) in paragraph at lines 18--21
+ \TU/lmss/m/n/10 технологической 
+ []
+
+
+Overfull \hbox (19.6pt too wide) in paragraph at lines 18--21
+ \TU/lmss/m/n/10 системы 
+ []
+
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 18--21
+ \TU/lmss/m/n/10 переменной 
+ []
+
+
+Overfull \hbox (30.2pt too wide) in paragraph at lines 18--21
+ \TU/lmss/m/n/10 структуры» 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 29.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 ^^I^^IТ
+            омск~--~2023~г.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1]
+Missing character: There is no Т (U+0422) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no о (U+043E) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no м (U+043C) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no с (U+0441) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no к (U+043A) in font [lmsans10-regular]:mapping=te
+x-text;!
+Missing character: There is no г (U+0433) in font [lmsans10-regular]:mapping=te
+x-text;!
+
+Overfull \hbox (21.22pt too wide) in paragraph at lines 34--35
+ []\TU/lmss/m/n/10 Томск – 
+ []
+
+
+Overfull \hbox (27.8pt too wide) in paragraph at lines 34--35
+ \TU/lmss/m/n/10 2023 г. 
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{titlepage}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 \end{titlepage}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> titlepage.tex
+                 
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 30 strings out of 476477
+ 625 string characters out of 5817858
+ 303539 words of memory out of 5000000
+ 20576 multiletter control sequences out of 15000+600000
+ 403454 words of font info for 30 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 24i,6n,23p,177b,185s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on titlepage.pdf (1 page).

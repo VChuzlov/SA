@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  25 MAR 2023 12:33
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  26 MAR 2023 20:08
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2678,24 +2678,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `Lec-08.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Lec-08.out':
-(rerunfilecheck)             Before: 17F742834F12FEF2254005A053A58589;2757
-(rerunfilecheck)             After:  EF9EA2DB8F546448ADB53B5B7F70EE7A;2757.
+Package rerunfilecheck Info: File `Lec-08.out' has not changed.
+(rerunfilecheck)             Checksum: EF9EA2DB8F546448ADB53B5B7F70EE7A;2757.
 runsystem(del Lec-08.pyg)...executed.
 
 runsystem(del Lec-08.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 35495 strings out of 476477
- 748414 string characters out of 5817858
- 1213562 words of memory out of 5000000
- 55015 multiletter control sequences out of 15000+600000
+ 35497 strings out of 476477
+ 748432 string characters out of 5817858
+ 1213618 words of memory out of 5000000
+ 55017 multiletter control sequences out of 15000+600000
  410235 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,12n,108p,640b,945s stack positions out of 5000i,500n,10000p,200000b,80000s
