@@ -1,0 +1,60 @@
+\frametitle{Задача}
+\scriptsize
+\begin{minipage}{.3\textwidth}
+$$
+\left\{
+\begin{aligned}
+\dfrac{d\left[C_9H_{20}\right]}{dt} &= -k_1 \cdot \left[C_9H_{20}\right] \\
+\dfrac{d\left[C_9H_{18}\right]}{dt} &= k_1 \cdot \left[C_9H_{20}\right] - k_2 \cdot \left[C_9H_{18}\right] \\
+\dfrac{d\left[C_9H_{16}\right]}{dt} &= k_2 \cdot \left[C_9H_{18}\right] \\
+\dfrac{d\left[H_2\right]}{dt} &= k_1 \cdot \left[C_9H_{20}\right] + k_2 \cdot \left[C_9H_{18}\right] \\
+\end{aligned}
+\right.
+$$
+\vfill
+\begin{table}[h!]
+\begin{tabular}{|l|r|r|r|r|}
+\hline
+Реакция & $C_9H_{20}$ & $C_9H_{18}$ & $C_9H_{16}$ & $H_2$ \\
+\hline
+$r_1$ & $-1$ & $1$ & $0$ & $1$ \\
+\hline
+$r_2$ & $0$ & $-1$ & $1$ & $1$ \\
+\hline
+\end{tabular}
+\end{table}
+\vfill
+\end{minipage}
+\hspace{.19\textwidth}
+\begin{minipage}{.5\textwidth}
+\centering
+Концентрация компонентов, $\mathrm{моль / л}$
+\begin{table}[h!]
+\begin{tabular}{|l|r|r|r|r|}
+\hline
+Время, ч & $C_9H_{20}$ & $C_9H_{18}$ & $C_9H_{16}$ & $H_2$ \\
+\hline
+$0.1$ & $0.8353$ & $0.1563$ & $0.0084$ & $0.1732$ \\
+\hline
+$0.2$ & $0.6977$ & $0.2715$ & $0.0308$ & $0.3331$ \\
+\hline
+$0.3$ & $0.5827$ & $0.3540$ & $0.0633$ & $0.4805$ \\
+\hline
+$0.4$ & $0.4868$ & $0.4104$ & $0.1028$ & $0.6161$ \\
+\hline
+$0.5$ & $0.4066$ & $0.4463$ & $0.1471$ & $0.7405$ \\
+\hline
+$0.6$ & $0.3396$ & $0.4662$ & $0.1942$ & $0.8546$ \\
+\hline
+$0.7$ & $0.2837$ & $0.4736$ & $0.2427$ & $0.9591$ \\
+\hline
+$0.8$ & $0.2369$ & $0.4716$ & $0.2915$ & $1.0545$ \\
+\hline
+$0.9$ & $0.1979$ & $0.4625$ & $0.3396$ & $1.1417$ \\
+\hline
+$1.0$ & $0.1653$ & $0.4481$ & $0.3866$ & $1.2213$ \\
+\hline
+\end{tabular}
+\end{table}
+\end{minipage}
+\vfill

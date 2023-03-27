@@ -1,0 +1,16 @@
+\frametitle{Задача}
+\scriptsize
+Необходимо определить кинетические параметры изменения концентрации каждого компонента в течение $1$ часа с шагом $0.1$. Концентрация $\left[C_9H_{20}\right]$ в начальный момент времени $1\ \mathrm{моль / л}$, концентрации остальных компонентов равны нулю. Построить зависимость $C\left(t\right)$ для каждого компонента.
+\vfill
+\textbf{Схема химических превращений:}
+\vfill
+\scalebox{.7}{
+\setchemfig{scheme debug=false}
+\schemestart \chemfig{H_3C-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_3} \arrow{->[$k_1$][]}\chemfig{H_2C=[:30]CH-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_3} \+  \chemfig{H_2} \schemestop
+}
+\vfill
+\scalebox{.7}{
+\setchemfig{scheme debug=false}
+\schemestart \chemfig{H_2C=[:30]CH-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_3} \arrow{->[$k_2$][]}\chemfig{H_2C=[:30]CH-[:-30]CH=[:30]CH-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_3} \+  \chemfig{H_2} \schemestop
+}
+\vfill

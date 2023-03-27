@@ -1,0 +1,227 @@
+
+% !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[aspectratio=169, mathserif]{beamer}% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+
+% Style options:
+% light --- light theme (default)
+% dark --- dark theme
+% enlogo --- english TPU logo {default}
+% rulogo --- russian TPU logo
+
+\usetheme[light, rulogo]{tpu}% dark theme used as an example of optional argument
+
+\usepackage[russian]{babel}%uncomment this to work in russian
+\usepackage[utf8]{inputenc}
+
+\usepackage{fontspec}
+
+\setromanfont{Brygada1918}[
+Path=./fonts/BrygadaFontFiles/,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\setsansfont{ALSSirius}[
+Path=./fonts/ALSSiriusFiles/,
+Extension = .otf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+%ItalicFont=*-Italic,
+%BoldItalicFont=*-BoldItalic
+]
+
+\setmonofont{Consolas}[
+Path=./fonts/ConsolasFontFiles/,
+%Scale=0.85,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\usepackage[cache=false]{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{onedarkBckGr}{RGB}{40, 44, 52}
+
+\usemintedstyle[python]{default}
+\setminted[python]{
+fontsize=\scriptsize,
+escapeinside=||,
+mathescape=true,
+numbersep=5pt,
+gobble=2,
+linenos=true,
+frame=leftline,
+framesep=1mm,
+python3=true,
+%bgcolor=backcolour,
+}
+
+\usemintedstyle[pycon]{default}
+\setminted[pycon]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	frame=single,
+	framesep=1mm,
+	python3=true,
+%	bgcolor=backcolour,
+	linenos=true,
+}
+
+\newmint{python}{}
+
+\usepackage{booktabs}% good looking tables
+\usepackage{multicol}% text in multiple columns, useful for side-by-side text and pictures
+\usepackage{hyperref}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\captionsetup[table]{justification=raggedleft,
+labelformat=empty,
+labelsep=endash,
+textformat=center,
+position=top,
+skip=5pt
+}
+
+\hyphenpenalty=10000% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
+
+\usepackage{chemfig}
+%\includeonlyframes{c}
+
+\title{\LARGE{Системный анализ процессов химической технологии}}
+\subtitle{\textcolor{tpugreen}{\textbf{Лабораторная работа №8}} \\ \textbf{Идентификация кинетических параметров \\ при моделировании химических реакций}}
+\author[]{Вячеслав Алексеевич Чузлов, \\
+к.т.н., доцент ОХИ ИШПР}
+\date{\today}
+
+\begin{document}
+
+\newcommand{\pythoninline}[1]{%
+	\colorbox{white}{%
+		\parbox[b][.6em]{\widthof{\mintinline[fontsize=\tiny]{ipython}{#1}}}{\mintinline[fontsize=\tiny]{ipython}{#1}}%
+	}%
+}
+
+% notice usage of \titleframe and several other unconventional functions
+% the reason being is custom backgrounds on these slides
+
+\titleframe% title
+
+%\tocframe{}% this custom frame accepts options for ToC
+
+
+\subsection{Задача}
+\begin{frame}[fragile, label=c]{Задача}
+\scriptsize
+Необходимо определить кинетические параметры изменения концентрации каждого компонента в течение $1$ часа с шагом $0.1$. Концентрация $\left[C_9H_{20}\right]$ в начальный момент времени $1\ \mathrm{моль / л}$, концентрации остальных компонентов равны нулю. Построить зависимость $C\left(t\right)$ для каждого компонента.
+\vfill
+\textbf{Схема химических превращений:}
+\vfill
+\scalebox{.7}{
+\setchemfig{scheme debug=false}
+\schemestart \chemfig{H_3C-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_3} \arrow{->[$k_1$][]}\chemfig{H_2C=[:30]CH-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_3} \+  \chemfig{H_2} \schemestop
+}
+\vfill
+\scalebox{.7}{
+\setchemfig{scheme debug=false}
+\schemestart \chemfig{H_2C=[:30]CH-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_3} \arrow{->[$k_2$][]}\chemfig{H_2C=[:30]CH-[:-30]CH=[:30]CH-[:-30]CH_2-[:30]CH_2-[:-30]CH_2-[:30]CH_2-[:-30]CH_3} \+  \chemfig{H_2} \schemestop
+}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile, label=c]{Задача}
+\scriptsize
+\begin{minipage}{.3\textwidth}
+$$
+\left\{
+\begin{aligned}
+\dfrac{d\left[C_9H_{20}\right]}{dt} &= -k_1 \cdot \left[C_9H_{20}\right] \\
+\dfrac{d\left[C_9H_{18}\right]}{dt} &= k_1 \cdot \left[C_9H_{20}\right] - k_2 \cdot \left[C_9H_{18}\right] \\
+\dfrac{d\left[C_9H_{16}\right]}{dt} &= k_2 \cdot \left[C_9H_{18}\right] \\
+\dfrac{d\left[H_2\right]}{dt} &= k_1 \cdot \left[C_9H_{20}\right] + k_2 \cdot \left[C_9H_{18}\right] \\
+\end{aligned}
+\right.
+$$
+\vfill
+\begin{table}[h!]
+\begin{tabular}{|l|r|r|r|r|}
+\hline
+Реакция & $C_9H_{20}$ & $C_9H_{18}$ & $C_9H_{16}$ & $H_2$ \\
+\hline
+$r_1$ & $-1$ & $1$ & $0$ & $1$ \\
+\hline
+$r_2$ & $0$ & $-1$ & $1$ & $1$ \\
+\hline
+\end{tabular}
+\end{table}
+\vfill
+\end{minipage}
+\hspace{.19\textwidth}
+\begin{minipage}{.5\textwidth}
+\centering
+Концентрация компонентов, $\mathrm{моль / л}$
+\begin{table}[h!]
+\begin{tabular}{|l|r|r|r|r|}
+\hline
+Время, ч & $C_9H_{20}$ & $C_9H_{18}$ & $C_9H_{16}$ & $H_2$ \\
+\hline
+$0.1$ & $0.8353$ & $0.1563$ & $0.0084$ & $0.1732$ \\
+\hline
+$0.2$ & $0.6977$ & $0.2715$ & $0.0308$ & $0.3331$ \\
+\hline
+$0.3$ & $0.5827$ & $0.3540$ & $0.0633$ & $0.4805$ \\
+\hline
+$0.4$ & $0.4868$ & $0.4104$ & $0.1028$ & $0.6161$ \\
+\hline
+$0.5$ & $0.4066$ & $0.4463$ & $0.1471$ & $0.7405$ \\
+\hline
+$0.6$ & $0.3396$ & $0.4662$ & $0.1942$ & $0.8546$ \\
+\hline
+$0.7$ & $0.2837$ & $0.4736$ & $0.2427$ & $0.9591$ \\
+\hline
+$0.8$ & $0.2369$ & $0.4716$ & $0.2915$ & $1.0545$ \\
+\hline
+$0.9$ & $0.1979$ & $0.4625$ & $0.3396$ & $1.1417$ \\
+\hline
+$1.0$ & $0.1653$ & $0.4481$ & $0.3866$ & $1.2213$ \\
+\hline
+\end{tabular}
+\end{table}
+\end{minipage}
+\vfill
+\end{frame}
+
+
+\contactsframe[\Large \textbf{Благодарю за внимание!}]{
+
+\includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\
+\includegraphics[width=.05\textwidth]{pics/mail} \quad chuva@tpu.ru \\
+\includegraphics[width=.03\textwidth]{pics/tel} \quad +7-962-782-66-15
+}
+
+\end{document}
+

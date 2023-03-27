@@ -1,0 +1,39 @@
+\mode<presentation>
+
+% light font on dark background and vice versa
+
+\DeclareOptionBeamer{dark}{
+	\def \TPUmaincolor {tpuwhite}
+	\def \TPUsubcolor {tpugreen}
+}
+\DeclareOptionBeamer{light}{
+	\def \TPUmaincolor {tpublack}
+	\def \TPUsubcolor {tpugreen}
+}
+
+\ExecuteOptionsBeamer{light}
+\ProcessOptionsBeamer
+
+% defining recommended TPU colours
+
+\definecolor{tpuwhite}{RGB}{255,255,255}
+\definecolor{tpublack}{RGB}{0,0,0}
+\definecolor{tpugreen}{RGB}{40,190,70}
+%\definecolor{tpudarkgreen}{RGB}{32,151,64}
+
+%\definecolor{extragreen}{RGB}{0,166,81}
+\definecolor{extrared}{RGB}{255,68,96}
+\definecolor{extrablue}{RGB}{101,115,255}
+\definecolor{extraorange}{RGB}{255,182,0}
+
+\definecolor{slidenumber}{RGB}{160,160,160}		% slide number colour matches the logo
+
+\setbeamercolor*{structure}{fg = \TPUmaincolor}
+\setbeamercolor*{alerted text}{fg = \TPUsubcolor}
+\setbeamercolor*{normal text}{fg = \TPUmaincolor}
+\setbeamertemplate{itemize items}{\color{\TPUsubcolor}\tiny$\blacksquare$}	% square itemize bullets
+
+\setbeamercolor*{date in head/foot}{fg = slidenumber}
+
+\mode
+<all>

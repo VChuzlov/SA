@@ -1,0 +1,26 @@
+\frametitle{Описание класса \texttt {Splitter}}
+\scriptsize
+\vfill
+\begin{table}[h!]
+^^I\centering
+^^I\renewcommand{\arraystretch}{1.2}
+^^I\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
+^^I^^I\hline
+^^I^^I\textbf{Атрибуты класса} & \textbf{Описание}  \\
+^^I^^I\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def calculate(
+    self,
+    flow: Flow,
+    *ratio: float
+) -> list[Flow]:
+\end{minted}
+\vfill
+\end{minipage}
+^^I^^I& Расчет делителя потока; возвращает в качестве результата список объектов \texttt{Flow} \\
+^^I^^I\hline
+^^I\end{tabular}
+\end{table}
+\vfill
