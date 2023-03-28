@@ -2,6 +2,8 @@ import numpy as np
 from scipy.integrate import solve_ivp
 from flows import Flow
 import constants as const
+import converters_and_functions as conv
+from kinetic import kinetic_scheme
 
 
 class Bed:
@@ -45,21 +47,21 @@ class Bed:
         feedstock: Flow, 
     ) -> Flow:
         self.residence_time = (
-            self.volume / feedstock.ideal_gas_volume * 3600 if feedstock.ideal_gas_volume
-            else self.volume / feedstock.std_liquid_volume_flow_rate * 3600
+            self.volume / feedstock.volume_flow_rate * 3600
         )
         solution = solve_ivp(
             kinetic_scheme,
             t_span=(0, self.residence_time),
-            y0=feedstock.mole_fractions,  # todo: molar fractions
+            y0=feedstock.maolar_fractions,  # todo: molar fractions
             args=(
                 feedstock.temperature,
             )
         )
         molar_fractions = solution.y[:, -1]
+        mf = conv.convert_molar_to_mass_fractions(molar_fractions, const.MR)
         product = Flow(
             mass_flow_rate=feedstock.mass_flow_rate,
-            mass_fractions=molar_fractions,
+            mass_fractions=mf,
             temperature=feedstock.temperature
         )
         return product
@@ -71,4 +73,6 @@ if __name__ == '__main__':
         'height': 1.5,
     }
     bed = Bed(**bed_params)
-    print(bed)
+    f = Flow(1000, np.random.random(17), temperature=273.15)
+    product = bed.calculate(kinetic_scheme, f)
+    print(product.mass_fractions)

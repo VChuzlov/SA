@@ -28,6 +28,10 @@ class Flow:
         )
         self.mole_flow_rate = self.mass_flow_rate / self.average_mol_mass
         self.volume_flow_rate = self.mass_flow_rate / (self.density * 1e3)
+        
+        self.maolar_fractions = conv.convert_mass_to_molar_fractions(
+            self.mass_fractions, const.MR, self.density
+        )
 
     @property
     def flow_cp(self) -> float:

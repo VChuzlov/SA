@@ -1,3 +1,4 @@
+from __future__ import annotations
 import numpy as np
 import pandas as pd
 import constants as const
@@ -5,6 +6,14 @@ import constants as const
 
 kinetic_matrix = pd.read_excel('kinetic_matrix.xlsx')
 kinetic_matrix = kinetic_matrix.iloc[:, 1:].to_numpy()
+
+
+def arrhenius_law(
+    temperature: float | np.ndarray,
+    ea: float | np.ndarray = const.EA,
+    predexp: float | np.ndarray = const.PREDEXP
+) -> float | np.ndarray:
+    return predexp * np.exp(-ea / (8.314 * temperature))
 
 
 def kinetic_scheme(
@@ -15,7 +24,7 @@ def kinetic_scheme(
     ea: np.ndarray = const.EA,
     stoich_matrix: np.ndarray = kinetic_matrix
 ) -> np.ndarray:
-
+    k = arrhenius_law(temperature)
     mask = stoich_matrix < 0
     p = (c ** -(stoich_matrix * mask)).prod(axis=1)
     reaction_rates = p * k
