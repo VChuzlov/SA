@@ -31,7 +31,7 @@ def main() -> None:
         ]
     )
     f = Flow(
-        50_000, 
+        50_000,
         mf, 
         temperature=403.15,
         pressure=3001.325
@@ -47,7 +47,7 @@ def main() -> None:
     mxr = Mixer()
     feedstock = mxr.mix(f, h2)    
     r = Reactor(*const.bed_params)
-    x0 = np.random.random(44)
+    x0 = const.PREDEXP
     solution = minimize(
         obj_func,
         x0,
@@ -55,11 +55,6 @@ def main() -> None:
         method='Nelder-Mead',
         bounds=[(0, None) for _ in range(44)]
     )
-    # solution = differential_evolution(
-    #     obj_func,
-    #     [(0, 1) for _ in range(44)],
-    #     args=(feedstock, r, kinetic_scheme, data)
-    # )
     print(solution.fun)
     print(solution.x)
     return
