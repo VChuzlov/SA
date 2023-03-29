@@ -1,0 +1,19 @@
+\frametitle{Расчет кинетических параметров}
+\scriptsize
+\begin{minipage}{.6\textwidth}
+\includegraphics[width=\linewidth]{./pics/err}
+\end{minipage}
+\begin{minipage}{.39\textwidth}
+\begin{itemize}
+\item Обратная кинетическая задача была решена методом Нелдера-Мида с ограничением по минимальному значению констант: \mintinline{python}|(0, None)|;
+\item Оптимизируемая функция:
+\vfill
+$$
+^^Ierror = \sum \limits _{i=1} ^{n} \left(c_i - c_{i, calc}\right) ^2
+$$
+\vfill
+\item Значение $error = 0.009515497205293953$.
+\end{itemize}
+\vfill
+\end{minipage}
+\vfill

@@ -1,0 +1,50 @@
+\frametitle{Описание класса \texttt {Flow}}
+\scriptsize
+\begin{table}[h!]
+^^I\centering
+^^I\renewcommand{\arraystretch}{1.2}
+^^I\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
+^^I^^I\hline
+^^I^^I\textbf{Атрибуты класса} & \textbf{Описание}  \\
+^^I^^I\hline
+^^I^^I\mintinline{python}|mass_flow_rate: float| & Массовый расход, кг / ч \\
+^^I^^I\hline
+^^I^^I\mintinline{python}|mole_flow_rate: float| & Мольный расход, кмоль / ч \\
+^^I^^I\hline
+^^I^^I\mintinline{python}|volume_flow_rate: float| & Объемный расход, м$^3$ / ч \\
+^^I^^I\hline
+^^I^^I\mintinline{python}|mass_fractions: np.ndarray| & Массовые доли \\
+^^I^^I\hline
+^^I^^I\mintinline{python}|mole_fractions: np.ndarray| & Мольные доли \\
+^^I^^I\hline
+^^I^^I\cellcolor{blue!25} \mintinline{python}|molar_fractions: np.ndarray| & \cellcolor{blue!25} Молярная концентрация, моль / л \\
+^^I^^I\hline
+^^I^^I\mintinline{python}|volume_fractions: np.ndarray| & Объемные доли \\
+^^I^^I\hline
+^^I^^I\mintinline{python}|temperature: float| & Температура потока, К \\
+^^I^^I\hline
+^^I^^I\cellcolor{blue!25} \mintinline{python}|pressure: float| & \cellcolor{blue!25} Давление потока, кПа \\
+^^I^^I\hline
+^^I^^I\mintinline{python}|density: float| & Плотность потока, г / см$^3$ \\
+^^I^^I\hline
+^^I^^I\cellcolor{blue!25} \mintinline{python}|ideal_gas_density: float| & \cellcolor{blue!25} Плотность потока для идеального газа, кг / м$^3$ \\
+^^I^^I\hline
+^^I^^I\mintinline{python}|average_mol_mass: float| & Средняя молекулярная масса потока, г / моль \\
+^^I^^I\hline
+^^I^^I\mintinline{python}|cp: float| & Массовая теплоемкость потока, кДж / кг \\
+^^I^^I\hline
+%\begin{minipage}{\linewidth}
+%\begin{minted}[frame=none, linenos=false]{python}
+%def __init__(
+%    self,
+%    mass_flow_rate: float,
+%    mass_fractions: np.ndarray,
+%    temperature: float
+%) -> None
+%\end{minted}
+%\end{minipage}
+%^^I^^I& Создает новый экземпляр класса \texttt{Flow}, заполняя все поля \\
+%^^I^^I\hline
+^^I\end{tabular}
+\end{table}
+\vfill

@@ -48,7 +48,6 @@ def main() -> None:
     feedstock = mxr.mix(f, h2)    
     r = Reactor(*const.bed_params)
     x0 = const.PREDEXP
-    # x0 = np.random.random(44)
     solution = minimize(
         obj_func,
         x0,
@@ -58,6 +57,14 @@ def main() -> None:
     )
     print(solution.fun)
     print(solution.x)
+    # err = obj_func(
+    #     const.PREDEXP, 
+    #     feedstock, 
+    #     r, 
+    #     kinetic_scheme, 
+    #     data
+    # )
+    # print(err)
     return
 
 

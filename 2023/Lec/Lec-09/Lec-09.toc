@@ -1,0 +1,9 @@
+\babel@toc {russian}{}
+\beamer@subsectionintoc {0}{1}{Принципиальная схема}{2}{0}{0}
+\beamer@subsectionintoc {0}{2}{Кинетическая модель процесса изомеризации}{3}{0}{0}
+\beamer@subsectionintoc {0}{3}{Описание класса \texttt {Flow}}{4}{0}{0}
+\beamer@subsectionintoc {0}{4}{Функции для пересчета составов}{6}{0}{0}
+\beamer@subsectionintoc {0}{5}{Функции для расчета плотности идеального газа}{7}{0}{0}
+\beamer@subsectionintoc {0}{6}{Описание класса \texttt {Bed}}{8}{0}{0}
+\beamer@subsectionintoc {0}{7}{Описание класса \texttt {Reactor}}{9}{0}{0}
+\beamer@subsectionintoc {0}{8}{Расчет кинетических параметров}{10}{0}{0}

@@ -1,0 +1,58 @@
+\frametitle{Описание класса \texttt {Bed}}
+\scriptsize
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
+^^I\hline
+^^I\textbf{Атрибуты класса} & \textbf{Описание}  \\
+^^I\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def __init__(
+        self,
+        diameter: float = None,
+        height: float = None,
+        volume: float = None
+) -> None
+\end{minted}
+\vfill
+\end{minipage}
+^^I&
+\begin{minipage}{\linewidth}
+Конструктор класса, необходимо передать диаметр и высоту, диаметр и объем или высоту и объем полки
+\end{minipage}
+\\
+^^I\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def __repr__(self) -> str
+\end{minted}
+\vfill
+\end{minipage}
+^^I^^I& Строковое представление объекта класса \texttt{Bed} \\
+^^I^^I\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def calculate(
+    self,
+    kinetic_scheme: callable,
+    feedstock: Flow,
+    ea: np.ndarray,
+    predexp: np.ndarray
+) -> Flow
+\end{minted}
+\vfill
+\end{minipage}
+^^I^^I&
+\begin{minipage}{\linewidth}
+Расчет системы дифференциальных уравнений изменения концентрации компонентов по времени
+\end{minipage}
+\\
+^^I^^I\hline
+^^I\end{tabular}
+\end{table}
+\vfill

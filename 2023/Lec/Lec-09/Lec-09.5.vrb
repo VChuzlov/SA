@@ -1,0 +1,29 @@
+\frametitle{Описание класса \texttt {Flow}}
+\scriptsize
+\begin{table}[h!]
+^^I\centering
+^^I\renewcommand{\arraystretch}{1.2}
+^^I\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
+^^I^^I\hline
+^^I^^I\textbf{Атрибуты класса} & \textbf{Описание}  \\
+^^I^^I\hline
+\begin{minipage}{\linewidth}
+\begin{minted}[frame=none, linenos=false]{python}
+def __init__(
+    self,
+    mass_flow_rate: float,
+    mass_fractions: np.ndarray,
+    temperature: float,
+    pressure: float
+) -> None
+\end{minted}
+\end{minipage}
+^^I^^I&
+\begin{minipage}{\linewidth}
+Создает новый экземпляр класса \texttt{Flow}, заполняя все поля
+\end{minipage}
+ \\
+^^I^^I\hline
+^^I\end{tabular}
+\end{table}
+\vfill

@@ -1,0 +1,5 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'Ïðîãðàììíûé êîä ïðîåêòà.blg'
+[102] biber-MSWIN32:340> INFO - === 
+[563] Utils.pm:411> ERROR - Cannot find control file 'Ïðîãðàììíûé êîä ïðîåêòà.bcf'! - Did latex run successfully on your .tex file before you ran biber?
+[563] Biber.pm:132> INFO - ERRORS: 1

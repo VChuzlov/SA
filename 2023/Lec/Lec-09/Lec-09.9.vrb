@@ -1,0 +1,56 @@
+\frametitle{Описание класса \texttt {Reactor}}
+\scriptsize
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
+^^I\hline
+^^I\textbf{Атрибуты класса} & \textbf{Описание}  \\
+^^I\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def __init__(
+    self,
+    *bed_params: dict
+) -> None
+\end{minted}
+\vfill
+\end{minipage}
+^^I&
+\begin{minipage}{\linewidth}
+Конструктор класса, необходимо передать диаметр и высоту, диаметр и объем или высоту и объем для каждой полки в виде словаря
+\end{minipage}
+^^I\\
+^^I\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def calculate(
+    self,
+    kinetic_scheme: callable,
+    feedstock: Flow,
+    ea: np.ndarray = const.EA,
+    predexp: np.ndarray = const.PREDEXP
+) -> Flow
+\end{minted}
+\vfill
+\end{minipage}
+^^I^^I&
+\begin{minipage}{\linewidth}
+Расчет системы дифференциальных уравнений изменения концентрации компонентов по времени для каждой полки катализатора
+\end{minipage}
+^^I^^I\\
+^^I^^I\hline
+\begin{minipage}{\linewidth}
+\vfill
+\begin{minted}[frame=none, linenos=false]{python}
+def performance(self) -> dict
+\end{minted}
+\vfill
+\end{minipage}
+^^I^^I& Метод, возвращающий словарь с информацией об эффективности процесса изомеризации: выход изомеризата, выход изоалканов \\
+^^I^^I\hline
+^^I\end{tabular}
+\end{table}
+\vfill

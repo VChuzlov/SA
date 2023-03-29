@@ -1,0 +1,43 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\beamer@subsectionentry {0}{0}{1}{2}{Принципиальная схема}}
+\headcommand {\slideentry {0}{1}{1}{2/2}{Принципиальная схема}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\beamer@subsectionentry {0}{0}{2}{3}{Кинетическая модель процесса изомеризации}}
+\headcommand {\slideentry {0}{2}{1}{3/3}{Кинетическая модель процесса изомеризации}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{0}{3}{4}{Описание класса \texttt {Flow}}}
+\headcommand {\slideentry {0}{3}{1}{4/4}{Описание класса \texttt {Flow}}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\slideentry {0}{3}{2}{5/5}{Описание класса \texttt {Flow}}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsectionpages {4}{5}}
+\headcommand {\beamer@subsectionentry {0}{0}{4}{6}{Функции для пересчета составов}}
+\headcommand {\slideentry {0}{4}{1}{6/6}{Функции для пересчета составов}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\beamer@subsectionentry {0}{0}{5}{7}{Функции для расчета плотности идеального газа}}
+\headcommand {\slideentry {0}{5}{1}{7/7}{Функции для расчета плотности идеального газа}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\beamer@subsectionentry {0}{0}{6}{8}{Описание класса \texttt {Bed}}}
+\headcommand {\slideentry {0}{6}{1}{8/8}{Описание класса \texttt {Bed}}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\beamer@subsectionentry {0}{0}{7}{9}{Описание класса \texttt {Reactor}}}
+\headcommand {\slideentry {0}{7}{1}{9/9}{Описание класса \texttt {Reactor}}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\beamer@subsectionentry {0}{0}{8}{10}{Расчет кинетических параметров}}
+\headcommand {\slideentry {0}{8}{1}{10/10}{Расчет кинетических параметров}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {0}{8}{2}{11/11}{Расчет кинетических параметров}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@partpages {1}{11}}
+\headcommand {\beamer@subsectionpages {10}{11}}
+\headcommand {\beamer@sectionpages {1}{11}}
+\headcommand {\beamer@documentpages {11}}
+\headcommand {\gdef \inserttotalframenumber {11}}

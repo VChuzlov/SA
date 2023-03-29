@@ -39,7 +39,7 @@ class Bed:
 
         self.area = np.pi * (self.diameter / 2) ** 2
     
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f'Volume: {self.volume:.2f};\narea: {self.area:.2f};\nd: {self.diameter:.2f};\nh: {self.height:.2f}'
 
     def calculate(
@@ -155,4 +155,4 @@ if __name__ == '__main__':
     perf = r.performance()
     for key in perf:
         print(f'{key}: {perf[key]:.2f}')
-    
+    print(product.mass_fractions)
