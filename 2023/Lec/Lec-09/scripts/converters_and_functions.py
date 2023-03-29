@@ -24,15 +24,15 @@ def convert_mass_to_molar_fractions(
     mw: np.ndarray,
     bulk_d20: float
 ) -> np.ndarray:
-    return mf / mw * bulk_d20 * 1000
+    return mf / mw * bulk_d20
 
 
 def convert_molar_to_mass_fractions(
     molar_frac: np.ndarray, 
-    mw: np.ndarray
+    mw: np.ndarray,
+    density: float
 ) -> np.ndarray:
-    bulk_d20 = (molar_frac * mw).sum()
-    return molar_frac * mw / bulk_d20
+    return molar_frac * mw / density
 
 
 def get_flow_density(

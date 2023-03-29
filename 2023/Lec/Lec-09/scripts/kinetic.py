@@ -10,8 +10,8 @@ kinetic_matrix = kinetic_matrix.iloc[:, 1:].to_numpy()
 
 def arrhenius_law(
     temperature: float | np.ndarray,
-    ea: float | np.ndarray = const.EA,
-    predexp: float | np.ndarray = const.PREDEXP
+    ea: float | np.ndarray,
+    predexp: float | np.ndarray
 ) -> float | np.ndarray:
     return predexp * np.exp(-ea / (8.314 * temperature))
 
@@ -24,7 +24,7 @@ def kinetic_scheme(
     ea: np.ndarray = const.EA,
     stoich_matrix: np.ndarray = kinetic_matrix
 ) -> np.ndarray:
-    k = arrhenius_law(temperature)
+    k = arrhenius_law(temperature, ea, predexp)
     mask = stoich_matrix < 0
     p = (c ** -(stoich_matrix * mask)).prod(axis=1)
     reaction_rates = p * k

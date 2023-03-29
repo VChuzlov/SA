@@ -4,6 +4,7 @@ from flows import Flow
 import constants as const
 import converters_and_functions as conv
 from kinetic import kinetic_scheme
+from mixer import Mixer
 
 
 class Bed:
@@ -44,7 +45,9 @@ class Bed:
     def calculate(
         self,
         kinetic_scheme: callable,
-        feedstock: Flow, 
+        feedstock: Flow,
+        ea: np.ndarray,
+        predexp: np.ndarray 
     ) -> Flow:
         self.residence_time = (
             self.volume / feedstock.ideal_gas_volume_flow_rate * 3600
@@ -52,13 +55,17 @@ class Bed:
         solution = solve_ivp(
             kinetic_scheme,
             t_span=(0, self.residence_time),
-            y0=feedstock.molar_fractions,  # todo: molar fractions
+            y0=feedstock.molar_fractions,
             args=(
                 feedstock.temperature,
+                predexp,
+                ea
             )
         )
         molar_fractions = solution.y[:, -1]
-        mf = conv.convert_molar_to_mass_fractions(molar_fractions, const.MR)
+        mf = conv.convert_molar_to_mass_fractions(
+            molar_fractions, const.MR, feedstock.ideal_gas_density
+        )
         product = Flow(
             mass_flow_rate=feedstock.mass_flow_rate,
             mass_fractions=mf,
@@ -80,33 +87,39 @@ class Reactor:
         self,
         kinetic_scheme: callable,
         feedstock: Flow,
+        ea: np.ndarray = const.EA,
+        predexp: np.ndarray = const.PREDEXP
     ) -> Flow:
         self.feedstock = feedstock
         f = self.feedstock
         
         for bed in self.beds:
-            f = bed.calculate(kinetic_scheme, f)
+            f = bed.calculate(
+                kinetic_scheme=kinetic_scheme, 
+                feedstock=f, 
+                ea=ea, 
+                predexp=predexp
+            )
         self.product = f
-        
         return self.product
     
     def performance(self) -> dict:
         perf = {
             'Выход изомеризата, % масс.': (
-                self.product.mass_fractions[:-1].sum() 
-                - self.product.mass_fractions[3]
+                (self.product.mass_fractions[:-1].sum() 
+                - self.product.mass_fractions[3]) / (1 - self.product.mass_fractions[3])
             ) * 100,
             'Выход изоалканов, % масс.': (
-                    self.product.mass_fractions[[1, 5, 9, 13]].sum() 
-                    / (1 - self.product.mass_fractions[[3, 16]].sum()) 
+                self.product.mass_fractions[[1, 5, 9, 13]].sum() 
+                / (1 - self.product.mass_fractions[[3, 16]].sum()) 
             ) * 100,
-            'Выход iC5, % масс.': (
-                self.product.mass_fractions[1]
-                 / (1 - self.product.mass_fractions[[3, 16]].sum()) 
+            'Конверсия nC5, %': 100 - (
+                self.product.mass_fractions[0]
+                / self.feedstock.mass_fractions[0]  
             ) * 100,
-            'Выход iC6, % масс.': (
-                self.product.mass_fractions[5]
-                 / (1 - self.product.mass_fractions[[3, 16]].sum()) 
+            'Конверсия nC6, % масс.': 100 - (
+                self.product.mass_fractions[4]
+                / self.feedstock.mass_fractions[4]  
             ) * 100,
         }
         return perf
@@ -119,27 +132,29 @@ if __name__ == '__main__':
     }
     mf = np.array(
         [
-            0.344, 0.1075, 0.043, 0., 0.1828, 0.2258, 0.0861, 0.0108,
-            0.,    0.,     0.,    0., 0.,     0.,     0.,     0.,     0.,
-
+            0.1784, 0.0557, 0.0223, 0., 0.0948, 0.1171, 0.0446,
+            0.0056, 0.1587, 0.146,  0.1066, 0.0168, 0.0123,
+            0.0293, 0.0118, 0., 0.,
         ]
     )
     f = Flow(
-        1000, 
+        50_000, 
         mf, 
-        temperature=273.15,
-        pressure=101.325
+        temperature=403.15,
+        pressure=3001.325
     )
     h2_mf = np.zeros_like(mf)
     h2_mf[3] = 1.
     h2 = Flow(
-        mass_flow_rate=100, 
+        mass_flow_rate=80, 
         mass_fractions=h2_mf, 
-        temperature=273.15, 
-        pressure=101.325
-    )    
-    r = Reactor(bed_params, bed_params, bed_params)
-    product = r.calculate(kinetic_scheme, f)
+        temperature=403.15, 
+        pressure=3001.325
+    )
+    mxr = Mixer()
+    feedstock = mxr.mix(f, h2)    
+    r = Reactor(*const.bed_params)
+    product = r.calculate(kinetic_scheme, feedstock, predexp=const.PREDEXP)
     perf = r.performance()
     for key in perf:
         print(f'{key}: {perf[key]:.2f}')

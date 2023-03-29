@@ -33,7 +33,7 @@ class Flow:
         self.volume_flow_rate = self.mass_flow_rate / (self.density * 1e3)
         
         self.molar_fractions = conv.convert_mass_to_molar_fractions(
-            self.mass_fractions, const.MR, self.density
+            self.mass_fractions, const.MR, self.ideal_gas_density
         )
 
         self.ideal_gas_volume_flow_rate = (
