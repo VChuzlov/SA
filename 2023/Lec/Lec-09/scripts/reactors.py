@@ -104,22 +104,19 @@ class Reactor:
         return self.product
     
     def performance(self) -> dict:
+        product_yield = (
+            self.product.mass_fractions[const.indxs].sum()
+            / self.feedstock.mass_fractions[const.indxs].sum()
+        )
         perf = {
             'Выход изомеризата, % масс.': (
-                (self.product.mass_fractions[:-1].sum() 
-                - self.product.mass_fractions[3]) / (1 - self.product.mass_fractions[3])
+                # (self.product.mass_fractions[:-1].sum() 
+                # - self.product.mass_fractions[3]) / (1 - self.product.mass_fractions[3])
+                product_yield
             ) * 100,
             'Выход изоалканов, % масс.': (
                 self.product.mass_fractions[[1, 5, 9, 13]].sum() 
                 / (1 - self.product.mass_fractions[[3, 16]].sum()) 
-            ) * 100,
-            'Конверсия nC5, %': 100 - (
-                self.product.mass_fractions[0]
-                / self.feedstock.mass_fractions[0]  
-            ) * 100,
-            'Конверсия nC6, % масс.': 100 - (
-                self.product.mass_fractions[4]
-                / self.feedstock.mass_fractions[4]  
             ) * 100,
         }
         return perf
@@ -158,3 +155,4 @@ if __name__ == '__main__':
     perf = r.performance()
     for key in perf:
         print(f'{key}: {perf[key]:.2f}')
+    

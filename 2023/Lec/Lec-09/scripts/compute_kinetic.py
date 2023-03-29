@@ -48,6 +48,7 @@ def main() -> None:
     feedstock = mxr.mix(f, h2)    
     r = Reactor(*const.bed_params)
     x0 = const.PREDEXP
+    # x0 = np.random.random(44)
     solution = minimize(
         obj_func,
         x0,

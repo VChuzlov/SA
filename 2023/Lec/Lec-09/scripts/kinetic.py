@@ -13,7 +13,7 @@ def arrhenius_law(
     ea: float | np.ndarray,
     predexp: float | np.ndarray
 ) -> float | np.ndarray:
-    return predexp * np.exp(-ea / (8.314 * temperature))
+    return predexp * np.exp(-ea * 1e3 / (8.314 * temperature))
 
 
 def kinetic_scheme(
