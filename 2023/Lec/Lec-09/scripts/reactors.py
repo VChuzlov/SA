@@ -47,12 +47,12 @@ class Bed:
         feedstock: Flow, 
     ) -> Flow:
         self.residence_time = (
-            self.volume / feedstock.volume_flow_rate * 3600
+            self.volume / feedstock.ideal_gas_volume_flow_rate * 3600
         )
         solution = solve_ivp(
             kinetic_scheme,
             t_span=(0, self.residence_time),
-            y0=feedstock.maolar_fractions,  # todo: molar fractions
+            y0=feedstock.molar_fractions,  # todo: molar fractions
             args=(
                 feedstock.temperature,
             )
@@ -62,10 +62,14 @@ class Bed:
         product = Flow(
             mass_flow_rate=feedstock.mass_flow_rate,
             mass_fractions=mf,
-            temperature=feedstock.temperature
+            temperature=feedstock.temperature,
+            pressure=feedstock.pressure
         )
         return product
 
+
+class Reactor:
+    """Класс для описания реактора, состоящего из массива полок"""
 
 if __name__ == '__main__':
     bed_params = {
@@ -73,6 +77,11 @@ if __name__ == '__main__':
         'height': 1.5,
     }
     bed = Bed(**bed_params)
-    f = Flow(1000, np.random.random(17), temperature=273.15)
+    f = Flow(
+        1000, 
+        conv.normalize(np.random.random(17)), 
+        temperature=273.15,
+        pressure=101.325
+    )
     product = bed.calculate(kinetic_scheme, f)
     print(product.mass_fractions)
