@@ -104,15 +104,10 @@ class Reactor:
         return self.product
     
     def performance(self) -> dict:
-        product_yield = (
-            self.product.mass_fractions[const.indxs].sum()
-            / self.feedstock.mass_fractions[const.indxs].sum()
-        )
         perf = {
             'Выход изомеризата, % масс.': (
-                # (self.product.mass_fractions[:-1].sum() 
-                # - self.product.mass_fractions[3]) / (1 - self.product.mass_fractions[3])
-                product_yield
+                self.product.mass_fractions[const.indxs].sum()
+                / self.feedstock.mass_fractions[const.indxs].sum()
             ) * 100,
             'Выход изоалканов, % масс.': (
                 self.product.mass_fractions[[1, 5, 9, 13]].sum() 
@@ -123,10 +118,6 @@ class Reactor:
 
 
 if __name__ == '__main__':
-    bed_params = {
-        'diameter': .5,
-        'height': 1.5,
-    }
     mf = np.array(
         [
             0.1784, 0.0557, 0.0223, 0., 0.0948, 0.1171, 0.0446,

@@ -4,7 +4,7 @@
 \documentclass[a4, 12pt, openany]{book}
 \usepackage[left=2.5cm, right=2.0cm, top=2.0cm, bottom=2.0cm]{geometry}
 \usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}	
+\usepackage[utf8]{inputenc}
 \usepackage[english, main=russian]{babel}
 %\usepackage{polyglossia}
 %\setdefaultlanguage{russian} %язык по умолчанию
@@ -32,15 +32,15 @@
 \usepackage[nooneline]{caption}
 \DeclareCaptionTextFormat{center}{\centering{#1}}
 \DeclareCaptionLabelFormat{figure}{Рисунок~#2}
-\captionsetup[table]{justification=raggedleft, 	
-	labelsep=newline, 
-	%	textfont=it, 
-	textformat=center, 
-	position=top, 
+\captionsetup[table]{justification=raggedleft,
+	labelsep=newline,
+	%	textfont=it,
+	textformat=center,
+	position=top,
 	skip=5pt
 }
 \captionsetup[figure]{justification=centering,
-	labelsep=endash, 
+	labelsep=endash,
 	labelformat=figure
 	%	textfont=it
 }
@@ -174,17 +174,17 @@
 	%	{==}{{{\color{ipython_purple}==}}}2
 	%	{<=}{{{\color{ipython_purple}<=}}}2
 	%	{>=}{{{\color{ipython_purple}>=}}}2
-	%	
+	%
 	%	{+=}{{{\color{ipython_purple}>=}}}2
 	%	{&=}{{{\color{ipython_purple}>=}}}2
 	%	{-=}{{{\color{ipython_purple}>=}}}2
 	%	{|=}{{{\color{ipython_purple}>=}}}2
-	%	
+	%
 	%	{*=}{{{\color{ipython_purple}>=}}}2
 	%	{^=}{{{\color{ipython_purple}>=}}}2
 	%	{/=}{{{\color{ipython_purple}>=}}}2
 	%	{>>=}{{{\color{ipython_purple}>=}}}2
-	%	
+	%
 	%	{\%=}{{{\color{ipython_purple}>=}}}2
 	%	{<<=}{{{\color{ipython_purple}>=}}}2
 	%	{**=}{{{\color{ipython_purple}>=}}}2
@@ -209,7 +209,7 @@
 	%	frameround=ffff,
 	framexleftmargin=5mm,
 	columns=fullflexible
-	numbers=left,
+	numbers=none,
 	numberstyle=\tiny\color{halfgray},
 	numbersep=5pt,
 	%
@@ -241,27 +241,27 @@
 \usepackage{amsmath}
 \usepackage{nicefrac}
 
-\usepackage[backend=biber, 
-style=gost-numeric,  
-autolang=other, 
-clearlang=true, 
+\usepackage[backend=biber,
+style=gost-numeric,
+autolang=other,
+clearlang=true,
 bibencoding=utf8,
 sorting=none
 ]{biblatex}
-\renewcommand*{\multicitedelim}{\addcomma\space} 
+\renewcommand*{\multicitedelim}{\addcomma\space}
 \usepackage{csquotes}
 \addbibresource{ref.bib}
 
 \begin{document}
-	
+
 	\include{titlepage}
-	
+
 	%\addcontentsline{toc}{chapter}{Начало работы}
-	
+
 %	\include{secondpage}
 	\renewcommand\contentsname{Содержание}
 %	\tableofcontents
-	
+
 	\lstlistoflistings
 	\include{chapter1} % Введение
 	\include{chapter2} % Как пользователь выполняет программы
@@ -271,7 +271,7 @@ sorting=none
 %	\include{chapter6} % Динамическая типизация
 %	\include{chapter7} % Строки в Python
 %	\include{chapter8} % Списки и словари
-%	\include{chapter9} % Кортежи, файлы и прочие типы 
+%	\include{chapter9} % Кортежи, файлы и прочие типы
 %	\include{chapter10} % Операторы и синтаксис
 %	\include{chapter11} % Проверки if и правила синтаксиса
 %	\include{chapter12} % Циклы while и for
@@ -295,17 +295,17 @@ sorting=none
 %	\include{chapter29} % Сисемы дифференциальных уравнений
 %	\include{chapter31} % Методы оптимизации
 %	\include{conclusion}
-%	
+%
 %	\lstlistoflistings
-%	
+%
 %	\addcontentsline{toc}{chapter}{Листинги}
-%	
+%
 %	\printbibliography
-%	
+%
 	\addcontentsline{toc}{chapter}{Список литературы}
-%	
+%
 %	\newpage
-%	
+%
 %	\include{lastpage}
-	
+
 \end{document}

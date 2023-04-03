@@ -9,7 +9,7 @@ MR = np.array(
     ]
 )
 
-# Ideal gas densities kg / m^3
+# Ideal gas densities kg / m**3
 DENSITIES = np.array(
     [
         3.219153774, 3.219153774, 3.123226115, 0.090127382,
