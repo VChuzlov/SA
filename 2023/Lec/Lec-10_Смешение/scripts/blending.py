@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.optimize import minimize
+import  scipy.optimize as opt
 import constants as const
 from flows import Flow
 from mixer import Mixer
@@ -35,12 +35,14 @@ class Blending:
         def obj_func(x: np.ndarray, value: float) -> float:
             m = Mixer()
             flows_ = flows[:]
-            [
-                flow.mass_flow_rate * x[i] for i, flow in enumerate(flows_)
-            ]
+            
+            for i, flow in enumerate(flows_):
+                flow.mass_flow_rate * x[i]
+            
             mixture = m.mix(*flows_)
             mixture.ron = get_octane_nummber(mixture)
-            return abs(value - mixture.ron)
+            
+            return (value - mixture.ron) ** 2
         
         x0 = np.random.random(len(flows))
         x0 = x0 / x0.sum()
@@ -48,20 +50,42 @@ class Blending:
             'type': 'eq',
             'fun': lambda x: 1 - x.sum()
         }
-        res = minimize(
+        res = {}
+        res['NM'] = opt.minimize(
             obj_func, 
             x0,
             args=(expected_value, ),
             # constraints=constr,
             method='Nelder-Mead'
         )
-        res = ga.genetic_algorithm(
-            ((0, .15), (0, .15), (0, .15), (0, .15), (0, .15), (0, .5),),
-            obj_func,
+        # res['GA'] = ga.genetic_algorithm(
+        #     ((0, .15), (0, .15), (0, .15), (0, .15), (0, .15), (0, .5),),
+        #     obj_func,
+        #     args=(expected_value, ),
+        #     popsize=100,
+        #     selection_size=20,
+        #     generations_count=10
+        # )
+        res['SHGO'] = opt.shgo(
+            obj_func, 
+            ((.0001, .9), )*6,
             args=(expected_value, ),
-            popsize=100,
-            selection_size=20,
-            generations_count=10
+        )
+        res['DA'] = opt.dual_annealing(
+            obj_func, 
+            ((.0001, .9), )*6,
+            args=(expected_value, ),
+        )
+        res['shgo_sobol'] = opt.shgo(
+            obj_func, 
+            ((0, .99), )*6,
+            args=(expected_value, ),
+            sampling_method='sobol'
+        )
+        res['DE'] = opt.differential_evolution(
+            obj_func, 
+            ((.0001, .9), )*6,
+            args=(expected_value, ),
         )
         return res
 
@@ -81,11 +105,18 @@ if __name__ == '__main__':
         for mf in data.T
     ]
     blending = Blending()
-    mixture = blending.blend(flows[-1])
-    print(mixture.ron)
-    res = blending.calculate_ratio(90, *flows)
-    print(res[0])
-    [flow.mass_flow_rate * res[i] for i, flow in enumerate(flows)]
-    mixture = blending.blend(*flows)
-    print(mixture.ron)
-    print()
+    for flow in flows:
+        mixture = blending.blend(flow)
+        print(mixture.ron)
+    res = blending.calculate_ratio(92.2, *flows)
+    with open('results.txt', 'w') as f:
+        for method in res:
+            print('*'*20, file=f)
+            print(method, file=f)
+            print('*'*20, file=f)
+            print(res[method], file=f)
+    print('Готово!')
+    # [flow.mass_flow_rate * res[i] for i, flow in enumerate(flows)]
+    # mixture = blending.blend(*flows)
+    # print(mixture.ron)
+    
