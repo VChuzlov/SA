@@ -3,6 +3,7 @@ from scipy.optimize import minimize
 import constants as const
 from flows import Flow
 from mixer import Mixer
+import genetic_algorithm as ga
 
 
 def get_octane_nummber(
@@ -33,10 +34,11 @@ class Blending:
         """Расчет оптимального соотношения потоков"""
         def obj_func(x: np.ndarray, value: float) -> float:
             m = Mixer()
+            flows_ = flows[:]
             [
-                flow.mass_flow_rate * x[i] for i, flow in enumerate(flows)
+                flow.mass_flow_rate * x[i] for i, flow in enumerate(flows_)
             ]
-            mixture = m.mix(*flows)
+            mixture = m.mix(*flows_)
             mixture.ron = get_octane_nummber(mixture)
             return abs(value - mixture.ron)
         
@@ -50,9 +52,16 @@ class Blending:
             obj_func, 
             x0,
             args=(expected_value, ),
-            constraints=constr,
-            # bounds=((0, .1), (0, .1), (0, .1), (0, .1), (0, .1), (0, 1),),
-            method='slsqp'
+            # constraints=constr,
+            method='Nelder-Mead'
+        )
+        res = ga.genetic_algorithm(
+            ((0, .15), (0, .15), (0, .15), (0, .15), (0, .15), (0, .5),),
+            obj_func,
+            args=(expected_value, ),
+            popsize=100,
+            selection_size=20,
+            generations_count=10
         )
         return res
 
@@ -74,6 +83,9 @@ if __name__ == '__main__':
     blending = Blending()
     mixture = blending.blend(flows[-1])
     print(mixture.ron)
-    res = blending.calculate_ratio(75, *flows)
-    print(res)
-    print(res.x.sum())
+    res = blending.calculate_ratio(90, *flows)
+    print(res[0])
+    [flow.mass_flow_rate * res[i] for i, flow in enumerate(flows)]
+    mixture = blending.blend(*flows)
+    print(mixture.ron)
+    print()
