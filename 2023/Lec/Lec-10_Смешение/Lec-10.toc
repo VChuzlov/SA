@@ -1,2 +1,2 @@
-\babel@toc {russian}{}\relax 
+\babel@toc {russian}{}
 \beamer@subsectionintoc {0}{1}{Метод SLSQP}{1}{0}{0}
