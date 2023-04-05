@@ -1,0 +1,204 @@
+
+% !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[aspectratio=169, mathserif]{beamer}% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+
+% Style options:
+% light --- light theme (default)
+% dark --- dark theme
+% enlogo --- english TPU logo {default}
+% rulogo --- russian TPU logo
+
+\usetheme[light, rulogo]{tpu}% dark theme used as an example of optional argument
+
+\usepackage[russian]{babel}%uncomment this to work in russian
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+
+\usepackage{fontspec}
+
+\setromanfont{Brygada1918}[
+Path=./fonts/BrygadaFontFiles/,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\setsansfont{ALSSirius}[
+Path=./fonts/ALSSiriusFiles/,
+Extension = .otf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+%ItalicFont=*-Italic,
+%BoldItalicFont=*-BoldItalic
+]
+
+\setmonofont{Consolas}[
+Path=./fonts/ConsolasFontFiles/,
+%Scale=0.85,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\usepackage[cache=false]{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\usepackage{colortbl}
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{onedarkBckGr}{RGB}{40, 44, 52}
+
+\usemintedstyle[python]{default}
+\setminted[python]{
+fontsize=\scriptsize,
+escapeinside=||,
+mathescape=true,
+numbersep=5pt,
+gobble=2,
+linenos=true,
+frame=leftline,
+framesep=1mm,
+python3=true,
+%bgcolor=backcolour,
+}
+
+\usemintedstyle[pycon]{default}
+\setminted[pycon]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	frame=single,
+	framesep=1mm,
+	python3=true,
+%	bgcolor=backcolour,
+	linenos=true,
+}
+
+\newmint{python}{}
+
+\usepackage{booktabs}% good looking tables
+\usepackage{multicol}% text in multiple columns, useful for side-by-side text and pictures
+\usepackage{hyperref}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\captionsetup[table]{justification=raggedleft,
+labelformat=empty,
+labelsep=endash,
+textformat=center,
+position=top,
+skip=5pt
+}
+
+\hyphenpenalty=10000% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
+
+\usepackage{chemfig}
+
+\includeonlyframes{c}
+
+\title{\LARGE{Системный анализ процессов химической технологии}}
+\subtitle{\textcolor{tpugreen}{\textbf{Лекция №10}} \\ \textbf{Расчет октановых чисел смешения}}
+\author[]{Вячеслав Алексеевич Чузлов, \\
+к.т.н., доцент ОХИ ИШПР}
+\date{\today}
+
+\begin{document}
+
+
+% notice usage of \titleframe and several other unconventional functions
+% the reason being is custom backgrounds on these slides
+
+\titleframe% title
+
+%\tocframe{}% this custom frame accepts options for ToC
+
+
+\subsection{Метод SLSQP}
+\begin{frame}[fragile, label=c]{Метод SLSQP}
+\scriptsize
+\begin{itemize}
+\item Метод SLSQP использует последовательное квадратичное программирование для минимизации функций нескольких переменных с любой комбинацией границ, а также ограничений на равенство и неравенство.
+\item Метод включает в себя подпрограмму оптимизации SLSQP, первоначально реализованную Дитером Крафтом (Dieter Kraft).
+\item Обратите внимание, что оболочка обрабатывает бесконечные значения в границах, преобразуя их в большие значения с плавающей точкой.
+\end{itemize}
+\vfill
+Метод SLSQP работает с задачей минимизации с ограничениями в следующей форме:
+\vfill
+\begin{equation}\label{eq:problem}
+\begin{gathered}
+\underset{x}{\min}\ f\left(x\right) \\
+\mathrm{при }\ c_j\left(x\right) = 0, \qquad j \in \mathcal{E} \\
+\qquad c_j\left(x\right) \geqslant 0, \qquad j \in \mathcal{I} \\
+\qquad lb_i \leqslant x_i \leqslant ub_i, \qquad i = 1, \ldots , N.
+\end{gathered}
+\end{equation}
+\vfill
+Здесь $\mathcal{E}$ и $\mathcal{I}$~--множества индексов, содержащих ограничения по равенству и неравенству.
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Метод SLSQP}
+\scriptsize
+\mintinline[fontsize=\small]{python}|scipy.optimize.minimize(method='SLSQP')|
+\vfill
+\textbf{Основные параметры:}
+\vfill
+\begin{itemize}
+\item[] \mintinline{python}|fun: callable|
+
+Объектная функция для минимизации.
+\vfill
+\mintinline{python}|fun(x, *args) -> float|
+
+где \texttt{x}~-- одномерный массив размера \mintinline{python}|(n, )|; \texttt{args}~-- кортеж параметров, необходимых для вызова функции.
+\vfill
+\item[] \mintinline{python}|x0: ndarray, shape (n,)|
+
+Начальное приближение. Массив элементов размера \mintinline{python}|(n,)|, где \texttt{n}~-- количество независимых переменных.
+\vfill
+\item[] \mintinline{python}|args: tuple, optional|
+
+Дополнительные аргументы, передаваемые объектной функции и ее производным (функциям \texttt{fun}, \texttt{jac} и \texttt{hess})
+\vfill
+\item[] \mintinline{python}|bounds: sequence, optional|
+
+Предельные значения для переменных.
+\vfill
+\item[] \mintinline{python}|constraints: {Constraint, dict} or List of {Constraint, dict}, optional|
+
+Описание функций, накладывающих ограничения на решение.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\contactsframe[\Large \textbf{Благодарю за внимание!}]{
+
+\includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\
+\includegraphics[width=.05\textwidth]{pics/mail} \quad chuva@tpu.ru \\
+\includegraphics[width=.03\textwidth]{pics/tel} \quad +7-962-782-66-15
+}
+
+\end{document}
+

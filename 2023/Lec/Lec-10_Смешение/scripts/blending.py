@@ -54,6 +54,9 @@ class Blending:
             
             return .01 - mixture.volume_fractions[56]
         
+        def aromatic_constr(x: np.ndarray) -> float:
+            return ...
+        
         x0 = np.random.random(len(flows))
         x0 = x0 / x0.sum()
         constr = (
@@ -82,16 +85,6 @@ class Blending:
             bounds=((.0001, .99),)*6,
             args=(expected_value, ),
         )
-        # res['DA'] = opt.dual_annealing(
-        #     obj_func, 
-        #     ((.0001, .9), )*6,
-        #     args=(expected_value, ),
-        # )
-        res['DE'] = opt.differential_evolution(
-            obj_func, 
-            ((.0001, .9), )*6,
-            args=(expected_value, ),
-        )
         return res
 
 
@@ -113,7 +106,7 @@ if __name__ == '__main__':
     for flow in flows:
         mixture = blending.blend(flow)
         print(mixture.ron)
-    res = blending.calculate_ratio(92.2, *flows)
+    res = blending.calculate_ratio(95.2, *flows)
     with open('results.txt', 'w') as f:
         for method in res:
             print('*'*20, file=f)
@@ -122,10 +115,11 @@ if __name__ == '__main__':
             print(res[method], file=f)
     print('Готово!')
     
-    x = np.array([0.01053909, 0.0685687 , 0.03535145, 0.03265733, 0.07617395, .77670948])
-    for i, flow in enumerate(flows):
-        flow.mass_flow_rate = x[i]
+    for key in res:
+        x = res[key].x
+        for i, flow in enumerate(flows):
+            flow.mass_flow_rate = x[i]
     
-    mixture = blending.blend(*flows)
-    print(mixture.ron, mixture.volume_fractions[56])
+        mixture = blending.blend(*flows)
+        print(key, mixture.ron, mixture.volume_fractions[56], x.sum())
     
