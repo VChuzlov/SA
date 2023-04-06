@@ -1,0 +1,15 @@
+\frametitle{Пример}
+\scriptsize
+\begin{minipage}{.52\textwidth}
+\includegraphics[width=.9\linewidth]{./pics/eggholder}
+\end{minipage}
+\begin{minipage}{.47\textwidth}
+Рассмотрим следующую функцию:
+\vfill
+\begin{equation*}
+z = \left(-y + 47\right) \cdot \sin \sqrt{\left|\dfrac{x}{2} + y + 47\right|} - x \cdot \sin \sqrt{\left|\dfrac{x}{2} - y - 47\right|}
+\end{equation*}
+\vfill
+Найдем минимум данной функции при значениях $x \in \left[400, 500\right];\ y \in \left[400, 500\right]$ и при условии, что $x = y$.
+\end{minipage}
+\vfill

@@ -1,0 +1,28 @@
+\frametitle{Пример}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+|\space|
+|\space|
+res = opt.minimize(
+    eggholder,
+    x0=(450, 450),
+    bounds=bounds,
+    constraints=constr,
+    method='SLSQP'
+)
+print(res)
+|\space|
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+     fun: -641.3734202306166
+     jac: array([ 27.49101257, -27.49103546])
+ message: 'Optimization terminated successfully'
+    nfev: 12
+     nit: 4
+    njev: 4
+  status: 0
+ success: True
+       x: array([448.93802864, 448.93802864])
+\end{minted}
+\vfill
