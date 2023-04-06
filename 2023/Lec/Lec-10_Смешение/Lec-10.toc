@@ -1,2 +1,3 @@
-\babel@toc {russian}{}
-\beamer@subsectionintoc {0}{1}{Метод SLSQP}{1}{0}{0}
+\babel@toc {russian}{}\relax 
+\beamer@sectionintoc {1}{Расчет октанового числа}{1}{0}{1}
+\beamer@sectionintoc {2}{Метод SLSQP}{2}{0}{2}

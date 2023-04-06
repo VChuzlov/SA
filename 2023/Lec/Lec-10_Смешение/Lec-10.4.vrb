@@ -1,4 +1,21 @@
-\frametitle{Пример}
+\frametitle{Метод SLSQP}
 \scriptsize
-\includegraphics[width=.6\textwidth]{./pics/eggholder}
+\begin{itemize}
+\item Метод SLSQP использует последовательное квадратичное программирование для минимизации функций нескольких переменных с любой комбинацией границ, а также ограничений на равенство и неравенство.
+\item Метод включает в себя подпрограмму оптимизации SLSQP, первоначально реализованную Дитером Крафтом (Dieter Kraft).
+\item Обратите внимание, что оболочка обрабатывает бесконечные значения в границах, преобразуя их в большие значения с плавающей точкой.
+\end{itemize}
+\vfill
+Метод SLSQP работает с задачей минимизации с ограничениями в следующей форме:
+\vfill
+\begin{equation}\label{eq:problem}
+\begin{gathered}
+\underset{x}{\min}\ f\left(x\right) \\
+\mathrm{при }\ c_j\left(x\right) = 0, \qquad j \in \mathcal{E} \\
+\qquad c_j\left(x\right) \geqslant 0, \qquad j \in \mathcal{I} \\
+\qquad lb_i \leqslant x_i \leqslant ub_i, \qquad i = 1, \ldots , N.
+\end{gathered}
+\end{equation}
+\vfill
+Здесь $\mathcal{E}$ и $\mathcal{I}$~--множества индексов, содержащих ограничения по равенству и неравенству.
 \vfill

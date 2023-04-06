@@ -1,32 +1,18 @@
-\frametitle{Метод SLSQP}
+\frametitle{Октанвое число}
 \scriptsize
-\mintinline[fontsize=\small]{python}|scipy.optimize.minimize(method='SLSQP')|
+\textcolor{tpugreen}{\textbf{Октановое число}}~-- это условная величина, характеризующая детонационную стойкость и численно равная процентному содержанию изооктана в эталонной смеси с н-гептаном, которая по детонационной стойкости эквивалентна испытуемому топливу в условиях стандартного одноцилиндрового двигателя.
 \vfill
-\textbf{Основные параметры:}
+\centering{\textbf{Эталонные углеводороды}}
 \vfill
-\begin{itemize}
-\item[] \mintinline{python}|fun: callable|
-
-Объектная функция для минимизации.
-\vfill
-\mintinline{python}|fun(x, *args) -> float|
-
-где \texttt{x}~-- одномерный массив размера \mintinline{python}|(n, )|; \texttt{args}~-- кортеж параметров, необходимых для вызова функции.
-\vfill
-\item[] \mintinline{python}|x0: ndarray, shape (n,)|
-
-Начальное приближение. Массив элементов размера \mintinline{python}|(n,)|, где \texttt{n}~-- количество независимых переменных.
-\vfill
-\item[] \mintinline{python}|args: tuple, optional|
-
-Дополнительные аргументы, передаваемые объектной функции и ее производным (функциям \texttt{fun}, \texttt{jac} и \texttt{hess})
-\vfill
-\item[] \mintinline{python}|bounds: sequence, optional|
-
-Предельные значения для переменных.
-\vfill
-\item[] \mintinline{python}|constraints: {Constraint, dict} or List of {Constraint, dict}, optional|
-
-Описание функций, накладывающих ограничения на решение.
-\end{itemize}
+\begin{minipage}{.48\textwidth}
+\includegraphics[width=.95\linewidth]{./pics/ic8}
+\centering 2,2,4-триметилпентан (изооктан)
+\end{minipage}
+\begin{minipage}{.01\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}{.48\textwidth}
+\includegraphics[width=\linewidth]{./pics/nc7}
+\centering н-гептан
+\end{minipage}
 \vfill

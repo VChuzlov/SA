@@ -133,7 +133,32 @@ skip=5pt
 %\tocframe{}% this custom frame accepts options for ToC
 
 
-\subsection{Метод SLSQP}
+\section{Расчет октанового числа}
+\sectionframe
+
+\begin{frame}[fragile, label=c]{Октанвое число}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Октановое число}}~-- это условная величина, характеризующая детонационную стойкость и численно равная процентному содержанию изооктана в эталонной смеси с н-гептаном, которая по детонационной стойкости эквивалентна испытуемому топливу в условиях стандартного одноцилиндрового двигателя.
+\vfill
+\centering{\textbf{Эталонные углеводороды}}
+\vfill
+\begin{minipage}{.48\textwidth}
+\includegraphics[width=.95\linewidth]{./pics/ic8}
+\centering 2,2,4-триметилпентан (изооктан)
+\end{minipage}
+\begin{minipage}{.01\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}{.48\textwidth}
+\includegraphics[width=\linewidth]{./pics/nc7}
+\centering н-гептан
+\end{minipage}
+\vfill
+\end{frame}
+
+
+
+\section{Метод SLSQP}
 \begin{frame}[fragile, label=c]{Метод SLSQP}
 \scriptsize
 \begin{itemize}
@@ -195,10 +220,80 @@ skip=5pt
 
 \begin{frame}[fragile, label=c]{Пример}
 \scriptsize
-\includegraphics[width=.6\textwidth]{./pics/eggholder}
+\begin{minipage}{.52\textwidth}
+\includegraphics[width=.9\linewidth]{./pics/eggholder}
+\end{minipage}
+\begin{minipage}{.47\textwidth}
+Рассмотрим следующую функцию:
+\vfill
+\begin{equation*}
+z = \left(-y + 47\right) \cdot \sin \sqrt{\left|\dfrac{x}{2} + y + 47\right|} - x \cdot \sin \sqrt{\left|\dfrac{x}{2} - y - 47\right|}
+\end{equation*}
+\vfill
+Найдем минимум данной функции при значениях $x \in \left[400, 500\right];\ y \in \left[400, 500\right]$ и при условии, что $x = y$.
+\end{minipage}
 \vfill
 \end{frame}
 
+
+\begin{frame}[fragile, label=c]{Пример}
+\scriptsize
+\begin{minted}{python}
+import numpy as np
+import scipy.optimize as opt
+
+
+def func(x):
+    return (
+        (-x[1] + 47) * np.sin(np.sqrt(abs(x[0] / 2 + x[1] + 47)))
+        - x[0] * np.sin(np.sqrt(abs(x[0] - x[1] - 47)))
+    )
+
+
+x = np.arange(-512, 513)
+y = np.arange(-512, 513)
+xgrid, ygrid = np.meshgrid(x, y)
+xy = np.stack([xgrid, ygrid])
+
+bounds = (400, 500), (400, 500)
+constr = {
+    'type': 'eq',
+    'fun': lambda x: x[0] - x[1]
+}
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Пример}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+|\space|
+|\space|
+res = opt.minimize(
+    eggholder,
+    x0=(450, 450),
+    bounds=bounds,
+    constraints=constr,
+    method='SLSQP'
+)
+print(res)
+|\space|
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+     fun: -641.3734202306166
+     jac: array([ 27.49101257, -27.49103546])
+ message: 'Optimization terminated successfully'
+    nfev: 12
+     nit: 4
+    njev: 4
+  status: 0
+ success: True
+       x: array([448.93802864, 448.93802864])
+\end{minted}
+\vfill
+\end{frame}
 
 
 
