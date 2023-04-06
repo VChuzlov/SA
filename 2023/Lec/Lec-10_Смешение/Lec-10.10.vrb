@@ -1,22 +1,12 @@
-\frametitle{Описание класса \texttt {Blend}}
+\frametitle{Задача}
 \scriptsize
-\textbf{Методы класса \texttt{Blend}}
+Определить соотношение $6$-ти потоков различного состава при котором достигается заданное октановое число ($92$, $95$, пункта по исследовательскому методу)
 \vfill
-\begin{tabular}{|p{.445\textwidth}|p{.55\textwidth}|}
-\hline
-\textbf{Метод} & \textbf{Описание} \\
-\hline
-\mintinline{python}|def blend(self, *flows: Flow) -> Flow| & Расчет октанового числа смешения неограниченного количества объектов класса \texttt{Flow} \\
-\hline
-\begin{minipage}{\linewidth}
-\begin{minted}[frame=none, linenos=false]{python}
-def calculate_ratio(
-    self,
-    expected_value: float,
-    *flows: Flow
-) -> dict
-\end{minted}
-\end{minipage} & Расчет соотношения потоков для достижения требуемого октанового числа смешения \\
-\hline
-\end{tabular}
+\textcolor{tpugreen}{\textbf{Этапы решения}}
+\begin{itemize}
+\item[\textcolor{tpugreen}{\checkmark}] Реализовать расчет октанового числа смешения
+\item Реализовать целевую функцию
+\item Применить один из методов минимизации функции
+\item Вывести результаты расчета
+\end{itemize}
 \vfill

@@ -6,10 +6,10 @@ from mixer import Mixer
 
 
 def get_octane_nummber(
-        flow: Flow,
-        ron: np.ndarray = const.RON,
-        bi: np.ndarray = const.Bi
-    ) -> float:
+    flow: Flow,
+    ron: np.ndarray = const.RON,
+    bi: np.ndarray = const.Bi
+) -> float:
     mf = flow.mass_fractions
     additive = (ron * mf).sum()
     
@@ -55,7 +55,14 @@ class Blending:
             return .01 - mixture.volume_fractions[56]
         
         def aromatic_constr(x: np.ndarray) -> float:
-            return ...
+            m = Mixer()
+            flows_ = flows[:]
+            
+            for i, flow in enumerate(flows_):
+                flow.mass_flow_rate * x[i]
+            
+            mixture = m.mix(*flows_)
+            return .35 - mixture.volume_fractions[56:63].sum()
         
         x0 = np.random.random(len(flows))
         x0 = x0 / x0.sum()
@@ -68,7 +75,12 @@ class Blending:
             {
                 'type': 'ineq',
                 'fun': benzole_constr,
-            }
+            },
+
+            {
+                'type': 'ineq',
+                'fun': aromatic_constr,
+            },
         )
         res = {}
         res['SLSQP'] = opt.minimize(
@@ -106,7 +118,7 @@ if __name__ == '__main__':
     for flow in flows:
         mixture = blending.blend(flow)
         print(mixture.ron)
-    res = blending.calculate_ratio(95.2, *flows)
+    res = blending.calculate_ratio(92.2, *flows)
     with open('results.txt', 'w') as f:
         for method in res:
             print('*'*20, file=f)
@@ -121,5 +133,11 @@ if __name__ == '__main__':
             flow.mass_flow_rate = x[i]
     
         mixture = blending.blend(*flows)
-        print(key, mixture.ron, mixture.volume_fractions[56], x.sum())
+        print(
+            key,
+            mixture.ron,
+            x.sum(),
+            mixture.volume_fractions[56],
+            mixture.volume_fractions[56:63].sum()
+        )
     

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  6 APR 2023 20:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  6 APR 2023 22:04
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1691,6 +1691,24 @@ LaTeX Warning: Label `c<1>' multiply defined.
 
 LaTeX Warning: Label `c' multiply defined.
 
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
 )
 \openout1 = `Lec-10.aux'.
 
@@ -1937,17 +1955,38 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 133
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Overfull \hbox (68.29076pt too wide) in paragraph at lines 133--133
-[][][][]  
+[][][]  
  []
 
 
+Overfull \vbox (5.0pt too high) detected at line 133
+ []
+
+File: bgs/light/title.png Graphic file (type bmp)
+<bgs/light/title.png>
+File: logos/ru/light/logoclr.png Graphic file (type bmp)
+<logos/ru/light/logoclr.png>
+[1
+
+]
 Overfull \hbox (68.29076pt too wide) in paragraph at lines 139--139
-[][][][]  
+[][][]  
  []
 
+
+Overfull \vbox (5.0pt too high) detected at line 139
+ []
+
+File: bgs/light/section.jpg Graphic file (type bmp)
+<bgs/light/section.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[2
+
+]
 \openout4 = `Lec-10.3.vrb'.
 
-(./Lec-10.3.vrb
+ (./Lec-10.3.vrb
 File: ./pics/ic8.png Graphic file (type bmp)
 <./pics/ic8.png>
 File: ./pics/nc7.png Graphic file (type bmp)
@@ -1957,7 +1996,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [1
+ [3
 
 ]
 \openout4 = `Lec-10.4.vrb'.
@@ -1973,7 +2012,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[2
+[4
 
 ]
 \openout4 = `Lec-10.5.vrb'.
@@ -2099,7 +2138,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[3
+[5
 
 ]
 \openout4 = `Lec-10.6.vrb'.
@@ -2114,7 +2153,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [4
+ [6
 
 ]
 \openout4 = `Lec-10.7.vrb'.
@@ -2135,7 +2174,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [5
+ [7
 
 ]
 \openout4 = `Lec-10.8.vrb'.
@@ -2160,22 +2199,37 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[6
+[8
 
 ]
-\openout4 = `Lec-10.9.vrb'.
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 308--308
+[][][]  
+ []
 
- (./Lec-10.9.vrb)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
+
+Overfull \vbox (5.0pt too high) detected at line 308
+ []
+
+File: bgs/light/section.jpg Graphic file (type bmp)
+<bgs/light/section.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [7
+[9
 
 ]
 \openout4 = `Lec-10.10.vrb'.
 
- (./Lec-10.10.vrb
+ (./Lec-10.10.vrb)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [10
+
+]
+\openout4 = `Lec-10.11.vrb'.
+
+ (./Lec-10.11.vrb
 \openout6 = `Lec-10.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -2189,7 +2243,8 @@ runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
 escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
 .pyg Lec-10.pyg)...executed.
 
- (./Lec-10.out.pyg)
+
+(./Lec-10.out.pyg)
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
 []|\TU/ALSSirius(0)/m/n/8 Расчет соотношения потоков для достижения
  []
@@ -2204,22 +2259,22 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [8
-
-]
-\openout4 = `Lec-10.11.vrb'.
-
- (./Lec-10.11.vrb)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [9
+ [11
 
 ]
 \openout4 = `Lec-10.12.vrb'.
 
- (./Lec-10.12.vrb
+ (./Lec-10.12.vrb)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [12
+
+]
+\openout4 = `Lec-10.13.vrb'.
+
+ (./Lec-10.13.vrb
 \openout6 = `Lec-10.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -2290,12 +2345,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
 
-[10
+[13
 
 ]
-\openout4 = `Lec-10.13.vrb'.
+\openout4 = `Lec-10.14.vrb'.
 
- (./Lec-10.13.vrb
+ (./Lec-10.14.vrb
 File: ./pics/eggholder.pdf Graphic file (type pdf)
 <use ./pics/eggholder.pdf>
 
@@ -2319,12 +2374,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [11
+ [14
 
 ]
-\openout4 = `Lec-10.14.vrb'.
+\openout4 = `Lec-10.15.vrb'.
 
- (./Lec-10.14.vrb
+ (./Lec-10.15.vrb
 \openout5 = `Lec-10.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -2336,12 +2391,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [12
+ [15
 
 ]
-\openout4 = `Lec-10.15.vrb'.
+\openout4 = `Lec-10.16.vrb'.
 
- (./Lec-10.15.vrb
+ (./Lec-10.16.vrb
 \openout5 = `Lec-10.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -2361,10 +2416,111 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [13
+ [16
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 489--489
+\openout4 = `Lec-10.17.vrb'.
+
+ (./Lec-10.17.vrb
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+(./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+
+(./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [17
+
+]
+\openout4 = `Lec-10.18.vrb'.
+
+ (./Lec-10.18.vrb
+\openout5 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [18
+
+]
+\openout4 = `Lec-10.19.vrb'.
+
+ (./Lec-10.19.vrb
+\openout5 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout5 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out.
+pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [19
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
 
  []
 
@@ -2375,10 +2531,21 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 489--489
-[]  
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 584--584
+[][]  
  []
 
+
+Overfull \vbox (5.0pt too high) detected at line 584
+ []
+
+File: bgs/contacts.jpg Graphic file (type bmp)
+<bgs/contacts.jpg>
+File: logos/ru/light/logoclr.png Graphic file (type bmp)
+<logos/ru/light/logoclr.png>
+[20
+
+]
 \tf@nav=\write8
 \openout8 = `Lec-10.nav'.
 
@@ -2389,6 +2556,7 @@ Overfull \hbox (68.29076pt too wide) in paragraph at lines 489--489
 \openout10 = `Lec-10.snm'.
 
 
+
 Package caption Warning: Unused \captionsetup[table] on input line 111.
 See the caption package documentation for explanation.
 
@@ -2397,19 +2565,19 @@ See the caption package documentation for explanation.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Lec-10.out' has not changed.
-(rerunfilecheck)             Checksum: 9137026A4307B493EBD55031F5A9AD80;343.
+(rerunfilecheck)             Checksum: 8C0A742A4204E68F2C55C53268C6CC66;929.
 runsystem(del Lec-10.pyg)...executed.
 
 runsystem(del Lec-10.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 35951 strings out of 476477
- 757643 string characters out of 5817858
- 1221952 words of memory out of 5000000
- 55585 multiletter control sequences out of 15000+600000
+ 36114 strings out of 476477
+ 760880 string characters out of 5817858
+ 1222947 words of memory out of 5000000
+ 55716 multiletter control sequences out of 15000+600000
  409443 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,17n,108p,496b,792s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,17n,108p,507b,792s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Lec-10.pdf (13 pages).
+Output written on Lec-10.pdf (20 pages).

@@ -1,32 +1,21 @@
 \frametitle{Метод SLSQP}
 \scriptsize
-\mintinline[fontsize=\small]{python}|scipy.optimize.minimize(method='SLSQP')|
-\vfill
-\textbf{Основные параметры:}
-\vfill
 \begin{itemize}
-\item[] \mintinline{python}|fun: callable|
-
-Объектная функция для минимизации.
-\vfill
-\mintinline{python}|fun(x, *args) -> float|
-
-где \texttt{x}~-- одномерный массив размера \mintinline{python}|(n, )|; \texttt{args}~-- кортеж параметров, необходимых для вызова функции.
-\vfill
-\item[] \mintinline{python}|x0: ndarray, shape (n,)|
-
-Начальное приближение. Массив элементов размера \mintinline{python}|(n,)|, где \texttt{n}~-- количество независимых переменных.
-\vfill
-\item[] \mintinline{python}|args: tuple, optional|
-
-Дополнительные аргументы, передаваемые объектной функции и ее производным (функциям \texttt{fun}, \texttt{jac} и \texttt{hess})
-\vfill
-\item[] \mintinline{python}|bounds: sequence, optional|
-
-Предельные значения для переменных.
-\vfill
-\item[] \mintinline{python}|constraints: {Constraint, dict} or List of {Constraint, dict}, optional|
-
-Описание функций, накладывающих ограничения на решение.
+\item Метод SLSQP (Sequential Least Squares Programming) использует последовательное квадратичное программирование для минимизации функций нескольких переменных с любой комбинацией границ, а также ограничений на равенство и неравенство.
+\item Метод включает в себя подпрограмму оптимизации SLSQP, первоначально реализованную Дитером Крафтом (Dieter Kraft).
+\item Обратите внимание, что бесконечные значения в границах преобразуются в большие значения с плавающей точкой.
 \end{itemize}
+\vfill
+Метод SLSQP предназначен для решения задач оптимизации функций в следующей форме:
+\vfill
+\begin{equation}\label{eq:problem}
+\begin{gathered}
+\underset{x}{\min}\ f\left(x\right) \\
+\mathrm{при }\ c_j\left(x\right) = 0, \qquad j \in \mathcal{E} \\
+\qquad c_j\left(x\right) \geqslant 0, \qquad j \in \mathcal{I} \\
+\qquad lb_i \leqslant x_i \leqslant ub_i, \qquad i = 1, \ldots , N.
+\end{gathered}
+\end{equation}
+\vfill
+Здесь $\mathcal{E}$ и $\mathcal{I}$~--множества индексов выражений, описывающих ограничения в виде равенств или неравенств; $\left[lb_i, ub_i\right]$~-- множества нижних и верхних границ для области определения функции.
 \vfill

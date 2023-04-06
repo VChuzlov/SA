@@ -1,3 +1,5 @@
 \babel@toc {russian}{}
-\beamer@sectionintoc {1}{Расчет октанового числа}{1}{0}{1}
-\beamer@sectionintoc {2}{Метод SLSQP}{9}{0}{2}
+\beamer@sectionintoc {1}{Расчет октанового числа}{2}{0}{1}
+\beamer@sectionintoc {2}{Подбор оптимального соотношения \\ компонентов смешения}{9}{0}{2}
+\beamer@sectionintoc {3}{Метод SLSQP}{12}{0}{3}
+\beamer@sectionintoc {4}{Метод SHGO}{17}{0}{4}

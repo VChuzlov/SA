@@ -1,21 +1,22 @@
-\frametitle{Метод SLSQP}
+\frametitle{Описание класса \texttt {Blend}}
 \scriptsize
-\begin{itemize}
-\item Метод SLSQP использует последовательное квадратичное программирование для минимизации функций нескольких переменных с любой комбинацией границ, а также ограничений на равенство и неравенство.
-\item Метод включает в себя подпрограмму оптимизации SLSQP, первоначально реализованную Дитером Крафтом (Dieter Kraft).
-\item Обратите внимание, что оболочка обрабатывает бесконечные значения в границах, преобразуя их в большие значения с плавающей точкой.
-\end{itemize}
+\textbf{Методы класса \texttt{Blend}}
 \vfill
-Метод SLSQP предназначен для решения задач оптимизации функций в следующей форме:
-\vfill
-\begin{equation}\label{eq:problem}
-\begin{gathered}
-\underset{x}{\min}\ f\left(x\right) \\
-\mathrm{при }\ c_j\left(x\right) = 0, \qquad j \in \mathcal{E} \\
-\qquad c_j\left(x\right) \geqslant 0, \qquad j \in \mathcal{I} \\
-\qquad lb_i \leqslant x_i \leqslant ub_i, \qquad i = 1, \ldots , N.
-\end{gathered}
-\end{equation}
-\vfill
-Здесь $\mathcal{E}$ и $\mathcal{I}$~--множества индексов выражений, описывающих ограничения в виде равенств или неравенств.
+\begin{tabular}{|p{.445\textwidth}|p{.55\textwidth}|}
+\hline
+\textbf{Метод} & \textbf{Описание} \\
+\hline
+\mintinline{python}|def blend(self, *flows: Flow) -> Flow| & Расчет октанового числа смешения неограниченного количества объектов класса \texttt{Flow} \\
+\hline
+\begin{minipage}{\linewidth}
+\begin{minted}[frame=none, linenos=false]{python}
+def calculate_ratio(
+    self,
+    expected_value: float,
+    *flows: Flow
+) -> dict
+\end{minted}
+\end{minipage} & Расчет соотношения потоков для достижения требуемого октанового числа смешения \\
+\hline
+\end{tabular}
 \vfill
