@@ -1,5 +1,5 @@
 import numpy as np
-import  scipy.optimize as opt
+import scipy.optimize as opt
 import constants as const
 from flows import Flow
 from mixer import Mixer

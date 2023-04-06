@@ -1,15 +1,22 @@
-\frametitle{Пример}
+\frametitle{Описание класса \texttt {Blend}}
 \scriptsize
-\begin{minipage}{.52\textwidth}
-\includegraphics[width=.9\linewidth]{./pics/eggholder}
-\end{minipage}
-\begin{minipage}{.47\textwidth}
-Рассмотрим следующую функцию:
+\textbf{Методы класса \texttt{Blend}}
 \vfill
-\begin{equation*}
-z = \left(-y + 47\right) \cdot \sin \sqrt{\left|\dfrac{x}{2} + y + 47\right|} - x \cdot \sin \sqrt{\left|\dfrac{x}{2} - y - 47\right|}
-\end{equation*}
-\vfill
-Найдем минимум данной функции при значениях $x \in \left[400, 500\right];\ y \in \left[400, 500\right]$ и при условии, что $x = y$.
-\end{minipage}
+\begin{tabular}{|p{.445\textwidth}|p{.55\textwidth}|}
+\hline
+\textbf{Метод} & \textbf{Описание} \\
+\hline
+\mintinline{python}|def blend(self, *flows: Flow) -> Flow| & Расчет октанового числа смешения неограниченного количества объектов класса \texttt{Flow} \\
+\hline
+\begin{minipage}{\linewidth}
+\begin{minted}[frame=none, linenos=false]{python}
+def calculate_ratio(
+    self,
+    expected_value: float,
+    *flows: Flow
+) -> dict
+\end{minted}
+\end{minipage} & Расчет соотношения потоков для достижения требуемого октанового числа смешения \\
+\hline
+\end{tabular}
 \vfill

@@ -114,6 +114,7 @@ skip=5pt
 
 \usepackage{chemfig}
 \usepackage{tabularx}
+\usepackage{amsfonts}
 
 \includeonlyframes{c}
 
@@ -252,15 +253,94 @@ $
 \vfill
 $
 \begin{aligned}
-\mathrm{ОЧ}_{\mathrm{см}} &- \text{Коэффициент взаимодействия компонентов $A$ и $B$}; \\
-P_{\mathrm{факт}} &- \text{Свойство смеси, определенное в лаборатории}; \\
-P_{\mathrm{об}} &- \text{Средневзвешенное (по объему) свойство смеси}; \\
-V_A, V_B &- \text{Объемная доля компонентов $A$ и $B$}.
+\mathrm{ОЧ}_{\mathrm{см}} &- \text{Октановое число смешения компонентов бензина}; \\
+B &- \text{Суммарное отклонение октановых чисел от аддитивности}; \\
+C_i &- \text{Концентрация $i$-го компонента, отн. ед.}; \\
+\mathrm{ОЧ}_i &- \text{Октановое число $i$-го компонента}; \\
+n &- \text{Количество компонентов}.
 \end{aligned}
 $
 \vfill
+Суммарное отклонение $B$ определяется следующим образом:
+\vfill
+\begin{minipage}{.35\textwidth}
+\begin{equation}
+	B = \sum \limits _{i=1} ^{n} \sum \limits _{j=i+1} ^{n} B_i \cdot B_j \cdot C_i \cdot C_j
+\end{equation}
+\vfill
+\end{minipage}
+\begin{minipage}{.04\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}{.6\textwidth}
+$B_i, B_j$~-- величины, характеризующие склонность $i$-й молекулы к межмолекулярному взаимодействию c $j$-й молекулой.
+\end{minipage}
+\vfill
+\tiny{*Ю.А. Смышляева, Э.Д. Иванчина, А.В. Кравцов, Ч.Т. Зыонг, Ф. Фан Разработка базы данных по октановым числам для математической модели процесса компаундирования товарных бензинов // Известия Томского политехнического университета. 2011. Т. 318. № 3}
+\vfill
 \end{frame}
 
+
+\begin{frame}[fragile, label=c]{Программная реализация}
+\scriptsize
+\begin{minted}{python}
+def get_octane_nummber(
+    flow: Flow,
+    ron: np.ndarray = const.RON,
+    bi: np.ndarray = const.Bi
+) -> float:
+    mf = flow.mass_fractions
+    additive = (ron * mf).sum()
+
+    non_additive = 0
+    for i, _ in enumerate(mf):
+        for j in range(i+1, mf.shape[0]):
+            non_additive += bi[i] * bi[j] * mf[i] * mf[j]
+
+    return additive + non_additive
+|\space|
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Задача}
+\scriptsize
+Определить соотношение $6$-ти потоков различного состава при котором достигается заданное октановое число (92, 95, пункта по исследовательскому методу)
+\vfill
+\textcolor{tpugreen}{\textbf{Этапы решения}}
+\begin{itemize}
+\item[\textcolor{tpugreen}{\checkmark}] Реализовать расчет октанового числа смешения
+\item Реализовать целевую функцию
+\item Применить один из методов минимизации функции
+\item Вывести результаты расчета
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile, label=c]{Описание класса \texttt{Blend}}
+\scriptsize
+\textbf{Методы класса \texttt{Blend}}
+\vfill
+\begin{tabular}{|p{.445\textwidth}|p{.55\textwidth}|}
+\hline
+\textbf{Метод} & \textbf{Описание} \\
+\hline
+\mintinline{python}|def blend(self, *flows: Flow) -> Flow| & Расчет октанового числа смешения неограниченного количества объектов класса \texttt{Flow} \\
+\hline
+\begin{minipage}{\linewidth}
+\begin{minted}[frame=none, linenos=false]{python}
+def calculate_ratio(
+    self,
+    expected_value: float,
+    *flows: Flow
+) -> dict
+\end{minted}
+\end{minipage} & Расчет соотношения потоков для достижения требуемого октанового числа смешения \\
+\hline
+\end{tabular}
+\vfill
+\end{frame}
 
 \section{Метод SLSQP}
 \begin{frame}[fragile, label=c]{Метод SLSQP}
@@ -271,7 +351,7 @@ $
 \item Обратите внимание, что оболочка обрабатывает бесконечные значения в границах, преобразуя их в большие значения с плавающей точкой.
 \end{itemize}
 \vfill
-Метод SLSQP работает с задачей минимизации с ограничениями в следующей форме:
+Метод SLSQP предназначен для решения задач оптимизации функций в следующей форме:
 \vfill
 \begin{equation}\label{eq:problem}
 \begin{gathered}
@@ -282,7 +362,7 @@ $
 \end{gathered}
 \end{equation}
 \vfill
-Здесь $\mathcal{E}$ и $\mathcal{I}$~--множества индексов, содержащих ограничения по равенству и неравенству.
+Здесь $\mathcal{E}$ и $\mathcal{I}$~--множества индексов выражений, описывающих ограничения в виде равенств или неравенств.
 \vfill
 \end{frame}
 
