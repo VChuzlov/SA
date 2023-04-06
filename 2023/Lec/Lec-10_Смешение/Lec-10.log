@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  6 APR 2023 14:20
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.1)  6 APR 2023 15:30
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1810,27 +1810,24 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 ]
 \openout4 = `Lec-10.8.vrb'.
 
- (./Lec-10.8.vrb
+ (./Lec-10.8.vrb)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [6
+
+]
+\openout4 = `Lec-10.9.vrb'.
+
+ (./Lec-10.9.vrb
 \openout6 = `Lec-10.pyg'.
 
 runsystem(pygmentize -S default -f latex -P commandprefix=PYG > Lec-10.out.pyg)
 ...executed.
 
- (./Lec-10.out.pyg)
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-10.out.pyg Lec-10.pyg)...executed.
 
- (./Lec-10.out.pyg)
-\openout6 = `Lec-10.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
-tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
-rue -o Lec-10.out.pyg Lec-10.pyg)...executed.
-
- (./Lec-10.out.pyg)
-\openout6 = `Lec-10.pyg'.
-
+(./Lec-10.out.pyg)
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
 tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
 rue -o Lec-10.out.pyg Lec-10.pyg)...executed.
@@ -1878,18 +1875,32 @@ runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
 tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
 rue -o Lec-10.out.pyg Lec-10.pyg)...executed.
 
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o Lec-10.out.pyg Lec-10.pyg)...executed.
+
+
+(./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
+tripnl=False -P "escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=T
+rue -o Lec-10.out.pyg Lec-10.pyg)...executed.
+
  (./Lec-10.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-
-[6
+ [7
 
 ]
-\openout4 = `Lec-10.9.vrb'.
+\openout4 = `Lec-10.10.vrb'.
 
- (./Lec-10.9.vrb
+ (./Lec-10.10.vrb
 File: ./pics/eggholder.pdf Graphic file (type pdf)
 <use ./pics/eggholder.pdf>
 
@@ -1913,12 +1924,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [7
+ [8
 
 ]
-\openout4 = `Lec-10.10.vrb'.
+\openout4 = `Lec-10.11.vrb'.
 
- (./Lec-10.10.vrb
+ (./Lec-10.11.vrb
 \openout5 = `Lec-10.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
@@ -1930,12 +1941,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [8
+ [9
 
 ]
-\openout4 = `Lec-10.11.vrb'.
+\openout4 = `Lec-10.12.vrb'.
 
- (./Lec-10.11.vrb
+ (./Lec-10.12.vrb
 \openout5 = `Lec-10.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P s
@@ -1955,10 +1966,10 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [9
+ [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 389--389
+Underfull \hbox (badness 10000) in paragraph at lines 400--400
 
  []
 
@@ -1969,7 +1980,7 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 389--389
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 400--400
 []  
  []
 
@@ -1998,12 +2009,12 @@ runsystem(del Lec-10.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 37675 strings out of 475848
- 822347 string characters out of 5805114
+ 37681 strings out of 475848
+ 822450 string characters out of 5805114
  1241620 words of memory out of 5000000
- 57965 multiletter control sequences out of 15000+600000
+ 57968 multiletter control sequences out of 15000+600000
  475264 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,17n,104p,496b,793s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Lec-10.pdf (9 pages).
+Output written on Lec-10.pdf (10 pages).
