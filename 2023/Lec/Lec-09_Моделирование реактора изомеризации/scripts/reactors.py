@@ -128,7 +128,7 @@ if __name__ == '__main__':
     f = Flow(
         50_000, 
         mf, 
-        temperature=403.15,
+        temperature=423.15,
         pressure=3001.325
     )
     h2_mf = np.zeros_like(mf)
@@ -136,7 +136,7 @@ if __name__ == '__main__':
     h2 = Flow(
         mass_flow_rate=80, 
         mass_fractions=h2_mf, 
-        temperature=403.15, 
+        temperature=423.15, 
         pressure=3001.325
     )
     mxr = Mixer()

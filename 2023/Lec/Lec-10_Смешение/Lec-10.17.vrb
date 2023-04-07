@@ -1,0 +1,29 @@
+\frametitle{\textbf {Метод SHGO}}
+\scriptsize
+<<Simplicial Homology Global Optimization>>~-- выполняет поиск глобального минимума функции.
+\mintinline{python}|scipy.optimize.shgo|
+\vfill
+\textcolor{tpugreen}{\textbf{Основные параметры:}}
+\vfill
+\begin{itemize}
+\item[] \mintinline{python}|func: callable|
+
+Объектная функция для минимизации.
+\vfill
+\mintinline{python}|func(x, *args) -> float|
+
+где \texttt{x}~-- одномерный массив размера \mintinline{python}|(n, )|; \texttt{args}~-- кортеж параметров, необходимых для вызова функции.
+\vfill
+\item[] \mintinline{python}|args: tuple, optional|
+
+Дополнительные аргументы, передаваемые объектной функции и ее производным (функциям \texttt{fun}, \texttt{jac} и \texttt{hess})
+\vfill
+\item[] \mintinline{python}|bounds: sequence, optional|
+
+Предельные значения для переменных.
+\vfill
+\item[] \mintinline{python}|constraints: {Constraint, dict} or List of {Constraint, dict}, optional|
+
+Описание функций, накладывающих ограничения на решение.
+\end{itemize}
+\vfill

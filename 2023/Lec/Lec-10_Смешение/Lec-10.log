@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  5 APR 2023 22:03
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  6 APR 2023 22:11
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1599,10 +1599,19 @@ Invalid UTF-8 byte or sequence at line 2413 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 2413 replaced by U+FFFD.
 )
 Package: chemfig 2021/02/28 v1.6a Draw molecule with an easy syntax (CT)
+) (c:/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen359
+\TX@old@table=\dimen360
+\TX@old@col=\dimen361
+\TX@target=\dimen362
+\TX@delta=\dimen363
+\TX@cols=\count415
+\TX@ftn=\toks60
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 122.
+(hyperref)                removing `\\' on input line 124.
 
 runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > Le
 c-10.aex <nul: /p x=^%~$PATH:i>> Lec-10.aex)...executed.
@@ -1616,34 +1625,118 @@ LaTeX Warning: Label `c<1>' multiply defined.
 
 LaTeX Warning: Label `c' multiply defined.
 
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
+
+LaTeX Warning: Label `c<1>' multiply defined.
+
+
+LaTeX Warning: Label `c' multiply defined.
+
 )
 \openout1 = `Lec-10.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 125.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 127.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-25.
+27.
  (c:/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1679,7 +1772,7 @@ LaTeX Font Info:    ... okay on input line 125.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 125.
+Package hyperref Info: Link coloring OFF on input line 127.
 (c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1689,11 +1782,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count415
+\c@section@level=\count416
 )
-LaTeX Info: Redefining \ref on input line 125.
-LaTeX Info: Redefining \pageref on input line 125.
-LaTeX Info: Redefining \nameref on input line 125.
+LaTeX Info: Redefining \ref on input line 127.
+LaTeX Info: Redefining \pageref on input line 127.
+LaTeX Info: Redefining \nameref on input line 127.
 
 (./Lec-10.out) (./Lec-10.out)
 \@outlinefile=\write7
@@ -1702,55 +1795,55 @@ LaTeX Info: Redefining \nameref on input line 125.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Brygada1918(0)/m/n on input line 125
+(Font)                  OT1/cmr/m/n --> TU/Brygada1918(0)/m/n on input line 127
 .
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 125.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/Brygada1918(0)/b/n on input line 12
-5.
+7.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/Brygada1918(0)/b/n on input line 12
-5.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 125.
+7.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/ALSSirius(0)/m/n on input line 125.
+(Font)                  OT1/cmss/m/n --> TU/ALSSirius(0)/m/n on input line 127.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/ALSSirius(0)/m/n on input line 125
+(Font)                  OT1/cmss/bx/n --> TU/ALSSirius(0)/m/n on input line 127
 .
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 125.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/Brygada1918(0)/m/it on input line 1
-25.
+27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/Brygada1918(0)/m/it on input line 
-125.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 125.
+127.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/Consolas(0)/m/n on input line 125.
+(Font)                  OT1/cmtt/m/n --> TU/Consolas(0)/m/n on input line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/Consolas(0)/m/n on input line 125.
+(Font)                  OT1/cmtt/m/n --> TU/Consolas(0)/m/n on input line 127.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
 (Font)                  TU/Brygada1918(0)/m/n --> TU/Brygada1918(0)/b/n on inpu
-t line 125.
+t line 127.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  TU/Brygada1918(0)/m/it --> TU/Brygada1918(0)/b/it on in
-put line 125.
+put line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/Brygada1918(0)/b/n on input line 12
-5.
+7.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  TU/Brygada1918(0)/b/n --> TU/Brygada1918(0)/b/n on inpu
-t line 125.
+t line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  TU/ALSSirius(0)/m/n --> TU/ALSSirius(0)/b/n on input li
-ne 125.
+ne 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  TU/Brygada1918(0)/m/it --> TU/Brygada1918(0)/b/it on in
-put line 125.
+put line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  TU/Consolas(0)/m/n --> TU/Consolas(0)/b/n on input line
- 125.
+ 127.
 
 (c:/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
 glish.dict
@@ -1776,109 +1869,318 @@ Dictionary: translator-numbers-dictionary, Language: English
 English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \th on input line 125.
+LaTeX Info: Redefining \th on input line 127.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 125.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 125.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 125.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 125.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 125.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 125.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 125.
-LaTeX Font Info:    Redeclaring math accent \check on input line 125.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 125.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 125.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 125.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 125.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 127.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 127.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 127.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 127.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 127.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 127.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 127.
+LaTeX Font Info:    Redeclaring math accent \check on input line 127.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 127.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 127.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 127.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 127.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 125.
+(Font)              `operators' in the math version `normal' on input line 127.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Brygada1918(0)/m/n on input line 125
+(Font)                  OT1/cmr/m/n --> TU/Brygada1918(0)/m/n on input line 127
 .
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 125.
+(Font)              `operators' in the math version `bold' on input line 127.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/Brygada1918(0)/m/n on input line 12
-5.
+7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/Brygada1918(0)/m/n --> TU/Brygada1918(0)/m/n on inpu
-t line 125.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 125.
+t line 127.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  TU/Brygada1918(0)/m/it --> TU/Brygada1918(0)/m/it on in
-put line 125.
+put line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  TU/Brygada1918(0)/b/n --> TU/Brygada1918(0)/b/n on inpu
-t line 125.
+t line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  TU/ALSSirius(0)/m/n --> TU/ALSSirius(0)/m/n on input li
-ne 125.
+ne 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  TU/Consolas(0)/m/n --> TU/Consolas(0)/m/n on input line
- 125.
+ 127.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/Brygada1918(0)/m/n --> TU/Brygada1918(0)/b/n on inpu
-t line 125.
+t line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  TU/Brygada1918(0)/b/it --> TU/Brygada1918(0)/b/it on in
-put line 125.
+put line 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  TU/ALSSirius(0)/b/n --> TU/ALSSirius(0)/b/n on input li
-ne 125.
+ne 127.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  TU/Consolas(0)/b/n --> TU/Consolas(0)/b/n on input line
- 125.
+ 127.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./Lec-10.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 131
+LaTeX Font Info:    Trying to load font information for U+msa on input line 133
 .
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 131
+LaTeX Font Info:    Trying to load font information for U+msb on input line 133
 .
 
 (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 131--131
-[][][][]  
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 133--133
+[][][]  
  []
 
-\openout4 = `Lec-10.2.vrb'.
 
-(./Lec-10.2.vrb)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
+Overfull \vbox (5.0pt too high) detected at line 133
+ []
+
+File: bgs/light/title.png Graphic file (type bmp)
+<bgs/light/title.png>
+File: logos/ru/light/logoclr.png Graphic file (type bmp)
+<logos/ru/light/logoclr.png>
+[1
+
+]
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 139--139
+[][][]  
+ []
+
+
+Overfull \vbox (5.0pt too high) detected at line 139
+ []
+
+File: bgs/light/section.jpg Graphic file (type bmp)
+<bgs/light/section.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [1
+[2
 
 ]
 \openout4 = `Lec-10.3.vrb'.
 
  (./Lec-10.3.vrb
-\openout6 = `Lec-10.pyg'.
+File: ./pics/ic8.png Graphic file (type bmp)
+<./pics/ic8.png>
+File: ./pics/nc7.png Graphic file (type bmp)
+<./pics/nc7.png>
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [3
+
+]
+\openout4 = `Lec-10.4.vrb'.
+
+ (./Lec-10.4.vrb
+File: ./pics/ron.png Graphic file (type bmp)
+<./pics/ron.png>
+)
+Overfull \vbox (7.07826pt too high) detected at line 177
+ []
+
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[4
+
+]
+\openout4 = `Lec-10.5.vrb'.
+
+ (./Lec-10.5.vrb
+Overfull \hbox (1.7166pt too wide) in paragraph at lines 8--8
+[]|$[]$| 
+ []
+
+
+Overfull \hbox (2.06335pt too wide) in paragraph at lines 8--8
+[]|\TU/ALSSirius(0)/m/n/8 –
+ []
+
+
+Overfull \hbox (5.88321pt too wide) in paragraph at lines 9--9
+[]|$[][]$| 
+ []
+
+
+Overfull \hbox (2.06335pt too wide) in paragraph at lines 9--9
+[]|\TU/ALSSirius(0)/m/n/8 –
+ []
+
+
+Overfull \hbox (5.88321pt too wide) in paragraph at lines 10--10
+[]|$[][]$| 
+ []
+
+
+Overfull \hbox (2.06335pt too wide) in paragraph at lines 10--10
+[]|\TU/ALSSirius(0)/m/n/8 –
+ []
+
+
+Overfull \hbox (5.88321pt too wide) in paragraph at lines 11--11
+[]|$[][]$| 
+ []
+
+
+Overfull \hbox (2.06335pt too wide) in paragraph at lines 11--11
+[]|\TU/ALSSirius(0)/m/n/8 –
+ []
+
+
+Underfull \hbox (badness 2717) in paragraph at lines 11--12
+[]|\TU/ALSSirius(0)/m/n/8 Сумма произведений $[][]$ и $[]$ каждого компонента, 
+умноженных на его объемную долю
+ []
+
+
+Overfull \hbox (3.1086pt too wide) in paragraph at lines 12--12
+[]|$[][]$| 
+ []
+
+
+Overfull \hbox (2.06335pt too wide) in paragraph at lines 12--12
+[]|\TU/ALSSirius(0)/m/n/8 –
+ []
+
+
+Overfull \hbox (6.2512pt too wide) in paragraph at lines 13--13
+[]|$[][]$| 
+ []
+
+
+Overfull \hbox (2.06335pt too wide) in paragraph at lines 13--13
+[]|\TU/ALSSirius(0)/m/n/8 –
+ []
+
+
+Overfull \hbox (6.2512pt too wide) in paragraph at lines 14--14
+[]|$[][]$| 
+ []
+
+
+Overfull \hbox (2.06335pt too wide) in paragraph at lines 14--14
+[]|\TU/ALSSirius(0)/m/n/8 –
+ []
+
+
+Overfull \hbox (5.89922pt too wide) in paragraph at lines 15--15
+[]|$[][]$| 
+ []
+
+
+Overfull \hbox (2.06335pt too wide) in paragraph at lines 15--15
+[]|\TU/ALSSirius(0)/m/n/8 –
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+[]|\TU/ALSSirius(0)/m/n/8 Сумма произведений квадрата содержания ароматических 
+углеводородов в каждом
+ []
+
+
+Overfull \hbox (5.89922pt too wide) in paragraph at lines 16--16
+[]|$[][]$| 
+ []
+
+
+Overfull \hbox (2.06335pt too wide) in paragraph at lines 16--16
+[]|\TU/ALSSirius(0)/m/n/8 –
+ []
+
+
+Underfull \hbox (badness 1975) in paragraph at lines 16--17
+[]|\TU/ALSSirius(0)/m/n/8 Квадрат суммы произведений процентного содержания аро
+матических углеводородов в
+ []
+
+
+Overfull \hbox (22.45518pt too wide) in paragraph at lines 7--18
+[][]  
+ []
+
+)
+Overfull \vbox (2.97891pt too high) detected at line 200
+ []
+
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[5
+
+]
+\openout4 = `Lec-10.6.vrb'.
+
+ (./Lec-10.6.vrb
+Overfull \hbox (41.82077pt too wide) in paragraph at lines 29--37
+[]$[][]$ 
+ []
+
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [6
+
+]
+\openout4 = `Lec-10.7.vrb'.
+
+ (./Lec-10.7.vrb
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+[]$[][]\OML/cmm/m/it/8 ; [][]$ \TU/ALSSirius(0)/m/n/8 – величины, характеризующ
+ие склонность $[]$-й
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+\TU/ALSSirius(0)/m/n/8 молекулы к межмолекулярному взаимодействию c $[]$-й
+ []
+
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [7
+
+]
+\openout4 = `Lec-10.8.vrb'.
+
+ (./Lec-10.8.vrb
+\openout5 = `Lec-10.pyg'.
 
 runsystem(pygmentize -S default -f latex -P commandprefix=PYG > Lec-10.out.pyg)
 ...executed.
@@ -1892,90 +2194,333 @@ runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
 escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
 .pyg Lec-10.pyg)...executed.
 
-
-(./Lec-10.out.pyg)
-\openout6 = `Lec-10.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
-.pyg Lec-10.pyg)...executed.
-
- (./Lec-10.out.pyg)
-\openout6 = `Lec-10.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
-.pyg Lec-10.pyg)...executed.
-
- (./Lec-10.out.pyg)
-\openout6 = `Lec-10.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
-.pyg Lec-10.pyg)...executed.
-
- (./Lec-10.out.pyg)
-\openout6 = `Lec-10.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
-.pyg Lec-10.pyg)...executed.
-
-
-(./Lec-10.out.pyg)
-\openout6 = `Lec-10.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
-.pyg Lec-10.pyg)...executed.
-
- (./Lec-10.out.pyg)
-\openout6 = `Lec-10.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
-.pyg Lec-10.pyg)...executed.
-
- (./Lec-10.out.pyg)
-\openout6 = `Lec-10.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
-.pyg Lec-10.pyg)...executed.
-
- (./Lec-10.out.pyg)
-\openout6 = `Lec-10.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
-.pyg Lec-10.pyg)...executed.
-
-
-(./Lec-10.out.pyg))
+ (./Lec-10.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [2
+[8
 
 ]
-\openout4 = `Lec-10.4.vrb'.
-
- (./Lec-10.4.vrb
-File: ./pics/eggholder.pdf Graphic file (type pdf)
-<use ./pics/eggholder.pdf>
-)
-Overfull \vbox (9.10916pt too high) detected at line 200
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 308--308
+[][][]  
  []
 
+
+Overfull \vbox (5.0pt too high) detected at line 308
+ []
+
+File: bgs/light/section.jpg Graphic file (type bmp)
+<bgs/light/section.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[9
+
+]
+\openout4 = `Lec-10.10.vrb'.
+
+ (./Lec-10.10.vrb)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[3
+ [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 210--210
+\openout4 = `Lec-10.11.vrb'.
+
+ (./Lec-10.11.vrb
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout5 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+
+(./Lec-10.out.pyg)
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+[]|\TU/ALSSirius(0)/m/n/8 Расчет соотношения потоков для достижения
+ []
+
+
+Overfull \hbox (23.26921pt too wide) in paragraph at lines 5--22
+[][]  
+ []
+
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [11
+
+]
+\openout4 = `Lec-10.12.vrb'.
+
+ (./Lec-10.12.vrb)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [12
+
+]
+\openout4 = `Lec-10.13.vrb'.
+
+ (./Lec-10.13.vrb
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+
+(./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+
+(./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+
+[13
+
+]
+\openout4 = `Lec-10.14.vrb'.
+
+ (./Lec-10.14.vrb
+File: ./pics/eggholder.pdf Graphic file (type pdf)
+<use ./pics/eggholder.pdf>
+
+Overfull \hbox (18.77364pt too wide) detected at line 11
+[] \OT1/cmr/m/n/8 = [] \OMS/cmsy/m/n/8 ^^A [] [] ^^@ [] ^^A [] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+[]\TU/ALSSirius(0)/m/n/8 Найдем минимум данной функции при
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 13--14
+\TU/ALSSirius(0)/m/n/8 значениях $[] \OMS/cmsy/m/n/8 2 [] \OT1/cmr/m/n/8 ;  [] 
+\OMS/cmsy/m/n/8 2 []$ \TU/ALSSirius(0)/m/n/8 и
+ []
+
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [14
+
+]
+\openout4 = `Lec-10.15.vrb'.
+
+ (./Lec-10.15.vrb
+\openout5 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [15
+
+]
+\openout4 = `Lec-10.16.vrb'.
+
+ (./Lec-10.16.vrb
+\openout5 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+
+(./Lec-10.out.pyg)
+\openout5 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out.
+pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [16
+
+]
+\openout4 = `Lec-10.17.vrb'.
+
+ (./Lec-10.17.vrb
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+(./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+
+(./Lec-10.out.pyg)
+\openout6 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [17
+
+]
+\openout4 = `Lec-10.18.vrb'.
+
+ (./Lec-10.18.vrb
+\openout5 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [18
+
+]
+\openout4 = `Lec-10.19.vrb'.
+
+ (./Lec-10.19.vrb
+\openout5 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out
+.pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg)
+\openout5 = `Lec-10.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-10.out.
+pyg Lec-10.pyg)...executed.
+
+ (./Lec-10.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [19
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
 
  []
 
@@ -1986,10 +2531,21 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 210--210
-[]  
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 584--584
+[][]  
  []
 
+
+Overfull \vbox (5.0pt too high) detected at line 584
+ []
+
+File: bgs/contacts.jpg Graphic file (type bmp)
+<bgs/contacts.jpg>
+File: logos/ru/light/logoclr.png Graphic file (type bmp)
+<logos/ru/light/logoclr.png>
+[20
+
+]
 \tf@nav=\write8
 \openout8 = `Lec-10.nav'.
 
@@ -2000,6 +2556,7 @@ Overfull \hbox (68.29076pt too wide) in paragraph at lines 210--210
 \openout10 = `Lec-10.snm'.
 
 
+
 Package caption Warning: Unused \captionsetup[table] on input line 111.
 See the caption package documentation for explanation.
 
@@ -2008,19 +2565,19 @@ See the caption package documentation for explanation.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Lec-10.out' has not changed.
-(rerunfilecheck)             Checksum: EB66358262E09ED4B61D15D06FD4306B;120.
+(rerunfilecheck)             Checksum: 8C0A742A4204E68F2C55C53268C6CC66;929.
 runsystem(del Lec-10.pyg)...executed.
 
 runsystem(del Lec-10.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 35725 strings out of 476477
- 753830 string characters out of 5817858
- 1216074 words of memory out of 5000000
- 55408 multiletter control sequences out of 15000+600000
- 409427 words of font info for 92 fonts, out of 8000000 for 9000
+ 36114 strings out of 476477
+ 760880 string characters out of 5817858
+ 1222947 words of memory out of 5000000
+ 55716 multiletter control sequences out of 15000+600000
+ 409443 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,11n,108p,419b,792s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,17n,108p,507b,792s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Lec-10.pdf (3 pages).
+Output written on Lec-10.pdf (20 pages).

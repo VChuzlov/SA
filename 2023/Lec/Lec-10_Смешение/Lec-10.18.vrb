@@ -1,0 +1,26 @@
+\frametitle{Пример}
+\scriptsize
+\begin{minted}{python}
+import numpy as np
+import scipy.optimize as opt
+
+
+def func(x):
+    return (
+        (-x[1] + 47) * np.sin(np.sqrt(abs(x[0] / 2 + x[1] + 47)))
+        - x[0] * np.sin(np.sqrt(abs(x[0] - x[1] - 47)))
+    )
+
+
+x = np.arange(-512, 513)
+y = np.arange(-512, 513)
+xgrid, ygrid = np.meshgrid(x, y)
+xy = np.stack([xgrid, ygrid])
+
+bounds = (400, 500), (400, 500)
+constr = {
+    'type': 'eq',
+    'fun': lambda x: x[0] - x[1]
+}
+\end{minted}
+\vfill

@@ -1,0 +1,21 @@
+\frametitle{Метод SLSQP}
+\scriptsize
+\begin{itemize}
+\item Метод SLSQP (Sequential Least Squares Programming) использует последовательное квадратичное программирование для минимизации функций нескольких переменных с любой комбинацией границ, а также ограничений на равенство и неравенство.
+\item Метод включает в себя подпрограмму оптимизации SLSQP, первоначально реализованную Дитером Крафтом (Dieter Kraft).
+\item Обратите внимание, что бесконечные значения в границах преобразуются в большие значения с плавающей точкой.
+\end{itemize}
+\vfill
+Метод SLSQP предназначен для решения задач оптимизации функций в следующей форме:
+\vfill
+\begin{equation}\label{eq:problem}
+\begin{gathered}
+\underset{x}{\min}\ f\left(x\right) \\
+\mathrm{при }\ c_j\left(x\right) = 0, \qquad j \in \mathcal{E} \\
+\qquad c_j\left(x\right) \geqslant 0, \qquad j \in \mathcal{I} \\
+\qquad lb_i \leqslant x_i \leqslant ub_i, \qquad i = 1, \ldots , N.
+\end{gathered}
+\end{equation}
+\vfill
+Здесь $\mathcal{E}$ и $\mathcal{I}$~--множества индексов выражений, описывающих ограничения в виде равенств или неравенств; $\left[lb_i, ub_i\right]$~-- множества нижних и верхних границ для области определения функции.
+\vfill

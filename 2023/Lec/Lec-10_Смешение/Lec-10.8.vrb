@@ -1,0 +1,20 @@
+\frametitle{Программная реализация}
+\scriptsize
+\begin{minted}{python}
+def get_octane_nummber(
+    flow: Flow,
+    ron: np.ndarray = const.RON,
+    bi: np.ndarray = const.Bi
+) -> float:
+    mf = flow.mass_fractions
+    additive = (ron * mf).sum()
+
+    non_additive = 0
+    for i, _ in enumerate(mf):
+        for j in range(i+1, mf.shape[0]):
+            non_additive += bi[i] * bi[j] * mf[i] * mf[j]
+
+    return additive + non_additive
+|\space|
+\end{minted}
+\vfill
