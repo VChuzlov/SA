@@ -57,14 +57,15 @@ def main() -> None:
     )
     print(solution.fun)
     print(solution.x)
-    # err = obj_func(
-    #     const.PREDEXP, 
-    #     feedstock, 
-    #     r, 
-    #     kinetic_scheme, 
-    #     data
-    # )
-    # print(err)
+    solution = minimize(
+        obj_func,
+        x0,
+        args=(feedstock, r, kinetic_scheme, data),
+        method='SLSQP',
+        bounds=[(0, None) for _ in range(44)]
+    )
+    print(solution.fun)
+    print(solution.x)
     return
 
 
