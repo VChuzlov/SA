@@ -48,18 +48,19 @@ def main() -> None:
     feedstock = mxr.mix(f, h2)    
     r = Reactor(*const.bed_params)
     x0 = const.PREDEXP
+    # solution = minimize(
+    #     obj_func,
+    #     x0,
+    #     args=(feedstock, r, kinetic_scheme, data),
+    #     method='Nelder-Mead',
+    #     bounds=[(0, None) for _ in range(44)]
+    # )
+    # print(solution.fun)
+    # print(solution.x)
+    x0 = np.random.random(44) * 1e9
     solution = minimize(
         obj_func,
-        x0,
-        args=(feedstock, r, kinetic_scheme, data),
-        method='Nelder-Mead',
-        bounds=[(0, None) for _ in range(44)]
-    )
-    print(solution.fun)
-    print(solution.x)
-    solution = minimize(
-        obj_func,
-        x0,
+        x0=x0,
         args=(feedstock, r, kinetic_scheme, data),
         method='SLSQP',
         bounds=[(0, None) for _ in range(44)]
