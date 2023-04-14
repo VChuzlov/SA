@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.optimize import minimize, differential_evolution
+from scipy.optimize import minimize, shgo
 from flows import Flow
 from reactors import Reactor
 from mixer import Mixer
@@ -62,7 +62,7 @@ def main() -> None:
         obj_func,
         x0=x0,
         args=(feedstock, r, kinetic_scheme, data),
-        method='SLSQP',
+         method='SLSQP',
         bounds=[(0, None) for _ in range(44)]
     )
     print(solution.fun)
