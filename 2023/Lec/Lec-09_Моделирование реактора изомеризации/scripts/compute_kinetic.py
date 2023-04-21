@@ -16,8 +16,8 @@ data = np.array(
 )
 
 
-def obj_func(
-    predexp, feedstock, reactor, kinetic_scheme, data) -> float:
+def obj_func(predexp, feedstock,
+             reactor, kinetic_scheme, data) -> float:
     product = reactor.calculate(kinetic_scheme, feedstock, predexp=predexp)
     return ((data - product.mass_fractions) ** 2).sum()
 
@@ -32,20 +32,20 @@ def main() -> None:
     )
     f = Flow(
         50_000,
-        mf, 
+        mf,
         temperature=403.15,
         pressure=3001.325
     )
     h2_mf = np.zeros_like(mf)
     h2_mf[3] = 1.
     h2 = Flow(
-        mass_flow_rate=80, 
-        mass_fractions=h2_mf, 
-        temperature=403.15, 
+        mass_flow_rate=80,
+        mass_fractions=h2_mf,
+        temperature=403.15,
         pressure=3001.325
     )
     mxr = Mixer()
-    feedstock = mxr.mix(f, h2)    
+    feedstock = mxr.mix(f, h2)
     r = Reactor(*const.bed_params)
     x0 = const.PREDEXP
     # solution = minimize(
@@ -62,7 +62,7 @@ def main() -> None:
         obj_func,
         x0=x0,
         args=(feedstock, r, kinetic_scheme, data),
-         method='SLSQP',
+        method='SLSQP',
         bounds=[(0, None) for _ in range(44)]
     )
     print(solution.fun)
