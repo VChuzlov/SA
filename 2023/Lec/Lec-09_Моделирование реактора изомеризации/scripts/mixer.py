@@ -43,13 +43,15 @@ if __name__ == '__main__':
 
     f1 = Flow(
         mass_flow_rate=100, 
-        mass_fractions=conv.normalize(np.random.randint(1, 5, 24)), 
-        temperature=200
+        mass_fractions=conv.normalize(np.random.randint(1, 5, 17)), 
+        temperature=250,
+        pressure=101.325
     )
     f2 = Flow(
         mass_flow_rate=100, 
-        mass_fractions=conv.normalize(np.random.randint(1, 5, 24)), 
-        temperature=300
+        mass_fractions=conv.normalize(np.random.randint(1, 5, 17)), 
+        temperature=300,
+        pressure=101.325
     )
     m = Mixer()
     fmixture = m.mix(f1, f2)

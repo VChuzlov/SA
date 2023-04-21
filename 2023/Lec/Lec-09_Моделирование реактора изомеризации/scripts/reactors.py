@@ -5,6 +5,7 @@ import constants as const
 import converters_and_functions as conv
 from kinetic import kinetic_scheme
 from mixer import Mixer
+from typing import Callable
 
 
 class Bed:
@@ -44,7 +45,7 @@ class Bed:
 
     def calculate(
         self,
-        kinetic_scheme: callable,
+        kinetic_scheme: Callable,
         feedstock: Flow,
         ea: np.ndarray,
         predexp: np.ndarray 
@@ -85,7 +86,7 @@ class Reactor:
 
     def calculate(
         self,
-        kinetic_scheme: callable,
+        kinetic_scheme: Callable,
         feedstock: Flow,
         ea: np.ndarray = const.EA,
         predexp: np.ndarray = const.PREDEXP

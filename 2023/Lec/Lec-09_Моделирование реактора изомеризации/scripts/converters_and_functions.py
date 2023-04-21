@@ -63,4 +63,5 @@ def normalize(x: np.ndarray) -> np.ndarray:
     return x / x.sum()
 
 
-if __name__ == '__main__': ...
+if __name__ == '__main__': 
+    ...
