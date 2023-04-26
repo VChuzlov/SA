@@ -10,6 +10,7 @@ from typing import Callable
 
 class Bed:
     """Класс, используемый для описания полки катализатора"""
+
     def __init__(
             self,
             diameter: float = None,
@@ -39,16 +40,17 @@ class Bed:
             return
 
         self.area = np.pi * (self.diameter / 2) ** 2
-    
+
     def __repr__(self) -> str:
-        return f'Volume: {self.volume:.2f};\narea: {self.area:.2f};\nd: {self.diameter:.2f};\nh: {self.height:.2f}'
+        return (f'Volume: {self.volume:.2f};\narea: {self.area:.2f};'
+                + f'\nd: {self.diameter:.2f};\nh: {self.height:.2f}')
 
     def calculate(
         self,
         kinetic_scheme: Callable,
         feedstock: Flow,
         ea: np.ndarray,
-        predexp: np.ndarray 
+        predexp: np.ndarray
     ) -> Flow:
         self.residence_time = (
             self.volume / feedstock.ideal_gas_volume_flow_rate * 3600
@@ -78,6 +80,7 @@ class Bed:
 
 class Reactor:
     """Класс для описания реактора, представленного в виде массива полок"""
+
     def __init__(
         self,
         *bed_params: dict
@@ -93,17 +96,17 @@ class Reactor:
     ) -> Flow:
         self.feedstock = feedstock
         f = self.feedstock
-        
+
         for bed in self.beds:
             f = bed.calculate(
-                kinetic_scheme=kinetic_scheme, 
-                feedstock=f, 
-                ea=ea, 
+                kinetic_scheme=kinetic_scheme,
+                feedstock=f,
+                ea=ea,
                 predexp=predexp
             )
         self.product = f
         return self.product
-    
+
     def performance(self) -> dict:
         perf = {
             'Выход изомеризата, % масс.': (
@@ -111,8 +114,8 @@ class Reactor:
                 / self.feedstock.mass_fractions[const.indxs].sum()
             ) * 100,
             'Выход изоалканов, % масс.': (
-                self.product.mass_fractions[[1, 5, 9, 13]].sum() 
-                / (1 - self.product.mass_fractions[[3, 16]].sum()) 
+                self.product.mass_fractions[[1, 5, 9, 13]].sum()
+                / (1 - self.product.mass_fractions[[3, 16]].sum())
             ) * 100,
         }
         return perf
@@ -122,26 +125,26 @@ if __name__ == '__main__':
     mf = np.array(
         [
             0.1784, 0.0557, 0.0223, 0., 0.0948, 0.1171, 0.0446,
-            0.0056, 0.1587, 0.146,  0.1066, 0.0168, 0.0123,
+            0.0056, 0.1587, 0.146, 0.1066, 0.0168, 0.0123,
             0.0293, 0.0118, 0., 0.,
         ]
     )
     f = Flow(
-        50_000, 
-        mf, 
+        50_000,
+        mf,
         temperature=423.15,
         pressure=3001.325
     )
     h2_mf = np.zeros_like(mf)
     h2_mf[3] = 1.
     h2 = Flow(
-        mass_flow_rate=80, 
-        mass_fractions=h2_mf, 
-        temperature=423.15, 
+        mass_flow_rate=80,
+        mass_fractions=h2_mf,
+        temperature=423.15,
         pressure=3001.325
     )
     mxr = Mixer()
-    feedstock = mxr.mix(f, h2)    
+    feedstock = mxr.mix(f, h2)
     r = Reactor(*const.bed_params)
     product = r.calculate(kinetic_scheme, feedstock, predexp=const.PREDEXP)
     perf = r.performance()
