@@ -1,30 +1,30 @@
 ********************
 SLSQP
 ********************
-     fun: 8.234766681880501e-07
-     jac: array([18.06669998, 30.66864586, 25.45507145, 29.75391579,  2.20669079,
-       -5.57861233])
- message: 'Optimization terminated successfully'
-    nfev: 77
-     nit: 9
-    njev: 9
-  status: 0
+ message: Optimization terminated successfully
  success: True
-       x: array([0.01489797, 0.09440505, 0.00746368, 0.04111372, 0.01543166,
-       0.82668792])
+  status: 0
+     fun: 1.4481841361657644e-06
+       x: [ 4.064e-02  1.150e-02  9.365e-02  8.877e-03  1.260e-01
+            7.193e-01]
+     nit: 8
+     jac: [-1.376e+01 -1.160e+00 -6.374e+00 -2.076e+00 -2.206e+00
+            5.579e+00]
+    nfev: 74
+    njev: 8
 ********************
 SHGO
 ********************
-     fun: 0.35530071957751375
-    funl: array([0.35530072])
- message: 'Optimization terminated successfully.'
-    nfev: 1514
-     nit: 2
-   nlfev: 1513
-   nlhev: 0
-   nljev: 99
+ message: Optimization terminated successfully.
  success: True
-       x: array([1.00000025e-04, 1.00000003e-04, 6.67206025e-02, 1.00000014e-04,
-       4.95050000e-01, 4.37929397e-01])
-      xl: array([[1.00000025e-04, 1.00000003e-04, 6.67206025e-02, 1.00000014e-04,
-        4.95050000e-01, 4.37929397e-01]])
+     fun: 0.35530071957751375
+    funl: [ 3.553e-01]
+       x: [ 1.000e-04  1.000e-04  6.672e-02  1.000e-04  4.950e-01
+            4.379e-01]
+      xl: [[ 1.000e-04  1.000e-04  6.672e-02  1.000e-04  4.950e-01
+             4.379e-01]]
+     nit: 2
+    nfev: 1514
+   nlfev: 1513
+   nljev: 99
+   nlhev: 0
