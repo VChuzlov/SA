@@ -1,0 +1,6 @@
+def __init__(
+    self,
+    mass_flow_rate: float,
+    mass_fractions: np.ndarray,
+    temperature: float
+) -> None

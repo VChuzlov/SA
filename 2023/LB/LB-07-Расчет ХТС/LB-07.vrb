@@ -1,26 +1,21 @@
-\frametitle{Описание класса \texttt {Splitter}}
+\frametitle{Функции для пересчета составов}
 \scriptsize
+\begin{enumerate}
+\item Пересчет массовых долей в объемные:
 \vfill
-\begin{table}[h!]
-^^I\centering
-^^I\renewcommand{\arraystretch}{1.2}
-^^I\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
-^^I^^I\hline
-^^I^^I\textbf{Атрибуты класса} & \textbf{Описание}  \\
-^^I^^I\hline
-\begin{minipage}{\linewidth}
+\begin{equation*}
+^^I\varphi _i = \dfrac{\dfrac{\omega _i}{\rho _i}}{\sum \limits _{i=1}^{n} \dfrac{\omega _i}{\rho _i}}
+\end{equation*}
 \vfill
-\begin{minted}[frame=none, linenos=false]{python}
-def calculate(
-    self,
-    flow: Flow,
-    *ratio: float
-) -> list[Flow]:
-\end{minted}
+где $\varphi _i$~-- объемная доля $i$-го компонента; $\omega _i$~-- массовая доля $i$-го компонента; $\rho _i$~-- плотность $i$-го компонента; $n$~-- число компонентов в системе; $i$~-- индекс компонента в системе.
 \vfill
-\end{minipage}
-^^I^^I& Расчет делителя потока; возвращает в качестве результата список объектов \texttt{Flow} \\
-^^I^^I\hline
-^^I\end{tabular}
-\end{table}
+\item Пересчет массовых долей в мольные:
+\vfill
+$$
+^^I\chi _i = \dfrac{\dfrac{\omega _i}{M_i}}{\sum \limits_{i=1}^{n}\dfrac{\omega _i}{M_i}}
+$$
+\vfill
+где $\chi _i$~-- мольная доля $i$-го компонента; $\omega _i$~-- массовая доля $i$-го компонента; $M_i$~-- молярная масса $i$-го компонента; $n$~-- число компонентов в системе; $i$~-- индекс компонента в системе.
+\vfill
+\end{enumerate}
 \vfill
