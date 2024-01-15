@@ -47,10 +47,13 @@ section {
 
 ![bg left](sectiongk.jpeg)
 
-![w:520](logoclr.png)
+<p align="center">
+  <img src='logo.png'
+    width="250"
+  />
+</p>
 
 
-<br>
 
 # Системный анализ процессов переработки нефти и газа
 
@@ -150,7 +153,7 @@ section {
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+<!-- ![bg](contentinteriorw.jpeg) -->
 
 # Типы данных
 
@@ -1863,7 +1866,7 @@ else:  # Нормальный выход
 <!-- _paginate: skip -->
 ![bg right opacity:.3](sectiongk.jpeg)
 
-![w:520](logoclr.png)
+![w:320](logo.png)
 
 <br>
 <br>
