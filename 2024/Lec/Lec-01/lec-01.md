@@ -153,7 +153,7 @@ section {
   }
 </style>
 
-<!-- ![bg](contentinteriorw.jpeg) -->
+![bg right opacity:.5](contentinteriorw.jpeg)
 
 # Типы данных
 
