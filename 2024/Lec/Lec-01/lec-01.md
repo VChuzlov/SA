@@ -45,7 +45,7 @@ section {
 }
 </style>
 
-![bg left](sectiongk.jpeg)
+![bg left:45%](sectiongk.jpeg)
 
 <p align="center">
   <img src='logo.png'
@@ -54,8 +54,13 @@ section {
 </p>
 
 
+<center>
+
+<br>
 
 # Системный анализ процессов переработки нефти и газа
+
+<br>
 
 ## Лекция №1 - Основы программирования на языке Python
 
@@ -63,6 +68,8 @@ section {
 Вячеслав Алексеевич Чузлов
 
 к.т.н., доцент ОХИ ИШПР ТПУ 
+
+</center>
 
 ---
 
@@ -1868,7 +1875,9 @@ else:  # Нормальный выход
 </style>
 
 <!-- _paginate: skip -->
-![bg right opacity:.5](sectiongk.jpeg)
+![bg right:50% opacity:.5](sectiongk.jpeg)
+
+<center>
 
 ![w:320](logo.png)
 
@@ -1882,3 +1891,5 @@ else:  # Нормальный выход
 
 Вячеслав Алексеевич Чузлов
 к.т.н., доцент ОХИ ИШПР
+
+</center>
