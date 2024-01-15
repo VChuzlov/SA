@@ -153,9 +153,11 @@ section {
   }
 </style>
 
-![bg right opacity:.5](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
+
 
 # Типы данных
+
 
 <!-- _paginate: skip -->
 
@@ -185,7 +187,7 @@ section {
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 # Числовые типы
 
@@ -258,7 +260,7 @@ print(x)  # 21
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 # Логический тип данных
 
@@ -404,7 +406,7 @@ print(3 > 6 > 9 > 12)  # False
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 # Строки
 
@@ -624,7 +626,7 @@ print(f'{1.2354:g}')  # 1.2354
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 # Списки
 
@@ -939,7 +941,7 @@ print(a)  # [20, ‐10, 10, 5, ‐3]
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 # Кортежи
 
@@ -1086,7 +1088,7 @@ s[3] = 'b'  # TypeError: 'str' object does not support item assignment
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 # Словари
 
@@ -1256,7 +1258,7 @@ print(d)  # {'h': None, 'e': None, 'l': None, 'o': None}
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 # Множества
 
@@ -1447,7 +1449,7 @@ print(managers ^ engineers)  # {'Boris', 'Fedor', 'Ivan', 'Victoriya'}
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 
 # Операторы управления <br> потоком команд
@@ -1544,7 +1546,7 @@ a = y if x else z
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 
 # Операторы цикла в Python
@@ -1690,7 +1692,7 @@ for i in range(3):
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 
 # Операторы `break`, `continue`, `pass` и конструкция `else` цикла
@@ -1864,7 +1866,7 @@ else:  # Нормальный выход
 </style>
 
 <!-- _paginate: skip -->
-![bg right opacity:.3](sectiongk.jpeg)
+![bg right opacity:.5](sectiongk.jpeg)
 
 ![w:320](logo.png)
 
