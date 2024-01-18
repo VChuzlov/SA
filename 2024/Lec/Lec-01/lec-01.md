@@ -668,7 +668,7 @@ print(f'{1.2354:g}')  # 1.2354
   }
 </style>
 
-![bg right](contentinteriorw.jpeg)
+![bg right opacity:.75](contentinteriorw.jpeg)
 
 # Списки
 
