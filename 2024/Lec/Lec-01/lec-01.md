@@ -1,37 +1,43 @@
 ---
 marp: true
-theme: base
-class:
-  - invert
+theme: default
+# class:
+#   - invert
 size: 16:9
 fontsize: 12px;
+
 style: |
   section::after {
-    content: 'Слайд ' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
-  }
+      content: 'Слайд ' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+    }
 
 
-  h1 {
-    color: 	rgb(40, 190, 70);
-  }
-  
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-  
-  .columns3 {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-  }
+    h1 {
+      color: 	rgb(40, 190, 70);
+    }
+    
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    
+    .columns3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
 
-  .small-text {
-    font-size: 1.45rem;
-  }
-  .headerless {
-        display: none;
+    .small-text {
+      font-size: 1.45rem;
+    }
+    .headerless {
+          display: none;
+      }
+    
+    blockquote {
+      border-left: rgb(255, 182, 0) solid;
+      color: rgb(255, 182, 0);
     }
 
 ---
@@ -44,6 +50,7 @@ section {
   justify-content: start;
 }
 </style>
+
 
 ![bg left:45%](sectiongk.jpeg)
 
@@ -80,9 +87,7 @@ section {
 
 # Язык программирования Python
 
-> **Python** – высокоуровневый язык программирования общего назначения с
-динамической строгой типизацией и автоматическим управлением памятью,
-ориентированный на повышение производительности разработчика, читаемости кода и его качества, а также на обеспечение кроссплатформенности написанных на нём программ.
+> **Python** – высокоуровневый язык программирования общего назначения с динамической строгой типизацией и автоматическим управлением памятью, ориентированный на повышение производительности разработчика, читаемости кода и его качества, а также на обеспечение кроссплатформенности написанных на нём программ.
 
 <div class="columns">
 <div>
@@ -584,48 +589,58 @@ print(s[5:1:‐1])  # elpm
 
 ---
 
-# Методы строк
+# Основные методы строк
 
-Ниже имя `s` – это объект строки, а опциональные (необязательные) аргументы указаны в квадратных скобках. Для получения полного списка используйте `dir()` или `help()`.
-
-<div class="columns">
-<div>
-
-`s.capitalize()`
-`s.casefold()`
-`s.center(width[, fillchar])`
-`s.count(sub[, start[, end]])`
-`s.endswith(suffix[, start[, end]])`
-`s.find(sub[, start[, end]])`
-`s.format(*args, **kwargs)`
-`s.format_map(mapping)`
-`s.index(sub[, start[, end]])`
-`s.isalnum()`
-`s.isalpha()`
-`s.isascii()`
-`s.isdecimal()`
-
-</div>
-
-<div>
-
-`s.isdigit()`
-`s.lower()`
-`s.islower()`
-`s.isnumeric()`
-`s.istitle()`
-`s.removeprefix(prefix)`
-`s.removesuffix(suffix)`
-`s.replace(old, new[, count])`
-`s.isupper()`
-`s.split(sep=None, maxsplit=‐1)`
-`s.startswith(prefix[, start[, end]])`
-`s.join(iterable)`
-`s.upper()`
-
-</div>
+|Метод|Описание|
+|-|-|
+|`center(width)`|Возвращает строку, отцентрированную в новую строку с общим количеством символов `width`|
+|`endswith(suffix)`|Возвращает `True`, если строка заканчивается подстрокой `suffix`|
+|`startswith(prefix)`|Возвращает `True`, если строка начинается подстрокой `prefix`|
+|`index(substring)`|Возвращает наименьший индекс в строке, соответствующий содержащейся в ней подстроке `substring`|
+|`upper()`|Возвращает копию строки, в которой все символы переведены в верхний регистр|
+|`lower()`|Возвращает копию строки, в которой все символы переведены в нижний регистр|
 
 ---
+
+# Основные методы строк
+
+|Метод|Описание|
+|-|-|
+|`title()`|Возвращает копию строки, в которой все слова начинаются с заглавных букв, а все прочие символы переведены в нижний регистр|
+|`replace(old, new)`|Возвращает копию строки, в которой каждая подстрока `old` заменена подстрокой `new`|
+|`split([sep])`|Возвращает список подстрок из исходной строки, которые разделены заданной строкой `sep`. Если строка `sep` не задана, то разделителем является любое количество пробелов|
+|`join([list])`|Использует строку как разделитель при объединении списка `list` строк|
+|`isalpha()`|Возвращает `True`, если все символы в строке являются алфавитными и строка не пустая, иначе возвращается `False`|
+
+---
+
+# Примеры использования методов строк
+
+```python
+a = 'java python c++ fortran '
+print(a.isalpha)  # False
+b = a.title()
+print(b)  # Java Python C++ Fortran
+```
+
+```python
+c = b.replace(' ', '!\n')
+print(c)  
+# Java!
+# Python!
+# C++!
+# Fortran!
+```
+
+```python
+i = c.index('Python')
+print(i)  # 6
+print(c[6:].startswith('Py'))  # True
+print(c[6:12].isalpha())  # True
+```
+
+---
+
 
 # Форматированные строки (f-строки)
 
@@ -641,6 +656,7 @@ print(f'{1.2354:g}')  # 1.2354
 
 ---
 
+
 <style scoped>
   section {
     justify-content: center;
@@ -648,7 +664,7 @@ print(f'{1.2354:g}')  # 1.2354
   }
 </style>
 
-![bg right opacity:.75](contentinteriorw.jpeg)
+![bg right](contentinteriorw.jpeg)
 
 # Списки
 
@@ -671,7 +687,9 @@ print(f'{1.2354:g}')  # 1.2354
 |`a = list(range(‐5, 6))`|Список последовательных целых чисел|
 |`a[i]`|Индекс|
 
+
 ---
+
 
 # Списки (list)
 
@@ -1930,7 +1948,7 @@ else:  # Нормальный выход
 </style>
 
 <!-- _paginate: skip -->
-![bg right:50% opacity:.5](sectiongk.jpeg)
+![bg right:50% grayscale:0.9](sectiongk.jpeg)
 
 <center>
 
