@@ -1,8 +1,8 @@
 ---
 marp: true
 theme: default
-# class:
-#   - invert
+class:
+  - invert
 size: 16:9
 fontsize: 12px;
 
@@ -36,8 +36,12 @@ style: |
       }
     
     blockquote {
-      border-left: rgb(255, 182, 0) solid;
-      color: rgb(255, 182, 0);
+      border-left: rgb(101,115,255) solid;
+      color: rgb(101,115,255);
+    }
+
+    body {
+        code-size: 1em;
     }
 
 ---
