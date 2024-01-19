@@ -323,6 +323,83 @@ print(a * b)  # -1.5
 
 ---
 
+# Имена переменных
+
+Несколько правил, определяющих формирование допустимых («правильных») имен переменных:
+
+- в именах переменных учитывается регистр символов (букв): `a` и `A` – это разные имена переменных;
+- имена переменных могут содержать любую букву, символ подчеркивания `_` и любую цифру (`0`–`9`), но **не должны** начинаться с цифры;
+- имя переменной не должно совпадать с  одним из зарезервированных ключевых слов:
+
+<center>
+
+<table>
+<tr>
+<td> and </td> 
+<td> as </td> 
+<td> assert</td> 
+<td> async </td> 
+<td> await </td> 
+<td> break </td>
+</tr>
+
+<tr>
+<td>class</td> 
+<td>continue </td> 
+<td>def</td> 
+<td>del</td>
+<td>elif</td>
+<td>else</td>
+</tr>
+
+<tr>
+<td>except</td>
+<td>finally</td>
+<td>for</td>
+<td>from</td>
+<td>global</td>
+<td>if</td>
+</tr>
+
+<tr>
+<td>import</td>
+<td>in</td>
+<td>is</td>
+<td>lambda</td>
+<td>nonlocal</td>
+<td>not</td>
+</tr>
+
+<tr>
+<td>or</td>
+<td>pass</td>
+<td>raise</td>
+<td>return</td>
+<td>try</td>
+<td>while</td>
+</tr>
+
+<tr>
+<td>with</td>
+<td>yield</td>
+<td>False</td>
+<td>True</td>
+<td>None</td>
+</tr>
+
+</table>
+
+</center>
+
+---
+
+# Имена переменных
+
+Некоторые соглашения по стилю:
+- имена переменных должны быть осмысленными (`area` лучше, чем `a`), но не слишкрм длинными (`the_area_of_the_triangle` – это слишком громоздкое имя)
+
+---
+
 <style scoped>
   section {
     justify-content: center;
