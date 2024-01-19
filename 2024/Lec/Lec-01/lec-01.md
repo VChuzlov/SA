@@ -1,10 +1,10 @@
 ---
 marp: true
 theme: default
-class:
-  - invert
+# class:
+#   - invert
 size: 16:9
-fontsize: 12px;
+fontsize: 12px
 
 style: |
   section::after {
@@ -54,6 +54,7 @@ section {
   justify-content: start;
 }
 </style>
+
 
 
 ![bg left:45%](sectiongk.jpeg)
@@ -303,6 +304,7 @@ print(x)  # 21
 
 - Для логического типа данных `bool` можно объявлять логические переменные, инициализируя их логическими значениями или присваивая им результат вычисления логических выражений.
 - Логических констант в Python две: `True` (истина) и `False` (ложь).
+
 
 ```py
 x = True
