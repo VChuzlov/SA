@@ -412,9 +412,9 @@ print(a * b)  # -1.5
   }
 </style>
 
-![bg right opacity:.75](contentinteriorw.jpeg)
+![bg right:45% opacity:.75](contentinteriorw.jpeg)
 
-# Логический тип данных
+# Операции сравнения и логические операции
 
 <!-- _paginate: skip -->
 
