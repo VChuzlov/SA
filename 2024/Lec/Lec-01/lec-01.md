@@ -775,8 +775,8 @@ print(id(s1), id(s3))  # 1971522386560 1971509687280
 <span style="color: #ffb600;">**отрицательных**</span> индексов.
 <!-- ![w:800px](индексы_и_срезы.jpg) -->
 <p align="center">
-  <img src='индексы_и_срезы.jpg'
-    width="800"
+  <img src='slice.svg'
+    width="900"
   />
 </p>
 
