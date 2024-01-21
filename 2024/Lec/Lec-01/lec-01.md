@@ -66,7 +66,7 @@ section {
 ![bg left:45%](sectiongk.jpeg)
 
 <p align="center">
-  <img src='logo.png'
+  <img src='TPU-logo_ver-parade-color-ru-cmyk.svg'
     width="250"
   />
 </p>
@@ -214,7 +214,7 @@ section {
   }
 </style>
 
-![bg right opacity:.75](contentinteriorw.jpeg)
+![bg right opacity:.35](section5.jpg)
 
 # Числовые типы
 
@@ -291,6 +291,39 @@ print(x)  # 21
 Составные операторы присваивания:
 `x += y` `x -= y` `x /= y` `x //= y`  `x %= y` `x *= y` `x **= y` 
 
+---
+
+# Математические функции
+
+- Две математические функции, предоставляемые «по умолчанию» как встроенные (built-in), – `abs()` и `round()`.
+
+```python
+print(abs(-5.2))  # 5.2
+print(abs(-2))  # 2
+print(abs(3 + 4j))  # 5.0
+```
+Это пример полиморфизма (polymorphism): одна и та же функция `abs()` выполняет различные операции с различными объектами:
+- если в функцию передано действительное число `x`, то возвращается $\left|x\right|$, неотрицательная величина этого числа без учета знака. 
+- если передается комплексное число $z = x + iy$, то возвращается его модуль <br> $\left|z\right| = \left(x^2 + y^2\right)$.
+
+---
+
+# Математические функции
+
+Функция `round()` (с одним аргументом) округляет число с плавающей точкой до ближайшего **четного** целого числа:
+
+```python
+print(round(-9.62))  # -10
+print(round(7.5))  # 8
+print(round(4.5))  # 4
+```
+
+- Можно также задать количество точных разрядов после десятичной точки как второй аргумент, передаваемый в функцию `round()`:
+
+```python
+print(round(3.141592653589793, 3))  # 3.142
+print(round(96485.33289, -2))  # 96500.0
+```
 
 ---
 
@@ -301,7 +334,7 @@ print(x)  # 21
   }
 </style>
 
-![bg right opacity:.75](contentinteriorw.jpeg)
+![bg right opacity:.35](section5.jpg)
 
 # Переменные (variables)
 
@@ -611,7 +644,7 @@ print(3 > 6 > 9 > 12)  # False
   }
 </style>
 
-![bg right opacity:.75](contentinteriorw.jpeg)
+![bg right opacity:.35](section5.jpg)
 
 # Строки
 
@@ -842,7 +875,7 @@ print(f'{1.2354:g}')  # 1.2354
   }
 </style>
 
-![bg right opacity:.75](contentinteriorw.jpeg)
+![bg right opacity:.35](section5.jpg)
 
 # Списки
 
@@ -1159,7 +1192,7 @@ print(a)  # [20, ‐10, 10, 5, ‐3]
   }
 </style>
 
-![bg right opacity:.75](contentinteriorw.jpeg)
+![bg right opacity:.35](section5.jpg)
 
 # Кортежи
 
@@ -1307,7 +1340,7 @@ s[3] = 'b'  # TypeError: 'str' object does not support item assignment
   }
 </style>
 
-![bg right opacity:.75](contentinteriorw.jpeg)
+![bg right opacity:.35](section5.jpg)
 
 
 # Операторы управления <br> потоком команд
@@ -1444,7 +1477,7 @@ a = y if x else z
   }
 </style>
 
-![bg right opacity:.75](contentinteriorw.jpeg)
+![bg right opacity:.35](section5.jpg)
 
 
 # Операторы цикла в Python
@@ -1592,7 +1625,7 @@ for i in range(3):
   }
 </style>
 
-![bg right opacity:.75](contentinteriorw.jpeg)
+![bg right opacity:.35](section5.jpg)
 
 
 # Операторы `break`, `continue`, `pass` и конструкция `else` цикла
@@ -1773,7 +1806,7 @@ else:  # Нормальный выход
 
 <center>
 
-![w:320](logo.png)
+![w:320](TPU-logo_ver-parade-color-ru-cmyk.svg)
 
 <br>
 <br>
