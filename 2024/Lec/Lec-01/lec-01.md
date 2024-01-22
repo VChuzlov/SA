@@ -36,7 +36,7 @@ style: |
       }
     
     .greenbox {
-      background-color: rgb(40, 190, 70);
+      fill: rgb(40, 190, 70);
       padding: 5px;
       widt: 10px;
     }
