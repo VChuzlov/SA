@@ -51,7 +51,7 @@ style: |
     }
 
     svg {
-      width: 510px;
+      width: 70px;
       height: 10px;
       fill: rgb(40, 190, 70);
       
@@ -184,10 +184,6 @@ section {
 </style>
 
 ![bg right opacity:.35](section5.jpg)
-
-<svg>
-  <rect width="70" height="10" />
-</svg>
 
 # Типы данных
 
