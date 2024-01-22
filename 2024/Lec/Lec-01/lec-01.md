@@ -36,9 +36,9 @@ style: |
       }
     
     .greenbox {
-      fill: rgb(40, 190, 70);
+      background-color: rgb(40, 190, 70);
       padding: 5px;
-      widt: 10px;
+      widt: 1px;
     }
     
     blockquote {
@@ -48,6 +48,13 @@ style: |
 
     body {
         code-size: 1em;
+    }
+
+    svg {
+      width: 510px;
+      height: 10px;
+      fill: rgb(40, 190, 70);
+      
     }
 
 ---
@@ -172,14 +179,18 @@ section {
 <style scoped>
   section {
     justify-content: center;
-    font-size: 30px
+    font-size: 30px;
   }
 </style>
 
 ![bg right opacity:.35](section5.jpg)
 
+<svg>
+  <rect width="70" height="10" />
+</svg>
 
 # Типы данных
+
 
 
 <!-- _paginate: skip -->
