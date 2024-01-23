@@ -1696,7 +1696,7 @@ else:  # Нормальный выход
 <!-- _paginate: skip -->
 
 
-![bg right:50%](contacts.jpeg)
+![bg right:50% opacity:.7](contacts.jpeg)
 
 <center>
 
