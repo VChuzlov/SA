@@ -1640,23 +1640,29 @@ for i in range(3):
 
 # Оператор `break`
 
-Оператор `break` выполняет немедленный выход из цикла, т.е. остановку выполнения команд, даже если условие выполнения цикла еще не приняло значение `False` или последовательность элементов не закончилась.
+Оператор `break`, немедленно завершает выполнение этого цикла:
 
-```py
+```python
+x = 0
+
 while True:
-    name = input('Enter name: ')
-    if name == 'stop':
-      break
-    age = input('Enter age: ')
-    print('Hello', name, '=>', int(age) * 2)
+    x += 1
+    if not (x % 15 and x % 25):
+        break
 
-# Enter name: John
-# Enter age: 35
-# Hello John => 70
-# Enter name: Julya
-# Enter age: 24
-# Hello Julya => 48
-# Enter name: stop
+print(x, 'is divisible by both 15 and 25')
+```
+
+Аналогично, для поиска индекса самого первого вхождения отрицательного числа в списке:
+
+```python
+alist = [0, 4, 5, -2, 5, 10]
+
+for i in range(len(alist)):
+    if alist[i] < 0:
+        break
+
+print(alist[i], 'occurs at index', i)  # -2 occurs at index 3
 ```
 
 ---
