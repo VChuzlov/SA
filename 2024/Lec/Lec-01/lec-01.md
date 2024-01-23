@@ -1764,7 +1764,7 @@ else:
 x = y // 2  # Для y > 1
 
 while x > 1:
-    if y % x == 0:  # Остаток от деления
+    if not y % x:  # Остаток от деления
         print(y, 'has factor', x)  # Имеет сомножитель
         break  # Пропуск else
 
