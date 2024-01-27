@@ -64,11 +64,11 @@ section {
 
 
 
-![bg left:30%](sectiongk.jpeg)
+![bg left:30% opacity:.45](texture.jpg)
 
 <p align="center">
   <img src='TPU-logo_ver-parade-color-ru-cmyk.svg'
-    width="250"
+    width="270"
   />
 </p>
 
@@ -79,16 +79,14 @@ section {
 
 # Системный анализ процессов переработки нефти и газа
 
-<br>
-
 ## Лекция №2 <br> Структуры данных: словари и множества. <br> Функции в Python
+
 
 <br>
 Вячеслав Алексеевич Чузлов
 
 к.т.н., доцент ОХИ ИШПР ТПУ 
 
-</center>
 
 ---
 
@@ -1695,7 +1693,7 @@ else:  # Нормальный выход
 <!-- _paginate: skip -->
 
 
-![bg right:50% opacity:.7](contacts.jpeg)
+![bg right:50%](texture.jpg)
 
 <center>
 
