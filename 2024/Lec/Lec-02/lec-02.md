@@ -95,79 +95,6 @@ section {
 <!-- paginate: true -->
 
 
-# Язык программирования Python
-
-> **Python** – высокоуровневый язык программирования общего назначения с динамической строгой типизацией и автоматическим управлением памятью, ориентированный на повышение производительности разработчика, читаемости кода и его качества, а также на обеспечение кроссплатформенности написанных на нём программ.
-
-<div class="columns">
-<div>
-
-## Установка
-- Установить Python (https://www.python.org/). В MacOS X и Linux уже установлен.
-- Только для Windows. При установке выбрать опцию с заданием переменных окружения (лучше установить пакет [Anaconda](https://www.anaconda.com/products/individual)).
-
-</div>
-
-<div>
-
-## Среда разработки
-- Для обучения, работы с данными и экспериментов с кодом: Jupyter Notebook из пакета [Anaconda](https://www.anaconda.com/products/individual).
-- Текстовые редакторы: [Visual Studio Code](https://code.visualstudio.com/), Sublime, Atom, Notepad++ и др.
-- IDE (Integrated Development Environment ): [PyCharm (Comunity Edition)](https://www.jetbrains.com/pycharm/download/#section=windows), Visual Studio, Spyder и др.
-
-</div>
-
----
-
-# Язык программирования Python
-
-<div class="columns3">
-<div>
-
-## Кто использует Python
-- Google
-- YouTube
-- Dropbox
-- BitTorrent
-- iRobot
-- Netflix
-- Intel
-- Cisco
-- NASA
-
-</div>
-
-<div>
-
-## Сильные стороны
-- Качество программного кода
-- Продуктивность труда
-- Кроссплатформенность
-- Библиотеки
-
-</div>
-
-<div>
-
-
-Индекс [TIOBE](https://www.tiobe.com/tiobe-index/) (январь 2024)
-
-<div class="small-text">
-<div>
-
-|Позиция|ЯП      |Рейтинг|
-|------:|:------ |-------:  |
-|1      |![](Python.webp) Python  |13.97 %|
-|2      |![](C.webp) C       |11.44 %|
-|3      |![](C__.webp) C++     |9.96 %|
-|4      |![](Java.webp) Java    |7.87 %|
-|5      |![](C_.webp) C#    |7.16 %|
-
-</div>
-</div>
-
----
-
 <style scoped>
   section {
     justify-content: center;
@@ -177,7 +104,7 @@ section {
 
 ![bg right opacity:.35](section5.jpg)
 
-# Типы данных
+# Словари (dict)
 
 
 
@@ -185,23 +112,37 @@ section {
 
 ---
 
-# Классификация объектов
+# Словари (dict)
 
-Основные типы объектов в Python
+- В Python словарь – это тип «ассоциативного массива», представляющего набор пар ключ-значение (key-value).
+- Словарь может содержать любые объекты как значения (values), но, в отличие от списков и кортежей, каждый элемент в словаре индексируется уникальным ключом (key), который может быть любым **неизменяемым** объектом.
+- Словари являются <mark>изменяемыми</mark> объектами.
 
-<center>
+Словарь можно определить с помощью пар `key:value`, записанных в фигурных скобках:
 
-|Тип объекта | Категория| Изменяемый? |
-|-|-|-|
-|Числа (`int`, `float`, `complex`)|Числовые|Нет|
-|Логический (`bool`)|Логические|Нет|
-|Строки (`str`)|Последовательности|Нет|
-|Списки (`list`)|Последовательности|Да|
-|Словари (`dict`)|Отображения|Да|
-|Кортежи (`tuple`)|Последовательности|Нет|
-|Множества (`set`)|Множества|Да|
+```python
+height = {
+    'Burj Khalifa': 828., 
+    'One World Trade Center': 541.3,
+    'Mercury City Tower': '', 
+    'Q1': 323.,
+    'Carlton Centre': 223., 
+    'Gran Torre Santiago': 300.,
+    'Mercury City Tower': 339.
+}
+```
 
-</center>
+---
+
+# Определение и индексиррование словаря
+
+- Отдельный элемент можно извлечь по его ключу, применяемому в качестве индекса, или с помощью переменной, значение которой равно ключу:
+
+```python
+print(height['One World Trade Center'])  # 541.3
+building = 'Carlton Centre'
+print(height[building])  # 223.0
+```
 
 ---
 
