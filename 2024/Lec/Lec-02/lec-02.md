@@ -1697,16 +1697,14 @@ else:  # Нормальный выход
 
 <center>
 
-![w:320](TPU-logo_ver-parade-color-ru-cmyk.svg)
+<!-- ![w:320](TPU-logo_ver-parade-color-ru-cmyk.svg) -->
+![w:280](cube_title.png)
 
-<br>
 <br>
 
 # Благодарю за внимание!
 
 <br>
-<br>
-
 
 Вячеслав Алексеевич Чузлов
 к.т.н., доцент ОХИ ИШПР
