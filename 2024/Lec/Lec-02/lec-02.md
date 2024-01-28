@@ -228,22 +228,21 @@ for i in range(8, 0, -1):
     justify-content: center;
     font-size: 30px;
   }
+  h1 {
+    color: white;
+    padding: 0px 50px 40px 80px;
+  }
 </style>
 
 ![bg grayscale](sectionrosew.jpeg)
 
 
-<header>
-
 <!-- <div id="rectangle"> </div> -->
     
-<div id="titulo"><h1>Методы словарей</h1>
-</div>
 
-</header>
-
-
+<div class="greenbox">
 <h1>Методы словарей</h1>
+</div>
 
 <!-- # Методы словарей -->
 
