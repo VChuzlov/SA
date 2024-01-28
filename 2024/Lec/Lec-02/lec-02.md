@@ -212,10 +212,7 @@ for i in range(8, 0, -1):
 </style>
 
 ![bg grayscale, opacity:.3](sectionrosew.jpeg)
-
-
-<!-- <div id="rectangle"> </div> -->
-    
+   
 
 
 <h1>Методы словарей</h1>
@@ -353,6 +350,32 @@ print(d)  # {'h': None, 'e': None, 'l': None, 'o': None}
 <style scoped>
   section {
     justify-content: center;
+    font-size: 40px;
+  }
+  h1 {
+    /* color: white; */
+    padding: 0px 0px 0px 0px;
+    height: auto;
+    align: justify; 
+  }
+</style>
+
+![bg right opacity:.65](L_height.webp)
+   
+
+
+
+# Множества (set)
+
+
+
+<!-- _paginate: skip -->
+
+---
+
+<style scoped>
+  section {
+    justify-content: center;
     font-size: 30px;
     
   }
@@ -362,6 +385,8 @@ print(d)  # {'h': None, 'e': None, 'l': None, 'o': None}
 
 
 ![bg right grayscale:.8](contacts.jpeg)
+
+<br>
 
 <center>
 
