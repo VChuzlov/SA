@@ -35,31 +35,7 @@ style: |
           display: none;
       }
     
-    .greenbox {
-      background-color: rgb(40, 190, 70);
-      padding: 60px 0px 70px 80px;
-      widt: 1px;
-    }
-
-    .rectangle {
-        width: 200px;
-        height: 100px;
-        background-color: #FF0000;
-    }
-
-    header {
-        /*text-align: left;*/
-        padding: 0px 50px 40px 80px;
-        background: rgb(40, 190, 70);
-        height: auto;
-        overflow: hidden;
-    }
-
-    #titulo {
-        float: left;
-        padding: 25px 300px 2px 2px;
-    }
-    
+       
     blockquote {
       border-left: rgb(101,115,255) solid;
       color: rgb(101,115,255);
@@ -107,9 +83,8 @@ section {
 к.т.н., доцент ОХИ ИШПР ТПУ 
 
 
+
 ---
-
-
 
 <!-- paginate: true -->
 
@@ -229,22 +204,22 @@ for i in range(8, 0, -1):
     font-size: 40px;
   }
   h1 {
-    color: white;
+    /* color: white; */
     padding: 0px 0px 0px 0px;
     height: auto;
-    
+    align: justify; 
   }
 </style>
 
-![bg grayscale](sectionrosew.jpeg)
+![bg grayscale, opacity:.3](sectionrosew.jpeg)
 
 
 <!-- <div id="rectangle"> </div> -->
     
 
-<div class="greenbox">
+
 <h1>Методы словарей</h1>
-</div>
+
 
 <!-- # Методы словарей -->
 
