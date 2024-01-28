@@ -649,7 +649,7 @@ def function_name(arg1, arg2, ..., arg3):
 <div>
 
 ```py
-def maximum(x: float, y: float) -> float | str:
+def maximum(x, y):
     if x > y:
         return x
     
@@ -668,7 +668,7 @@ print(maximum(20, 30))  # 30
 <div>
 
 ```py
-def maximum(x: float, y: float) -> float | str:
+def maximum(x, y):
     if x > y:
         return x
     
@@ -758,7 +758,7 @@ print_max(x, y)  # 5 is max
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg grayscale, opacity:.3](sectionrosew.jpeg)
 
 # Области видимости
 
@@ -872,6 +872,21 @@ g = maker(2)
 print(g(5))  # 25
 print(f(5))  # 125
 ```
+
+---
+
+<style scoped>
+  section {
+    justify-content: center;
+    font-size: 30px
+  }
+</style>
+
+![bg right:40% grayscale:.5](Hall_MainTPU.jpg)
+
+# Аннотация типов <br> (type hints)
+
+<!-- _paginate: skip -->
 
 ---
 
@@ -1161,7 +1176,7 @@ print(f(10, *(20, ), c=30, **{'d': 40}))  # (10, 20, 30, 40)
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right grayscale, opacity:.3](section5.jpg)
 
 # Анонимные (`lambda`) функции
 
@@ -1324,7 +1339,7 @@ print(actions[key]())  # 25
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg left:40% grayscale:.7](L_height(1).webp)
 
 # Функции генераторы
 
