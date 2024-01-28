@@ -37,7 +37,7 @@ style: |
     
     .greenbox {
       background-color: rgb(40, 190, 70);
-      padding: 5px;
+      padding: 60px 0px 70px 80px;
       widt: 1px;
     }
 
@@ -117,11 +117,11 @@ section {
 <style scoped>
   section {
     justify-content: center;
-    font-size: 30px;
+    font-size: 40px;
   }
 </style>
 
-![bg right opacity:.35](section5.jpg)
+![bg right:40% opacity:.35](section5.jpg)
 
 # Словари (dict)
 
@@ -226,11 +226,13 @@ for i in range(8, 0, -1):
 <style scoped>
   section {
     justify-content: center;
-    font-size: 30px;
+    font-size: 40px;
   }
   h1 {
     color: white;
-    padding: 0px 50px 40px 80px;
+    padding: 0px 0px 0px 0px;
+    height: auto;
+    
   }
 </style>
 
@@ -254,22 +256,19 @@ for i in range(8, 0, -1):
 
 # Метод `get()`
 
-Числа в Python могут быть трех типов:
-1. Целые числа (`int`);
-2. Числа с плавающей точкой (`float`);
-3. Комплексные числа (`complex`).
+> Обращение к словарю по индексу с несуществующим ключом приводит к <mark>ошибке</mark>:
 
-<br>
+```python
+print(mass['Pluto'])  # KeyError: 'Pluto'
+```
 
-<center>
+- Можно использовать метод `get()` для извлечения значения, задавая ключ, если он существует, или некоторое значение по умолчанию, если ключ не существует. 
+- Если значение по умолчанию не задано, то возвращается специальное значение `None`.
 
-|Литерал|Расшифровка|
-|-------|-----------|
-|`1234`, `−24`, `0`, `99999999999999999`|Целые числа (неограниченный размер)|
-|`1.23`, `1.`, `3.17e-10`, `4E210`, `4.0e+210`|Числа с плавающей точкой|
-|`3+4j`, `3.0+4.0j`, `3J`|Литералы комплексных чисел|
-
-</center>
+```python
+print(mass.get('Pluto'))  # None
+print(mass.get('Pluto', -1))  # -1
+```
 
 ---
 
