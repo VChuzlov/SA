@@ -251,6 +251,24 @@ print(mass.get('Pluto', -1))  # -1
 
 - Методы `keys()`, `values()` и `items()` возвращают соответственно ключи, значения и пары ключ-значение (в виде кортежей) словаря.
 
+```python
+planets = mass.keys()
+print(planets)  # dict_keys(['Mercury', 'Venus', 'Earth'])
+for planet in planets:
+    print(planet , mass[planet])
+
+# Mercury 3.301e+23
+# Venus 4.867e+24
+# Earth 5.972e+24
+```
+
+> По объекту `dict_keys` можно выполнять итеративный проход любое число раз, но **невозможно** индексировать и **нельзя** выполнять операции присваивания:
+
+```python
+planets = mass.keys()
+print(planets[0])  # TypeError: 'dict_keys' object is not subscriptable
+```
+
 ---
 
 # Оператор присваивания
