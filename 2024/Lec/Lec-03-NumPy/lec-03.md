@@ -1575,7 +1575,7 @@ np.savetxt(fname , X, fmt='%.18e', delimiter=' ',
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg left:35% grayscale:.5](1421669704_1861638967.jpg)
 
 # Полиномы
 
