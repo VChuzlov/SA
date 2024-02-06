@@ -480,7 +480,7 @@ array([2, 0, 3, 3, 7, 9])
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg grayscale, opacity:.3](sectionrosew.jpeg)
 
 # Изменение формы массива
 
