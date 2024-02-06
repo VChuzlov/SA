@@ -122,14 +122,9 @@ section {
 <style scoped>
   section {
     justify-content: center;
-    font-size: 40px;
+    font-size: 30px;
   }
-  h1 {
-    /* color: white; */
-    padding: 0px 0px 0px 0px;
-    height: auto;
-    align: justify; 
-  }
+
 </style>
 
 ![bg grayscale, opacity:.3](sectionrosew.jpeg)
