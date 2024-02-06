@@ -1306,7 +1306,7 @@ log10(x) = [0.         0.30103    0.60205999 1.        ]
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg right:40% grayscale:.5](Hall_MainTPU.jpg)
 
 # Функции агригирования
 
@@ -1496,7 +1496,7 @@ array([0.80852699, 0.66407676, 0.90174667])
   }
 </style>
 
-![bg](contentinteriorw.jpeg)
+![bg left:40% grayscale:.7](L_height(1).webp)
 
 # Чтение и запись массива в файл
 
