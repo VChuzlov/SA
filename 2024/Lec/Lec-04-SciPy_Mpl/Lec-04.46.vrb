@@ -1,25 +1,31 @@
-\frametitle{Построение графиков}
+\frametitle{Сохранение рисунков}
 \scriptsize
-Построение линейного графика можно выполнить при помощи следующих команд:
+Библиотека Matplotlib предоставляет возможность сохранять рисунки в файлы различных форматов. К примеру, можно сохранить предыдущий рисунок в формате PNG:
 \vfill
-\begin{minipage}{.4\textwidth}
-\begin{minted}{python}
-import numpy as np
-import matplotlib.pyplot as plt
-
-
-x = np.linspace(0, 10, 100)
-plt.plot(x,  np.sin(x), '-')
-plt.plot(x, np.cos(x), '--')
-plt.show()
+\begin{minted}[firstnumber=last]{python}
+plt.savefig('myfig.png')
 |\space|
 \end{minted}
-\end{minipage}
-\begin{minipage}{.59\textwidth}
-\begin{figure}[h!]
-^^I\centering
-^^I\includegraphics[width=\linewidth]{./pics/Figure_1.pdf}
-^^I\caption{Пример построения графика}
-\end{figure}
-\end{minipage}
+\vfill
+Метод \texttt{savefig()} устанавливает формат файла, исходя из расширения в заданном пользователем имени файла. Список поддерживаемых форматов:
+\vfill
+\begin{minted}[firstnumber=last]{python}
+plt.gcf().canvas.get_supported_filetypes()
+|\space|
+\end{minted}
+\begin{minted}[frame=none]{pycon}
+{'eps': 'Encapsulated Postscript',
+ 'jpg': 'Joint Photographic Experts Group',
+ 'jpeg': 'Joint Photographic Experts Group',
+ 'pdf': 'Portable Document Format',
+ 'pgf': 'PGF code for LaTeX',
+ 'png': 'Portable Network Graphics',
+ 'ps': 'Postscript',
+ 'raw': 'Raw RGBA bitmap',
+ 'rgba': 'Raw RGBA bitmap',
+ 'svg': 'Scalable Vector Graphics',
+ 'svgz': 'Scalable Vector Graphics',
+ 'tif': 'Tagged Image File Format',
+ 'tiff': 'Tagged Image File Format'}
+\end{minted}
 \vfill

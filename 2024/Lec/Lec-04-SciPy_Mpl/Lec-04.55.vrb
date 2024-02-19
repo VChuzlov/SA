@@ -1,6 +1,6 @@
-\frametitle{Пределы осей координат}
+\frametitle{Метки на графиках}
 \scriptsize
-В библиотеке Matplotlib достаточно хорошо реализован автоматический подбор пределов осей координат, однако в некоторых случаях требуется более тонкая настройка. Наиболее легкий путь~-- использовать методы \texttt{plt.xlim()} и \texttt{plt.ylim()} (рисунок~\ref{fig:fig_8}):
+Для быстрого определения названий и меток осей существуют специальные методы (рисунок \ref{fig:fig_11}):
 \vfill
 \begin{minipage}{.4\textwidth}
 \begin{minted}{python}
@@ -11,9 +11,12 @@ import matplotlib.pyplot as plt
 plt.style.use('seaborn-v0_8-whitegrid')
 
 x = np.linspace(0, 10, 1000)
-plt.plot(x, np.sin(x))
-plt.xlim(-1, 11)
-plt.ylim(-1.5, 1.5)
+plt.plot(x, np.cos(x))
+
+# График функции y = cos(x)
+plt.title('График функции y = cos(x)')
+plt.xlabel('x')
+plt.ylabel('cos(x)')
 
 plt.show()
 |\space|
@@ -22,9 +25,9 @@ plt.show()
 \begin{minipage}{.59\textwidth}
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=.85\linewidth]{./pics/Figure_8}
-^^I\caption{Пример настройки пределов координатных осей}
-^^I\label{fig:fig_8}
+^^I\includegraphics[width=.85\linewidth]{./pics/Figure_11}
+^^I\caption{Пример настройки заголовка графика и названий осей координат}
+^^I\label{fig:fig_11}
 \end{figure}
 \end{minipage}
 \vfill

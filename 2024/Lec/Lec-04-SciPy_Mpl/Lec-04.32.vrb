@@ -2,7 +2,8 @@
 \scriptsize
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=.6\linewidth]{./pics/Figure_38}
-^^I\caption{Функция затухающего косинуса с искусственным зашумлением}
+^^I\includegraphics[width=.6\textwidth]{./pics/Figure_39.pdf}
+^^I\caption{Нелинейная аппроксимация методом наименьших квадратов для функции затухающего косинуса с зашумлением}
+^^I\label{fig:figure_39}
 \end{figure}
 \vfill

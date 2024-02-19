@@ -299,7 +299,7 @@ $$
 \vfill
 \begin{minted}{pycon}
 >>> import numpy as np
->>> quad(lambda x: np.exp(-x**2), 0, np.inf)
+>>> quad(lambda x: np.exp(-x ** 2), 0, np.inf)
 (0.8862269254527579, 7.101318378329813e-09)
 >>> np.sqrt(np.pi) / 2   # аналитическое решение
 0.8862269254527579
@@ -370,53 +370,6 @@ $$
 \vfill
 \end{frame}
 
-\subsection{Интегралы от двух и нескольких переменных}
-\begin{frame}[fragile, label=c]{Интегралы от двух и нескольких переменных}
-\scriptsize
-\begin{itemize}
-	\item Модуль \texttt{scipy.integrate} содержит методы \texttt{dblquad}, \texttt{tplquad} и \texttt{nquad}, вычисляющие двойные, тройные и кратные интегралы, соответственно.
-	\item Так как в общем случае пределы по одной координате могут зависеть от другой координаты, синтаксис указанных выше методов усложняется.
-	\item Метод \texttt{dblquad} вычисляет двойной интеграл:
-\vfill
-$$
-	\int\limits_{a}^{b}\int\limits_{g(x)}^{h(x)} \, dy \, dx
-$$
-\vfill
-	\item В данном случае функция $f(x,y)$ должна быть передана как функция минимум двух переменных \texttt{func(y, x, \_)}.
-	\item В обязательном порядке функция должна принимать \texttt{y} как свой первый аргумент, а \texttt{x} как второй.
-	\item Пределы интегрирования должны быть переданы в \texttt{dblquad} в следующих четырех аргументах: сначала нижний и верхний пределы по \texttt{x} (\texttt{a} и \texttt{b}), затем нижний и верхний пределы интегрирования по \texttt{y}~-- аргументы \texttt{gfun} и \texttt{hfun}, которые должны обязательно быть вызываемыми объектами, принимающими один аргумент \texttt{x}, при котором этот предел применяется.
-	\item Если какой-либо из пределов интегрирования по \texttt{y} не зависит от \texttt{x}, то функция \texttt{gfun} и/или \texttt{hfun} будут возвращать постоянное значение.
-\end{itemize}
-\vfill
-\end{frame}
-
-\begin{frame}[fragile, label=c]{Интегралы от двух и нескольких переменных}
-\scriptsize
-Рассмотрим пример:
-\vfill
-$$
-	\int\limits_{1}^{4}\int\limits_{0}^{2} x^2y \, dy \, dx
-$$
-\vfill
-Вычисления выполним следующим образом:
-\vfill
-\begin{minted}{pycon}
->>> from scipy.integrate import dblquad
->>> def f(y, x):
-...     return x ** 2 * y
-...
->>> a, b = 1, 4
->>> dblquad(f, a, b, gfun=lambda x: 0, hfun=lambda x: 2)
-(42.00000000000001, 4.662936703425658e-13)
-\end{minted}
-\vfill
-\begin{itemize}
-	\item В данном случае аргументы \texttt{gfun} и \texttt{hfun} вызываются с передачей в них значения \texttt{x}, однако они возвращают постоянные значения.
-	\item Метод \texttt{tplquad} используется для вычисления тройных интегралов.
-	\item Для интегрирования с более высокой кратностью, необходимо использовать метод \texttt{scipy.integrate.nquad}: \url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.nquad.html}.
-\end{itemize}
-\vfill
-\end{frame}
 
 
 \subsection{Обыкновенные дифференциальные уравнения}
@@ -454,7 +407,7 @@ $$
 \begin{frame}[fragile, label=c]{Обыкновенные дифференциальные уравнения}
 \scriptsize
 \begin{itemize}
-	\item Для численного решения данного уравнения при помощи метода \texttt{solve\_ivp} потребуется записать его в форме с единственной зависимой переменной $y(t) \equiv \left[A\right]$, являющейся функцией независимой переменной \texttt{t} (время эксперимента). В итоге получим:
+	\item Для численного решения данного уравнения при помощи функции \texttt{solve\_ivp()} потребуется записать его в форме с единственной зависимой переменной $y(t) \equiv \left[A\right]$, являющейся функцией независимой переменной \texttt{t} (время эксперимента). В итоге получим:
 \vfill
 $$
 	\dfrac{dy}{dt} = -ky

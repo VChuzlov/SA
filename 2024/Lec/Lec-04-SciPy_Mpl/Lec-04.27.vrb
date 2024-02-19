@@ -1,26 +1,8 @@
 \frametitle{Одномерная интерполяция}
 \scriptsize
-\begin{itemize}
-^^I\item Метод \texttt{scipy.interpolate.interp1d} представляет метод одномерной интерполяции.
-^^I\item Данный метод в качестве входных параметров принимает массивы точек \texttt{x} и \texttt{y}, а возвращает объект функции, который можно вызывать для получения интерполируемых значений в промежуточных точках \texttt{x}.
-^^I\item По умолчанию используется линейная схема интерполяции, однако существует возможность применения и других вариантов.
-\end{itemize}
-\vfill
-\begin{table}[h!]
-%^^I\caption{Схемы интерполяции, передаваемые в аргументе \texttt{kind} при вызове метода \texttt{scipy.interpolate.interp1d}}
-%^^I\label{tab:interp1d}
-^^I\begin{tabular*}{\linewidth}{p{0.15\linewidth}p{0.8\linewidth}}
-^^I^^I\hline
-^^I^^I\textbf{\texttt{kind} }& \textbf{Описание} \\
-^^I^^I\hline
-^^I^^I\mintinline{python}|'linear'| & Принятая по умолчанию линейная интерполяция, использующая при расчетах только значения из исходных данных, охватывающих требуемую точку \\
-^^I^^I\mintinline{python}|'nearest'| & Привязка к ближайшей^^I точке данных \\
-^^I^^I\mintinline{python}|'zero'| & Сплайн нулевого порядка: интерполирует по последнему наблюдаемому значению при проходе по массиву данных \\
-^^I^^I\mintinline{python}|'slinear'| & Интерполяция сплайном первого порядка (аналог \mintinline{python}|'linear'|) \\
-^^I^^I\mintinline{python}|'quadratic'| & Интерполяция сплайном второго порядка \\
-^^I^^I\mintinline{python}|'cubic'| & Интерполяция кубическим сплайном \\
-^^I^^I\mintinline{python}|'previous'| & Используется предыдущая точка данных \\
-^^I^^I\hline
-^^I\end{tabular*}
-\end{table}
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.65\linewidth]{./pics/Figure_37}
+^^I\caption{Демонстрация различных методик интерполяции, доступных в методе \texttt{scipy.interpolate.interp1d}}
+\end{figure}
 \vfill

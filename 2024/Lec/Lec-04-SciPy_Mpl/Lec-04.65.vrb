@@ -1,23 +1,23 @@
-\frametitle{Диаграммы рассеяния}
+\frametitle{Гистограммы}
 \scriptsize
-При помощи \texttt{plt.scatter()} можно создавать диаграммы рассеяния с индивидуальными свойствами каждой точки (такими как размер, заливка, цвет рамки и т.д.).
-
-Создадим случайную диаграмму рассеяния с точками различных размеров и цветов. Воспользуемся ключевым аргументом \texttt{alpha}, отвечающим за уровень прозрачности (рисунок \ref{fig:fig_18}):
+Сравнение гистограмм нескольких распределений (рисунок~\ref{fig:fig_21}):
 \vfill
 \begin{minipage}{.4\textwidth}
 \begin{minted}{python}
 import numpy as np
 import matplotlib.pyplot as plt
-rng = np.random.RandomState(0)
 
-x = rng.randn(100)
-y = rng.randn(100)
-colors = rng.rand(100)
-sizes = 1000 * rng.rand(100)
-plt.scatter(x, y, c=colors,
-            s=sizes, alpha=0.3,
-            cmap='viridis')
-plt.colorbar()  # цветовая шкала
+
+x1 = np.random.normal(0, 0.8, 1000)
+x2 = np.random.normal(-2, 1, 1000)
+x3 = np.random.normal(3, 2, 1000)
+
+options = dict(alpha=0.3, bins=40)
+
+plt.hist(x1, **options)
+plt.hist(x2, **options)
+plt.hist(x3, **options)
+
 plt.show()
 |\space|
 \end{minted}
@@ -25,9 +25,9 @@ plt.show()
 \begin{minipage}{.59\textwidth}
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=.73\linewidth]{./pics/Figure_18}
-^^I\caption{Настройка размера, цвета и прозрачности точек диаграммы рассеяния при помощи функции \texttt{plt.scatter()}}
-^^I\label{fig:fig_18}
+^^I\includegraphics[width=.9\linewidth]{./pics/Figure_21}
+^^I\caption{Несколько гистограмм с наложением}
+^^I\label{fig:fig_21}
 \end{figure}
 \end{minipage}
 \vfill

@@ -1,21 +1,30 @@
-\frametitle{Настройка стилей}
+\frametitle{Построение графиков}
 \scriptsize
-Для того чтобы настроить стиль графиков, будем использовать команду \texttt{plt.style}. Ниже приведен пример выбора стиля \texttt{classic}, который обеспечит в создаваемых  графиках классический стиль библиотеки Matplotlib:
+При необходимости совместить несколько графиков на одном рисунке можно воспользоваться функцией \mintinline{python}|subplots()|:
 \vfill
-\begin{minted}{pycon}
->>> import matplotlib.pyplot as plt
->>> plt.style.use('classic')
+\begin{minipage}{.38\textwidth}
+\begin{minted}{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = np.linspace(0, 10, 100)
+
+fig, ax = plt.subplots(
+    1, 2, figsize=(7, 3.)
+)
+ax[0].plot(x,  np.sin(x), '-')
+ax[1].plot(x, np.cos(x), '--')
+
+plt.show()
+|\space|
 \end{minted}
-\vfill
-Для того, чтобы увидеть список доступных для использования стилей, необходимо выполнить следующую инструкцию:
-\begin{minted}{pycon}
->>> plt.style.available
-['Solarize_Light2', '_classic_test_patch', '_mpl-gallery', '_mpl-gallery-nogrid', 'bmh',
-'classic', 'dark_background', 'fast', 'fivethirtyeight', 'ggplot', 'grayscale',
- 'seaborn-v0_8', 'seaborn-v0_8-bright', 'seaborn-v0_8-colorblind', 'seaborn-v0_8-dark',
- 'seaborn-v0_8-dark-palette', 'seaborn-v0_8-darkgrid', 'seaborn-v0_8-deep',
- 'seaborn-v0_8-muted', 'seaborn-v0_8-notebook', 'seaborn-v0_8-paper', 'seaborn-v0_8-pastel',
- 'seaborn-v0_8-poster', 'seaborn-v0_8-talk', 'seaborn-v0_8-ticks', 'seaborn-v0_8-white',
- 'seaborn-v0_8-whitegrid', 'tableau-colorblind10']
-\end{minted}
+\end{minipage}
+\begin{minipage}{.61\textwidth}
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=1.1\linewidth]{./pics/double}
+^^I\caption{Пример совмещения двух графиков на одном рисунке}
+\end{figure}
+\end{minipage}
 \vfill

@@ -1,32 +1,12 @@
 \frametitle{Система взаимосвязанных ОДУ первого порядка}
 \scriptsize
-Для наглядной демонстрации рассмотрим следующую схему химических реакций:
-\vfill
-$$
-^^IA \rightarrow B \rightarrow C
-$$
-\vfill
-\noindent с константами скоростей $k_1$ и $k_2$. Уравнения, описывающие скорость изменения концентраций компонентов по времени, записываются следующим образом:
-\vfill
-\begin{equation*}
-^^I\left\{
-^^I\begin{aligned}
-^^I^^I\dfrac{d\left[A\right]}{dt} &= -k_1\left[A\right] \\
-^^I^^I\dfrac{d\left[B\right]}{dt} &=  k_1\left[A\right] - k_2\left[B\right] \\
-^^I^^I\dfrac{d\left[C\right]}{dt} &=  k_2\left[B\right] \\
-^^I\end{aligned}
-^^I\right.
-\end{equation*}
-\vfill
-Для численного решения предположим $y_1 \equiv \left[A\right]$,  $y_2 \equiv \left[B\right]$ и $y_3 \equiv \left[C\right]$:
-\vfill
-\begin{equation*}
-^^I\left\{
-^^I\begin{aligned}
-^^I^^I\dfrac{d\left[A\right]}{dt} &= -k_1y_1 \\
-^^I^^I\dfrac{d\left[B\right]}{dt} &=  k_1y_1 - k_2y_2 \\
-^^I^^I\dfrac{d\left[C\right]}{dt} &=  k_2y_2 \\
-^^I\end{aligned}
-^^I\right.
-\end{equation*}
+\begin{minted}{pycon}
+>>> solution = solve_ivp(func, (t0, tf), y0, dense_output=True, args=(k1, k2))
+>>> t = np.linspace(t0, tf, 50)
+>>> a, b, c = solution.sol(t)
+>>> # аналитическое решение
+>>> a_exact = a0 * np.exp(-k1 * t)
+>>> b_exact = a0 * k1 / (k2 - k1) * (np.exp(-k1 * t) - np.exp(-k2 * t))
+>>> c_exact = a0 - a_exact - b_exact
+\end{minted}
 \vfill

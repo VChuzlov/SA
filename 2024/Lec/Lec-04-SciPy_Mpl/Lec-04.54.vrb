@@ -1,11 +1,29 @@
-\frametitle{Цвет и стиль линий}
+\frametitle{Пределы осей координат}
 \scriptsize
+Альтернативный способ~-- вызов метода \texttt{plt.axis()}. Данный метод дает возможность задавать пределы значений координатных осей путем передачи списка \texttt{[xmin, xmax, ymin, ymax]} (рисунок~\ref{fig:fig_9}):
+\vfill
+\begin{minipage}{.4\textwidth}
+\begin{minted}{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+plt.style.use('seaborn-v0_8-whitegrid')
+
+x = np.linspace(0, 10, 1000)
+plt.plot(x, np.sin(x))
+plt.axis([0, 5, -1.1, 1.1])
+
+plt.show()
+|\space|
+\end{minted}
+\end{minipage}
+\begin{minipage}{.59\textwidth}
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=.5\linewidth]{./pics/Figure_7}
-^^I\caption{Настройка стиля линий графика}
-^^I\label{fig:fig_7}
+^^I\includegraphics[width=.85\linewidth]{./pics/Figure_9}
+^^I\caption{Настройка пределов координатных осей посредством метода \texttt{plt.axis()}}
+^^I\label{fig:fig_9}
 \end{figure}
-\vfill
-В действительности существует множество других аргументов для более тонкой настройки внешнего вида графика. Обратитесь к документации функции \texttt{plt.plot()} для более подробного изучения.
+\end{minipage}
 \vfill

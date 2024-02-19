@@ -1,25 +1,23 @@
 \frametitle{Диаграммы рассеяния}
 \scriptsize
-Используя дополнительные ключевые аргументы функции \texttt{plt.plot()} можно определять множество свойств линий и маркеров (рисунок~\ref{fig:fig_16}):
+При помощи \texttt{plt.scatter()} можно создавать диаграммы рассеяния с индивидуальными свойствами каждой точки (такими как размер, заливка, цвет рамки и т.д.).
+
+Создадим случайную диаграмму рассеяния с точками различных размеров и цветов. Воспользуемся ключевым аргументом \texttt{alpha}, отвечающим за уровень прозрачности (рисунок \ref{fig:fig_18}):
 \vfill
 \begin{minipage}{.4\textwidth}
 \begin{minted}{python}
 import numpy as np
 import matplotlib.pyplot as plt
+rng = np.random.RandomState(0)
 
-
-plt.style.use('seaborn-v0_8-whitegrid')
-
-x = np.linspace(0, 10, 30)
-y = np.sin(x)
-
-plt.plot(x, y, '-p', color='gray',
-         markersize=14, linewidth=4,
-         markerfacecolor='white',
-         markeredgecolor='gray',
-         markeredgewidth=1)
-plt.ylim(-1.2, 1.2)
-
+x = rng.randn(100)
+y = rng.randn(100)
+colors = rng.rand(100)
+sizes = 1000 * rng.rand(100)
+plt.scatter(x, y, c=colors,
+            s=sizes, alpha=0.3,
+            cmap='viridis')
+plt.colorbar()  # цветовая шкала
 plt.show()
 |\space|
 \end{minted}
@@ -27,9 +25,9 @@ plt.show()
 \begin{minipage}{.59\textwidth}
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=.85\linewidth]{./pics/Figure_16}
-^^I\caption{Пример индивидуальной настройки вида линий и маркеров точек}
-^^I\label{fig:fig_16}
+^^I\includegraphics[width=.73\linewidth]{./pics/Figure_18}
+^^I\caption{Настройка размера, цвета и прозрачности точек диаграммы рассеяния при помощи функции \texttt{plt.scatter()}}
+^^I\label{fig:fig_18}
 \end{figure}
 \end{minipage}
 \vfill

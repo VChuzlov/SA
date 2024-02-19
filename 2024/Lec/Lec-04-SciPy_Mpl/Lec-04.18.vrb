@@ -1,17 +1,29 @@
 \frametitle{Обыкновенные дифференциальные уравнения}
 \scriptsize
-%\begin{minipage}{.6\linewidth}
-%\end{minipage}
-\begin{minipage}{.58\linewidth}
-\begin{figure}
-\centering
-^^I\includegraphics[width=\linewidth]{./pics/Figure_34}
-^^I\caption{Снижение концентрации реагента в реакции первого порядка: аналитическое и численное решения}
+\begin{minipage}{.58\textwidth}
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.92\linewidth]{./pics/Figure_35}
+^^I\caption{Снижение концентрации реагента по времени: аналитическое и численное решение с использованием предварительно определенных точек}
 \end{figure}
 \end{minipage}
-\begin{minipage}{.4\linewidth}
-^^I\begin{itemize}
-^^I^^I\item Данный подход оправдан в тех случаях, когда требуется определить только конечную концентрацию реагента, однако для отслеживания изменения концентрации во времени с более высокой дискретностью можно передать специальную последовательность точек по времени в опциональном аргументе \texttt{t\_eval}.
-^^I\end{itemize}
+\begin{minipage}{.415\textwidth}
+\begin{itemize}
+^^I\item Аналогично методу \texttt{quad}, дополнительные аргументы можно передать через параметр \texttt{args}.
+^^I\item В рассмотренном выше примере константа скорости реакции \texttt{k} определена в глобальной области видимости, однако лучше передавать эту переменную явным образом:
+
+\begin{minted}[frame=none]{pycon}
+>>> def func(t, y, k):
+...     return -k * y
+...
+\end{minted}
+\end{itemize}
 \end{minipage}
+\begin{itemize}
+^^I\item Дополнительные аргументы указываются в параметре \texttt{args}:
+\vfill
+\begin{minted}[frame=none]{pycon}
+>>> solution = solve_ivp(func, (t0, tf), [y0], args=(k,))
+\end{minted}
+\end{itemize}
 \vfill

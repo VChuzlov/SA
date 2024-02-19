@@ -1,32 +1,12 @@
-\frametitle{Простые линейные графики}
+\frametitle{Цвет и стиль линий}
 \scriptsize
-При необходимости создать рисунок с несколькими линиями, можно применить метод \texttt{plot} несколько раз, воспользовавшись объектно-ориентированным интерфейсом (рисунок~\ref{fig:fig_5}):
-\vfill
-\begin{minipage}{.4\textwidth}
-\begin{minted}{python}
-import numpy as np
-import matplotlib.pyplot as plt
-
-
-plt.style.use('seaborn-v0_8-whitegrid')
-
-fig = plt.figure()
-ax = plt.axes()
-
-x = np.linspace(0, 10, 1000)
-ax.plot(x, np.sin(x))
-ax.plot(x, np.cos(x))
-
-plt.show()
-|\space|
-\end{minted}
-\end{minipage}
-\begin{minipage}{.59\textwidth}
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=\linewidth]{./pics/Figure_5.pdf}
-^^I\caption{График с несколькими линиями}
-^^I\label{fig:fig_5}
+^^I\includegraphics[width=.5\linewidth]{./pics/Figure_6}
+^^I\caption{Настройка цвета линий графика}
+^^I\label{fig:fig_6}
 \end{figure}
-\end{minipage}
+\begin{itemize}
+\item В том случае, если цвет не определен пользователем, выбор будет происходить автоматически по циклу из набора цветов по умолчанию, если график содержит несколько линий.
+\end{itemize}
 \vfill

@@ -1,31 +1,32 @@
-\frametitle{Сохранение рисунков}
+\frametitle{Простые линейные графики}
 \scriptsize
-Библиотека Matplotlib предоставляет возможность сохранять рисунки в файлы различных форматов. К примеру, можно сохранить предыдущий рисунок в формате PNG:
+При необходимости создать рисунок с несколькими линиями, можно применить метод \texttt{plot} несколько раз, воспользовавшись объектно-ориентированным интерфейсом (рисунок~\ref{fig:fig_5}):
 \vfill
-\begin{minted}[firstnumber=last]{python}
-plt.savefig('myfig.png')
+\begin{minipage}{.4\textwidth}
+\begin{minted}{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+plt.style.use('seaborn-v0_8-whitegrid')
+
+fig = plt.figure()
+ax = plt.axes()
+
+x = np.linspace(0, 10, 1000)
+ax.plot(x, np.sin(x))
+ax.plot(x, np.cos(x))
+
+plt.show()
 |\space|
 \end{minted}
-\vfill
-Метод \texttt{savefig()} устанавливает формат файла, исходя из расширения в заданном пользователем имени файла. Список поддерживаемых форматов:
-\vfill
-\begin{minted}[firstnumber=last]{python}
-plt.gcf().canvas.get_supported_filetypes()
-|\space|
-\end{minted}
-\begin{minted}[frame=none]{pycon}
-{'eps': 'Encapsulated Postscript',
- 'jpg': 'Joint Photographic Experts Group',
- 'jpeg': 'Joint Photographic Experts Group',
- 'pdf': 'Portable Document Format',
- 'pgf': 'PGF code for LaTeX',
- 'png': 'Portable Network Graphics',
- 'ps': 'Postscript',
- 'raw': 'Raw RGBA bitmap',
- 'rgba': 'Raw RGBA bitmap',
- 'svg': 'Scalable Vector Graphics',
- 'svgz': 'Scalable Vector Graphics',
- 'tif': 'Tagged Image File Format',
- 'tiff': 'Tagged Image File Format'}
-\end{minted}
+\end{minipage}
+\begin{minipage}{.59\textwidth}
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=\linewidth]{./pics/Figure_5.pdf}
+^^I\caption{График с несколькими линиями}
+^^I\label{fig:fig_5}
+\end{figure}
+\end{minipage}
 \vfill

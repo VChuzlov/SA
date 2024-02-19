@@ -1,14 +1,29 @@
 \frametitle{Нелинейная аппроксимация методом \\ наименьших квадратов}
 \scriptsize
+Задача аппроксимации зашумленного набора данных сводится к определению параметров \texttt{a}, \texttt{freq} и \texttt{tau} (представим, что они нам неизвестны).
+\vfill
+\begin{itemize}
+^^I\item Для решения этой задачи сначала необходимо определить функцию \texttt{residuals}:
+\vfill
 \begin{minted}{pycon}
->>> import numpy as np
->>> a, freq, tau = 10, 4, 0.5
->>> def f(t, a, freq, tau):
-...     return a * np.exp(-t / tau) * np.cos(2 * np.pi * freq * t)
+>>> def residuals(params, y, t):
+...     a, freq, tau = params
+...     return y - f(t, a, freq, tau)
 ...
->>> tmax, dt = 1, 0.01
->>> t = np.arange(0, tmax, dt)
->>> y_exact = f(t, a, freq, tau)
->>> y = y_exact + np.random.randn(y_exact.shape[0]) * 2
 \end{minted}
+\vfill
+^^I\item Первый аргумент~-- последовательность параметров \texttt{params} которые для лучшей читаемости кода распаковываются в именованные переменные.
+^^I\item Требуемые дополнительные аргументы: набор точек данных \texttt{y} и независимая переменная \texttt{t}.
+^^I\item Далее необходимо задать начальные приближения для параметров и вызвать метод \texttt{leastsq}:
+\vfill
+\begin{minted}{pycon}
+>>> from scipy.optimize import leastsq
+>>> params0 = 5, 5, 1
+>>> plsq = leastsq(residuals, params0, args=(y, t))
+>>> plsq[0]
+array([9.1920154, 4.0158567, 0.593839 ])
+\end{minted}
+\end{itemize}
+\vfill
+Действительные значения параметров \texttt{a, freq, tau = 10, 4, 0.5}, таким образом, учитывая шум, добавленный к исходным данным, результат можно считать вполне приемлемым.
 \vfill

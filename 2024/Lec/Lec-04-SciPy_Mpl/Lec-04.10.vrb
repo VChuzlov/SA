@@ -6,7 +6,7 @@
 \vfill
 \begin{minted}{pycon}
 >>> import numpy as np
->>> quad(lambda x: np.exp(-x**2), 0, np.inf)
+>>> quad(lambda x: np.exp(-x ** 2), 0, np.inf)
 (0.8862269254527579, 7.101318378329813e-09)
 >>> np.sqrt(np.pi) / 2   # аналитическое решение
 0.8862269254527579

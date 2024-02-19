@@ -2,11 +2,10 @@
 \scriptsize
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=.5\linewidth]{./pics/Figure_6}
-^^I\caption{Настройка цвета линий графика}
-^^I\label{fig:fig_6}
+^^I\includegraphics[width=.5\linewidth]{./pics/Figure_7}
+^^I\caption{Настройка стиля линий графика}
+^^I\label{fig:fig_7}
 \end{figure}
-\begin{itemize}
-\item В том случае, если цвет не определен пользователем, выбор будет происходить автоматически по циклу из набора цветов по умолчанию, если график содержит несколько линий.
-\end{itemize}
+\vfill
+В действительности существует множество других аргументов для более тонкой настройки внешнего вида графика. Обратитесь к документации функции \texttt{plt.plot()} для более подробного изучения.
 \vfill

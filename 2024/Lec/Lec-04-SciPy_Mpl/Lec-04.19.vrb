@@ -1,27 +1,28 @@
-\frametitle{Обыкновенные дифференциальные уравнения}
+\frametitle{Система взаимосвязанных ОДУ первого порядка}
 \scriptsize
-\begin{itemize}
-^^I\item Разобьем наш интервал интегрирования на 20 точек по времени:
+\textcolor{tpugreen}{\textbf{Решение системы ОДУ первого порядка}}
+\vfill
+^^IМетод \texttt{solve\_ivp} также может быть использован для решения системы взаимосвязанных ОДУ первого порядка с несколькими зависимыми переменными $y_1(t), y_2(t),\dots, y_n(t)$:
+\vfill
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^I\dfrac{dy_1}{dt} &= f_1\left(y_1, y_2,\dots, y_n; t\right)\\
+^^I^^I\dfrac{dy_2}{dt} &= f_2\left(y_1, y_2,\dots, y_n; t\right)\\
+^^I^^I\dots \\
+^^I^^I\dfrac{dy_n}{dt} &= f_n\left(y_1, y_2,\dots, y_n; t\right)
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
 \vfill
 \begin{minted}{pycon}
->>> t0, tf = 0, 20
->>> t_eval = np.linspace(t0, tf, 20)
->>> solution = solve_ivp(func, (t0, tf), [y0], t_eval=t_eval)
->>> t, y = solution.t, solution.y[0]
+>>> def func(t, y):
+...     # y = [y1, y2, ... yn] - последовательность зависимых переменных
+...     dy1dt = f1(y, t)
+...     dy2dt = f2(y, t)
+...     # ... и т.д.
+...     # Возвращаются вычисленные производные в последовательности,
+...     # например, в кортеже
+...     return dy1dt, dy2dt, ... dyndt
 \end{minted}
-\vfill
-^^I\item В опциональный  аргумент \mintinline{python}|dense_output| можно передать значение \mintinline{python}|True| для определения объекта \mintinline{python}|OdeSolution| с атрибутом \mintinline{python}|sol| как одним из возвращаемых объектов.
-^^I\item Данный функционал можно использовать для генерации значений решения в промежуточных точках по времени:
-\vfill
-\begin{minted}{pycon}
->>> # Начальная и конечные точки по времени интегрирования
->>> t0, tf = 0, 20
->>> # Интегрирования дифференциального уравнения
->>> solution = solve_ivp(func, (t0, tf), [y0], dense_output=True)
->>> t = np.linspace(t0, tf, 20)
->>> y = solution.sol(t)[0]
-\end{minted}
-\vfill
-^^I\item Объект \texttt{solution.sol} можно вызывать: значение независимой переменной~-- времени~-- передается в него как аргумент, и возвращается массив решений в этот момент времени. В рассмотренном случае есть только одна зависимая переменная \texttt{y}, поэтому используется индекс \texttt{[0]}.
-\end{itemize}
-\vfill
+\vfil

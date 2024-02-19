@@ -1,28 +1,22 @@
 \frametitle{Система взаимосвязанных ОДУ первого порядка}
 \scriptsize
-\textcolor{tpugreen}{\textbf{Решение системы ОДУ первого порядка}}
-\vfill
-^^IМетод \texttt{solve\_ivp} также может быть использован для решения системы взаимосвязанных ОДУ первого порядка с несколькими зависимыми переменными $y_1(t), y_2(t),\dots, y_n(t)$:
-\vfill
-\begin{equation*}
-^^I\left\{
-^^I\begin{aligned}
-^^I^^I\dfrac{dy_1}{dt} &= f_1\left(y_1, y_2,\dots, y_n; t\right)\\
-^^I^^I\dfrac{dy_2}{dt} &= f_2\left(y_1, y_2,\dots, y_n; t\right)\\
-^^I^^I\dots \\
-^^I^^I\dfrac{dy_n}{dt} &= f_n\left(y_1, y_2,\dots, y_n; t\right)
-^^I\end{aligned}
-^^I\right.
-\end{equation*}
+Зададимся значениями констант: $k_1 = 0.2 \text{ } c^{-1}$, $k_2 = 0.8 \text{ } c^{-1}$ и начальными условиями: $y_1(0) = 100$, $y_2(0) = 0$ $y_3(0) = 0$.
 \vfill
 \begin{minted}{pycon}
->>> def func(t, y):
-...     # y = [y1, y2, ... yn] - последовательность зависимых переменных
-...     dy1dt = f1(y, t)
-...     dy2dt = f2(y, t)
-...     # ... и т.д.
-...     # Возвращаются вычисленные производные в последовательности,
-...     # например, в кортеже
-...     return dy1dt, dy2dt, ... dyndt
+>>> import numpy as np
+>>> from scipy.integrate import solve_ivp
+>>> # константы скоростей и начальные условия
+>>> k1, k2 = 0.2, 0.8
+>>> a0, b0, c0 = 100, 0, 0
+>>> t0, tf = 0, 20
+>>> def func(t, y, k1, k2):
+...     """"Returns dy_i/dt = f(t, y_i) at time t."""
+...     y1, y2, y3 = y
+...     dy1dt = -k1 * y1
+...     dy2dt = k1 * y1 - k2 * y2
+...     dy3dt = k2 * y2
+...     return dy1dt, dy2dt, dy3dt
+...
+>>> y0 = a0, b0, c0
 \end{minted}
-\vfil
+\vfill

@@ -1,31 +1,25 @@
-\frametitle{Простые линейные графики}
+\frametitle{Цвет и стиль линий}
 \scriptsize
-После того, как созданы оси, можно приступить к построению графика данных, применив метод \texttt{ax.plot(}). Рассмотрим простую синусоиду (рисунок~\ref{fig:fig_4}):
+Функции \texttt{plt.plot} можно передавать дополнительные аргументы, позволяющие управлять цветами и стилями линий. Для настройки цвета используется ключевой слово \texttt{color} с соответствующим строковым аргументом, задающим почти любой цвет (рисунок~\ref{fig:fig_6}):
 \vfill
-\begin{minipage}{.4\textwidth}
 \begin{minted}{python}
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 plt.style.use('seaborn-v0_8-whitegrid')
-
-fig = plt.figure()
-ax = plt.axes()
-
-x = np.linspace(0, 10, 1000)
-ax.plot(x, np.sin(x))
+# цвет по названию
+plt.plot(x, np.sin(x), color='blue')
+# краткий код цвета (rgbcmyk)
+plt.plot(x, np.sin(x - 1), color='g')
+# Шкала оттенков серого цвета в диапазоне от 0 до 1
+plt.plot(x, np.sin(x - 2), color='0.75')
+# 16-ричный код (RRGGBB от 00 до FF)
+plt.plot(x, np.sin(x - 3), color='#FFDD44')
+# Кортеж RGB, значения от 0 до 1
+plt.plot(x, np.sin(x - 4), color=(1.0, 0.2, 0.3))
+# Поддерживаются все имена цветов HTML
+plt.plot(x, np.sin(x - 5), color='chartreuse')
 
 plt.show()
-|\space|
 \end{minted}
-\end{minipage}
-\begin{minipage}{.59\textwidth}
-\begin{figure}[h!]
-^^I\centering
-^^I\includegraphics[width=\linewidth]{./pics/Figure_4.pdf}
-^^I\caption{График простой синусоиды}
-^^I\label{fig:fig_4}
-\end{figure}
-\end{minipage}
 \vfill

@@ -1,6 +1,6 @@
-\frametitle{Диаграммы рассеяния}
+\frametitle{Гистограммы}
 \scriptsize
-Функция построения диаграмм \texttt{plt.scatter()}, в многом похожая на  \texttt{plt.plot()}, обладает еще более расширенными возможностями (рисунок~\ref{fig:fig_17}):
+Функция \texttt{hist()} поддерживает множество параметров для настройки вычисления и отображения. Рассмотрим пример гистограммы с детальными пользовательскими настройками (рисунок~\ref{fig:fig_20}):
 \vfill
 \begin{minipage}{.4\textwidth}
 \begin{minted}{python}
@@ -8,12 +8,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-plt.style.use('seaborn-v0_8-whitegrid')
+plt.style.use('seaborn-v0_8-white')
+data = np.random.randn(1000)
 
-x = np.linspace(0, 10, 30)
-y = np.sin(x)
-
-plt.scatter(x, y, marker='o')
+plt.hist(data, bins=30, alpha=0.5,
+         color='steelblue',
+         edgecolor='none')
 
 plt.show()
 |\space|
@@ -22,9 +22,9 @@ plt.show()
 \begin{minipage}{.59\textwidth}
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=.85\linewidth]{./pics/Figure_17}
-^^I\caption{Диаграмма рассеяния, построенная с использованием метода \texttt{plt.scatter()}}
-^^I\label{fig:fig_17}
+^^I\includegraphics[width=.85\linewidth]{./pics/Figure_20}
+^^I\caption{Пример гистограммы с пользовательскими настройками}
+^^I\label{fig:fig_20}
 \end{figure}
 \end{minipage}
 \vfill

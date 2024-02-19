@@ -1,30 +1,31 @@
-\frametitle{Построение графиков}
+\frametitle{Простые линейные графики}
 \scriptsize
-При необходимости совместить несколько графиков на одном рисунке можно воспользоваться функцией \mintinline{python}|subplots()|:
+После того, как созданы оси, можно приступить к построению графика данных, применив метод \texttt{ax.plot(}). Рассмотрим простую синусоиду (рисунок~\ref{fig:fig_4}):
 \vfill
-\begin{minipage}{.38\textwidth}
+\begin{minipage}{.4\textwidth}
 \begin{minted}{python}
 import numpy as np
 import matplotlib.pyplot as plt
 
 
-x = np.linspace(0, 10, 100)
+plt.style.use('seaborn-v0_8-whitegrid')
 
-fig, ax = plt.subplots(
-    1, 2, figsize=(7, 3.)
-)
-ax[0].plot(x,  np.sin(x), '-')
-ax[1].plot(x, np.cos(x), '--')
+fig = plt.figure()
+ax = plt.axes()
+
+x = np.linspace(0, 10, 1000)
+ax.plot(x, np.sin(x))
 
 plt.show()
 |\space|
 \end{minted}
 \end{minipage}
-\begin{minipage}{.61\textwidth}
+\begin{minipage}{.59\textwidth}
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=1.1\linewidth]{./pics/double}
-^^I\caption{Пример совмещения двух графиков на одном рисунке}
+^^I\includegraphics[width=\linewidth]{./pics/Figure_4.pdf}
+^^I\caption{График простой синусоиды}
+^^I\label{fig:fig_4}
 \end{figure}
 \end{minipage}
 \vfill

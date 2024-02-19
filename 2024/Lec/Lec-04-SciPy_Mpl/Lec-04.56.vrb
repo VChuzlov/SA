@@ -1,6 +1,6 @@
-\frametitle{Пределы осей координат}
+\frametitle{Метки на графиках}
 \scriptsize
-Альтернативный способ~-- вызов метода \texttt{plt.axis()}. Данный метод дает возможность задавать пределы значений координатных осей путем передачи списка \texttt{[xmin, xmax, ymin, ymax]} (рисунок~\ref{fig:fig_9}):
+Когда требуется отобразить несколько линий в одной координатной сетке, часто бывает необходимо создать легенду, на которой была бы отмечена каждая линия. Для быстрого решения данной задачи в Matplotlib есть метод \texttt{plt.legend()} (рисунок~\ref{fig:fig_12}):
 \vfill
 \begin{minipage}{.4\textwidth}
 \begin{minted}{python}
@@ -11,9 +11,14 @@ import matplotlib.pyplot as plt
 plt.style.use('seaborn-v0_8-whitegrid')
 
 x = np.linspace(0, 10, 1000)
-plt.plot(x, np.sin(x))
-plt.axis([0, 5, -1.1, 1.1])
+plt.plot(x, np.cos(x), color='b',
+         linestyle='-',
+         label='cos(x)')
+plt.plot(x, np.sin(x), color='g',
+         linestyle=':',
+         label='sin(x)')
 
+plt.legend()
 plt.show()
 |\space|
 \end{minted}
@@ -21,9 +26,9 @@ plt.show()
 \begin{minipage}{.59\textwidth}
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=.85\linewidth]{./pics/Figure_9}
-^^I\caption{Настройка пределов координатных осей посредством метода \texttt{plt.axis()}}
-^^I\label{fig:fig_9}
+^^I\includegraphics[width=.85\linewidth]{./pics/Figure_12}
+^^I\caption{Пример настройки легенды графика с помощью метода \texttt{plt.legend()}}
+^^I\label{fig:fig_12}
 \end{figure}
 \end{minipage}
 \vfill

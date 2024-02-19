@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  19 FEB 2024 20:32
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  19 FEB 2024 21:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1591,18 +1591,6 @@ LaTeX Warning: Label `c<1>' multiply defined.
 LaTeX Warning: Label `c' multiply defined.
 
 
-LaTeX Warning: Label `c<1>' multiply defined.
-
-
-LaTeX Warning: Label `c' multiply defined.
-
-
-LaTeX Warning: Label `c<1>' multiply defined.
-
-
-LaTeX Warning: Label `c' multiply defined.
-
-
 LaTeX Warning: Label `m<1>' multiply defined.
 
 
@@ -2353,34 +2341,6 @@ runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
 scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
 pyg Lec-04.pyg)...executed.
 
- (./Lec-04.out.pyg))
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [14
-
-]
-\openout4 = `Lec-04.15.vrb'.
-
-
-(./Lec-04.15.vrb)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [15
-
-]
-\openout4 = `Lec-04.16.vrb'.
-
- (./Lec-04.16.vrb
-\openout5 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
-scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
-pyg Lec-04.pyg)...executed.
-
  (./Lec-04.out.pyg)
 \openout5 = `Lec-04.pyg'.
 
@@ -2394,12 +2354,79 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
 
-[16
+[14
+
+]
+\openout4 = `Lec-04.15.vrb'.
+
+ (./Lec-04.15.vrb
+\openout5 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
+pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [15
+
+]
+\openout4 = `Lec-04.16.vrb'.
+
+ (./Lec-04.16.vrb
+File: ./pics/Figure_34.pdf Graphic file (type pdf)
+<use ./pics/Figure_34.pdf>
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [16
 
 ]
 \openout4 = `Lec-04.17.vrb'.
 
- (./Lec-04.17.vrb
+
+(./Lec-04.17.vrb
+\openout5 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
+pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg)
+\openout6 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
+.pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg)
+\openout6 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
+.pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg)
+\openout6 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
+.pyg Lec-04.pyg)...executed.
+
+
+(./Lec-04.out.pyg)
+\openout6 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
+.pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg)
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
@@ -2417,73 +2444,6 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 \openout4 = `Lec-04.18.vrb'.
 
  (./Lec-04.18.vrb
-File: ./pics/Figure_34.pdf Graphic file (type pdf)
-<use ./pics/Figure_34.pdf>
-)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [18
-
-]
-\openout4 = `Lec-04.19.vrb'.
-
-
-(./Lec-04.19.vrb
-\openout5 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
-scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
-pyg Lec-04.pyg)...executed.
-
- (./Lec-04.out.pyg)
-\openout6 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
-.pyg Lec-04.pyg)...executed.
-
- (./Lec-04.out.pyg)
-\openout6 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
-.pyg Lec-04.pyg)...executed.
-
- (./Lec-04.out.pyg)
-\openout6 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
-.pyg Lec-04.pyg)...executed.
-
-
-(./Lec-04.out.pyg)
-\openout6 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
-.pyg Lec-04.pyg)...executed.
-
- (./Lec-04.out.pyg)
-\openout5 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
-scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
-pyg Lec-04.pyg)...executed.
-
- (./Lec-04.out.pyg))
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [19
-
-]
-\openout4 = `Lec-04.20.vrb'.
-
- (./Lec-04.20.vrb
 File: ./pics/Figure_35.pdf Graphic file (type pdf)
 <use ./pics/Figure_35.pdf>
 \openout5 = `Lec-04.pyg'.
@@ -2500,7 +2460,37 @@ scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
 pyg Lec-04.pyg)...executed.
 
  (./Lec-04.out.pyg))
-Overfull \vbox (0.62808pt too high) detected at line 579
+Overfull \vbox (0.62808pt too high) detected at line 532
+ []
+
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[18
+
+]
+\openout4 = `Lec-04.19.vrb'.
+
+ (./Lec-04.19.vrb
+\openout5 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
+pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [19
+
+]
+\openout4 = `Lec-04.20.vrb'.
+
+ (./Lec-04.20.vrb)
+Overfull \vbox (2.8842pt too high) detected at line 597
  []
 
 File: bgs/light/slide.jpg Graphic file (type bmp)
@@ -2529,37 +2519,7 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 ]
 \openout4 = `Lec-04.22.vrb'.
 
- (./Lec-04.22.vrb)
-Overfull \vbox (2.8842pt too high) detected at line 644
- []
-
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
-[22
-
-]
-\openout4 = `Lec-04.23.vrb'.
-
- (./Lec-04.23.vrb
-\openout5 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
-scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
-pyg Lec-04.pyg)...executed.
-
- (./Lec-04.out.pyg))
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [23
-
-]
-\openout4 = `Lec-04.24.vrb'.
-
- (./Lec-04.24.vrb
+ (./Lec-04.22.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
@@ -2572,43 +2532,43 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [24
+ [22
 
 ]
-\openout4 = `Lec-04.25.vrb'.
+\openout4 = `Lec-04.23.vrb'.
 
- (./Lec-04.25.vrb
+ (./Lec-04.23.vrb
 File: ./pics/Figure_36.pdf Graphic file (type pdf)
 <use ./pics/Figure_36.pdf>
 )
-Overfull \vbox (10.97629pt too high) detected at line 692
+Overfull \vbox (10.97629pt too high) detected at line 645
  []
 
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[25
+[23
 
 ]
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 695--695
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 648--648
 [][][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 695
+Overfull \vbox (5.0pt too high) detected at line 648
  []
 
 File: bgs/light/section.jpg Graphic file (type bmp)
 <bgs/light/section.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[26
+[24
 
 ]
-\openout4 = `Lec-04.27.vrb'.
+\openout4 = `Lec-04.25.vrb'.
 
- (./Lec-04.27.vrb
+ (./Lec-04.25.vrb
 \openout6 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -2680,7 +2640,40 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [27
+ [25
+
+]
+\openout4 = `Lec-04.26.vrb'.
+
+ (./Lec-04.26.vrb
+\openout5 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
+scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
+pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [26
+
+]
+\openout4 = `Lec-04.27.vrb'.
+
+ (./Lec-04.27.vrb
+File: ./pics/Figure_37.pdf Graphic file (type pdf)
+<use ./pics/Figure_37.pdf>
+)
+Overfull \vbox (6.89964pt too high) detected at line 706
+ []
+
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[27
 
 ]
 \openout4 = `Lec-04.28.vrb'.
@@ -2703,39 +2696,6 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 \openout4 = `Lec-04.29.vrb'.
 
  (./Lec-04.29.vrb
-File: ./pics/Figure_37.pdf Graphic file (type pdf)
-<use ./pics/Figure_37.pdf>
-)
-Overfull \vbox (6.89964pt too high) detected at line 753
- []
-
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
-[29
-
-]
-\openout4 = `Lec-04.30.vrb'.
-
- (./Lec-04.30.vrb
-\openout5 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
-scapeinside=&&" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out.
-pyg Lec-04.pyg)...executed.
-
- (./Lec-04.out.pyg))
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [30
-
-]
-\openout4 = `Lec-04.31.vrb'.
-
- (./Lec-04.31.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
@@ -2748,28 +2708,28 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [31
+ [29
 
 ]
-\openout4 = `Lec-04.32.vrb'.
+\openout4 = `Lec-04.30.vrb'.
 
- (./Lec-04.32.vrb
+ (./Lec-04.30.vrb
 File: ./pics/Figure_38.pdf Graphic file (type pdf)
 <use ./pics/Figure_38.pdf>
 )
-Overfull \vbox (9.94687pt too high) detected at line 802
+Overfull \vbox (9.94687pt too high) detected at line 755
  []
 
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[32
+[30
 
 ]
-\openout4 = `Lec-04.33.vrb'.
+\openout4 = `Lec-04.31.vrb'.
 
- (./Lec-04.33.vrb
+ (./Lec-04.31.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
@@ -2788,24 +2748,24 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [33
+ [31
 
 ]
-\openout4 = `Lec-04.34.vrb'.
+\openout4 = `Lec-04.32.vrb'.
 
 
-(./Lec-04.34.vrb
+(./Lec-04.32.vrb
 File: ./pics/Figure_39.pdf Graphic file (type pdf)
 <use ./pics/Figure_39.pdf>
 )
-Overfull \vbox (9.52768pt too high) detected at line 844
+Overfull \vbox (9.52768pt too high) detected at line 797
  []
 
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[34
+[32
 
 ]
 \openout4 = `Lec-04.vrb'.
@@ -2815,7 +2775,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [35
+ [33
 
 ]
 \openout4 = `Lec-04.vrb'.
@@ -2832,7 +2792,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [36
+ [34
 
 ]
 \openout4 = `Lec-04.vrb'.
@@ -2850,7 +2810,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [37
+ [35
 
 ]
 \openout4 = `Lec-04.vrb'.
@@ -2896,37 +2856,37 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [38
+ [36
 
 ]
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 971--971
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 924--924
 [][][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 971
+Overfull \vbox (5.0pt too high) detected at line 924
  []
 
 File: bgs/light/section.jpg Graphic file (type bmp)
 <bgs/light/section.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[39
+[37
 
 ]
-\openout4 = `Lec-04.40.vrb'.
+\openout4 = `Lec-04.38.vrb'.
 
- (./Lec-04.40.vrb)
+ (./Lec-04.38.vrb)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [40
+ [38
 
 ]
-\openout4 = `Lec-04.41.vrb'.
+\openout4 = `Lec-04.39.vrb'.
 
- (./Lec-04.41.vrb
+ (./Lec-04.39.vrb
 File: ./pics/Figure_41.pdf Graphic file (type pdf)
 <use ./pics/Figure_41.pdf>
 \openout5 = `Lec-04.pyg'.
@@ -2948,37 +2908,37 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [41
+ [39
 
 ]
-\openout4 = `Lec-04.42.vrb'.
+\openout4 = `Lec-04.40.vrb'.
 
- (./Lec-04.42.vrb)
+ (./Lec-04.40.vrb)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [42
+ [40
 
 ]
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 1037--1037
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 990--990
 [][][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 1037
+Overfull \vbox (5.0pt too high) detected at line 990
  []
 
 File: bgs/light/section.jpg Graphic file (type bmp)
 <bgs/light/section.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[43
+[41
 
 ]
-\openout4 = `Lec-04.44.vrb'.
+\openout4 = `Lec-04.42.vrb'.
 
- (./Lec-04.44.vrb
+ (./Lec-04.42.vrb
 File: ./pics/mpl_logo.pdf Graphic file (type pdf)
 <use ./pics/mpl_logo.pdf>
 \openout5 = `Lec-04.pyg'.
@@ -2992,12 +2952,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [44
+ [42
 
 ]
-\openout4 = `Lec-04.45.vrb'.
+\openout4 = `Lec-04.43.vrb'.
 
- (./Lec-04.45.vrb
+ (./Lec-04.43.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l pycon -f latex -P commandprefix=PYG -F tokenmerge -P "e
@@ -3017,12 +2977,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [45
+ [43
 
 ]
-\openout4 = `Lec-04.46.vrb'.
+\openout4 = `Lec-04.44.vrb'.
 
- (./Lec-04.46.vrb
+ (./Lec-04.44.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -3037,12 +2997,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [46
+ [44
 
 ]
-\openout4 = `Lec-04.47.vrb'.
+\openout4 = `Lec-04.45.vrb'.
 
- (./Lec-04.47.vrb
+ (./Lec-04.45.vrb
 \openout6 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -3069,12 +3029,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [47
+ [45
 
 ]
-\openout4 = `Lec-04.48.vrb'.
+\openout4 = `Lec-04.46.vrb'.
 
- (./Lec-04.48.vrb
+ (./Lec-04.46.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -3100,7 +3060,53 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [48
+ [46
+
+]
+\openout4 = `Lec-04.47.vrb'.
+
+ (./Lec-04.47.vrb
+\openout5 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
+.pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg)
+File: ./pics/Figure_4.pdf Graphic file (type pdf)
+<use ./pics/Figure_4.pdf>
+)
+Overfull \vbox (3.91211pt too high) detected at line 1165
+ []
+
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[47
+
+]
+\openout4 = `Lec-04.48.vrb'.
+
+ (./Lec-04.48.vrb
+\openout5 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
+.pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg)
+File: ./pics/Figure_5.pdf Graphic file (type pdf)
+<use ./pics/Figure_5.pdf>
+)
+Overfull \vbox (5.00343pt too high) detected at line 1200
+ []
+
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[48
 
 ]
 \openout4 = `Lec-04.49.vrb'.
@@ -3112,46 +3118,31 @@ runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
 escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
 .pyg Lec-04.pyg)...executed.
 
- (./Lec-04.out.pyg)
-File: ./pics/Figure_4.pdf Graphic file (type pdf)
-<use ./pics/Figure_4.pdf>
-)
-Overfull \vbox (3.91211pt too high) detected at line 1212
- []
-
+ (./Lec-04.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[49
+ [49
 
 ]
 \openout4 = `Lec-04.50.vrb'.
 
  (./Lec-04.50.vrb
-\openout5 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
-.pyg Lec-04.pyg)...executed.
-
- (./Lec-04.out.pyg)
-File: ./pics/Figure_5.pdf Graphic file (type pdf)
-<use ./pics/Figure_5.pdf>
+File: ./pics/Figure_6.pdf Graphic file (type pdf)
+<use ./pics/Figure_6.pdf>
 )
-Overfull \vbox (5.00343pt too high) detected at line 1247
- []
-
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[50
+ [50
 
 ]
 \openout4 = `Lec-04.51.vrb'.
 
- (./Lec-04.51.vrb
+
+(./Lec-04.51.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -3169,8 +3160,8 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 \openout4 = `Lec-04.52.vrb'.
 
  (./Lec-04.52.vrb
-File: ./pics/Figure_6.pdf Graphic file (type pdf)
-<use ./pics/Figure_6.pdf>
+File: ./pics/Figure_7.pdf Graphic file (type pdf)
+<use ./pics/Figure_7.pdf>
 )
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
@@ -3189,7 +3180,10 @@ runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
 escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
 .pyg Lec-04.pyg)...executed.
 
- (./Lec-04.out.pyg))
+ (./Lec-04.out.pyg)
+File: ./pics/Figure_8.pdf Graphic file (type pdf)
+<use ./pics/Figure_8.pdf>
+)
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -3200,20 +3194,6 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 \openout4 = `Lec-04.54.vrb'.
 
  (./Lec-04.54.vrb
-File: ./pics/Figure_7.pdf Graphic file (type pdf)
-<use ./pics/Figure_7.pdf>
-)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [54
-
-]
-\openout4 = `Lec-04.55.vrb'.
-
-
-(./Lec-04.55.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -3221,8 +3201,29 @@ escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
 .pyg Lec-04.pyg)...executed.
 
  (./Lec-04.out.pyg)
-File: ./pics/Figure_8.pdf Graphic file (type pdf)
-<use ./pics/Figure_8.pdf>
+File: ./pics/Figure_9.pdf Graphic file (type pdf)
+<use ./pics/Figure_9.pdf>
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+
+[54
+
+]
+\openout4 = `Lec-04.55.vrb'.
+
+ (./Lec-04.55.vrb
+\openout5 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
+.pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg)
+File: ./pics/Figure_11.pdf Graphic file (type pdf)
+<use ./pics/Figure_11.pdf>
 )
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
@@ -3240,47 +3241,6 @@ runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
 escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
 .pyg Lec-04.pyg)...executed.
 
- (./Lec-04.out.pyg)
-File: ./pics/Figure_9.pdf Graphic file (type pdf)
-<use ./pics/Figure_9.pdf>
-)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
-
-[56
-
-]
-\openout4 = `Lec-04.57.vrb'.
-
- (./Lec-04.57.vrb
-\openout5 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
-.pyg Lec-04.pyg)...executed.
-
- (./Lec-04.out.pyg)
-File: ./pics/Figure_11.pdf Graphic file (type pdf)
-<use ./pics/Figure_11.pdf>
-)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [57
-
-]
-\openout4 = `Lec-04.58.vrb'.
-
- (./Lec-04.58.vrb
-\openout5 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
-.pyg Lec-04.pyg)...executed.
-
 
 (./Lec-04.out.pyg)
 File: ./pics/Figure_12.pdf Graphic file (type pdf)
@@ -3290,12 +3250,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [58
+ [56
 
 ]
-\openout4 = `Lec-04.59.vrb'.
+\openout4 = `Lec-04.57.vrb'.
 
- (./Lec-04.59.vrb
+ (./Lec-04.57.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -3310,13 +3270,13 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [59
+ [57
 
 ]
-\openout4 = `Lec-04.60.vrb'.
+\openout4 = `Lec-04.58.vrb'.
 
 
-(./Lec-04.60.vrb
+(./Lec-04.58.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -3328,28 +3288,28 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [60
+ [58
 
 ]
-\openout4 = `Lec-04.61.vrb'.
+\openout4 = `Lec-04.59.vrb'.
 
- (./Lec-04.61.vrb
+ (./Lec-04.59.vrb
 File: ./pics/Figure_14.pdf Graphic file (type pdf)
 <use ./pics/Figure_14.pdf>
 )
-Overfull \vbox (13.66211pt too high) detected at line 1535
+Overfull \vbox (13.66211pt too high) detected at line 1488
  []
 
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[61
+[59
 
 ]
-\openout4 = `Lec-04.62.vrb'.
+\openout4 = `Lec-04.60.vrb'.
 
- (./Lec-04.62.vrb
+ (./Lec-04.60.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -3364,12 +3324,12 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [62
+ [60
 
 ]
-\openout4 = `Lec-04.63.vrb'.
+\openout4 = `Lec-04.61.vrb'.
 
- (./Lec-04.63.vrb
+ (./Lec-04.61.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -3380,6 +3340,47 @@ escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
 (./Lec-04.out.pyg)
 File: ./pics/Figure_16.pdf Graphic file (type pdf)
 <use ./pics/Figure_16.pdf>
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [61
+
+]
+\openout4 = `Lec-04.62.vrb'.
+
+ (./Lec-04.62.vrb
+\openout5 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
+.pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg)
+File: ./pics/Figure_17.pdf Graphic file (type pdf)
+<use ./pics/Figure_17.pdf>
+)
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [62
+
+]
+\openout4 = `Lec-04.63.vrb'.
+
+
+(./Lec-04.63.vrb
+\openout5 = `Lec-04.pyg'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
+escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
+.pyg Lec-04.pyg)...executed.
+
+ (./Lec-04.out.pyg)
+File: ./pics/Figure_18.pdf Graphic file (type pdf)
+<use ./pics/Figure_18.pdf>
 )
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
@@ -3398,20 +3399,20 @@ escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
 .pyg Lec-04.pyg)...executed.
 
  (./Lec-04.out.pyg)
-File: ./pics/Figure_17.pdf Graphic file (type pdf)
-<use ./pics/Figure_17.pdf>
+File: ./pics/Figure_20.pdf Graphic file (type pdf)
+<use ./pics/Figure_20.pdf>
 )
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [64
+
+[64
 
 ]
 \openout4 = `Lec-04.65.vrb'.
 
-
-(./Lec-04.65.vrb
+ (./Lec-04.65.vrb
 \openout5 = `Lec-04.pyg'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
@@ -3419,8 +3420,8 @@ escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
 .pyg Lec-04.pyg)...executed.
 
  (./Lec-04.out.pyg)
-File: ./pics/Figure_18.pdf Graphic file (type pdf)
-<use ./pics/Figure_18.pdf>
+File: ./pics/Figure_21.pdf Graphic file (type pdf)
+<use ./pics/Figure_21.pdf>
 )
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
@@ -3438,47 +3439,6 @@ runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
 escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
 .pyg Lec-04.pyg)...executed.
 
- (./Lec-04.out.pyg)
-File: ./pics/Figure_20.pdf Graphic file (type pdf)
-<use ./pics/Figure_20.pdf>
-)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
-
-[66
-
-]
-\openout4 = `Lec-04.67.vrb'.
-
- (./Lec-04.67.vrb
-\openout5 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
-.pyg Lec-04.pyg)...executed.
-
- (./Lec-04.out.pyg)
-File: ./pics/Figure_21.pdf Graphic file (type pdf)
-<use ./pics/Figure_21.pdf>
-)
-File: bgs/light/slide.jpg Graphic file (type bmp)
-<bgs/light/slide.jpg>
-File: logos/ru/light/logobw.png Graphic file (type bmp)
-<logos/ru/light/logobw.png>
- [67
-
-]
-\openout4 = `Lec-04.68.vrb'.
-
- (./Lec-04.68.vrb
-\openout5 = `Lec-04.pyg'.
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P "
-escapeinside=||" -P mathescape=True -F gobble:n=2 -P python3=True -o Lec-04.out
-.pyg Lec-04.pyg)...executed.
-
 
 (./Lec-04.out.pyg)
 File: ./pics/Figure_24.pdf Graphic file (type pdf)
@@ -3488,10 +3448,10 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [68
+ [66
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1790--1790
+Underfull \hbox (badness 10000) in paragraph at lines 1743--1743
 
  []
 
@@ -3502,19 +3462,19 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 1790--1790
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 1743--1743
 [][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 1790
+Overfull \vbox (5.0pt too high) detected at line 1743
  []
 
 File: bgs/contacts.jpg Graphic file (type bmp)
 <bgs/contacts.jpg>
 File: logos/ru/light/logoclr.png Graphic file (type bmp)
 <logos/ru/light/logoclr.png>
-[69
+[67
 
 ]
 \tf@nav=\write8
@@ -3534,19 +3494,19 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Lec-04.out' has not changed.
-(rerunfilecheck)             Checksum: E3797CE9E97BFF46D43F43E0616D53AD;5000.
+(rerunfilecheck)             Checksum: B7993525C6160ABC44FE8862EEDCEADE;4613.
 runsystem(del Lec-04.pyg)...executed.
 
 runsystem(del Lec-04.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 36067 strings out of 476477
- 759353 string characters out of 5817858
- 1204007 words of memory out of 5000000
- 55391 multiletter control sequences out of 15000+600000
+ 36047 strings out of 476477
+ 759063 string characters out of 5817858
+ 1203498 words of memory out of 5000000
+ 55379 multiletter control sequences out of 15000+600000
  410227 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,12n,108p,631b,933s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Lec-04.pdf (69 pages).
+Output written on Lec-04.pdf (67 pages).

@@ -1,29 +1,9 @@
 \frametitle{Диаграммы рассеяния}
 \scriptsize
-Наряду с линейными графиками, еще одним распространенным типом является диаграмма рассеяния. В таких диаграммах точки не соединяются линиями, а представляются отдельно (рисунок~\ref{fig:fig_13}):
-\vfill
-\begin{minipage}{.4\textwidth}
-\begin{minted}{python}
-import numpy as np
-import matplotlib.pyplot as plt
-
-
-plt.style.use('seaborn-v0_8-whitegrid')
-
-x = np.linspace(0, 10, 30)
-y = np.sin(x)
-
-plt.plot(x, y, 'o', color='black')
-plt.show()
-|\space|
-\end{minted}
-\end{minipage}
-\begin{minipage}{.59\textwidth}
 \begin{figure}[h!]
 ^^I\centering
-^^I\includegraphics[width=.85\linewidth]{./pics/Figure_13}
-^^I\caption{Пример построения диаграммы рассеяния с помощью функции \texttt{plt.plot()}}
-^^I\label{fig:fig_13}
+^^I\includegraphics[width=.65\linewidth]{./pics/Figure_14}
+^^I\caption{Пример использования строковых кодов для маркеров диаграммы рассеяния}
+^^I\label{fig:fig_14}
 \end{figure}
-\end{minipage}
 \vfill

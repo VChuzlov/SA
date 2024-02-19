@@ -1,29 +1,32 @@
-\frametitle{Обыкновенные дифференциальные уравнения}
+\frametitle{Система взаимосвязанных ОДУ первого порядка}
 \scriptsize
-\begin{minipage}{.58\textwidth}
-\begin{figure}[h!]
-^^I\centering
-^^I\includegraphics[width=.92\linewidth]{./pics/Figure_35}
-^^I\caption{Снижение концентрации реагента по времени: аналитическое и численное решение с использованием предварительно определенных точек}
-\end{figure}
-\end{minipage}
-\begin{minipage}{.415\textwidth}
-\begin{itemize}
-^^I\item Аналогично методу \texttt{quad}, дополнительные аргументы можно передать через параметр \texttt{args}.
-^^I\item В рассмотренном выше примере константа скорости реакции \texttt{k} определена в глобальной области видимости, однако лучше передавать эту переменную явным образом:
-
-\begin{minted}[frame=none]{pycon}
->>> def func(t, y, k):
-...     return -k * y
-...
-\end{minted}
-\end{itemize}
-\end{minipage}
-\begin{itemize}
-^^I\item Дополнительные аргументы указываются в параметре \texttt{args}:
+Для наглядной демонстрации рассмотрим следующую схему химических реакций:
 \vfill
-\begin{minted}[frame=none]{pycon}
->>> solution = solve_ivp(func, (t0, tf), [y0], args=(k,))
-\end{minted}
-\end{itemize}
+$$
+^^IA \rightarrow B \rightarrow C
+$$
+\vfill
+\noindent с константами скоростей $k_1$ и $k_2$. Уравнения, описывающие скорость изменения концентраций компонентов по времени, записываются следующим образом:
+\vfill
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^I\dfrac{d\left[A\right]}{dt} &= -k_1\left[A\right] \\
+^^I^^I\dfrac{d\left[B\right]}{dt} &=  k_1\left[A\right] - k_2\left[B\right] \\
+^^I^^I\dfrac{d\left[C\right]}{dt} &=  k_2\left[B\right] \\
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
+\vfill
+Для численного решения предположим $y_1 \equiv \left[A\right]$,  $y_2 \equiv \left[B\right]$ и $y_3 \equiv \left[C\right]$:
+\vfill
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^I\dfrac{d\left[A\right]}{dt} &= -k_1y_1 \\
+^^I^^I\dfrac{d\left[B\right]}{dt} &=  k_1y_1 - k_2y_2 \\
+^^I^^I\dfrac{d\left[C\right]}{dt} &=  k_2y_2 \\
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
 \vfill

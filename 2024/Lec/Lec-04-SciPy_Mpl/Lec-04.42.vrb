@@ -1,9 +1,24 @@
-\frametitle{Численные методы решения уравнений}
+\frametitle{Библиотека Matplotlib}
 \scriptsize
+\begin{minipage}{.85\textwidth}
 \begin{itemize}
-\item Наиболее медленный, но весьма надежный \textcolor{tpugreen}{\textbf{метод бисекций}} реализован в \texttt{scipy.optimize.bisect}.
-\item Одним из быстрейших методов поиска корней является алгоритм Ньютона-Рафсона в тех случаях, когда можно найти определить первую производную $f^{\ \prime}(x)$.
-\item В тех случаях, когда возможно написать исходный код для аналитического выражения первой производной $f^{\ \prime}(x)$, этот код передается в метод \texttt{scipy.optimize.newton} в виде аргумента \texttt{fprime} вместе с начальной точкой \texttt{x0}, которая должна находится как можно ближе к определяемому корню. В данном случае нет необходимости определять ограничивающий интервал для поиска корня.
-\item Если первую производную $f^{\ \prime}(x)$ выразить аналитически невозможно, то в методе \texttt{newton} используется \textcolor{extraorange}{\textbf{алгоритм секущих}}.
+\item \textbf{Matplotlib}~-- библиотека для визуализации данных, основанная на массивах  \texttt{NumPy}.
+\item Важнейшей возможностью данного пакета является хорошая совместимость с множеством операционных систем и графических прикладных частей.
 \end{itemize}
+\end{minipage}
+\begin{minipage}{.14\textwidth}
+\includegraphics[width=\linewidth]{./pics/mpl_logo}
+\end{minipage}
+\begin{itemize}
+\item Полезным источником информации является галерея Matplotlib (\url{https://matplotlib.org/stable/gallery/index.html}). Галерея содержит большое количество миниатюр различных типов графиков, каждая из которых является ссылкой на страницу с фрагментом кода на языке Python, используемым для его генерации.
+\end{itemize}
+\vfill
+Для импорта библиотеки Matplotlib приняты стандартные сокращения:
+\vfill
+\begin{minted}{pycon}
+>>> import matplotlib as mpl
+>>> import matplotlib.pyplot as plt
+\end{minted}
+\vfill
+Используемая версия библиотеки - 3.8.2
 \vfill
