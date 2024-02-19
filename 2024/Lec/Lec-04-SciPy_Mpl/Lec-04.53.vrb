@@ -1,0 +1,25 @@
+\frametitle{Цвет и стиль линий}
+\scriptsize
+Стиль линий настраивается при помощи ключевого аргумента \texttt{linestyle} (рисунок \ref{fig:fig_7}):
+\vfill
+\begin{minted}{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+plt.style.use('seaborn-v0_8-whitegrid')
+
+plt.plot(x, x, linestyle='solid')
+plt.plot(x, x + 1, linestyle='dashed')
+plt.plot(x, x + 2, linestyle='dashdot')
+plt.plot(x, x + 3, linestyle='dotted')
+# разрешены следующие сокращения
+plt.plot(x, x + 4, linestyle='-')  # сполшная
+plt.plot(x, x + 5, linestyle='--') # штриховая
+plt.plot(x, x + 6, linestyle='-.') # штрихпунктирная
+plt.plot(x, x + 7, linestyle=':')  # линия из точек
+
+plt.show()
+|\space|
+\end{minted}
+\vfill

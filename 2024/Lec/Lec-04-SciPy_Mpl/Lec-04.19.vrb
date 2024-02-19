@@ -1,0 +1,27 @@
+\frametitle{Обыкновенные дифференциальные уравнения}
+\scriptsize
+\begin{itemize}
+^^I\item Разобьем наш интервал интегрирования на 20 точек по времени:
+\vfill
+\begin{minted}{pycon}
+>>> t0, tf = 0, 20
+>>> t_eval = np.linspace(t0, tf, 20)
+>>> solution = solve_ivp(func, (t0, tf), [y0], t_eval=t_eval)
+>>> t, y = solution.t, solution.y[0]
+\end{minted}
+\vfill
+^^I\item В опциональный  аргумент \mintinline{python}|dense_output| можно передать значение \mintinline{python}|True| для определения объекта \mintinline{python}|OdeSolution| с атрибутом \mintinline{python}|sol| как одним из возвращаемых объектов.
+^^I\item Данный функционал можно использовать для генерации значений решения в промежуточных точках по времени:
+\vfill
+\begin{minted}{pycon}
+>>> # Начальная и конечные точки по времени интегрирования
+>>> t0, tf = 0, 20
+>>> # Интегрирования дифференциального уравнения
+>>> solution = solve_ivp(func, (t0, tf), [y0], dense_output=True)
+>>> t = np.linspace(t0, tf, 20)
+>>> y = solution.sol(t)[0]
+\end{minted}
+\vfill
+^^I\item Объект \texttt{solution.sol} можно вызывать: значение независимой переменной~-- времени~-- передается в него как аргумент, и возвращается массив решений в этот момент времени. В рассмотренном случае есть только одна зависимая переменная \texttt{y}, поэтому используется индекс \texttt{[0]}.
+\end{itemize}
+\vfill

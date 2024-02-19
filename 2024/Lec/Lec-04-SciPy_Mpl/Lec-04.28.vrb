@@ -1,0 +1,17 @@
+\frametitle{Одномерная интерполяция}
+\scriptsize
+\begin{minted}{pycon}
+>>> import numpy as np
+>>> from scipy.interpolate import interp1d
+>>> a, nu, k = 10, 4, 2
+>>> def func(x, a, nu, k):
+...     return a * np.exp(-k * x) * np.cos(2 * np.pi * nu * x)
+...
+>>> xmax, nx = 0.5, 8
+>>> x = np.linspace(0, xmax, nx)
+>>> y = func(x, a, nu, k)
+>>> nearest = interp1d(x, y, kind='nearest')
+>>> linear = interp1d(x, y)
+>>> cubic = interp1d(x, y, kind='cubic')
+\end{minted}
+\vfill

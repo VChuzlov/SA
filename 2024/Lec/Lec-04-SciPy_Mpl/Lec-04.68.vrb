@@ -1,0 +1,39 @@
+\frametitle{Трехмерные графики}
+\scriptsize
+Модуль \texttt{mplot3d} содержит инструменты для отображения трехмерных графиков. Функция \texttt{ax.contour3D()} ожидает данные в формате двумерных регулярных сеток (рисунок~\ref{fig:fig_24}):
+\vfill
+\begin{minipage}{.4\textwidth}
+\begin{minted}{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+def fun(x, y):
+    return np.sin(np.sqrt(x ** 2 + y ** 2))
+
+x = np.linspace(-6, 6, 30)
+y = np.linspace(-6, 6, 30)
+x_mesh, y_mesh = np.meshgrid(x, y)
+z_mesh = fun(x_mesh, y_mesh)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+ax.contour3D(x_mesh, y_mesh, z_mesh,
+             50, cmap='cool')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+plt.show()
+\end{minted}
+\end{minipage}
+\begin{minipage}{.09\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.87\linewidth]{./pics/Figure_24}
+^^I\caption{Построение трехмерного графика при помощи функции \texttt{ax.contour-3D()}}
+^^I\label{fig:fig_24}
+\end{figure}
+\end{minipage}
+\vfill

@@ -1,0 +1,19 @@
+\frametitle{Обыкновенные дифференциальные уравнения}
+\scriptsize
+Пример программы, сравнивающей численное и аналитическое решение для реакции при $k = 0.2 \text{ } c^{-1}$ и $y(0) \equiv \left[A\right]_0 = 100$:
+\vfill
+\begin{minted}{pycon}
+>>> import numpy as np
+>>> from scipy.integrate import solve_ivp
+>>> k = 0.2  # Константа скорости реакции первого порядка, 1 / с
+>>> y0 = 100  # Начальное условие: y = 100 в момент времени t = 0
+>>> t0, tf = 0, 20  # Начальная и конечная точки времени для интегрирования
+>>> def func(t, y):
+... """Return dy/dt = f(t, y) at time t."""
+...     return -k * y
+...
+>>> # Интегрирование дифференциального уравнения
+>>> solution = solve_ivp(func, (t0, tf), [y0])
+>>> t, y = solution.t, solution.y[0]
+\end{minted}
+\vfill

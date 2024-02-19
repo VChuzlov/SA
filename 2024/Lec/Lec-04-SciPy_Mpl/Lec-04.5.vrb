@@ -1,0 +1,24 @@
+\frametitle{Физические константы}
+\scriptsize
+\begin{itemize}
+^^I\item В библиотеке SciPy содержатся рекомендованные международным Комитетом по данным для науки и техники CODATA значения целого ряда физических констант (\url{https://physics.nist.gov/cuu/Constants/}).
+^^I\item Значения констант вместе с единицами их измерения и допустимыми погрешностями хранятся в словаре \texttt{scipy.constants.physical\_constants}, в котором ключами являются строки идентификации. Например:
+\end{itemize}
+\vfill
+\begin{minted}{pycon}
+>>> import scipy.constants as const
+>>> const.physical_constants['Avogadro constant']
+(6.02214076e+23, 'mol^-1', 0.0)
+\end{minted}
+\vfill
+Специальные методы \texttt{value}, \texttt{unit} и \texttt{precision} возвращают соответствующие свойства констант:
+\vfill
+\begin{minted}{pycon}
+>>> const.value('electron mass')
+9.1093837015e-31
+>>> const.unit('electron mass')
+'kg'
+>>> const.precision('electron mass')
+3.0737534961217373e-10
+\end{minted}
+\vfill

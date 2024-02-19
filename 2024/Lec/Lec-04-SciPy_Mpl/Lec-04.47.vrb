@@ -1,0 +1,30 @@
+\frametitle{Построение графиков}
+\scriptsize
+При необходимости совместить несколько графиков на одном рисунке можно воспользоваться функцией \mintinline{python}|subplots()|:
+\vfill
+\begin{minipage}{.38\textwidth}
+\begin{minted}{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = np.linspace(0, 10, 100)
+
+fig, ax = plt.subplots(
+    1, 2, figsize=(7, 3.)
+)
+ax[0].plot(x,  np.sin(x), '-')
+ax[1].plot(x, np.cos(x), '--')
+
+plt.show()
+|\space|
+\end{minted}
+\end{minipage}
+\begin{minipage}{.61\textwidth}
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=1.1\linewidth]{./pics/double}
+^^I\caption{Пример совмещения двух графиков на одном рисунке}
+\end{figure}
+\end{minipage}
+\vfill

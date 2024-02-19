@@ -1,0 +1,32 @@
+\frametitle{Трехмерные графики}
+\scriptsize
+Для изменения угла возвышения нужно применить метод \mintinline{python}|view_init|. Для примера, приведенного на рисунке \ref{fig:fig_24} можно выбрать следующие параметры: угол возвышения $60$ градусов (т.е. $60$ градусов над плоскостью $X$-$Y$); азимут $35$ градусов (т.е. график будет повернут на $35$ градусов против часовой стрелки вокруг оси $Z$):
+\vfill
+\begin{minipage}{.4\textwidth}
+\begin{minted}[firstnumber=last]{python}
+|\space|
+|\space|
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+ax.contour3D(x_mesh, y_mesh, z_mesh,
+             50, cmap='cool')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+ax.view_init(60, 35)
+plt.show()
+|\space|
+\end{minted}
+\end{minipage}
+\begin{minipage}{.09\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.8\linewidth]{./pics/Figure_25}
+^^I\caption{Настройка угла зрения для трехмерного графика}
+^^I\label{fig:fig_25}
+\end{figure}
+\end{minipage}
+\vfill

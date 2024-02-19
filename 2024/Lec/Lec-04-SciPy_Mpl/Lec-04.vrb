@@ -1,0 +1,29 @@
+\frametitle{Аппроксимация}
+\scriptsize
+Результаты расчетов:
+\begin{itemize}
+\item Линейная аппроксимация
+\begin{minted}{pycon}
+[4.40187563e+01 1.80478428e-02] 0.11106445922161706
+\end{minted}
+\item Степенная аппроксимация
+\begin{minted}{pycon}
+[19.46645965  0.16224222] 0.011577630390983832
+\end{minted}
+\item Экспоненциальная аппроксимация
+\begin{minted}{pycon}
+[4.47183499e+01 3.39118322e-04] 0.17227508882258857
+\end{minted}
+\end{itemize}
+\vfill
+Суммарная ошибка для степенной аппроксимации минимальна, поэтому выбираем данный вид функции для определения энтропии:
+\vfill
+\begin{minted}{python}
+s_new = power(t_new, power_params)
+print(s_new)
+|\space|
+\end{minted}
+\begin{minted}{pycon}
+55.67500745784808
+\end{minted}
+\vfill

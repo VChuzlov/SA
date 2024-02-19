@@ -1,0 +1,34 @@
+\frametitle{Метки на графиках}
+\scriptsize
+Когда требуется отобразить несколько линий в одной координатной сетке, часто бывает необходимо создать легенду, на которой была бы отмечена каждая линия. Для быстрого решения данной задачи в Matplotlib есть метод \texttt{plt.legend()} (рисунок~\ref{fig:fig_12}):
+\vfill
+\begin{minipage}{.4\textwidth}
+\begin{minted}{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+plt.style.use('seaborn-v0_8-whitegrid')
+
+x = np.linspace(0, 10, 1000)
+plt.plot(x, np.cos(x), color='b',
+         linestyle='-',
+         label='cos(x)')
+plt.plot(x, np.sin(x), color='g',
+         linestyle=':',
+         label='sin(x)')
+
+plt.legend()
+plt.show()
+|\space|
+\end{minted}
+\end{minipage}
+\begin{minipage}{.59\textwidth}
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.85\linewidth]{./pics/Figure_12}
+^^I\caption{Пример настройки легенды графика с помощью метода \texttt{plt.legend()}}
+^^I\label{fig:fig_12}
+\end{figure}
+\end{minipage}
+\vfill

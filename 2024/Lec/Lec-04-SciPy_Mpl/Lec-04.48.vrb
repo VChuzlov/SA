@@ -1,0 +1,31 @@
+\frametitle{Сохранение рисунков}
+\scriptsize
+Библиотека Matplotlib предоставляет возможность сохранять рисунки в файлы различных форматов. К примеру, можно сохранить предыдущий рисунок в формате PNG:
+\vfill
+\begin{minted}[firstnumber=last]{python}
+plt.savefig('myfig.png')
+|\space|
+\end{minted}
+\vfill
+Метод \texttt{savefig()} устанавливает формат файла, исходя из расширения в заданном пользователем имени файла. Список поддерживаемых форматов:
+\vfill
+\begin{minted}[firstnumber=last]{python}
+plt.gcf().canvas.get_supported_filetypes()
+|\space|
+\end{minted}
+\begin{minted}[frame=none]{pycon}
+{'eps': 'Encapsulated Postscript',
+ 'jpg': 'Joint Photographic Experts Group',
+ 'jpeg': 'Joint Photographic Experts Group',
+ 'pdf': 'Portable Document Format',
+ 'pgf': 'PGF code for LaTeX',
+ 'png': 'Portable Network Graphics',
+ 'ps': 'Postscript',
+ 'raw': 'Raw RGBA bitmap',
+ 'rgba': 'Raw RGBA bitmap',
+ 'svg': 'Scalable Vector Graphics',
+ 'svgz': 'Scalable Vector Graphics',
+ 'tif': 'Tagged Image File Format',
+ 'tiff': 'Tagged Image File Format'}
+\end{minted}
+\vfill

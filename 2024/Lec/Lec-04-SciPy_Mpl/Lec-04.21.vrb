@@ -1,0 +1,28 @@
+\frametitle{Система взаимосвязанных ОДУ первого порядка}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Решение системы ОДУ первого порядка}}
+\vfill
+^^IМетод \texttt{solve\_ivp} также может быть использован для решения системы взаимосвязанных ОДУ первого порядка с несколькими зависимыми переменными $y_1(t), y_2(t),\dots, y_n(t)$:
+\vfill
+\begin{equation*}
+^^I\left\{
+^^I\begin{aligned}
+^^I^^I\dfrac{dy_1}{dt} &= f_1\left(y_1, y_2,\dots, y_n; t\right)\\
+^^I^^I\dfrac{dy_2}{dt} &= f_2\left(y_1, y_2,\dots, y_n; t\right)\\
+^^I^^I\dots \\
+^^I^^I\dfrac{dy_n}{dt} &= f_n\left(y_1, y_2,\dots, y_n; t\right)
+^^I\end{aligned}
+^^I\right.
+\end{equation*}
+\vfill
+\begin{minted}{pycon}
+>>> def func(t, y):
+...     # y = [y1, y2, ... yn] - последовательность зависимых переменных
+...     dy1dt = f1(y, t)
+...     dy2dt = f2(y, t)
+...     # ... и т.д.
+...     # Возвращаются вычисленные производные в последовательности,
+...     # например, в кортеже
+...     return dy1dt, dy2dt, ... dyndt
+\end{minted}
+\vfil

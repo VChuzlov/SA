@@ -1,0 +1,26 @@
+\frametitle{Интегралы от двух и нескольких переменных}
+\scriptsize
+Рассмотрим пример:
+\vfill
+$$
+^^I\int\limits_{1}^{4}\int\limits_{0}^{2} x^2y \, dy \, dx
+$$
+\vfill
+Вычисления выполним следующим образом:
+\vfill
+\begin{minted}{pycon}
+>>> from scipy.integrate import dblquad
+>>> def f(y, x):
+...     return x ** 2 * y
+...
+>>> a, b = 1, 4
+>>> dblquad(f, a, b, gfun=lambda x: 0, hfun=lambda x: 2)
+(42.00000000000001, 4.662936703425658e-13)
+\end{minted}
+\vfill
+\begin{itemize}
+^^I\item В данном случае аргументы \texttt{gfun} и \texttt{hfun} вызываются с передачей в них значения \texttt{x}, однако они возвращают постоянные значения.
+^^I\item Метод \texttt{tplquad} используется для вычисления тройных интегралов.
+^^I\item Для интегрирования с более высокой кратностью, необходимо использовать метод \texttt{scipy.integrate.nquad}: \url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.nquad.html}.
+\end{itemize}
+\vfill

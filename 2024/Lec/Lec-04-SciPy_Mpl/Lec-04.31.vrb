@@ -1,0 +1,14 @@
+\frametitle{Нелинейная аппроксимация методом \\ наименьших квадратов}
+\scriptsize
+\begin{minted}{pycon}
+>>> import numpy as np
+>>> a, freq, tau = 10, 4, 0.5
+>>> def f(t, a, freq, tau):
+...     return a * np.exp(-t / tau) * np.cos(2 * np.pi * freq * t)
+...
+>>> tmax, dt = 1, 0.01
+>>> t = np.arange(0, tmax, dt)
+>>> y_exact = f(t, a, freq, tau)
+>>> y = y_exact + np.random.randn(y_exact.shape[0]) * 2
+\end{minted}
+\vfill

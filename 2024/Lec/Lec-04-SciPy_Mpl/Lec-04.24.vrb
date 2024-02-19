@@ -1,0 +1,12 @@
+\frametitle{Система взаимосвязанных ОДУ первого порядка}
+\scriptsize
+\begin{minted}{pycon}
+>>> solution = solve_ivp(func, (t0, tf), y0, dense_output=True, args=(k1, k2))
+>>> t = np.linspace(t0, tf, 50)
+>>> a, b, c = solution.sol(t)
+>>> # аналитическое решение
+>>> a_exact = a0 * np.exp(-k1 * t)
+>>> b_exact = a0 * k1 / (k2 - k1) * (np.exp(-k1 * t) - np.exp(-k2 * t))
+>>> c_exact = a0 - a_exact - b_exact
+\end{minted}
+\vfill

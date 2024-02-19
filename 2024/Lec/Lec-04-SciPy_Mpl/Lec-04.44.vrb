@@ -1,0 +1,24 @@
+\frametitle{Библиотека Matplotlib}
+\scriptsize
+\begin{minipage}{.85\textwidth}
+\begin{itemize}
+\item \textbf{Matplotlib}~-- библиотека для визуализации данных, основанная на массивах  \texttt{NumPy}.
+\item Важнейшей возможностью данного пакета является хорошая совместимость с множеством операционных систем и графических прикладных частей.
+\end{itemize}
+\end{minipage}
+\begin{minipage}{.14\textwidth}
+\includegraphics[width=\linewidth]{./pics/mpl_logo}
+\end{minipage}
+\begin{itemize}
+\item Полезным источником информации является галерея Matplotlib (\url{https://matplotlib.org/stable/gallery/index.html}). Галерея содержит большое количество миниатюр различных типов графиков, каждая из которых является ссылкой на страницу с фрагментом кода на языке Python, используемым для его генерации.
+\end{itemize}
+\vfill
+Для импорта библиотеки Matplotlib приняты стандартные сокращения:
+\vfill
+\begin{minted}{pycon}
+>>> import matplotlib as mpl
+>>> import matplotlib.pyplot as plt
+\end{minted}
+\vfill
+Используемая версия библиотеки - 3.8.2
+\vfill

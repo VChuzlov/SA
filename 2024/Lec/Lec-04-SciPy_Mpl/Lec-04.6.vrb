@@ -1,0 +1,32 @@
+\frametitle{Физические константы}
+\scriptsize
+Полный перечень всех констант с названиями приведен в официальной документации  (\url{https://docs.scipy.org/doc/scipy/reference/constants.html}), наиболее распространенные из них представлены в таблице:
+
+\begin{table}[h!]
+^^I\centering
+%^^I\caption{Некоторые распространенные физические константы из модуля \texttt{scipy.constants}}
+^^I\label{tab:scipy.constants}
+
+^^I\begin{tabular*}{\linewidth}{p{0.28\linewidth}p{0.15\linewidth}p{0.2\linewidth}p{0.3\linewidth}}
+^^I^^I\hline
+^^I^^I\textbf{Имя константы}& \textbf{Переменная} & \textbf{Значение} & \textbf{Единицы измерения} \\
+^^I^^I\hline
+
+^^I^^I\mintinline{python}|'atomic mass constant'| & \texttt{m\_u}& \texttt{1.6605390666e-27} & $\mathrm{кг}$ \\
+^^I^^I\mintinline{python}|'Avogadro constant'| & \texttt{N\_A}& \texttt{6.02214076e+23} & $\mathrm{1/моль}$ \\
+^^I^^I\mintinline{python}|'Bohr magneton'| & & \texttt{9.2740100783e-24} & $\mathrm{Дж/Тл}$ \\
+^^I^^I\mintinline{python}|'Bohr radius'| & & \texttt{5.29177210903e-11} & $\mathrm{м}$ \\
+^^I^^I\mintinline{python}|'Boltzmann constant'| & \texttt{k} & \texttt{1.380649e-23} & $\mathrm{Дж/К}$ \\
+^^I^^I\mintinline{python}|'electron mass'| & \texttt{m\_e} & \texttt{9.1093837015e-31} & $\mathrm{кг}$ \\
+^^I^^I\mintinline{python}|'elementary charge'| & \texttt{e} & \texttt{1.602176634e-19} & $\mathrm{Кл}$ \\
+^^I^^I\mintinline{python}|'Faraday constant'| &  & \texttt{96485.33212} & $\mathrm{Кл/моль}$ \\
+^^I^^I\mintinline{python}|'molar gas constant'| & \texttt{R} & \texttt{8.314462618} & $\mathrm{Дж/(моль \cdot К)}$ \\
+^^I^^I\mintinline{python}|'neutron mass'| & \texttt{m\_n} & \texttt{1.67492749804e-27} & $\mathrm{кг}$ \\
+^^I^^I\mintinline{python}|'Planck constant'| & \texttt{h} & \texttt{6.62607015e-34} & $\mathrm{Дж \cdot с}$ \\
+^^I^^I\mintinline{python}|'proton mass'| & \texttt{m\_p} & \texttt{1.67262192369e-27} & $\mathrm{кг}$ \\
+^^I^^I\mintinline{python}|'Rydberg constant'| & \texttt{Rydberg} & \texttt{10973731.56816} & $\mathrm{1/м}$ \\
+^^I^^I\mintinline{python}|'speed of light in vacuum'| & \texttt{c} & \texttt{299792458.0} & $\mathrm{м/с}$ \\
+^^I^^I\hline
+^^I\end{tabular*}
+\end{table}
+\vfill

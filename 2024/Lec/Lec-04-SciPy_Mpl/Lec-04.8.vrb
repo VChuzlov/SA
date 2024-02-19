@@ -1,0 +1,27 @@
+\frametitle{Физические константы}
+\scriptsize
+Значения некоторых самых часто используемых констант присвоены переменным в модуле \texttt{scipy.constants} (в единицах СИ), что делает возможным их прямой импорт:
+\vfill
+\begin{minted}{pycon}
+>>> from scipy.constants import c, R, k
+>>> # скорость света, универсальная газовая постоянная, постоянная Больцмана
+>>> c, R, k
+(299792458.0, 8.314462618, 1.380649e-23)
+\end{minted}
+\vfill
+Пакет \texttt{scipy.constants} содержит определение полезных коэффициентов и методов преобразования, которые включают префиксы системы СИ:
+\vfill
+\begin{minted}{pycon}
+>>> import scipy.constants as const
+>>> const.atm  # 1 атм в Па
+101325.0
+>>> const.bar  # 1 бар в Па
+100000.0
+>>> const.torr  # 1 торр в Па
+133.32236842105263
+>>> const.zero_Celsius  # 0 °C в К
+273.15
+>>> const.micro  # а также нано, пико, мега, гига и т.д.
+1e-06
+\end{minted}
+\vfill

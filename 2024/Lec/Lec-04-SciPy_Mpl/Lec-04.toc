@@ -1,0 +1,18 @@
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Физические константы}{4}{0}{1}
+\beamer@sectionintoc {2}{Интегрирование и обыкновенные \\ дифференциальные уравнения}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Определенные интегралы от одной переменной}{9}{0}{2}
+\beamer@subsectionintoc {2}{2}{Интегралы от двух и нескольких переменных}{13}{0}{2}
+\beamer@subsectionintoc {2}{3}{Обыкновенные дифференциальные уравнения}{15}{0}{2}
+\beamer@sectionintoc {3}{Интерполяция и аппроксимация}{26}{0}{3}
+\beamer@subsectionintoc {3}{1}{Одномерная интерполяция}{27}{0}{3}
+\beamer@subsectionintoc {3}{2}{Нелинейная аппроксимация методом \\ наименьших квадратов}{30}{0}{3}
+\beamer@sectionintoc {4}{Численные методы решения уравнений}{39}{0}{4}
+\beamer@sectionintoc {5}{Визуализация данных с \\ помощью библиотеки Matplotlib}{43}{0}{5}
+\beamer@subsectionintoc {5}{1}{Настройка графика}{51}{0}{5}
+\beamer@subsectionintoc {5}{2}{Пределы осей координат}{55}{0}{5}
+\beamer@subsectionintoc {5}{3}{Метки на графиках}{57}{0}{5}
+\beamer@subsectionintoc {5}{4}{Метки на графиках}{58}{0}{5}
+\beamer@subsectionintoc {5}{5}{Диаграммы рассеяния}{59}{0}{5}
+\beamer@subsectionintoc {5}{6}{Гистограммы}{66}{0}{5}
+\beamer@subsectionintoc {5}{7}{Трехмерные графики}{68}{0}{5}

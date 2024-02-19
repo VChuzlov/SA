@@ -1,0 +1,24 @@
+\frametitle{Диаграммы рассеяния}
+\scriptsize
+Третий аргумент в вызове \texttt{plt.plot()} задает тип символа, используемого при построении графика. Для стилей маркеров существует собственный набор сокращенных строковых кодов (рисунок~\ref{fig:fig_14}):
+\vfill
+\begin{minted}{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+plt.style.use('tableau-colorblind10')
+
+rng = np.random.RandomState(0)
+for marker in ['o', '.', ',', 'x', '+', 'v', '^',
+               '<', '>', 's', 'd']:
+    plt.plot(rng.rand(5), rng.rand(5), marker,
+             label=f"marker='{marker}'")
+
+plt.legend()
+plt.xlim(0, 1.8)
+
+plt.show()
+|\space|
+\end{minted}
+\vfill

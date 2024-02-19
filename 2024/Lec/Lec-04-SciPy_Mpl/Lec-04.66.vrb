@@ -1,0 +1,30 @@
+\frametitle{Гистограммы}
+\scriptsize
+Функция \texttt{hist()} поддерживает множество параметров для настройки вычисления и отображения. Рассмотрим пример гистограммы с детальными пользовательскими настройками (рисунок~\ref{fig:fig_20}):
+\vfill
+\begin{minipage}{.4\textwidth}
+\begin{minted}{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+plt.style.use('seaborn-v0_8-white')
+data = np.random.randn(1000)
+
+plt.hist(data, bins=30, alpha=0.5,
+         color='steelblue',
+         edgecolor='none')
+
+plt.show()
+|\space|
+\end{minted}
+\end{minipage}
+\begin{minipage}{.59\textwidth}
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.85\linewidth]{./pics/Figure_20}
+^^I\caption{Пример гистограммы с пользовательскими настройками}
+^^I\label{fig:fig_20}
+\end{figure}
+\end{minipage}
+\vfill

@@ -1,0 +1,11 @@
+\frametitle{Цвет и стиль линий}
+\scriptsize
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.5\linewidth]{./pics/Figure_7}
+^^I\caption{Настройка стиля линий графика}
+^^I\label{fig:fig_7}
+\end{figure}
+\vfill
+В действительности существует множество других аргументов для более тонкой настройки внешнего вида графика. Обратитесь к документации функции \texttt{plt.plot()} для более подробного изучения.
+\vfill

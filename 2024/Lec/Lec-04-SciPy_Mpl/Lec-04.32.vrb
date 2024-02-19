@@ -1,0 +1,8 @@
+\frametitle{Нелинейная аппроксимация методом \\ наименьших квадратов}
+\scriptsize
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.6\linewidth]{./pics/Figure_38}
+^^I\caption{Функция затухающего косинуса с искусственным зашумлением}
+\end{figure}
+\vfill

@@ -1,0 +1,9 @@
+\frametitle{Диаграммы рассеяния}
+\scriptsize
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.65\linewidth]{./pics/Figure_14}
+^^I\caption{Пример использования строковых кодов для маркеров диаграммы рассеяния}
+^^I\label{fig:fig_14}
+\end{figure}
+\vfill

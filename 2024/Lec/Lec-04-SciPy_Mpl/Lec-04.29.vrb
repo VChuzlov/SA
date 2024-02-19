@@ -1,0 +1,8 @@
+\frametitle{Одномерная интерполяция}
+\scriptsize
+\begin{figure}[h!]
+^^I\centering
+^^I\includegraphics[width=.65\linewidth]{./pics/Figure_37}
+^^I\caption{Демонстрация различных методик интерполяции, доступных в методе \texttt{scipy.interpolate.interp1d}}
+\end{figure}
+\vfill
