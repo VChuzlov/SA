@@ -68,7 +68,7 @@ def genetic_algorithm(
         bounds, func, initial_guess=(), args=(),
         popsize=1000, selection_size=200,
         mutation_limits=(0.5, 1.2), mutation_range=1,
-        generations_count=100):
+        generations_count=10):
     best = [None for _ in range(generations_count)]
     	
     for generation in range(generations_count):
