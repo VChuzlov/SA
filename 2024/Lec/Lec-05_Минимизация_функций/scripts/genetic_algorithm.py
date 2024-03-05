@@ -24,7 +24,7 @@ def crossover(selected_pop, popsize):
     crossovered = int((popsize - length / 2)) or 1  # оператор скрещивания
     # выполнится хотябы один раз
     count = 0
-    genome1, genome2 = [], []  # вспомогательные списки для мутирующих генов
+    genome1, genome2 = [], []  # вспомогательные списки для смешения генотипов
 
     while count != crossovered:  # индексы выбираются случайным образом
         index1 = randint(0, length - 1)
