@@ -70,10 +70,10 @@ def genetic_algorithm(
         mutation_limits=(0.5, 1.2), mutation_range=1,
         generations_count=100):
     best = [None for _ in range(generations_count)]
-    	
+
     for generation in range(generations_count):
         mutation_decrease = (
-            mutation_range + math.log(1 + generation))
+                mutation_range + math.log(1 + generation))
         population = create_population(
             bounds, popsize, initial_guess)
         selected = selection(
@@ -84,5 +84,5 @@ def genetic_algorithm(
         population = mutated[:]
         best[generation], = selection(func, population, 1, args)
         initial_guess = [best[generation]]
-	
+
     return selection(func, best, generations_count, args)
