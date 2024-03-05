@@ -1,0 +1,26 @@
+\frametitle{Программная реализация}
+\scriptsize
+Ограничим область поиска для значения констант диапазоном $[0, 1]$.
+\vfill
+\begin{minted}{python}
+import genetic_algorithm as ga
+from solve_ode import rk
+
+
+def obj_func(k, equations, method, t, h, initial_composition, actual_values):
+    # решение системы ОДУ численным методом
+    c = method(equations, t[0], t[-1],
+    initial_composition, h, args=(k,))
+    return sum((c[-1][i] - actual_values[i]) ** 2
+               for i in range(len(actual_values)))
+
+
+actual_values = [0.4513, 0.5487]  # экспериментальные значения
+k = ga.genetic_algorithm([[0, 1], [0, 1]], obj_func,
+                         args=(equations, rk, [0, 1], 0.1,
+                               [1, 0], actual_values))
+print(k[0])  # [0.8614790508500587, 0.12043760065726794]
+\end{minted}
+\vfill
+По аргументу \texttt{method} можно передавать различные численные методы решения систем обыкновенных дифференциальных уравнений.
+\vfill
