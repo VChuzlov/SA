@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -39,7 +42,8 @@
 \@writefile{nav}{\headcommand {\slideentry {1}{1}{1}{5/5}{Минимизация без ограничений}{0}}}
 \@writefile{nav}{\headcommand {\beamer@framepages {5}{5}}}
 \HyPL@Entry{5<</P(\376\377\0006)>>}
-\newlabel{fig:contour2}{{1}{6}{Контурный график функции $f\left (x, y\right ) = \left (x^2 + y - 11\right )^2 + \left (x + y^2 - 7\right )^2$}{Doc-Start}{}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:contour2}{{1}{6}{Контурный график функции $f\left (x, y\right ) = \left (x^2 + y - 11\right )^2 + \left (x + y^2 - 7\right )^2$\relax }{Doc-Start}{}}
 \@writefile{snm}{\beamer@slide {fig:contour2}{6}}
 \@writefile{nav}{\headcommand {\slideentry {1}{1}{2}{6/6}{Минимизация без ограничений}{0}}}
 \@writefile{nav}{\headcommand {\beamer@framepages {6}{6}}}
@@ -80,7 +84,7 @@
 \@writefile{nav}{\headcommand {\slideentry {1}{3}{1}{16/16}{Минимизация функции одной переменной}{0}}}
 \@writefile{nav}{\headcommand {\beamer@framepages {16}{16}}}
 \HyPL@Entry{16<</P(\376\377\0001\0007)>>}
-\newlabel{fig:figure_40}{{2}{17}{График полинома $f(x) = x^4 - 3x^3 - 24x^2 + 28x + 48$}{Doc-Start}{}}
+\newlabel{fig:figure_40}{{2}{17}{График полинома $f(x) = x^4 - 3x^3 - 24x^2 + 28x + 48$\relax }{Doc-Start}{}}
 \@writefile{snm}{\beamer@slide {fig:figure_40}{17}}
 \@writefile{nav}{\headcommand {\slideentry {1}{3}{2}{17/17}{Минимизация функции одной переменной}{0}}}
 \@writefile{nav}{\headcommand {\beamer@framepages {17}{17}}}
@@ -123,7 +127,7 @@
 \@writefile{nav}{\headcommand {\slideentry {2}{1}{3}{24/24}{Метод Нелдера-Мида}{0}}}
 \@writefile{nav}{\headcommand {\beamer@framepages {24}{24}}}
 \HyPL@Entry{24<</P(\376\377\0002\0005)>>}
-\newlabel{fig:nelder_mead}{{3}{25}{Блок-схема алгоритма Нелдера-Мида}{Doc-Start}{}}
+\newlabel{fig:nelder_mead}{{3}{25}{Блок-схема алгоритма Нелдера-Мида\relax }{Doc-Start}{}}
 \@writefile{snm}{\beamer@slide {fig:nelder_mead}{25}}
 \@writefile{nav}{\headcommand {\slideentry {2}{1}{4}{25/25}{Метод Нелдера-Мида}{0}}}
 \@writefile{nav}{\headcommand {\beamer@framepages {25}{25}}}
@@ -131,9 +135,9 @@
 \@writefile{toc}{\beamer@subsectionintoc {2}{2}{Пример}{26}{0}{2}}
 \@writefile{nav}{\headcommand {\beamer@subsectionpages {22}{25}}}
 \@writefile{nav}{\headcommand {\beamer@subsectionentry {0}{2}{2}{26}{Пример}}}
-\newlabel{fig:3d}{{4}{26}{3-d график функции $x^2 + xy + y^2 - 6x - 9y$}{Doc-Start}{}}
+\newlabel{fig:3d}{{4}{26}{3-d график функции $x^2 + xy + y^2 - 6x - 9y$\relax }{Doc-Start}{}}
 \@writefile{snm}{\beamer@slide {fig:3d}{26}}
-\newlabel{fig:contour}{{5}{26}{2-d представление функции $x^2 + xy + y^2 - 6x - 9y$}{Doc-Start}{}}
+\newlabel{fig:contour}{{5}{26}{2-d представление функции $x^2 + xy + y^2 - 6x - 9y$\relax }{Doc-Start}{}}
 \@writefile{snm}{\beamer@slide {fig:contour}{26}}
 \@writefile{nav}{\headcommand {\slideentry {2}{2}{1}{26/26}{Пример}{0}}}
 \@writefile{nav}{\headcommand {\beamer@framepages {26}{26}}}
@@ -166,12 +170,12 @@
 \@writefile{nav}{\headcommand {\slideentry {3}{0}{4}{33/33}{}{0}}}
 \@writefile{nav}{\headcommand {\beamer@framepages {33}{33}}}
 \HyPL@Entry{33<</P(\376\377\0003\0004)>>}
-\newlabel{fig:crossover}{{6}{34}{Распространенные схемы скрещивания и мутации}{Doc-Start}{}}
+\newlabel{fig:crossover}{{6}{34}{Распространенные схемы скрещивания и мутации\relax }{Doc-Start}{}}
 \@writefile{snm}{\beamer@slide {fig:crossover}{34}}
 \@writefile{nav}{\headcommand {\slideentry {3}{0}{5}{34/34}{}{0}}}
 \@writefile{nav}{\headcommand {\beamer@framepages {34}{34}}}
 \HyPL@Entry{34<</P(\376\377\0003\0005)>>}
-\newlabel{fig:ga3}{{7}{35}{Схема генетического алгоритма}{Doc-Start}{}}
+\newlabel{fig:ga3}{{7}{35}{Схема генетического алгоритма\relax }{Doc-Start}{}}
 \@writefile{snm}{\beamer@slide {fig:ga3}{35}}
 \@writefile{nav}{\headcommand {\slideentry {3}{0}{6}{35/35}{}{0}}}
 \@writefile{nav}{\headcommand {\beamer@framepages {35}{35}}}

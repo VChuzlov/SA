@@ -85,7 +85,7 @@ BoldItalicFont=*-BoldItalic
 
 \usepackage{booktabs}	% good looking tables
 \usepackage{multicol}	% text in multiple columns, useful for side-by-side text and pictures
-\usepackage{hyperref}
+
 %\usepackage{minted}
 \usepackage{xcolor}
 \definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
@@ -99,6 +99,15 @@ BoldItalicFont=*-BoldItalic
 \definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
 \definecolor{urlcolor}{HTML}{800080} % цвет ссылок
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{hyperref}
+%\hypersetup{
+%    colorlinks=true,
+%    linkcolor=black,
+%    filecolor=magenta,
+%    urlcolor=magenta,
+%    pdfpagemode=FullScreen,
+%}
 
 \usepackage{amsxtra}
 \usepackage{longtable}
@@ -307,7 +316,7 @@ BoldItalicFont=*-BoldItalic
 %    % The hyperref package gives us a pdf with properly built
 %    % internal navigation ('pdf bookmarks' for the table of contents,
 %    % internal cross-reference links, web links for URLs, etc.)
-%%    \usepackage{hyperref}
+%    \usepackage{hyperref}
 %    % The default LaTeX title has an obnoxious amount of whitespace. By default,
 %    % titling removes some of it. It also provides customization options.
 %%    \usepackage{titling}
@@ -320,7 +329,7 @@ BoldItalicFont=*-BoldItalic
 %
 %
 %
-%    % Colors for the hyperref package
+    % Colors for the hyperref package
 %    \definecolor{urlcolor}{rgb}{0,.145,.698}
 %    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
 %    \definecolor{citecolor}{rgb}{.12,.54,.11}
@@ -595,7 +604,7 @@ BoldItalicFont=*-BoldItalic
 %    }
 
 
-\title{\Large{Системный анализ процессов переработки нефти и газа}}
+\title{\Large{Системный анализ \\ процессов переработки нефти \\ и газа}}
 \subtitle{\textcolor{tpugreen}{\textbf{Лекция 5}} \\ \textbf{Минимизация функций}}
 \author[]{\textbf{Вячеслав Алексеевич Чузлов}}
 \institute{к.т.н., доцент ОХИ ИШПР}
@@ -1038,6 +1047,8 @@ $$
 	\item коэффициент сжатия $\beta > 0$, как правило, выбирается значение $0.5$;
 	\item коэффициент растяжения $\gamma > 0$, как правило, выбирается значение $2$.
 \end{itemize}
+\vfill
+\href{https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%9D%D0%B5%D0%BB%D0%B4%D0%B5%D1%80%D0%B0_%E2%80%94_%D0%9C%D0%B8%D0%B4%D0%B0#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Nelder_Mead1.gif}{\textcolor{magenta}{Пример последовательных симплексов}}
 \vfill
 \end{frame}
 
