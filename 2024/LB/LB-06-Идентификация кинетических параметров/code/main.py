@@ -79,7 +79,8 @@ def calculate_kinetic_constants(
 def draw_plot(
         t: np.ndarray,
         c: np.ndarray,
-        c_calc: np.ndarray
+        c_calc: np.ndarray,
+        labels: list[str]
 ) -> None:
     """Функция для построения графика изменения концентраций 
     химических веществ от времени протекания реакций 
@@ -90,16 +91,18 @@ def draw_plot(
         t (np.ndarray): Значения времени, которым соответствуют концентрации с0 + c 
         c (np.ndarray): Экспериментальные значения концентрации компонентов (точки)
         c_calc (np.ndarray): Расчетные значения концентрации компонентов (линии)
+        labels (list[str]): Подписи к легенде на графике
     """
     fig, ax = plt.subplots()
 
     for i, _ in enumerate(c):
-        ax.scatter(t, c[i])
-        ax.plot(t, c_calc[i])
+        ax.scatter(t, c[i], label=labels[i])
+        ax.plot(t, c_calc[i], label=labels[i])
 
     ax.set_xlabel('Время, ч')
     ax.set_ylabel('Концентрация, моль/л')
 
+    plt.legend(ncol=4)
     plt.tight_layout()
     plt.savefig('plot.pdf')
     return
@@ -130,4 +133,9 @@ if __name__ == '__main__':
         args=(k, st_matrix)
     ).y
     
-    draw_plot(time, np.vstack([c0.reshape(1, -1), c]).T, c_calc)
+    draw_plot(
+        time, 
+        np.vstack([c0.reshape(1, -1), c]).T, 
+        c_calc,
+        [r'$C_9H_{20}$', r'$C_9H_{18}$', r'$C_9H_{16}$', r'$H_2$']
+    )
