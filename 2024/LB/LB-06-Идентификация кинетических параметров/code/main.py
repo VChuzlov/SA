@@ -77,7 +77,7 @@ def draw_plot(
     ax.set_ylabel('Концентрация, моль/л')
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig('plot.pdf')
     return
 
 
