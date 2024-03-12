@@ -105,4 +105,4 @@ if __name__ == '__main__':
         y0=c0,
         args=(k, st_matrix)
     )
-    draw_plot(time, c, c_calc)
+    draw_plot(time, np.vstack([c0, c]), c_calc)
