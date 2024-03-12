@@ -64,5 +64,9 @@ def draw_plot() -> None:
 
 
 if __name__ == '__main__':
+    k0 = np.array([.5, .5])
+    c = np.loadtxt('data.txt', skiprows=1)
+    c0 = np.array([1, 0, 0, 0])
+    
     k = calculate_kinetic_constants()
     draw_plot()
