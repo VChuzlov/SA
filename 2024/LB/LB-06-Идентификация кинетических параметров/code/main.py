@@ -38,8 +38,25 @@ def obj_func(
     return ((c - c_calc[:, 1:].T) ** 2).sum() / n
 
 
-def calculate_kinetic_constants() -> np.ndarray:
-    return ...
+def calculate_kinetic_constants(
+        k0: np.ndarray,
+        c: np.ndarray,
+        kinetic_scheme: Callable,
+        time: np.ndarray,
+        c0: np.ndarray,
+) -> np.ndarray:
+    res = minimize(
+        fun=obj_func,
+        x0=k0,
+        method='Nelder-Mead',
+        args=(
+            c,
+            kinetic_scheme,
+            time,
+            c0
+        )
+    )
+    return res.x
 
 
 def draw_plot() -> None:
