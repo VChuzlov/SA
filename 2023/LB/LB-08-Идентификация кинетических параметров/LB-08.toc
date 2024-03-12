@@ -1,2 +1,2 @@
-\babel@toc {russian}{}
+\babel@toc {russian}{}\relax 
 \beamer@subsectionintoc {0}{1}{Задача}{2}{0}{0}
