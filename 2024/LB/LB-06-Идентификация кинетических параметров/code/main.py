@@ -24,7 +24,7 @@ def obj_func(
         c0 (np.ndarray): начальные концентрации компонентов, [моль/л]
 
     Returns:
-        float: _description_
+        float: средняя квадратичная ошибка
     """
     solution = solve_ivp(
         fun=kinetic_scheme,
@@ -34,7 +34,8 @@ def obj_func(
         args=(k, )
     )
     c_calc = solution.sol(time)
-    return ((c - c_calc[:, 1:].T) ** 2).sum()
+    n = c.size
+    return ((c - c_calc[:, 1:].T) ** 2).sum() / n
 
 
 def calculate_kinetic_constants() -> np.ndarray:
