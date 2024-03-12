@@ -62,7 +62,22 @@ def calculate_kinetic_constants(
     return res.x
 
 
-def draw_plot() -> None:
+def draw_plot(
+        t: np.ndarray,
+        c: np.ndarray,
+        c_calc: np.ndarray
+) -> None:
+    fig, ax = plt.subplots()
+
+    for i, _ in enumerate(c):
+        ax.scatter(t, c[i])
+        ax.plot(t, c_calc[i])
+
+    ax.set_xlabel('Время, ч')
+    ax.set_ylabel('Концентрация, моль/л')
+
+    plt.tight_layout()
+    plt.show()
     return
 
 
@@ -82,4 +97,12 @@ if __name__ == '__main__':
     k = calculate_kinetic_constants(
         k0, c, kinetic_scheme, time, c0, st_matrix)
     print(k)
-    draw_plot()
+
+    c_calc = solve_ivp(
+        kinetic_scheme,
+        t_span=(t0, tf),
+        t_eval=time,
+        y0=c0,
+        args=(k, st_matrix)
+    )
+    draw_plot(time, c, c_calc)
