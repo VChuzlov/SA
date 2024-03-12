@@ -17,7 +17,8 @@ def kinetic_scheme(
     stoich_matrix: np.ndarray = kinetic_matrix
 ) -> np.ndarray:
 
-    mask = stoich_matrix < 0
+
+    mask = stoich_matrix < 0  # Выбираем элементы с отрицательными стехим. коэфф-тами
     p = (c ** -(stoich_matrix * mask)).prod(axis=1)
     reaction_rates = p * k
     
