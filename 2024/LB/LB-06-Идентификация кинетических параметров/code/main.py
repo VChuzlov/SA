@@ -13,6 +13,7 @@ def obj_func(
         kinetic_scheme: Callable,
         time: np.ndarray,
         c0: np.ndarray,
+        st_matrix: np.ndarray
 ) -> float:
     """Целевая функция, подлежащая минимизации.
 
@@ -31,7 +32,7 @@ def obj_func(
         t_span=(0, time[-1]),
         y0=c0,
         dense_output=True,
-        args=(k, )
+        args=(k, st_matrix)
     )
     c_calc = solution.sol(time)
     n = c.size
@@ -44,6 +45,7 @@ def calculate_kinetic_constants(
         kinetic_scheme: Callable,
         time: np.ndarray,
         c0: np.ndarray,
+        st_matrix: np.ndarray
 ) -> np.ndarray:
     res = minimize(
         fun=obj_func,
@@ -53,7 +55,8 @@ def calculate_kinetic_constants(
             c,
             kinetic_scheme,
             time,
-            c0
+            c0,
+            st_matrix
         )
     )
     return res.x
@@ -65,8 +68,18 @@ def draw_plot() -> None:
 
 if __name__ == '__main__':
     k0 = np.array([.5, .5])
-    c = np.loadtxt('data.txt', skiprows=1)
+    c = np.loadtxt('data.txt', skiprows=1, usecols=range(1, 5))
     c0 = np.array([1, 0, 0, 0])
-    
-    k = calculate_kinetic_constants()
+    t0, tf, h = .0, 1., .1
+    time = np.arange(t0, tf+h, h)
+    st_matrix = np.array(
+        [
+            [-1, 1, 0, 1],
+            [0, -1, 1, 1]
+        ]
+    )
+
+    k = calculate_kinetic_constants(
+        k0, c, kinetic_scheme, time, c0, st_matrix)
+    print(k)
     draw_plot()
