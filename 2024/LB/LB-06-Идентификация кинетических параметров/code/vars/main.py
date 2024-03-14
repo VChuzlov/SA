@@ -1,3 +1,4 @@
+from __future__ import annotations
 import numpy as np
 from scipy.optimize import minimize
 from scipy.integrate import solve_ivp
@@ -139,3 +140,5 @@ if __name__ == '__main__':
         c_calc,
         [r'$C_9H_{16}$', r'$H_2$', r'$C_9H_{18}$', r'$C_9H_{20}$']
     )
+
+    print(c_calc[:, 1:].T)
