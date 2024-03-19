@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  19 MAR 2024 20:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  19 MAR 2024 21:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2605,7 +2605,7 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 [42
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1203--1203
+Underfull \hbox (badness 10000) in paragraph at lines 1202--1202
 
  []
 
@@ -2616,12 +2616,12 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 1203--1203
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 1202--1202
 [][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 1203
+Overfull \vbox (5.0pt too high) detected at line 1202
  []
 
 File: bgs/contacts.jpg Graphic file (type bmp)
@@ -2652,10 +2652,10 @@ runsystem(del Lec-06.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 35480 strings out of 476477
- 748504 string characters out of 5817858
- 1187485 words of memory out of 5000000
- 54976 multiletter control sequences out of 15000+600000
+ 35482 strings out of 476477
+ 748522 string characters out of 5817858
+ 1187541 words of memory out of 5000000
+ 54978 multiletter control sequences out of 15000+600000
  411804 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,13n,108p,733b,950s stack positions out of 5000i,500n,10000p,200000b,80000s
