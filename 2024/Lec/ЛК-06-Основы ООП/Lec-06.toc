@@ -1,4 +1,4 @@
-\babel@toc {russian}{}\relax 
+\babel@toc {russian}{}
 \beamer@sectionintoc {1}{Объектно-ориентированное \\ программирование на языке Python}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Конструктор класса}{5}{0}{1}
 \beamer@subsectionintoc {1}{2}{Зачем использовать ООП}{6}{0}{1}
@@ -11,5 +11,5 @@
 \beamer@sectionintoc {3}{Переменные класса и объекта}{21}{0}{3}
 \beamer@sectionintoc {4}{Реализация ХТС с помощью \\ объектной модели}{27}{0}{4}
 \beamer@subsectionintoc {4}{1}{Описание класса \texttt {Flow}}{29}{0}{4}
-\beamer@subsectionintoc {4}{2}{Описание класса \texttt {Mixer}}{39}{0}{4}
-\beamer@subsectionintoc {4}{3}{Описание основной программы}{43}{0}{4}
+\beamer@subsectionintoc {4}{2}{Описание класса \texttt {Mixer}}{37}{0}{4}
+\beamer@subsectionintoc {4}{3}{Описание основной программы}{41}{0}{4}

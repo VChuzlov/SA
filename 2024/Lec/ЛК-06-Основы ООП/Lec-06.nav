@@ -98,28 +98,26 @@
 \headcommand {\beamer@framepages {35}{35}}
 \headcommand {\slideentry {4}{1}{8}{36/36}{Описание класса \texttt {Flow}}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\slideentry {4}{1}{9}{37/37}{Описание класса \texttt {Flow}}{0}}
+\headcommand {\beamer@subsectionpages {29}{36}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{37}{Описание класса \texttt {Mixer}}}
+\headcommand {\slideentry {4}{2}{1}{37/37}{Описание класса \texttt {Mixer}}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\slideentry {4}{1}{10}{38/38}{Описание класса \texttt {Flow}}{0}}
+\headcommand {\slideentry {4}{2}{2}{38/38}{Описание класса \texttt {Mixer}}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\beamer@subsectionpages {29}{38}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{39}{Описание класса \texttt {Mixer}}}
-\headcommand {\slideentry {4}{2}{1}{39/39}{Описание класса \texttt {Mixer}}{0}}
+\headcommand {\slideentry {4}{2}{3}{39/39}{Описание класса \texttt {Mixer}}{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\slideentry {4}{2}{2}{40/40}{Описание класса \texttt {Mixer}}{0}}
+\headcommand {\slideentry {4}{2}{4}{40/40}{Описание класса \texttt {Mixer}}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\slideentry {4}{2}{3}{41/41}{Описание класса \texttt {Mixer}}{0}}
+\headcommand {\beamer@subsectionpages {37}{40}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{41}{Описание основной программы}}
+\headcommand {\slideentry {4}{3}{1}{41/41}{Описание основной программы}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\slideentry {4}{2}{4}{42/42}{Описание класса \texttt {Mixer}}{0}}
+\headcommand {\slideentry {4}{3}{2}{42/42}{Описание основной программы}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\beamer@subsectionpages {39}{42}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{43}{Описание основной программы}}
-\headcommand {\slideentry {4}{3}{1}{43/43}{Описание основной программы}{0}}
+\headcommand {\slideentry {4}{3}{3}{43/43}{Описание основной программы}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {4}{3}{2}{44/44}{Описание основной программы}{0}}
-\headcommand {\beamer@framepages {44}{44}}
-\headcommand {\beamer@partpages {1}{44}}
-\headcommand {\beamer@subsectionpages {43}{44}}
-\headcommand {\beamer@sectionpages {27}{44}}
-\headcommand {\beamer@documentpages {44}}
-\headcommand {\gdef \inserttotalframenumber {44}}
+\headcommand {\beamer@partpages {1}{43}}
+\headcommand {\beamer@subsectionpages {41}{43}}
+\headcommand {\beamer@sectionpages {27}{43}}
+\headcommand {\beamer@documentpages {43}}
+\headcommand {\gdef \inserttotalframenumber {43}}

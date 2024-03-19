@@ -723,93 +723,93 @@ True
 
 \subsection{Описание класса \texttt{Flow}}
 
-\begin{frame}[fragile]{Описание класса \texttt{Flow}}
-\scriptsize
-\begin{table}[h!]
-	\centering
-	\renewcommand{\arraystretch}{1.2}
-	\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
-		\hline
-		\textbf{Атрибуты класса} & \textbf{Описание}  \\
-		\hline
-		\mintinline{python}|mass_flow_rate: float| & Массовый расход, кг/ч \\
-		\hline
-		\mintinline{python}|mass_fractions: np.ndarray| & Массовые доли \\
-		\hline
-		\mintinline{python}|temperature: float| & Температура потока, °C \\
-		\hline
-		\mintinline{python}|pressure: float| & Давление потока, кПа \\
-		\hline
-\begin{minipage}{\linewidth}
-\begin{minted}[frame=none, linenos=false]{python}
-def __init__(
-    self,
-    mass_flow_rate: float,
-    mass_fractions: np.ndarray,
-    temperature: float, pressure: float
-) -> None
-\end{minted}
-\end{minipage}
-		& Создает новый экземпляр класса \texttt{Flow}, заполняя все поля \\
-		\hline
-\begin{minipage}{\linewidth}
-\begin{minted}[frame=none, linenos=false]{python}
-def convert_mass_to_volume_fractions(
-    self,
-    densities: np.ndarray
-) -> np.ndarray
-\end{minted}
-\end{minipage}
-		& Перевод массовых долей в объемные \\
-		\hline
-\begin{minipage}{\linewidth}
-\begin{minted}[frame=none, linenos=false]{python}
-def convert_mass_to_mole_fractions(
-    self,
-    mr: np.ndarray
-) -> np.ndarray
-\end{minted}
-\end{minipage}
-		& Перевод массовых долей в мольные \\
-		\hline
-	\end{tabular}
-\end{table}
-\vfill
-\end{frame}
-
-\begin{frame}[fragile]{Описание класса \texttt{Flow}}
-\scriptsize
-\begin{table}[h!]
-	\centering
-	\renewcommand{\arraystretch}{1.2}
-	\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
-		\hline
-		\textbf{Атрибуты класса} & \textbf{Описание}  \\
-		\hline
-\begin{minipage}{\linewidth}
-\begin{minted}[frame=none, linenos=false]{python}
-def get_flow_density(
-    self,
-    densities: np.ndarray
-) -> float
-\end{minted}
-\end{minipage}
-		& Расчет плотности потока \\
-		\hline
-\begin{minipage}{\linewidth}
-\begin{minted}[frame=none, linenos=false]{python}
-def get_average_molar_mass(
-    self,
-    mr: np.ndarray
-) -> float
-\end{minted}
-\end{minipage}
-		& Расчет средней молекулярной массы потока \\
-		\hline
-	\end{tabular}
-\end{table}
-\vfill
-\end{frame}
+%\begin{frame}[fragile]{Описание класса \texttt{Flow}}
+%\scriptsize
+%\begin{table}[h!]
+%	\centering
+%	\renewcommand{\arraystretch}{1.2}
+%	\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
+%		\hline
+%		\textbf{Атрибуты класса} & \textbf{Описание}  \\
+%		\hline
+%		\mintinline{python}|mass_flow_rate: float| & Массовый расход, кг/ч \\
+%		\hline
+%		\mintinline{python}|mass_fractions: np.ndarray| & Массовые доли \\
+%		\hline
+%		\mintinline{python}|temperature: float| & Температура потока, °C \\
+%		\hline
+%		\mintinline{python}|pressure: float| & Давление потока, кПа \\
+%		\hline
+%\begin{minipage}{\linewidth}
+%\begin{minted}[frame=none, linenos=false]{python}
+%def __init__(
+%    self,
+%    mass_flow_rate: float,
+%    mass_fractions: np.ndarray,
+%    temperature: float, pressure: float
+%) -> None
+%\end{minted}
+%\end{minipage}
+%		& Создает новый экземпляр класса \texttt{Flow}, заполняя все поля \\
+%		\hline
+%\begin{minipage}{\linewidth}
+%\begin{minted}[frame=none, linenos=false]{python}
+%def convert_mass_to_volume_fractions(
+%    self,
+%    densities: np.ndarray
+%) -> np.ndarray
+%\end{minted}
+%\end{minipage}
+%		& Перевод массовых долей в объемные \\
+%		\hline
+%\begin{minipage}{\linewidth}
+%\begin{minted}[frame=none, linenos=false]{python}
+%def convert_mass_to_mole_fractions(
+%    self,
+%    mr: np.ndarray
+%) -> np.ndarray
+%\end{minted}
+%\end{minipage}
+%		& Перевод массовых долей в мольные \\
+%		\hline
+%	\end{tabular}
+%\end{table}
+%\vfill
+%\end{frame}
+%
+%\begin{frame}[fragile]{Описание класса \texttt{Flow}}
+%\scriptsize
+%\begin{table}[h!]
+%	\centering
+%	\renewcommand{\arraystretch}{1.2}
+%	\begin{tabular}{|p{.49\linewidth}|p{.49\linewidth}|}
+%		\hline
+%		\textbf{Атрибуты класса} & \textbf{Описание}  \\
+%		\hline
+%\begin{minipage}{\linewidth}
+%\begin{minted}[frame=none, linenos=false]{python}
+%def get_flow_density(
+%    self,
+%    densities: np.ndarray
+%) -> float
+%\end{minted}
+%\end{minipage}
+%		& Расчет плотности потока \\
+%		\hline
+%\begin{minipage}{\linewidth}
+%\begin{minted}[frame=none, linenos=false]{python}
+%def get_average_molar_mass(
+%    self,
+%    mr: np.ndarray
+%) -> float
+%\end{minted}
+%\end{minipage}
+%		& Расчет средней молекулярной массы потока \\
+%		\hline
+%	\end{tabular}
+%\end{table}
+%\vfill
+%\end{frame}
 
 %\subsubsection{Функции для пересчета составов}
 \begin{frame}[fragile]{Функции для пересчета составов}
@@ -1139,28 +1139,56 @@ if __name__ == '__main__':
 \scriptsize
 \begin{minted}{python}
 import numpy as np
-import flow
-import mixer
+from flow import Flow
+from mixer import Mixer
+import constants as const
 
 
 if __name__ == '__main__':
-    densities = np.array([.416, .546, .585, .5510, .6, .616, .6262, .6594])
-    mr = np.array([16, 30, 44, 58, 58, 72, 72, 86])
-    mf1 = np.array([.1, .1, .1, .4, .2, .05, .03, .02])
-    mf2 = np.array([.0, .0, .2, .5, .1, .15, .0, .05])
-    f1 = flow.Flow(mass_flow_rate=100, mass_fractions=mf1,
-                   temperature=150, pressure=101.325)
-    f2 = flow.Flow(mass_flow_rate=120, mass_fractions=mf2,
-                   temperature=125, pressure=350.)
-    mixer1 = mixer.Mixer()
+    mf1 = np.array(
+        [
+            .1, .1, .1, .4, .2, .05, .03, .02,
+            .0, .0, .0, .0, .0, .0,  .0,  .0,
+            .0, .0, .0, .0, .0, .0,  .0,  .0,
+        ]
+    )
+    mf2 = np.array(
+        [
+            .0, .0, .2, .5, .1, .15, .0, .05,
+            .0, .0, .0, .0, .0, .0,  .0, .0,
+            .0, .0, .0, .0, .0, .0,  .0, .0,
+        ]
+    )
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]{Описание основной программы}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+    f1 = Flow(
+        mass_flow_rate=100,
+        mass_fractions=mf1,
+        temperature=130
+    )
+    f2 = Flow(
+        mass_flow_rate=120,
+        mass_fractions=mf2,
+        temperature=120
+    )
+    mixer1 = Mixer()
     f3 = mixer1.mix(f1, f2)
-    print(f3.mass_flow_rate, f3.temperature, f3.pressure)
+    print(f3.mass_flow_rate, f3.temperature)
     print(f3.mass_fractions)
 \end{minted}
+\vfill
 \begin{minted}{pycon}
-220 137.5 101.325
+220 126.42767662034315
 [0.04545455 0.04545455 0.15454545 0.45454545 0.14545455 0.10454545
- 0.01363636 0.03636364]
+ 0.01363636 0.03636364 0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.         0.         0.         0.        ]
 \end{minted}
 \vfill
 \end{frame}
