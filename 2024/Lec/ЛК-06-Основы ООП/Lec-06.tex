@@ -981,26 +981,25 @@ $$
 %\subsubsection{Программная реализация}
 \begin{frame}[fragile]{Программная реализация класса \texttt{Mixer}}
 \scriptsize
+Файл \texttt{mixer.py}:
 \begin{minted}{python}
 import numpy as np
-from flow import Flow
+from scipy.optimize import fsolve
+from flows import Flow
 
 
 class Mixer:
     def mix(self, *flows: Flow) -> Flow:
         self.flows = flows
-
         mass_flow_rate = np.sum(
             [flow.mass_flow_rate for flow in self.flows]
         )
-
         mass_fractions = np.sum(
             [flow.mass_fractions * flow.mass_flow_rate for flow in self.flows],
             axis=0,
         ) / mass_flow_rate
-
         t_mean = np.mean(
-            [flow.temperature for flow in self.flows]  # так неправильно!!
+            [flow.temperature for flow in self.flows]
         )
 |\space|
 \end{minted}

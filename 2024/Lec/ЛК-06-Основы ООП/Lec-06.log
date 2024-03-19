@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.12)  19 MAR 2024 09:48
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.12)  19 MAR 2024 09:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2520,7 +2520,7 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
  [40
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1098
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1097
 
  []
 
@@ -2531,12 +2531,12 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 1098--1098
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 1097--1097
 [][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 1098
+Overfull \vbox (5.0pt too high) detected at line 1097
  []
 
 File: bgs/contacts.jpg Graphic file (type bmp)
