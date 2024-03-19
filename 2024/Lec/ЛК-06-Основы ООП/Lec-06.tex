@@ -860,10 +860,82 @@ $$
 \vfill
 \end{frame}
 
+\begin{frame}[fragile]{Модуль вспомогательных функций}
+\scriptsize
+Файл \texttt{converters\_and\_functions.py}:
+\vfill
+\begin{minted}{python}
+import numpy as np
+
+
+def convert_mass_to_volume_fractions(
+    mass_fractions: np.ndarray,
+    density: np.ndarray
+) -> np.ndarray:
+    x = mass_fractions / density
+    s = x.sum()
+    return x / s
+
+
+def convert_mass_to_mole_fractions(
+    mass_fractions: np.ndarray,
+    mr: np.ndarray
+) -> np.ndarray:
+    x = mass_fractions / mr
+    s = x.sum()
+    return x / s
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Модуль вспомогательных функций}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+|\space|
+|\space|
+def get_flow_density(
+    mass_fractions: np.ndarray,
+    density: np.ndarray
+) -> float:
+    return (mass_fractions / density).sum() ** -1
+
+
+def get_average_mol_mass(
+    mass_fractions: np.ndarray,
+    mr: np.ndarray
+) -> float:
+    return (mass_fractions / mr).sum() ** -1
+|\space|
+|\space|
+\end{minted}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile]{Модуль вспомогательных функций}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+def get_flow_cp(
+    mass_fractions: np.ndarray,
+    coeffs: np.ndarray,
+    temperature: float
+) -> float:
+    p = np.arange(coeffs.shape[1])
+    component_cp = ((p + 1) * coeffs * temperature ** p).sum(axis=1)
+    return (component_cp * mass_fractions).sum()
+
+
+def normalize(x: np.ndarray) -> np.ndarray:
+    return x / x.sum()
+|\space|
+|\space|
+\end{minted}
+\vfill
+\end{frame}
+
 %\subsubsection{Программная реализация}
 \begin{frame}[fragile]{Программная реализация класса \texttt{Flow}}
 \scriptsize
-Рассмотрим пример реализации класса \mintinline{python}|Flow|, являющегося представлением объекта материального потока (модуль \texttt{flow.py}).
+Рассмотрим пример реализации класса \mintinline{python}|Flow|, являющегося представлением объекта материального потока (модуль \texttt{flow.py}). Свойства веществ сохраним в файле \texttt{constants.py}
 \vfill
 \begin{minted}{python}
 import numpy as np
@@ -1009,16 +1081,25 @@ class Mixer:
 \begin{frame}[fragile]{Программная реализация класса \texttt{Mixer}}
 \scriptsize
 \begin{minted}[firstnumber=last]{python}
-        pressure = min(flow.pressure for flow in self.flows)
-
         self.mixture = Flow(
             mass_flow_rate=mass_flow_rate,
             mass_fractions=mass_fractions,
-            temperature=t_mean,
-            pressure=pressure
+            temperature=t_mean
         )
-
+        self.mixture.temperature = self.__calculate_temperature()
         return self.mixture
+
+    def __calculate_temperature(self) -> float:
+        def func(t):
+            self.mixture.temperature = t
+            t_ = np.sum(
+                [flow.mass_flow_rate * flow.flow_cp * flow.temperature
+                 for flow in self.flows]
+            ) / (self.mixture.mass_flow_rate * self.mixture.flow_cp)
+            return t - t_
+
+        temperature, = fsolve(func, self.mixture.temperature)
+        return temperature
 |\space|
 |\space|
 \end{minted}
@@ -1029,28 +1110,25 @@ class Mixer:
 \scriptsize
 \begin{minted}[firstnumber=last]{python}
 if __name__ == '__main__':
-    mf1 = np.random.randint(1, 5, 8)
-    mf1 = mf1 / mf1.sum()
+    import converters_and_functions as conv
 
-    mf2 = np.random.randint(1, 5, 8)
-    mf2 = mf2 / mf2.sum()
-
-    f1 = Flow(mass_flow_rate=100, mass_fractions=mf1,
-              temperature=250, pressure=101.325)
-
-    f2 = Flow(mass_flow_rate=100, mass_fractions=mf2,
-              temperature=300, pressure=101.325)
-
+    f1 = Flow(
+        mass_flow_rate=100,
+        mass_fractions=conv.normalize(np.random.randint(1, 5, 24)),
+        temperature=200
+    )
+    f2 = Flow(
+        mass_flow_rate=100,
+        mass_fractions=conv.normalize(np.random.randint(1, 5, 24)),
+        temperature=300
+    )
     m = Mixer()
-    mixture = m.mix(f1, f2)
-    print(mixture.temperature)
-    print(mixture.mass_fractions)
+    fmixture = m.mix(f1, f2)
+    print(fmixture.temperature)
 |\space|
 \end{minted}
 \begin{minted}{pycon}
-275.0
-[0.12045455 0.11818182 0.07272727 0.11590909 0.14090909 0.14318182
- 0.14545455 0.14318182]
+249.13760300860477
 \end{minted}
 \vfill
 \end{frame}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.12)  19 MAR 2024 09:53
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.12)  19 MAR 2024 11:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2342,20 +2342,13 @@ File: logos/ru/light/logobw.png Graphic file (type bmp)
 \openout4 = `Lec-06.vrb'.
 
  (./Lec-06.vrb
-\openout6 = `Lec-06.pyg'.
-
-runsystem(pygmentize -l 'python' -f latex -P commandprefix=PYG -F tokenmerge -P
- stripnl='False' -P escapeinside='||' -P mathescape='True' -F gobble:n='2' -P p
-ython3='True' -o Lec-06.out.pyg Lec-06.pyg)...executed.
-
- (./Lec-06.out.pyg)
 \openout5 = `Lec-06.pyg'.
 
 runsystem(pygmentize -l 'python' -f latex -P commandprefix=PYG -F tokenmerge -P
  stripnl='False' -P escapeinside='||' -P mathescape='True' -F gobble:n='2' -P p
 ython3='True' -o Lec-06.out.pyg Lec-06.pyg)...executed.
 
-(./Lec-06.out.pyg))
+ (./Lec-06.out.pyg))
 File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
@@ -2389,8 +2382,66 @@ runsystem(pygmentize -l 'python' -f latex -P commandprefix=PYG -F tokenmerge -P
  stripnl='False' -P escapeinside='||' -P mathescape='True' -F gobble:n='2' -P p
 ython3='True' -o Lec-06.out.pyg Lec-06.pyg)...executed.
 
+ (./Lec-06.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+[35
 
-(./Lec-06.out.pyg)
+]
+\openout4 = `Lec-06.vrb'.
+
+ (./Lec-06.vrb
+\openout6 = `Lec-06.pyg'.
+
+runsystem(pygmentize -l 'python' -f latex -P commandprefix=PYG -F tokenmerge -P
+ stripnl='False' -P escapeinside='||' -P mathescape='True' -F gobble:n='2' -P p
+ython3='True' -o Lec-06.out.pyg Lec-06.pyg)...executed.
+
+ (./Lec-06.out.pyg)
+\openout5 = `Lec-06.pyg'.
+
+runsystem(pygmentize -l 'python' -f latex -P commandprefix=PYG -F tokenmerge -P
+ stripnl='False' -P escapeinside='||' -P mathescape='True' -F gobble:n='2' -P p
+ython3='True' -o Lec-06.out.pyg Lec-06.pyg)...executed.
+
+ (./Lec-06.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [36
+
+]
+\openout4 = `Lec-06.vrb'.
+
+ (./Lec-06.vrb
+\openout5 = `Lec-06.pyg'.
+
+runsystem(pygmentize -l 'python' -f latex -P commandprefix=PYG -F tokenmerge -P
+ stripnl='False' -P escapeinside='||' -P mathescape='True' -F gobble:n='2' -P p
+ython3='True' -o Lec-06.out.pyg Lec-06.pyg)...executed.
+
+
+(./Lec-06.out.pyg))
+File: bgs/light/slide.jpg Graphic file (type bmp)
+<bgs/light/slide.jpg>
+File: logos/ru/light/logobw.png Graphic file (type bmp)
+<logos/ru/light/logobw.png>
+ [37
+
+]
+\openout4 = `Lec-06.vrb'.
+
+ (./Lec-06.vrb
+\openout5 = `Lec-06.pyg'.
+
+runsystem(pygmentize -l 'python' -f latex -P commandprefix=PYG -F tokenmerge -P
+ stripnl='False' -P escapeinside='||' -P mathescape='True' -F gobble:n='2' -P p
+ython3='True' -o Lec-06.out.pyg Lec-06.pyg)...executed.
+
+ (./Lec-06.out.pyg)
 \openout5 = `Lec-06.pyg'.
 
 runsystem(pygmentize -l 'pycon' -f latex -P commandprefix=PYG -F tokenmerge -P 
@@ -2402,7 +2453,8 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [35
+
+[38
 
 ]
 \openout4 = `Lec-06.vrb'.
@@ -2434,7 +2486,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [36
+ [39
 
 ]
 \openout4 = `Lec-06.vrb'.
@@ -2451,7 +2503,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [37
+ [40
 
 ]
 \openout4 = `Lec-06.vrb'.
@@ -2468,7 +2520,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
-[38
+[41
 
 ]
 \openout4 = `Lec-06.vrb'.
@@ -2492,7 +2544,7 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [39
+ [42
 
 ]
 \openout4 = `Lec-06.vrb'.
@@ -2517,10 +2569,10 @@ File: bgs/light/slide.jpg Graphic file (type bmp)
 <bgs/light/slide.jpg>
 File: logos/ru/light/logobw.png Graphic file (type bmp)
 <logos/ru/light/logobw.png>
- [40
+ [43
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1097
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1175
 
  []
 
@@ -2531,19 +2583,19 @@ File: pics/mail.png Graphic file (type bmp)
 File: pics/tel.png Graphic file (type bmp)
 <pics/tel.png>
 
-Overfull \hbox (68.29076pt too wide) in paragraph at lines 1097--1097
+Overfull \hbox (68.29076pt too wide) in paragraph at lines 1175--1175
 [][]  
  []
 
 
-Overfull \vbox (5.0pt too high) detected at line 1097
+Overfull \vbox (5.0pt too high) detected at line 1175
  []
 
 File: bgs/contacts.jpg Graphic file (type bmp)
 <bgs/contacts.jpg>
 File: logos/ru/light/logoclr.png Graphic file (type bmp)
 <logos/ru/light/logoclr.png>
-[41
+[44
 
 ]
 \tf@nav=\write8
@@ -2560,19 +2612,19 @@ File: logos/ru/light/logoclr.png Graphic file (type bmp)
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Lec-06.out' has not changed.
-(rerunfilecheck)             Checksum: 90F196208ADBB826EA66A050EFCB2426;3360.
+(rerunfilecheck)             Checksum: 9594F4D6EBC8F4C9EBEA7D2FF20818CE;3360.
 runsystem(rm Lec-06.pyg)...executed.
 
 runsystem(rm Lec-06.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 37634 strings out of 476689
- 826439 string characters out of 5806613
+ 37655 strings out of 476689
+ 826733 string characters out of 5806613
  1858018 words of memory out of 6000000
- 56918 multiletter control sequences out of 15000+600000
+ 56927 multiletter control sequences out of 15000+600000
  520661 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,14n,104p,732b,960s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Lec-06.pdf (41 pages).
+Output written on Lec-06.pdf (44 pages).

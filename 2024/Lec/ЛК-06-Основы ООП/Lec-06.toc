@@ -11,5 +11,5 @@
 \beamer@sectionintoc {3}{Переменные класса и объекта}{21}{0}{3}
 \beamer@sectionintoc {4}{Реализация ХТС с помощью \\ объектной модели}{27}{0}{4}
 \beamer@subsectionintoc {4}{1}{Описание класса \texttt {Flow}}{29}{0}{4}
-\beamer@subsectionintoc {4}{2}{Описание класса \texttt {Mixer}}{36}{0}{4}
-\beamer@subsectionintoc {4}{3}{Описание основной программы}{40}{0}{4}
+\beamer@subsectionintoc {4}{2}{Описание класса \texttt {Mixer}}{39}{0}{4}
+\beamer@subsectionintoc {4}{3}{Описание основной программы}{43}{0}{4}
