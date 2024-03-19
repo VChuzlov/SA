@@ -1,0 +1,28 @@
+\frametitle{Описание основной программы}
+\scriptsize
+\begin{minted}{python}
+import numpy as np
+import flow
+import mixer
+
+
+if __name__ == '__main__':
+    densities = np.array([.416, .546, .585, .5510, .6, .616, .6262, .6594])
+    mr = np.array([16, 30, 44, 58, 58, 72, 72, 86])
+    mf1 = np.array([.1, .1, .1, .4, .2, .05, .03, .02])
+    mf2 = np.array([.0, .0, .2, .5, .1, .15, .0, .05])
+    f1 = flow.Flow(mass_flow_rate=100, mass_fractions=mf1,
+                   temperature=150, pressure=101.325)
+    f2 = flow.Flow(mass_flow_rate=120, mass_fractions=mf2,
+                   temperature=125, pressure=350.)
+    mixer1 = mixer.Mixer()
+    f3 = mixer1.mix(f1, f2)
+    print(f3.mass_flow_rate, f3.temperature, f3.pressure)
+    print(f3.mass_fractions)
+\end{minted}
+\begin{minted}{pycon}
+220 137.5 101.325
+[0.04545455 0.04545455 0.15454545 0.45454545 0.14545455 0.10454545
+ 0.01363636 0.03636364]
+\end{minted}
+\vfill
