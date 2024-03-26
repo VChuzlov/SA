@@ -19,18 +19,18 @@ def ex_1():
         temperature=t0,
         mass_fractions=mf
     )
-    cp_aarray = np.zeros_like(t_array)
+    cp_array = np.zeros_like(t_array)
     for i, t in enumerate(t_array):
         f.temperature = t
-        cp_aarray[i] = f.flow_cp
+        cp_array[i] = f.flow_cp
     
-    plt.style.use('dark_background')
-    fig, ax = plt.subplots()
-    ax.plot(t_array, cp_aarray)
-    ax.set_xlabel('Температура, °С')
-    ax.set_ylabel('Теплоемкость потока')
-    plt.tight_layout()
-    plt.show()
+    # plt.style.use('dark_background')
+    # fig, ax = plt.subplots()
+    # ax.plot(t_array, cp_array)
+    # ax.set_xlabel('Температура, °С')
+    # ax.set_ylabel('Теплоемкость потока')
+    # plt.tight_layout()
+    # plt.show()
     return
 
 
@@ -69,17 +69,16 @@ def ex2():
     f3 = Flow(
         mass_flow_rate=1200,
         mass_fractions=mf3,
-        temperature=115
+        temperature=250
     )
     mixer1 = Mixer()
-    f3 = mixer1.mix(f1, f2, f3)
-    print(f3.mass_flow_rate, f3.temperature)
-    print(f3.mass_fractions)
+    f4 = mixer1.mix(f1, f2, f3)
+    print(f4.mass_flow_rate, f4.temperature)
+    print(f4.mass_fractions)
     return
 
 
 if __name__ == '__main__':
-    ex_1()
     ex2()
 # 3700 127.87305682120657
 # [0.04676216 0.02296216 0.03085676 0.04712432 0.06775946 0.03782162
