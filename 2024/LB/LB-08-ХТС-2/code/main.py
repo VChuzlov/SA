@@ -76,4 +76,4 @@ def main3() -> None:
 
 
 if __name__ == '__main__':
-    main3()
+    main2()
