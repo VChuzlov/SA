@@ -13,5 +13,6 @@ def mixing(
     for i in range(len(new_composition)):
         for j in range(len(flow_rates)):
             new_composition[i] += mass_composition[j][i]
+    
     mix_composition = [value / mix_flow_rate for value in new_composition]
     return mix_flow_rate, mix_composition
