@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  1 MAR 2023 22:32
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.7.16)  31 MAR 2024 16:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2606,8 +2606,14 @@ See the caption package documentation for explanation.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `Lec-05.out' has not changed.
-(rerunfilecheck)             Checksum: BAA2D8184E8682F5A0536E785846862B;3465.
+
+Package rerunfilecheck Warning: File `Lec-05.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Lec-05.out':
+(rerunfilecheck)             Before: 0CFBA222AD5BC5F7A43CC936D7C93726;3480
+(rerunfilecheck)             After:  BAA2D8184E8682F5A0536E785846862B;3465.
 runsystem(del Lec-05.pyg)...executed.
 
 runsystem(del Lec-05.out.pyg)...executed.
@@ -2616,7 +2622,7 @@ runsystem(del Lec-05.out.pyg)...executed.
 Here is how much of TeX's memory you used:
  38126 strings out of 476477
  790124 string characters out of 5817858
- 1287449 words of memory out of 5000000
+ 1287450 words of memory out of 5000000
  57617 multiletter control sequences out of 15000+600000
  411031 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
