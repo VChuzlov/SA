@@ -2,6 +2,7 @@ from scipy.interpolate import interp1d
 from scipy.optimize import least_squares
 import numpy as np
 from typing import Callable
+import matplotlib.pyplot as plt
 
 
 def interpolation(
@@ -76,4 +77,11 @@ if __name__ == '__main__':
     )
     for ti, hi in zip(_t, _dh_line):
         print(f'{ti:>4.0f} {hi:>8.4f}')
+    
+    plt.scatter(t, dh, label='Исходные данные', marker='+')
+    plt.plot(_t, _dh, label='Кубический сплайн', c='k')
+    plt.plot(_t, _dh_line, label='Линейная аппроксимация', c='r')
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
     
