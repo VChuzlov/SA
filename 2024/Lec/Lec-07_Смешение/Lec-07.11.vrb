@@ -1,0 +1,22 @@
+\frametitle{Описание класса \texttt {Blend}}
+\scriptsize
+\textbf{Методы класса \texttt{Blend}}
+\vfill
+\begin{tabular}{|p{.445\textwidth}|p{.55\textwidth}|}
+\hline
+\textbf{Метод} & \textbf{Описание} \\
+\hline
+\mintinline{python}|def blend(self, *flows: Flow) -> Flow| & Расчет октанового числа смешения неограниченного количества объектов класса \texttt{Flow} \\
+\hline
+\begin{minipage}{\linewidth}
+\begin{minted}[frame=none, linenos=false]{python}
+def calculate_ratio(
+    self,
+    expected_value: float,
+    *flows: Flow
+) -> dict
+\end{minted}
+\end{minipage} & Расчет соотношения потоков для достижения требуемого октанового числа смешения \\
+\hline
+\end{tabular}
+\vfill

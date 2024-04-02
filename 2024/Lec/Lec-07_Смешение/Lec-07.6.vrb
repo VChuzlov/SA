@@ -1,0 +1,40 @@
+\frametitle{Расчет октанового числа смешения}
+\scriptsize
+Изучение данных по смешению компонентов бензина показало, что нелинейность поведения компонентов бензина при смешении можно описать следующим образом:
+\vfill
+\begin{equation}
+^^IP_{\mathrm{расч}} = P_{\mathrm{об}} + I_{\left(1,2\right)} \cdot X_1 \cdot X_2 + I_{\left(1,3\right)} \cdot X_1 \cdot X_3 + \ldots + I_{\left(8,9\right)} \cdot X_8 \cdot X_9
+\end{equation}
+\vfill
+$
+\begin{aligned}
+P_{\mathrm{расч}} & -  \text{Расчетное свойство}; \\
+P_{\mathrm{об}} & - \text{Средневзвешенное (по объему) свойство}; \\
+I_{\left(1,2\right)} \ldots I_{\left(8,9\right)} & - \text{Коэффициенты взаимодействия компонентов}; \\
+X_1 \ldots X_9 & - \text{Объемная доля каждого компонента}.
+\end{aligned}
+$
+\vfill
+Коэффициент взаимодействия для бинарной смеси можно рассчитать по следующей формуле:
+\vfill
+\begin{minipage}{.39\textwidth}
+\begin{equation}
+^^II_{\left(A,B\right)} = \dfrac{P_{\mathrm{факт}}-P_{\mathrm{об}}}{V_A \cdot V_B}
+\end{equation}
+\end{minipage}
+\begin{minipage}{.05\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}{.49\textwidth}
+$
+\begin{aligned}
+I_{\left(A,B\right)} &- \text{Коэффициент взаимодействия компонентов $A$ и $B$}; \\
+P_{\mathrm{факт}} &- \text{Свойство смеси, определенное в лаборатории}; \\
+P_{\mathrm{об}} &- \text{Средневзвешенное (по объему) свойство смеси}; \\
+V_A, V_B &- \text{Объемная доля компонентов $A$ и $B$}.
+\end{aligned}
+$
+\end{minipage}
+\vfill
+\tiny{*Паркаш Суриндер Справочник по переработке нефти / Перевод с английского. – М: ООО Премиум Инжиниринг, 2012. – 776 с., ил. – (Промышленный инжиниринг)}
+\vfill

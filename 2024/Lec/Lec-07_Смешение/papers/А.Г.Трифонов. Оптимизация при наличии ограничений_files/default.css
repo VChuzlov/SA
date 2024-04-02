@@ -1,0 +1,117 @@
+BODY    {
+	BACKGROUND-COLOR: #ffffff;
+    FONT-FAMILY: Verdana,Arial, Helvetica;
+    font-size:10pt;
+        }
+p,ul,td {font-size:10pt;FONT-FAMILY: Verdana,Arial, Helvetica,sans-serif;}
+a       {font-size:10pt;FONT-FAMILY: Verdana,Arial, Helvetica; color:#8b4023;    text-decoration: none;}
+a:hover { text-decoration: none; color:red;}
+a.menu1 { font-weight:bold;}
+a.topnav{font-size:10pt;color:#ffffff;}
+a.topnav:hover{font-size:10pt;color:#ffffff;}
+a.login{color:#000000; font-size:7pt;}
+a.login:hover{color:#000000; text-decoration: underline;}
+a.wo {color: #000000; text-decoration: none;}
+
+
+.navblack{    FONT-FAMILY: Verdana,Arial, Helvetica;background-color:black;}
+.navgray {    FONT-FAMILY: Verdana,Arial, Helvetica;background-color:#676767;}
+.navright{    FONT-FAMILY: Verdana,Arial, Helvetica;background-color:#6C6C6C;}
+
+.h1     {    FONT-FAMILY: Verdana,Arial, Helvetica;font-size:10pt; font-weight:bold;color:#b30101;}
+.h2     {    FONT-FAMILY: Verdana,Arial, Helvetica;font-size:10pt; font-weight:bold;}
+.h3     {    FONT-FAMILY: Verdana,Arial, Helvetica;font-size:10pt; font-weight:bold;color:#b30101; }
+.redbold{    FONT-FAMILY: Verdana,Arial, Helvetica;font-size:9pt;color:#b30101; font-weight:bold;}
+.red    {    FONT-FAMILY: Verdana,Arial, Helvetica;font-size:10pt;color:#b30101; font-weight:bold;}
+.mb {    FONT-FAMILY: Verdana,Arial, Helvetica;font-size:10pt; font-weight:bold;color:#b30101;}
+input,select {    FONT-FAMILY: Verdana,Arial, Helvetica;font-size:10pt;height:20px;}
+textarea {    FONT-FAMILY: Verdana,Arial, Helvetica;font-size:10pt;}
+.text1 {    FONT-FAMILY: Verdana,Arial, Helvetica;font-size:10pt; font-weight:normal;}
+.border{
+	border: solid 1px #000;
+	border-bottom: 0;
+	border-right: 0;
+}
+.border td{
+	padding: 10px;
+	border-right: solid 1px #000;
+	border-bottom: solid 1px #000;
+}
+.bn{
+	width: 159px;
+	height: 50px;
+	overflow: hidden;
+	border: solid 1px red
+}
+.bn table{
+	border-collapse: collapse;
+	border: 0
+}
+.bn table td{
+	padding: 0;
+	text-align: center;
+	vertical-align: middle;
+}
+.bn table td, .bn table td .h1{
+	font-size: 9px;
+}
+.bn table td p{
+	margin: 0;
+	padding: 0;
+}
+/* b-list-url */
+.b-list-url {
+	margin:0;
+	padding:0;
+}
+.b-list-url__item {
+	list-style:none;
+	display:block;
+	float:left;
+	padding-right:3px;
+}
+.b-list-url__item_last {
+	padding-right:0px;
+}
+	.b-list-url__item a {
+		display:block;
+		padding:3px 5px;
+		background:#ffa851;
+		border:1px solid #c91b0b;
+		color:#c91b0b;
+		text-decoration:underline;
+	}
+	.b-list-url__item a:hover {
+		text-decoration:none;
+	}
+/* b-list-url < */
+.bg-matlab-header {
+	display:block;
+	background:url(/web/20160813023414im_/http://matlab.exponenta.ru/images/bg-matlab-header2.png);
+	text-decoration:none !important;
+	color:#fff !important;
+	font-size:18px;
+	font-weight:bold;
+	padding:12px 20px;
+	margin:0 auto;
+}
+/*
+     FILE ARCHIVED ON 02:34:14 Aug 13, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:10:31 Apr 05, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 124.05
+  exclusion.robots: 0.104
+  exclusion.robots.policy: 0.091
+  cdx.remote: 0.076
+  esindex: 0.012
+  LoadShardBlock: 44.39 (3)
+  PetaboxLoader3.datanode: 84.059 (5)
+  load_resource: 149.99 (2)
+  PetaboxLoader3.resolve: 73.767 (2)
+*/

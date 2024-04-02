@@ -1,0 +1,587 @@
+
+% !TeX document-id = {d8b4925c-2057-42a4-b894-2f1a3f1b6345}
+%!TeX TXS-program:compile = txs:///xelatex/[--shell-escape]
+\documentclass[aspectratio=169, mathserif]{beamer}% TPU recommends 16:9 ratio, 4:3 may require some work with inner theme .sty file
+
+% Style options:
+% light --- light theme (default)
+% dark --- dark theme
+% enlogo --- english TPU logo {default}
+% rulogo --- russian TPU logo
+
+\usetheme[light, rulogo]{tpu}% dark theme used as an example of optional argument
+
+\usepackage[russian]{babel}%uncomment this to work in russian
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+
+\usepackage{fontspec}
+
+\setromanfont{Brygada1918}[
+Path=./fonts/BrygadaFontFiles/,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\setsansfont{ALSSirius}[
+Path=./fonts/ALSSiriusFiles/,
+Extension = .otf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+%ItalicFont=*-Italic,
+%BoldItalicFont=*-BoldItalic
+]
+
+\setmonofont{Consolas}[
+Path=./fonts/ConsolasFontFiles/,
+%Scale=0.85,
+Extension = .ttf,
+UprightFont=*-Regular,
+BoldFont=*-Bold,
+ItalicFont=*-Italic,
+BoldItalicFont=*-BoldItalic
+]
+
+\usepackage[cache=false]{minted}
+\usepackage{xcolor} % to access the named colour LightGray
+\usepackage{colortbl}
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{onedarkBckGr}{RGB}{40, 44, 52}
+
+\usemintedstyle[python]{default}
+\setminted[python]{
+fontsize=\scriptsize,
+escapeinside=||,
+mathescape=true,
+numbersep=5pt,
+gobble=2,
+linenos=true,
+frame=leftline,
+framesep=1mm,
+python3=true,
+%bgcolor=backcolour,
+}
+
+\usemintedstyle[pycon]{default}
+\setminted[pycon]{
+	fontsize=\scriptsize,
+	escapeinside=||,
+	mathescape=true,
+	numbersep=5pt,
+	gobble=2,
+	frame=single,
+	framesep=1mm,
+	python3=true,
+%	bgcolor=backcolour,
+	linenos=true,
+}
+
+\newmint{python}{}
+
+\usepackage{booktabs}% good looking tables
+\usepackage{multicol}% text in multiple columns, useful for side-by-side text and pictures
+\usepackage{hyperref}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+\definecolor{linkcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{urlcolor}{HTML}{800080} % цвет ссылок
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage[nooneline]{caption}
+\DeclareCaptionTextFormat{center}{\centering{#1}}
+\captionsetup[table]{justification=raggedleft,
+labelformat=empty,
+labelsep=endash,
+textformat=center,
+position=top,
+skip=5pt
+}
+
+\hyphenpenalty=10000% i don’t think hyphenation in presentations is a good idea, feel free to change however you like
+
+\usepackage{chemfig}
+\usepackage{tabularx}
+\usepackage{amsfonts}
+
+%\includeonlyframes{c}
+
+\title{\LARGE{Системный анализ процессов переработки нефти и газа}}
+\subtitle{\textcolor{tpugreen}{\textbf{Лекция №7}} \\ \textbf{Расчет октановых чисел смешения}}
+\author[]{Вячеслав Алексеевич Чузлов, \\
+к.т.н., доцент ОХИ ИШПР}
+\date{\today}
+
+\begin{document}
+
+
+% notice usage of \titleframe and several other unconventional functions
+% the reason being is custom backgrounds on these slides
+
+\titleframe% title
+
+%\tocframe{}% this custom frame accepts options for ToC
+
+
+\section{Расчет октанового числа}
+\sectionframe
+
+\begin{frame}[fragile, label=c]{Октановое число}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Октановое число}}~-- это условная величина, характеризующая детонационную стойкость и численно равная процентному содержанию изооктана в эталонной смеси с н-гептаном, которая по детонационной стойкости эквивалентна испытуемому топливу в условиях стандартного одноцилиндрового двигателя.
+\vfill
+\centering{\textbf{Эталонные углеводороды}}
+\vfill
+\begin{minipage}{.48\textwidth}
+\includegraphics[width=.95\linewidth]{./pics/ic8}
+\centering 2,2,4-триметилпентан (изооктан)
+\end{minipage}
+\begin{minipage}{.01\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}{.48\textwidth}
+\includegraphics[width=\linewidth]{./pics/nc7}
+\centering н-гептан
+\end{minipage}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Октановые числа индивидуальных углеводородов}
+\scriptsize
+\begin{minipage}{.55\textwidth}
+\includegraphics[width=\linewidth]{./pics/ron}
+\end{minipage}
+\begin{minipage}{.44\textwidth}
+\begin{itemize}
+\item Наименьшим ОЧ обладают алканы нормального строения, наивысшим – ароматические УВ.
+\item ОЧ нормальных алканов резко снижается с увеличением их молекулярной массы.
+\item ОЧ изопарафинов значительно выше, чем у алканов нормального строения.
+\item Олефиновые УВ обладают более высокими ОЧ в сравнении с алканами с тем же числом атомов углерода.
+\item ОЧ аренов повышается с увеличением числа углеродных атомов.
+\end{itemize}
+\end{minipage}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Расчет октанового числа смешения}
+\scriptsize
+\begin{equation}
+	R = R_1 + C_1 \cdot \left(R_2 - R_1 \cdot J_x\right) + C_2 \cdot \left(O_1 - O_2\right) + C_3 \cdot \left(A_1 - A_2\right)
+\end{equation}
+\vfill
+\begin{tabular}{p{.01\textwidth}p{.005\textwidth}p{.95\textwidth}}
+$R$ & -- & Октановое число смеси по исследовательскому методу; \\
+$R_0$ & -- & Октановое число каждого компонента по исследовательскому методу; \\
+$R_1$ & -- & Сумма произведений октанового числа каждого компонента (ОЧ ИМ) на его объемную долю (октановое число, средневзвешенное по объему); \\
+$R_2$ & -- & Сумма произведений $R_0$ и $J$ каждого компонента, умноженных на его объемную долю (произведения, средневзвешенные по объему); \\
+$J_x$ & -- & Сумма произведений чувствительности каждого компонента $J$ на его объемную долю; \\
+$O_1$ & -- & Сумма произведений квадрата процентного содержания олефинов в каждом компоненте на его объемную долю; \\
+$O_2$ & -- & Квадрат суммы произведений процентного содержания олефинов в каждом компоненте на его объемную долю (квадрат суммы, средневзвешенной по объему); \\
+$A_1$ & -- & Сумма произведений квадрата содержания ароматических углеводородов в каждом компоненте на его объемную долю; \\
+$A_2$ & -- & Квадрат суммы произведений процентного содержания ароматических углеводородов в каждом компоненте на его объемную долю (квадрат суммы, средневзвешенной по объему). \\
+\end{tabular}
+\vfill
+\tiny{*Паркаш Суриндер Справочник по переработке нефти / Перевод с английского. – М: ООО Премиум Инжиниринг, 2012. – 776 с., ил. – (Промышленный инжиниринг)}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Расчет октанового числа смешения}
+\scriptsize
+Изучение данных по смешению компонентов бензина показало, что нелинейность поведения компонентов бензина при смешении можно описать следующим образом:
+\vfill
+\begin{equation}
+	P_{\mathrm{расч}} = P_{\mathrm{об}} + I_{\left(1,2\right)} \cdot X_1 \cdot X_2 + I_{\left(1,3\right)} \cdot X_1 \cdot X_3 + \ldots + I_{\left(8,9\right)} \cdot X_8 \cdot X_9
+\end{equation}
+\vfill
+$
+\begin{aligned}
+P_{\mathrm{расч}} & -  \text{Расчетное свойство}; \\
+P_{\mathrm{об}} & - \text{Средневзвешенное (по объему) свойство}; \\
+I_{\left(1,2\right)} \ldots I_{\left(8,9\right)} & - \text{Коэффициенты взаимодействия компонентов}; \\
+X_1 \ldots X_9 & - \text{Объемная доля каждого компонента}.
+\end{aligned}
+$
+\vfill
+Коэффициент взаимодействия для бинарной смеси можно рассчитать по следующей формуле:
+\vfill
+\begin{minipage}{.39\textwidth}
+\begin{equation}
+	I_{\left(A,B\right)} = \dfrac{P_{\mathrm{факт}}-P_{\mathrm{об}}}{V_A \cdot V_B}
+\end{equation}
+\end{minipage}
+\begin{minipage}{.05\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}{.49\textwidth}
+$
+\begin{aligned}
+I_{\left(A,B\right)} &- \text{Коэффициент взаимодействия компонентов $A$ и $B$}; \\
+P_{\mathrm{факт}} &- \text{Свойство смеси, определенное в лаборатории}; \\
+P_{\mathrm{об}} &- \text{Средневзвешенное (по объему) свойство смеси}; \\
+V_A, V_B &- \text{Объемная доля компонентов $A$ и $B$}.
+\end{aligned}
+$
+\end{minipage}
+\vfill
+\tiny{*Паркаш Суриндер Справочник по переработке нефти / Перевод с английского. – М: ООО Премиум Инжиниринг, 2012. – 776 с., ил. – (Промышленный инжиниринг)}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Расчет октанового числа смешения}
+\scriptsize
+Октановое число смешения можно представить в виде суммы двух составляющих: аддитивной и неаддитивной:
+\vfill
+\begin{equation}
+	\mathrm{ОЧ}_{\mathrm{см}} = \sum \limits _{i=1} ^{n} \left(\mathrm{ОЧ_{i} \cdot C_{i}}\right) + B
+\end{equation}
+\vfill
+$
+\begin{aligned}
+\mathrm{ОЧ}_{\mathrm{см}} &- \text{Октановое число смешения компонентов бензина}; \\
+B &- \text{Суммарное отклонение октановых чисел от аддитивности}; \\
+C_i &- \text{Концентрация $i$-го компонента, отн. ед.}; \\
+\mathrm{ОЧ}_i &- \text{Октановое число $i$-го компонента}; \\
+n &- \text{Количество компонентов}.
+\end{aligned}
+$
+\vfill
+Суммарное отклонение $B$ определяется следующим образом:
+\vfill
+\begin{minipage}{.35\textwidth}
+\begin{equation}
+	B = \sum \limits _{i=1} ^{n} \sum \limits _{j=i+1} ^{n} B_i \cdot B_j \cdot C_i \cdot C_j
+\end{equation}
+\vfill
+\end{minipage}
+\begin{minipage}{.04\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}{.6\textwidth}
+$B_i, B_j$~-- величины, характеризующие склонность $i$-й молекулы к межмолекулярному взаимодействию c $j$-й молекулой.
+\end{minipage}
+\vfill
+\tiny{*Ю.А. Смышляева, Э.Д. Иванчина, А.В. Кравцов, Ч.Т. Зыонг, Ф. Фан Разработка базы данных по октановым числам для математической модели процесса компаундирования товарных бензинов // Известия Томского политехнического университета. 2011. Т. 318. № 3}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Программная реализация}
+\scriptsize
+\begin{minted}{python}
+def get_octane_nummber(
+    flow: Flow,
+    ron: np.ndarray = const.RON,
+    bi: np.ndarray = const.Bi
+) -> float:
+    mf = flow.mass_fractions
+    additive = (ron * mf).sum()
+
+    non_additive = 0
+    for i, _ in enumerate(mf):
+        for j in range(i+1, mf.shape[0]):
+            non_additive += bi[i] * bi[j] * mf[i] * mf[j]
+
+    return additive + non_additive
+|\space|
+\end{minted}
+\vfill
+\end{frame}
+
+
+\section{Подбор оптимального соотношения \\ компонентов смешения}
+\sectionframe
+
+\begin{frame}[fragile, label=c]{Задача}
+\scriptsize
+Определить соотношение $6$-ти потоков различного состава при котором достигается заданное октановое число ($92$, $95$, пункта по исследовательскому методу)
+\vfill
+\textcolor{tpugreen}{\textbf{Этапы решения}}
+\begin{itemize}
+\item Реализовать расчет октанового числа смешения
+\item Реализовать целевую функцию
+\item Применить один из методов минимизации функции
+\item Вывести результаты расчета
+\end{itemize}
+\vfill
+\end{frame}
+
+\begin{frame}[fragile, label=c]{Описание класса \texttt{Blend}}
+\scriptsize
+\textbf{Методы класса \texttt{Blend}}
+\vfill
+\begin{tabular}{|p{.445\textwidth}|p{.55\textwidth}|}
+\hline
+\textbf{Метод} & \textbf{Описание} \\
+\hline
+\mintinline{python}|def blend(self, *flows: Flow) -> Flow| & Расчет октанового числа смешения неограниченного количества объектов класса \texttt{Flow} \\
+\hline
+\begin{minipage}{\linewidth}
+\begin{minted}[frame=none, linenos=false]{python}
+def calculate_ratio(
+    self,
+    expected_value: float,
+    *flows: Flow
+) -> dict
+\end{minted}
+\end{minipage} & Расчет соотношения потоков для достижения требуемого октанового числа смешения \\
+\hline
+\end{tabular}
+\vfill
+\end{frame}
+
+\section{Метод SLSQP}
+\begin{frame}[fragile, label=c]{Метод SLSQP}
+\scriptsize
+\begin{itemize}
+\item Метод SLSQP (Sequential Least Squares Programming) использует последовательное квадратичное программирование для минимизации функций нескольких переменных с любой комбинацией границ, а также ограничений на равенство и неравенство.
+\item Метод включает в себя подпрограмму оптимизации SLSQP, первоначально реализованную Дитером Крафтом (Dieter Kraft).
+\item Обратите внимание, что бесконечные значения в границах преобразуются в большие значения с плавающей точкой.
+\end{itemize}
+\vfill
+Метод SLSQP предназначен для решения задач оптимизации функций в следующей форме:
+\vfill
+\begin{equation}\label{eq:problem}
+\begin{gathered}
+\underset{x}{\min}\ f\left(x\right) \\
+\mathrm{при }\ c_j\left(x\right) = 0, \qquad j \in \mathcal{E} \\
+\qquad c_j\left(x\right) \geqslant 0, \qquad j \in \mathcal{I} \\
+\qquad lb_i \leqslant x_i \leqslant ub_i, \qquad i = 1, \ldots , N.
+\end{gathered}
+\end{equation}
+\vfill
+Здесь $\mathcal{E}$ и $\mathcal{I}$~--множества индексов выражений, описывающих ограничения в виде равенств или неравенств; $\left[lb_i, ub_i\right]$~-- множества нижних и верхних границ для области определения функции.
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Метод SLSQP}
+\scriptsize
+\mintinline[fontsize=\small]{python}|scipy.optimize.minimize(method='SLSQP')|
+\vfill
+\textbf{Основные параметры:}
+\vfill
+\begin{itemize}
+\item[] \mintinline{python}|fun: callable|
+
+Объектная функция для минимизации.
+\vfill
+\mintinline{python}|fun(x, *args) -> float|
+
+где \texttt{x}~-- одномерный массив размера \mintinline{python}|(n, )|; \texttt{args}~-- кортеж параметров, необходимых для вызова функции.
+\vfill
+\item[] \mintinline{python}|x0: ndarray, shape (n,)|
+
+Начальное приближение. Массив элементов размера \mintinline{python}|(n,)|, где \texttt{n}~-- количество независимых переменных.
+\vfill
+\item[] \mintinline{python}|args: tuple, optional|
+
+Дополнительные аргументы, передаваемые объектной функции и ее производным (функциям \texttt{fun}, \texttt{jac} и \texttt{hess})
+\vfill
+\item[] \mintinline{python}|bounds: sequence, optional|
+
+Предельные значения для переменных.
+\vfill
+\item[] \mintinline{python}|constraints: {Constraint, dict} or List of {Constraint, dict}, optional|
+
+Описание функций, накладывающих ограничения на решение.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Пример}
+\scriptsize
+\begin{minipage}{.52\textwidth}
+\includegraphics[width=.9\linewidth]{./pics/eggholder}
+\end{minipage}
+\begin{minipage}{.47\textwidth}
+Рассмотрим следующую функцию:
+\vfill
+\begin{equation*}
+z = \left(-y + 47\right) \cdot \sin \sqrt{\left|\dfrac{x}{2} + y + 47\right|} - x \cdot \sin \sqrt{\left|\dfrac{x}{2} - y - 47\right|}
+\end{equation*}
+\vfill
+Найдем минимум данной функции при значениях $x \in \left[400, 500\right];\ y \in \left[400, 500\right]$ и при условии, что $x = y$.
+\end{minipage}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Пример}
+\scriptsize
+\begin{minted}{python}
+import numpy as np
+import scipy.optimize as opt
+
+
+def func(x):
+    return (
+        (-x[1] + 47) * np.sin(np.sqrt(abs(x[0] / 2 + x[1] + 47)))
+        - x[0] * np.sin(np.sqrt(abs(x[0] - x[1] - 47)))
+    )
+
+
+x = np.arange(-512, 513)
+y = np.arange(-512, 513)
+xgrid, ygrid = np.meshgrid(x, y)
+xy = np.stack([xgrid, ygrid])
+
+bounds = (400, 500), (400, 500)
+constr = {
+    'type': 'eq',
+    'fun': lambda x: x[0] - x[1]
+}
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Пример}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+|\space|
+|\space|
+res = opt.minimize(
+    eggholder,
+    x0=(450, 450),
+    bounds=bounds,
+    constraints=constr,
+    method='SLSQP'
+)
+print(res)
+|\space|
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+     fun: -641.3734202306166
+     jac: array([ 27.49101257, -27.49103546])
+ message: 'Optimization terminated successfully'
+    nfev: 12
+     nit: 4
+    njev: 4
+  status: 0
+ success: True
+       x: array([448.93802864, 448.93802864])
+\end{minted}
+\vfill
+\end{frame}
+
+
+\section{Метод SHGO}
+\begin{frame}[fragile, label=c]{\textbf{Метод SHGO}}
+\scriptsize
+<<Simplicial Homology Global Optimization>>~-- выполняет поиск глобального минимума функции.
+\mintinline{python}|scipy.optimize.shgo|
+\vfill
+\textcolor{tpugreen}{\textbf{Основные параметры:}}
+\vfill
+\begin{itemize}
+\item[] \mintinline{python}|func: callable|
+
+Объектная функция для минимизации.
+\vfill
+\mintinline{python}|func(x, *args) -> float|
+
+где \texttt{x}~-- одномерный массив размера \mintinline{python}|(n, )|; \texttt{args}~-- кортеж параметров, необходимых для вызова функции.
+\vfill
+\item[] \mintinline{python}|args: tuple, optional|
+
+Дополнительные аргументы, передаваемые объектной функции и ее производным (функциям \texttt{fun}, \texttt{jac} и \texttt{hess})
+\vfill
+\item[] \mintinline{python}|bounds: sequence, optional|
+
+Предельные значения для переменных.
+\vfill
+\item[] \mintinline{python}|constraints: {Constraint, dict} or List of {Constraint, dict}, optional|
+
+Описание функций, накладывающих ограничения на решение.
+\end{itemize}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Пример}
+\scriptsize
+\begin{minted}{python}
+import numpy as np
+import scipy.optimize as opt
+
+
+def func(x):
+    return (
+        (-x[1] + 47) * np.sin(np.sqrt(abs(x[0] / 2 + x[1] + 47)))
+        - x[0] * np.sin(np.sqrt(abs(x[0] - x[1] - 47)))
+    )
+
+
+x = np.arange(-512, 513)
+y = np.arange(-512, 513)
+xgrid, ygrid = np.meshgrid(x, y)
+xy = np.stack([xgrid, ygrid])
+
+bounds = (400, 500), (400, 500)
+constr = {
+    'type': 'eq',
+    'fun': lambda x: x[0] - x[1]
+}
+\end{minted}
+\vfill
+\end{frame}
+
+
+\begin{frame}[fragile, label=c]{Пример}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+|\space|
+|\space|
+res = opt.shgo(
+    eggholder,
+    bounds=bounds,
+    constraints=constr
+)
+print(res)
+|\space|
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+     fun: -641.1947007740115
+    funl: array([-641.19470077])
+ message: 'Optimization terminated successfully.'
+    nfev: 11
+     nit: 2
+   nlfev: 6
+   nlhev: 0
+   nljev: 2
+ success: True
+       x: array([450., 450.])
+      xl: array([[450., 450.]])
+\end{minted}
+\vfill
+\end{frame}
+
+
+\contactsframe[\Large \textbf{Благодарю за внимание!}]{
+
+\includegraphics[width=.05\textwidth]{pics/home} \quad Учебный корпус №2, ауд. 136 \\
+\includegraphics[width=.05\textwidth]{pics/mail} \quad chuva@tpu.ru \\
+\includegraphics[width=.03\textwidth]{pics/tel} \quad +7-962-782-66-15
+}
+
+\end{document}
+

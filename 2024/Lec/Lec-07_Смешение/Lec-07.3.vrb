@@ -1,0 +1,18 @@
+\frametitle{Октановое число}
+\scriptsize
+\textcolor{tpugreen}{\textbf{Октановое число}}~-- это условная величина, характеризующая детонационную стойкость и численно равная процентному содержанию изооктана в эталонной смеси с н-гептаном, которая по детонационной стойкости эквивалентна испытуемому топливу в условиях стандартного одноцилиндрового двигателя.
+\vfill
+\centering{\textbf{Эталонные углеводороды}}
+\vfill
+\begin{minipage}{.48\textwidth}
+\includegraphics[width=.95\linewidth]{./pics/ic8}
+\centering 2,2,4-триметилпентан (изооктан)
+\end{minipage}
+\begin{minipage}{.01\textwidth}
+\hfill
+\end{minipage}
+\begin{minipage}{.48\textwidth}
+\includegraphics[width=\linewidth]{./pics/nc7}
+\centering н-гептан
+\end{minipage}
+\vfill

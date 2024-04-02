@@ -1,0 +1,28 @@
+\frametitle{Пример}
+\scriptsize
+\begin{minted}[firstnumber=last]{python}
+|\space|
+|\space|
+res = opt.shgo(
+    eggholder,
+    bounds=bounds,
+    constraints=constr
+)
+print(res)
+|\space|
+\end{minted}
+\vfill
+\begin{minted}[frame=none, linenos=false]{pycon}
+     fun: -641.1947007740115
+    funl: array([-641.19470077])
+ message: 'Optimization terminated successfully.'
+    nfev: 11
+     nit: 2
+   nlfev: 6
+   nlhev: 0
+   nljev: 2
+ success: True
+       x: array([450., 450.])
+      xl: array([[450., 450.]])
+\end{minted}
+\vfill
