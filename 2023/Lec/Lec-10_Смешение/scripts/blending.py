@@ -118,7 +118,7 @@ if __name__ == '__main__':
     for flow in flows:
         mixture = blending.blend(flow)
         print(mixture.ron)
-    res = blending.calculate_ratio(92.2, *flows)
+    res = blending.calculate_ratio(95.2, *flows)
     with open('results.txt', 'w') as f:
         for method in res:
             print('*'*20, file=f)
