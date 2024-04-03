@@ -69,7 +69,7 @@ def ex2():
     f3 = Flow(
         mass_flow_rate=1200,
         mass_fractions=mf3,
-        temperature=250
+        temperature=150
     )
     mixer1 = Mixer()
     f4 = mixer1.mix(f1, f2, f3)
