@@ -377,7 +377,7 @@ def calculate_ratio(
 \textbf{Основные параметры:}
 \vfill
 \begin{itemize}
-\item[] \mintinline{python}|fun: callable|
+\item[] \mintinline{python}|fun: Callable|
 
 Объектная функция для минимизации.
 \vfill
@@ -430,7 +430,7 @@ import numpy as np
 import scipy.optimize as opt
 
 
-def func(x):
+def func(x: np.ndarray) -> np.ndarray:
     return (
         (-x[1] + 47) * np.sin(np.sqrt(abs(x[0] / 2 + x[1] + 47)))
         - x[0] * np.sin(np.sqrt(abs(x[0] - x[1] - 47)))
@@ -458,7 +458,7 @@ constr = {
 |\space|
 |\space|
 res = opt.minimize(
-    eggholder,
+    func,
     x0=(450, 450),
     bounds=bounds,
     constraints=constr,
@@ -492,7 +492,7 @@ print(res)
 \textcolor{tpugreen}{\textbf{Основные параметры:}}
 \vfill
 \begin{itemize}
-\item[] \mintinline{python}|func: callable|
+\item[] \mintinline{python}|func: Callable|
 
 Объектная функция для минимизации.
 \vfill
@@ -523,7 +523,7 @@ import numpy as np
 import scipy.optimize as opt
 
 
-def func(x):
+def func(x: np.ndarray) -> np.ndarray:
     return (
         (-x[1] + 47) * np.sin(np.sqrt(abs(x[0] / 2 + x[1] + 47)))
         - x[0] * np.sin(np.sqrt(abs(x[0] - x[1] - 47)))
@@ -551,7 +551,7 @@ constr = {
 |\space|
 |\space|
 res = opt.shgo(
-    eggholder,
+    func,
     bounds=bounds,
     constraints=constr
 )

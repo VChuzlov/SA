@@ -5,7 +5,7 @@
 \textbf{Основные параметры:}
 \vfill
 \begin{itemize}
-\item[] \mintinline{python}|fun: callable|
+\item[] \mintinline{python}|fun: Callable|
 
 Объектная функция для минимизации.
 \vfill

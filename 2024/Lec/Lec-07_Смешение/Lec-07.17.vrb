@@ -6,7 +6,7 @@
 \textcolor{tpugreen}{\textbf{Основные параметры:}}
 \vfill
 \begin{itemize}
-\item[] \mintinline{python}|func: callable|
+\item[] \mintinline{python}|func: Callable|
 
 Объектная функция для минимизации.
 \vfill

@@ -4,7 +4,7 @@
 |\space|
 |\space|
 res = opt.shgo(
-    eggholder,
+    func,
     bounds=bounds,
     constraints=constr
 )

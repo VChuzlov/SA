@@ -4,7 +4,7 @@
 |\space|
 |\space|
 res = opt.minimize(
-    eggholder,
+    func,
     x0=(450, 450),
     bounds=bounds,
     constraints=constr,

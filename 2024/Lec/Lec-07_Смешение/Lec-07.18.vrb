@@ -5,7 +5,7 @@ import numpy as np
 import scipy.optimize as opt
 
 
-def func(x):
+def func(x: np.ndarray) -> np.ndarray:
     return (
         (-x[1] + 47) * np.sin(np.sqrt(abs(x[0] / 2 + x[1] + 47)))
         - x[0] * np.sin(np.sqrt(abs(x[0] - x[1] - 47)))
