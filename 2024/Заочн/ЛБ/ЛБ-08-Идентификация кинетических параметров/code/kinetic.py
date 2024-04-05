@@ -33,4 +33,4 @@ def kinetic_scheme(
 
 
 if __name__ == '__main__':
-    pass
+    print(help(kinetic_scheme))

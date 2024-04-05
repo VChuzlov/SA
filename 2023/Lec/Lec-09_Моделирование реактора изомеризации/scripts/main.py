@@ -40,7 +40,7 @@ def calculation(t: float) -> tuple[float, float]:
 
 
 def main() -> None:
-    t = np.linspace(350, 500, 20)
+    t = np.linspace(350, 550, 20)
     vcalculation = np.vectorize(calculation)
     isomerate, isoalkanes = vcalculation(t)
     print('Температура, К',
