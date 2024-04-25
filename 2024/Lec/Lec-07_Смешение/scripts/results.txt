@@ -4,7 +4,7 @@ SLSQP
  message: Optimization terminated successfully
  success: True
   status: 0
-     fun: 0.5089425331108401
+     fun: 0.5089425324549239
        x: [ 1.000e-04  1.000e-04  1.000e-04  1.000e-04  9.600e-03
             9.900e-01]
      nit: 2
